@@ -1333,23 +1333,38 @@ function vn48LoadFoodGeo(){
  const escaped=names.map(x=>x.replace(/[.*+?^$()|[\]\\]/g,'\\$&'));
  const regex=escaped.join('|').replace(/"/g,'');
  const query='[out:json][timeout:25];nwr["name"~"'+regex+'",i]["amenity"~"^(restaurant|cafe|fast_food|bar)$"](48.10,16.15,48.34,16.63);out center;';
- const url='https://overpass.kumi.systems/api/interpreter';
- const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),42000);
- fetch(url,{method:'POST',body:new URLSearchParams({data:query}),signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error('OpenStreetMap '+r.status);return r.json();}).then(data=>{
-  const pois=(data.elements||[]).filter(p=>p.tags?.name&&Number.isFinite(Number(p.lat??p.center?.lat))&&Number.isFinite(Number(p.lon??p.center?.lon)));
+ const hosts=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter'];
+ async function loadMatchingPois(){
+  let lastError;
+  for(const url of hosts){
+   const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),18000);
+   try{
+    const response=await fetch(url,{method:'POST',body:new URLSearchParams({data:query}),signal:ctrl.signal});
+    if(!response.ok)throw Error('OSM service HTTP '+response.status);
+    const data=await response.json();
+    if(!Array.isArray(data.elements))throw Error('Invalid OSM response');
+    return data.elements;
+   }catch(error){lastError=error;}
+   finally{clearTimeout(timer);}
+  }
+  throw lastError||Error('Location lookup unavailable');
+ }
+ loadMatchingPois().then(elements=>{
+  const pois=elements.filter(p=>p.tags?.name&&Number.isFinite(Number(p.lat??p.center?.lat))&&Number.isFinite(Number(p.lon??p.center?.lon)));
   const lookup={};
   for(const p of pois){const name=vn48NormalizeName(p.tags.name);(lookup[name]??=[]).push(p);}
   const result={};
   for(const r of vn48FoodRecords()){
    const key=vn48NormalizeName(r.name?.de);
    const matches=lookup[key]||[];
-   // Exact normalized name matching only. Ambiguous duplicate names are not pinned.
-   if(matches.length!==1)continue;
+   if(matches.length!==1)continue; // Never guess between ambiguous locations.
    const p=matches[0],lat=Number(p.lat??p.center?.lat),lon=Number(p.lon??p.center?.lon);
    if(lat>=48.10&&lat<=48.34&&lon>=16.15&&lon<=16.63)result[r.id]={lat,lon,osm_id:p.id};
   }
   VN48_FOOD_GEO=result;VN48_GEO_STATE='ready';
- }).catch(()=>{VN48_GEO_STATE='unavailable';}).finally(()=>{clearTimeout(timer);if(state.tab==='map'&&nearMode31()==='food')render();});
+ }).catch(()=>{VN48_GEO_STATE='unavailable';}).finally(()=>{
+  if(state.tab==='map'&&nearMode31()==='food')render();
+ });
 }
 function nearFood31(){
  return vn48FoodRecords().map(r=>{
