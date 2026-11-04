@@ -11,3 +11,15 @@ for(const tab of ['볼거리','먹거리','계획','내주변'])assert.ok(index.
 const catalog=JSON.parse(fs.readFileSync(path.join(pub,'catalog_48.json'),'utf8'));
 const experience=JSON.parse(fs.readFileSync(path.join(pub,'experiences_24.json'),'utf8'));
 console.log('Cloudflare preflight OK: '+required.length+' static files, four API handlers, five navigation tabs, catalog '+(Array.isArray(catalog)?catalog.length:'data')+', experiences '+(Array.isArray(experience)?experience.length:'data'));
+
+// Phase 26 regression gate: ensure the live Pages output contains the Phase 25 guided-tour flow.
+for(const label of ['코스 상세 안내','이 코스로 계획짜기','tour-apply','tour-start-date','tour-start-time']){
+  assert.ok(index.includes(label),`guided tour missing from public/index.html: ${label}`);
+}
+// Cloudflare Pages must use public/, not the older root index.html.
+const rootIndexPath=path.join(root,'index.html');
+if(fs.existsSync(rootIndexPath)){
+  const legacy=fs.readFileSync(rootIndexPath,'utf8');
+  if(legacy!==index)console.warn('DEPLOY WARNING: root index.html is older than public/index.html. Configure Cloudflare Pages output directory = public.');
+}
+console.log('Phase 26 release gate OK: tour preview/apply controls present; output directory must be public.');
