@@ -104,3 +104,12 @@ assert.ok(index.includes('data-legacy-photo'),'Photo failure recovery is missing
 assert.ok(index.includes('img.dataset.retry23'),'Photo retry logic is missing');
 assert.ok(index.includes('referrerpolicy="no-referrer"'),'Image requests must omit app referral information');
 console.log('Photo delivery regression gate OK: 48 credited images, Commons redirect and fallback.');
+
+const statusEnd=index.indexOf('</div>',index.indexOf('<div class="status">'));
+const adPos=index.indexOf('id="ad-slot"'),headerPos=index.indexOf('<header class="header">'),mainPos=index.indexOf('<main id="main"');
+assert.ok(statusEnd>=0 && adPos>statusEnd && adPos<headerPos && headerPos<mainPos,'Ad slot should appear above app header and content');
+for(const item of ['vn33-sights-screen','vn33-sight-head','vn33-sight-brand','vn33-sight-tabs','<span class="near32-logo" aria-hidden="true">V</span>','data-act="section-sights"']){
+ assert.ok(index.includes(item),'missing compact sight header component: '+item);
+}
+assert.ok(!index.includes('큰 사진을 좌우로 넘기며 가고 싶은 곳을 찾아보세요.'),'old sight instructions must be removed');
+console.log('Phase 33 placement checks OK: ad at top, compact V sight header and inline categories.');
