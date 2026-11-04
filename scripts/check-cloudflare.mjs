@@ -77,10 +77,17 @@ assert.ok(index.includes('Grundkarte: <a href="https://basemap.at/'), 'map attri
 assert.ok(!index.includes('tile.openstreetmap.org'), 'legacy public tile provider must not remain');
 console.log('Austrian HiDPI map regression gate OK: two layers and attribution.');
 
-const newTabs=["['map','지도']","['sights','볼거리']","['food','먹거리']","['wc','화장실']","['plan','계획']"];
+const newTabs=["['sights','볼거리']","['food','먹거리']","['wc','화장실']","['plan','계획']"];
 let prev=-1;for(const t of newTabs){const pos=index.indexOf(t);assert.ok(pos>prev,'Five near-me categories must appear in requested order: '+t);prev=pos;}
 for(const feature of ['nearSearch31','nearFoodLayer31','nearPlanLayer31','nearPin31','near31-search','near31-planbar','data-act="use-gps"','data-act="reset-anchor"','showFacilities(\'wc\')']){
  assert.ok(index.includes(feature),'missing new nearby map feature: '+feature);
 }
 assert.ok(!index.includes('<div class="near-mapstatus">${h(caption)}</div>'),'obsolete public-data status overlay must be removed');
-console.log('Nearby five-tab map regression gate OK.');
+console.log('Nearby four-tab map regression gate OK.');
+
+for (const feature of ['nearSightPopup32','vn32-sight-pop','vn32-brand','near32-logo','id="ad-slot"','vn32-ad-slot','vn32-near-screen','near31-pin-sights{color:#2563eb}','near31-pin-food{color:#dc2626}','near31-pin-wc{color:#166534']){
+ assert.ok(index.includes(feature),'Missing Phase 32 map feature: '+feature);
+}
+assert.ok(index.includes("choices=[['sights','볼거리'],['food','먹거리'],['wc','화장실'],['plan','계획']]"),'nearby categories must be exactly four in requested order');
+assert.ok(index.includes('grid-template-columns:repeat(4,minmax(0,1fr))'),'nearby tabs must be four columns');
+console.log('Phase 32 map layout, colored ball-head pins, popup and ad-slot checks OK.');
