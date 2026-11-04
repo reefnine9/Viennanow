@@ -408,7 +408,7 @@
 .vn61-subnav{display:flex;align-items:center;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:6px;padding:6px 0 3px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .vn61-subnav button{flex:0 0 auto;white-space:nowrap;border-radius:20px;border:1px solid #d4e1db;background:#fff;color:#536f70;padding:8px 12px;font-weight:750;font-size:11px;min-height:35px}
 .vn61-subnav button.active{background:#1b4b56;color:#fff;border-color:#1b4b56}
-</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
+.vn59-wc-no-photo{margin:8px 0;padding:10px 9px;border-radius:9px;background:#edf3ef;color:#536d6a;font-size:11px;line-height:1.5}</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 'use strict';
@@ -1778,12 +1778,14 @@ function showPlaces(){if(!map||!layerGroup)return;refreshSightClusters48();map.s
 const VN59_WC_PHOTOS=[
  {match:/rathauspark|felderstra(?:ß|ss)e/i,file:'RathausparkKloWien.JPG',author:'Robert Schediwy',licence:'CC BY-SA 3.0',caption:'Rathauspark의 공중화장실 (2007년 촬영)'},
  {match:/stadtpark/i,file:'GuentherZ 2009-09-15 1314 Wien03 Stadtpark WC.jpg',author:'GuentherZ',licence:'CC BY 3.0',caption:'비엔나 3구 Stadtpark의 공중화장실 (2009년 촬영)'},
- {match:/karlsplatz.*oper|oper.*karlsplatz|u.bahn.*oper/i,file:'A-Wien-Toilette-Ubahn-Oper-2.JPG',author:'Bgabel',licence:'CC BY-SA 3.0',caption:'Karlsplatz 지하철역 오페라 출구 화장실 (2012년 촬영)'}
+ {match:/karlsplatz.*oper|oper.*karlsplatz|u.bahn.*oper|opernpassage/i,file:'A-Wien-Toilette-Ubahn-Oper-2.JPG',author:'Bgabel',licence:'CC BY-SA 3.0',caption:'Karlsplatz 지하철역 오페라 출구 화장실 (2012년 촬영)'},
+ {match:/graben/i,file:'GuentherZ 2009-10-03 0791 Wien01 Graben WC total.jpg',author:'GuentherZ',licence:'CC BY 3.0',caption:'Graben 지하 공중화장실 (2009년 촬영)'},
+ {match:/st[öo]berplatz|stoeberplatz/i,file:'WienToiletteStoeberplatz.jpg',author:'Extrawurst',licence:'CC BY-SA 3.0',caption:'Stöberplatz의 공중화장실 (2005년 촬영)'}
 ];
 function vn59WcPhoto(p){
  const location=String([p.name,p.details,p.address].filter(Boolean).join(' '));
  const found=VN59_WC_PHOTOS.find(x=>x.match.test(location));
- if(!found)return '';
+ if(!found)return '<div class="vn59-wc-no-photo">이 시설의 실제 사진은 아직 확보하지 못했습니다.</div>';
  const file=encodeURIComponent(found.file),src='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+file+'?width=640',original='https://commons.wikimedia.org/wiki/File:'+file;
  return `<figure class="vn59-wc-photo"><img src="${h(src)}" alt="${h(found.caption)}" loading="lazy" onerror="this.parentElement.hidden=true"><figcaption>${h(found.caption)} · ${h(found.author)} · ${h(found.licence)} · <a href="${h(original)}" target="_blank" rel="noopener noreferrer">사진 출처·라이선스 ↗</a></figcaption></figure>`;
 }
@@ -1792,7 +1794,7 @@ function showFacilities(kind){
  const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
  const points=nearest(info.points,anchor(),{max:55,radius:3000}).map((p,i)=>({
   key:String(i),title:p.name||'공공화장실',lat:p.lat,lon:p.lon,type:'wc',action:'noop',
-  popup:`<div class="vn59-wc-popup"><b>${h(p.name||'공공화장실')}</b>${vn59WcPhoto(p)}<p>${h(p.details||'')}</p><small>사진은 과거 촬영 자료입니다. 현장 상태·실시간 개방 여부는 확인되지 않았습니다.</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a></div>`
+  popup:`<div class="vn59-wc-popup"><b>${h(p.name||'공공화장실')}</b>${vn59WcPhoto(p)}<p>${h(p.details||'')}</p><small>사진은 과거 촬영 자료이며 같은 지역 내 시설도 외관이 다를 수 있습니다. 실시간 개방 여부는 확인되지 않았습니다.</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a></div>`
  }));
  map.setView([anchor().lat,anchor().lon],14);
  vn60Clusters(points,{label:'공공화장실'});
