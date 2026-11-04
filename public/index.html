@@ -1332,8 +1332,8 @@ function vn48LoadFoodGeo(){
  const names=vn48FoodRecords().map(r=>r.name?.de).filter(Boolean);
  const escaped=names.map(x=>x.replace(/[.*+?^$()|[\]\\]/g,'\\$&'));
  const regex=escaped.join('|').replace(/"/g,'');
- const query='[out:json][timeout:32];nwr["name"~"'+regex+'",i]["amenity"~"restaurant|cafe|fast_food|bar"](48.10,16.15,48.34,16.63);out center;';
- const url='https://overpass-api.de/api/interpreter';
+ const query='[out:json][timeout:25];nwr["name"~"'+regex+'",i]["amenity"~"^(restaurant|cafe|fast_food|bar)$"](48.10,16.15,48.34,16.63);out center;';
+ const url='https://overpass.kumi.systems/api/interpreter';
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),42000);
  fetch(url,{method:'POST',body:new URLSearchParams({data:query}),signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error('OpenStreetMap '+r.status);return r.json();}).then(data=>{
   const pois=(data.elements||[]).filter(p=>p.tags?.name&&Number.isFinite(Number(p.lat??p.center?.lat))&&Number.isFinite(Number(p.lon??p.center?.lon)));
@@ -1345,13 +1345,20 @@ function vn48LoadFoodGeo(){
    const matches=lookup[key]||[];
    // Exact normalized name matching only. Ambiguous duplicate names are not pinned.
    if(matches.length!==1)continue;
-   const p=matches[0],lat=Number(p.lat??p.center.lat),lon=Number(p.lon??p.center.lon);
+   const p=matches[0],lat=Number(p.lat??p.center?.lat),lon=Number(p.lon??p.center?.lon);
    if(lat>=48.10&&lat<=48.34&&lon>=16.15&&lon<=16.63)result[r.id]={lat,lon,osm_id:p.id};
   }
   VN48_FOOD_GEO=result;VN48_GEO_STATE='ready';
  }).catch(()=>{VN48_GEO_STATE='unavailable';}).finally(()=>{clearTimeout(timer);if(state.tab==='map'&&nearMode31()==='food')render();});
 }
-function nearFood31(){return vn48FoodRecords().filter(r=>VN48_FOOD_GEO[r.id]).map(r=>({...r,ko:r.name?.ko||r.name?.de,lat:VN48_FOOD_GEO[r.id].lat,lon:VN48_FOOD_GEO[r.id].lon}));}
+function nearFood31(){
+ return vn48FoodRecords().map(r=>{
+  const staticGeo=r.location,osmGeo=VN48_FOOD_GEO[r.id];
+  const known=Number.isFinite(staticGeo?.lat)&&Number.isFinite(staticGeo?.lng);
+  const geo=known?{lat:staticGeo.lat,lon:staticGeo.lng,source:'verified'}:osmGeo;
+  return geo?{...r,ko:r.name?.ko||r.name?.de,lat:geo.lat,lon:geo.lon,mapSource:known?'verified':'osm_live'}:null;
+ }).filter(Boolean);
+}
 function nearPlanChoices31(){return VN_COURSES36.map(c=>({id:c.id,name:c.title,duration:c.duration,category:c.category}));}
 function nearSelectedPlan31(){const choices=nearPlanChoices31();const id=choices.some(c=>c.id===state.nearPlanChoice)?state.nearPlanChoice:'B01';return VN_COURSES36.find(c=>c.id===id)||VN_COURSES36[0];}
 // Map catalogue: all 48 sights including provisional markers for places whose entrances are not verified.
@@ -1359,18 +1366,18 @@ function mapSights48(){return CATALOG48.filter(c=>Number.isFinite(Number(c.lat))
 function nearPage21(){
  const section=nearMode31(),a=anchor();
  if(section==='food'){if(!VN42_DB&&!VN42_LOADING&&!VN42_ERROR)vn42Load();if(VN42_DB)vn48LoadFoodGeo();}
- const choices=[['sights','볼거리'],['food','먹거리'],['wc','화장실'],['plan','계획']];
+ const choices=[['sights','볼거리'],['food','맛집'],['wc','화장실'],['plan','계획']];
  const menus=choices.map(([id,title])=>`<button type="button" class="chip ${section===id?'active':''}" data-act="section-near" data-value="${id}" aria-pressed="${section===id}">${title}</button>`).join('');
  const plan=section==='plan'?nearSelectedPlan31():null,options=nearPlanChoices31();
  const tools=section==='map'?`<form class="near31-search" id="near-search-form" role="search"><input id="near-search-input" type="search" class="near31-input" placeholder="명소·카페 이름 검색" aria-label="지도 장소 검색" value="${h(state.nearSearch||'')}"><button type="submit" aria-label="장소 찾기">⌕</button></form>`:section==='plan'?`<div class="near31-planbar vn41-nearplan"><select id="near-plan-choice" aria-label="지도에서 볼 여행 코스">${options.map(x=>`<option value="${h(x.id)}" ${plan?.id===x.id?'selected':''}>${h(x.category)} · ${h(x.name)} (${h(x.duration)})</option>`).join('')}</select></div>`:'';
  let items=[],resultTitle='';
  if(section==='wc'){const info=loadedFacilities.wc;items=info?.status==='ok'?nearest(info.points,a,{max:10,radius:3000}):[];resultTitle=info?.status==='failed'?'화장실 데이터를 불러오지 못했습니다':`공공화장실 · ${items.length}곳 (가까운 위치)`;}
  else if(section==='sights'){items=mapSights48().map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d).slice(0,10);resultTitle='볼거리 48곳 · 지도를 확대하면 개별 핀 표시';}
- else if(section==='food'){items=nearFood31().map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d);resultTitle='먹거리 '+vn48FoodRecords().length+'곳 · 지도 위치 확인 '+items.length+'곳'+(VN48_GEO_STATE==='loading'?' (위치 검색 중)':VN48_GEO_STATE==='unavailable'?' (위치 데이터 연결 실패)':'');}
+ else if(section==='food'){items=nearFood31().map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d);resultTitle='맛집 '+vn48FoodRecords().length+'곳 · 지도 핀 '+items.length+'곳'+(VN48_GEO_STATE==='loading'?' (위치 검색 중)':VN48_GEO_STATE==='unavailable'?' (위치 데이터 연결 실패)':'');}
  else if(section==='plan')resultTitle=(plan?.title||'코스 없음')+' · '+(plan?.duration||'');
  else resultTitle='원하는 명소를 검색하세요';
- const rows=section==='wc'?items.map(p=>`<div class="near-row"><span>${h(p.name||'공공화장실')} · 약 ${Math.round(p.distance||0)}m 직선</span><a class="near-footlink" target="_blank" rel="noopener noreferrer" href="${h(facilityRouteLink(p))}">길찾기</a></div>`).join(''):section==='sights'?items.map(p=>`<div class="near-row"><span>${h(p.ko)}</span><button data-act="detail" data-id="${h(p.id)}">상세</button></div>`).join(''):section==='food'?vn48FoodRecords().map(p=>`<div class="near-row"><span>${h(p.name?.ko||p.name?.de)} <small>${VN48_FOOD_GEO[p.id]?'지도 핀 연결':'위치 확인 전'}</small></span><button data-act="vn48-food-open" data-id="${h(p.id)}">소개</button><a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(p))}">Google 지도 ↗</a></div>`).join(''):'';
- const note=section==='wc'?'공공데이터 위치이며 개방 여부는 실시간으로 확인되지 않습니다.':section==='food'?'94개 맛집 소개와 목록을 연결했습니다. 지도 핀은 OpenStreetMap에서 식당명이 정확히 일치하는 장소에만 표시하며, 나머지는 Google 지도 링크로 확인하세요. 지도 위치 제공: © OpenStreetMap contributors (ODbL).':section==='plan'?'번호는 방문 순서, 점선은 단순 연결선입니다. 실제 도보 경로가 아닙니다.':section==='sights'?'관광명소 핀은 일부 근사 좌표입니다. 실제 출입구를 확인하세요.':'등록된 명소를 이름으로 검색할 수 있습니다.';
+ const rows=section==='wc'?items.map(p=>`<div class="near-row"><span>${h(p.name||'공공화장실')} · 약 ${Math.round(p.distance||0)}m 직선</span><a class="near-footlink" target="_blank" rel="noopener noreferrer" href="${h(facilityRouteLink(p))}">길찾기</a></div>`).join(''):section==='sights'?items.map(p=>`<div class="near-row"><span>${h(p.ko)}</span><button data-act="detail" data-id="${h(p.id)}">상세</button></div>`).join(''):section==='food'?vn48FoodRecords().map(p=>`<div class="near-row"><span>${h(p.name?.ko||p.name?.de)} <small>${(Number.isFinite(p.location?.lat)||VN48_FOOD_GEO[p.id])?'지도 핀 연결':'위치 확인 전'}</small></span><button data-act="vn48-food-open" data-id="${h(p.id)}">소개</button><a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(p))}">Google 지도 ↗</a></div>`).join(''):'';
+ const note=section==='wc'?'공공데이터 위치이며 개방 여부는 실시간으로 확인되지 않습니다.':section==='food'?'맛집 82곳의 목록을 연결했습니다. 지도 핀은 저장된 지도 좌표 또는 OpenStreetMap 이름이 일치한 식당만 표시합니다. 나머지는 아래 목록에서 Google 지도로 확인하세요. 지도 위치 제공: © OpenStreetMap contributors (ODbL).':section==='plan'?'번호는 방문 순서, 점선은 단순 연결선입니다. 실제 도보 경로가 아닙니다.':section==='sights'?'관광명소 핀은 일부 근사 좌표입니다. 실제 출입구를 확인하세요.':'등록된 명소를 이름으로 검색할 수 있습니다.';
  return `<section class="near-shell near31-shell" aria-label="내주변 지도"><div class="near-top near31-top"><div class="near-titleline near31-title"><strong class="near32-brand"><span class="near32-logo" aria-label="ViennaNow">V</span><span>내주변</span></strong><div class="near31-locations"><button data-act="use-gps" title="GPS로 내 위치 찾기" class="${a.label.startsWith('내 위치')?'active':''}">◎ 내 위치</button><button data-act="reset-anchor" title="슈테판 대성당 중심으로 이동" class="${!a.label.startsWith('내 위치')?'active':''}">⌂ 슈테판</button></div></div><nav class="near-filter-row near31-tabs" aria-label="지도 표시 내용">${menus}</nav></div><div class="near-mapframe near31-mapframe">${tools}<div id="map" role="application" aria-label="비엔나 지도"><div class="mapfallback">지도를 불러오는 중입니다</div></div></div><div class="near-bottom"><div class="near-summary"><b>${h(resultTitle)}</b></div><p class="near31-note">${h(note)}</p>${rows?`<details class="near-more"><summary>장소 목록 펼치기 ▾</summary>${rows}</details>`:''}</div></section>`;
 }
 function distKm21(lat1,lon1,lat2,lon2){const r=Math.PI/180,dlat=(lat2-lat1)*r,dlon=(lon2-lon1)*r;return 6371*2*Math.asin(Math.sqrt(Math.sin(dlat/2)**2+Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dlon/2)**2))}
@@ -1463,9 +1470,9 @@ function nearPlanLayer31(){
 }
 function nearFoodLayer31(){
  nearFood31().forEach(v=>{
-  const m=L.marker([Number(v.lat),Number(v.lon)],{icon:nearPin31('food')}).addTo(layerGroup);
+  const m=L.marker([Number(v.lat),Number(v.lon)],{icon:nearPin31('food'),title:v.ko}).addTo(layerGroup);
   const reason=v.description?.ko||v.quick_pick?.summary_ko||'대표 메뉴는 식당 정보에서 확인하세요.';
-  m.bindPopup(`<div class="vn48-popup"><b>${h(v.ko)}</b><p>${h(reason)}</p><small>OpenStreetMap 등록 위치 · 실제 출입구는 확인 필요</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">맛집 자세히 보기</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google 지도 ↗</a></div></div>`,{maxWidth:260});
+  m.bindPopup(`<div class="vn48-popup"><b>${h(v.ko)}</b><p>${h(reason)}</p><small>${v.mapSource==='verified'?'공개 지도에서 확인한 위치':'OpenStreetMap 이름 일치 위치'} · 실제 출입구는 확인 필요${v.operations?.status==='temporarily_closed'?' · 임시휴업':''}</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">맛집 자세히 보기</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google 지도 ↗</a></div></div>`,{maxWidth:260});
  });
  map.setView([anchor().lat,anchor().lon],13);
 }
@@ -1609,7 +1616,7 @@ async function autoDayWalk(){
   render();
 }
 function act(a,el){let id=el?.dataset?.id,value=el?.dataset?.value;switch(a){
-case 'vn48-food-open':{state.tab='food';state.vn42Open=id;state.foodQuery='';save();render();return;}
+case 'vn48-food-open':{const restaurant=VN42_DB?.restaurants?.find(r=>r.id===id);state.tab='food';state.vn42FoodCategory='all';state.vn42Open=id;state.foodQuery=restaurant?.name?.de||'';save();render();return;}
 case 'vn-filter-scroll':{const strip=document.querySelector('.vn40-filter-wrap .vn38-filterstrip');if(strip){strip.scrollBy({left:(value==='prev'?-1:1)*Math.max(170,strip.clientWidth*.75),behavior:'smooth'});}return;}
 case 'vn-course-filter':state.vnCourseFilter39=value;state.vnCourseDetail=null;save();render();return;
 case 'vn-course-detail':state.vnCourseDetail=id;save();render();$('main').scrollTop=0;return;
