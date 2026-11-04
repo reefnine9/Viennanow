@@ -354,6 +354,8 @@
 .vn48-editorial{padding:11px 12px;background:#f2f6f1;border-left:3px solid #3c8b78;border-radius:9px}
 .vn48-editorial b{display:block;margin-bottom:7px;font-size:12px}.vn48-editorial span{display:block;font-size:12px;line-height:1.8;white-space:pre-line}
 .vn48-popup p{font-size:11px;line-height:1.6;max-height:110px;overflow:auto}.vn48-popup small{font-size:10px;color:#687d7b}.vn48-popup button{border:0;border-radius:6px;background:#235d55;color:white;padding:6px;margin-top:6px;font-size:11px}
+
+.vn49-guide{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px;background:#f7f5ee;border:1px solid #e6dec9;border-radius:9px;font-size:11px}.vn49-guide b{font-weight:850}.vn49-guide a{color:#386c65;font-weight:750}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -1200,7 +1202,8 @@ function vn47StreetViewLink(r){
 }
 function foodPage21(){
  if(!VN42_DB&&!VN42_LOADING&&!VN42_ERROR)vn42Load();
- const opts=[['all','전체'],['must','필수 맛집'],['featured','대표 맛집'],['local_recommended','현지 추천'],['hidden_gem','숨은 맛집'],['personal','주민 맛집 노트'],['asian','한식·아시아'],['new','NEW']];
+ const opts=[['all','전체'],['must','필수 맛집'],['featured','대표 맛집'],['local_recommended','현지 추천'],['hidden_gem','숨은 맛집'],['michelin','미슐랭'],['asian','한식·아시아'],['new','NEW']];
+ if(state.vn42FoodCategory==='personal')state.vn42FoodCategory='michelin';
  const cat=state.vn42FoodCategory||'all';
  const nav=opts.map(([id,label])=>'<button class="vn42-chip '+(cat===id?'on':'')+'" aria-pressed="'+(cat===id)+'" data-act="vn42-food-filter" data-value="'+h(id)+'">'+h(label)+'</button>').join('');
  const top='<div class="vn42-top"><div class="vn42-logo"><span class="vn37-v">V</span><strong>먹거리</strong></div><div class="vn42-filters">'+nav+'</div></div>';
@@ -1208,15 +1211,15 @@ function foodPage21(){
  const isWarn=r=>(r.tags||[]).includes('visit_warning');
  const all=VN42_DB.restaurants;
  const base=all.filter(r=>!isWarn(r)||r.id==='restaurant-cafe-central');
- const items=base.filter(r=>cat==='all'||(cat==='must'?!!r.editorial?.must_visit:cat==='personal'?!!r.personal_review?.visited:(r.categories||[]).includes(cat)));
+ const items=base.filter(r=>cat==='all'||(cat==='must'?!!r.editorial?.must_visit:cat==='michelin'?r.editorial?.michelin?.distinction==='Bib Gourmand':(r.categories||[]).includes(cat))).sort((a,b)=>cat==='michelin'?(a.name?.de||'').localeCompare(b.name?.de||''):0);
  const q=(state.foodQuery||'').trim().toLocaleLowerCase();
  const shown=items.filter(r=>!q||[r.name?.de,r.name?.ko,r.name?.en,r.description?.ko,...(r.recommended_dishes||[])].filter(Boolean).join(' ').toLocaleLowerCase().includes(q));
- const label={featured:'대표 맛집',local_recommended:'현지 추천',hidden_gem:'숨은 맛집',asian:'한식·아시아',new:'NEW',personal:'주민 맛집 노트'};
+ const label={featured:'대표 맛집',local_recommended:'현지 추천',hidden_gem:'숨은 맛집',asian:'한식·아시아',new:'NEW',michelin:'빕 구르망'};
  const cards=shown.map(r=>{
   const name=r.name?.ko||r.name?.de||'';
   const secondary=name===r.name?.de?(r.quick_pick?.area_ko||'비엔나 · 오스트리아'):r.name?.de;
   const featured=!!r.editorial?.must_visit;
-  const tagNames=[...(featured?['★ 필수 맛집']:[]),...(r.categories||[]).map(c=>label[c]||c),...(r.operations?.status==='temporarily_closed'?['임시휴업']:[])];
+  const tagNames=[...(r.editorial?.michelin?.distinction==='Bib Gourmand'?['미쉐린 빕 구르망 2026']:[]),...(featured?['★ 필수 맛집']:[]),...(r.categories||[]).map(c=>label[c]||c),...(r.operations?.status==='temporarily_closed'?['임시휴업']:[])];
   const badges=tagNames.slice(0,3).map(t=>'<span class="vn42-tag">'+h(t)+'</span>').join('');
   const photo=r.media?.cover?.commercial_use_verified?r.media.cover:null;
   const thumb=photo?'<img class="vn43-photo" loading="lazy" src="'+h(photo.url)+'" alt="'+h(photo.caption_ko||name)+'" onerror="this.hidden=true;this.parentElement.classList.add(\'no-image\')">':'';
@@ -1232,7 +1235,7 @@ function foodPage21(){
   const alternative=r.operations?.temporary_alternative?'임시 카페: '+r.operations.temporary_alternative.name+' · '+r.operations.temporary_alternative.address:'';
   const credit=photo?'<p class="vn43-credit">사진: '+h(photo.author)+' · '+h(photo.license)+' · <a href="'+h(photo.source_page)+'" target="_blank" rel="noopener noreferrer">출처·이용 조건</a> (화면 맞춤 자르기)</p>':'';
   const gallery=expanded&&(r.media?.gallery||[]).length>1?'<div class="vn43-gallery">'+r.media.gallery.slice(1,3).filter(p=>p.commercial_use_verified).map(p=>'<figure><img loading="lazy" src="'+h(p.url)+'" alt="'+h(p.caption_ko||name)+'"><figcaption>사진: '+h(p.author)+' · '+h(p.license)+' · <a href="'+h(p.source_page)+'" target="_blank" rel="noopener noreferrer">원본</a></figcaption></figure>').join('')+'</div>':'';
-  const detail=expanded?'<div class="vn42-detail">'+(r.description?.ko?'<p class="vn48-editorial"><b>이 맛집을 선정한 이유</b><span>'+h(r.description.ko)+'</span></p>':'')+(reopen?'<p><b>'+h(reopen)+'</b></p>':'')+(alternative?'<p>'+h(alternative)+'</p>':'')+'<p>최신 위치·영업시간·메뉴·리뷰를 Google 지도에서 확인하세요. 예약 방법은 식당별로 다를 수 있습니다.</p>'+gallery+credit+'</div>':'';
+  const detail=expanded?'<div class="vn42-detail">'+(r.editorial?.michelin?.source?'<p class="vn49-guide"><b>미쉐린 가이드 빕 구르망 · 2026</b><a target="_blank" rel="noopener noreferrer" href="'+h(r.editorial.michelin.source)+'">미쉐린 공식 소개 확인 ↗</a></p>':'')+(r.description?.ko?'<p class="vn48-editorial"><b>이 맛집을 선정한 이유</b><span>'+h(r.description.ko)+'</span></p>':'')+(reopen?'<p><b>'+h(reopen)+'</b></p>':'')+(alternative?'<p>'+h(alternative)+'</p>':'')+'<p>최신 위치·영업시간·메뉴·리뷰를 Google 지도에서 확인하세요. 예약 방법은 식당별로 다를 수 있습니다.</p>'+gallery+credit+'</div>':'';
   return '<article class="vn42-card vn43-card"><div class="vn43-top">'+media+'<div class="vn43-info"><button class="vn42-item" data-act="vn42-food-open" data-id="'+h(r.id)+'" aria-expanded="'+expanded+'"><span><strong>'+h(name)+'</strong><small>'+h(secondary)+'</small></span><b aria-hidden="true">'+(expanded?'⌃':'›')+'</b></button><div class="vn42-tags">'+badges+'</div><p class="vn43-brief">'+h(brief)+'</p>'+(menu?'<p class="vn43-menu">추천 메뉴 · '+h(menu)+'</p>':'')+'</div></div>'+(photo?'<div class="vn43-inline-credit">사진: '+h(photo.author)+' · '+h(photo.license)+' · <a href="'+h(photo.source_page)+'" target="_blank" rel="noopener noreferrer">출처/라이선스</a> · 화면 맞춤 자르기</div>':'')+'<div class="vn47-links"><a class="vn43-maplink" href="'+h(mapUrl)+'" target="_blank" rel="noopener noreferrer">Google 지도에서 자세히 보기 ↗</a>'+streetAction+'</div>'+detail+'</article>';
  }).join('');
  return '<div class="vn42-wrap">'+top+'<div class="vn42-content"><input id="foodSearch21" class="search" value="'+h(state.foodQuery||'')+'" placeholder="맛집 이름 검색" aria-label="맛집 검색"><div class="vn42-summary"><b>'+shown.length+'곳</b><small>'+h(opts.find(v=>v[0]===cat)?.[1]||'전체')+' · 전체 '+base.length+'곳</small></div>'+(cards||'<div class="card soft">해당 분류의 맛집이 아직 없습니다.</div>')+'<p class="vn42-note">ViennaNow의 식당 추천 후보입니다. 자세한 위치, 최신 메뉴, 영업시간 및 예약 방법은 각 식당의 Google 지도를 확인해 주세요. 사진은 사용 조건을 확인한 것만 표시합니다. 거리뷰 버튼은 Google 지도로 연결되며, 해당 위치를 선택해 거리뷰를 열 수 있습니다.</p></div></div>';
