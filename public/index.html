@@ -1088,7 +1088,7 @@ const VN_ROUTE_ALIASES41={"호프부르크·미하엘광장":"미하엘광장","
 const VN_ROUTE_SKIP41=["점심","저녁","간식","선택 체험","자전거","보트","호이리게","가스트하우스","전통 카페","전통 레스토랑","전통 슈니첼","전통 공예","디자인·빈티지 상점","놀이기구","마을 산책","강변 산책","카페 또는 피크닉","카페·저녁","도심 점심","카페","상점"];
 function vnCoursePoint41(stop){
  const label=String(stop||'').trim();
- if(!label||VN_ROUTE_SKIP41.some(s=>label===s||label.startsWith(s+' ')||label.startsWith(s+'·')))return null;
+ if(!label||VN_ROUTE_SKIP41.some(s=>label===s||(s!=='카페'&&s!=='전통 카페'&&(label.startsWith(s+' ')||label.startsWith(s+'·')))))return null;
  const direct=VN_ROUTE_POINTS41[label]||VN_ROUTE_POINTS41[VN_ROUTE_ALIASES41[label]];
  if(direct)return {name:label,lat:direct[0],lon:direct[1]};
  const match=Object.keys(VN_ROUTE_POINTS41).filter(k=>k.length>3&&(label.includes(k)||k.includes(label))).sort((a,b)=>b.length-a.length)[0];
