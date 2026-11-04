@@ -14,7 +14,8 @@
     "2026-11-04: 추가 13곳의 장소 위치를 지도/식당 공식 주소와 대조하고 기록. Tian Restaurant 좌표 재검증 교정.",
     "2026-11-04: 추가 식당 3곳의 실좌표 및 9곳의 공식/영업자 주소 기록; 좌표가 없다고 주소를 추정 좌표로 변환하지 않음.",
     "2026-11-04: Trzesniewski Dorotheergasse 1 본점 좌표와 Kim Shop Währinger Straße 44 위치 추가.",
-    "2026-11-04: Heidenkummer 식당 OSM 장소 좌표 및 나머지 일부 식당 공식 주소·지점 구분을 검증해서 저장."
+    "2026-11-04: Heidenkummer 식당 OSM 장소 좌표 및 나머지 일부 식당 공식 주소·지점 구분을 검증해서 저장.",
+    "2026-11-04: Wiener Würstelstand Pfeilgasse, Speisekammer, Christian Lange 지도 검색용 주소를 현지 식당 가이드와 대조해 추가."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -3775,7 +3776,7 @@
         "area_ko": null,
         "google_maps_query": null
       },
-      "address_source": "https://www.google.com/maps/search/?api=1&query=Wiener+W%C3%BCrstelstand+Pfeilgasse+1+Wien",
+      "address_source": "https://kurier.at/leben/essen-trinken/top-5-beste-wuerstelstaende-wien/403123416",
       "address_checked_on": "2026-11-04"
     },
     {
@@ -3946,7 +3947,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Urban-Loritz-Platz, 1070 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -3993,7 +3994,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://goodnight.at/locations/1092-speisekammer",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-eh-scho-wuascht",
@@ -4070,7 +4073,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Avedikstraße 4, 1150 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -4117,7 +4120,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.falstaff.com/at/streetfood/wuerstelstand-christian-lange",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-leberkas-pepi",
