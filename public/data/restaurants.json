@@ -497,8 +497,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20666,
+        "lng": 16.37386,
+        "source": "https://mapcarta.com/N948703166",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -708,8 +711,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20226,
+        "lng": 16.37494,
+        "source": "https://mapcarta.com/N5156996030",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -772,8 +778,11 @@
       "district": null,
       "address": "Servitengasse 7, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2201042,
+        "lng": 16.3641491,
+        "source": "https://untappd.com/v/gasthaus-tante-liesl/13278362/photos",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
