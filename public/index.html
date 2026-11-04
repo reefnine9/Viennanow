@@ -568,7 +568,7 @@ function storyHero(){
  const id=FEATURED_PHOTOS[i],p=photoFor(id),c=catalogById(id);
  return `<section class="photo-story" aria-label="비엔나 명소 사진 갤러리"><img class="story-image" src="${h(p.url)}" data-legacy-photo="${h(p.legacyUrl||'')}" referrerpolicy="no-referrer" alt="${h(p.title)} 여행 사진" fetchpriority="high" onerror="photoFail23(this)"><div class="story-shade"></div><div class="story-top"><span>VIENNA, BEYOND THE POSTCARD</span><button class="story-expand" data-act="photo-full" data-id="${id}">⤢ 사진 확대</button></div><div class="story-caption"><span class="story-label">DISCOVER VIENNA · ${i+1} / ${FEATURED_PHOTOS.length}</span><h2>${h(p.title)}</h2><div class="story-sub">${h(c?.de||'Wien, Österreich')}</div><div class="story-actions"><button data-act="story-prev" class="circle-control" aria-label="이전 사진">‹</button><button data-act="story-next" class="circle-control" aria-label="다음 사진">›</button><button class="story-discover" data-act="detail" data-id="${id}">이 장소 둘러보기 ↗</button></div><div class="story-progress" aria-label="사진 갤러리 진행률"><i style="width:${Math.round((i+1)/FEATURED_PHOTOS.length*100)}%"></i></div></div></section>`}
 function photoTiles(ids=['A01','A03','A04','A09','A12','A14']){return `<div class="photo-tiles">${ids.map(id=>{const p=byId(id);if(!p)return '';return `<button class="photo-tile" data-act="detail" data-id="${id}">${photoImg(id,'tile-image')}<span class="tile-gradient"></span><span class="tile-label"><strong>${h(p.ko)}</strong><small>${h(p.de)}</small></span></button>`}).join('')}</div>`;}
-function photoCredits(){return `<div class="credit-list">${PHOTO_ASSETS.map(p=>`<div class="credit-row"><b>${h(p.title)}</b><span>${h(p.creator)} · ${h(p.license)}</span><div><a href="${h(p.source)}" target="_blank" rel="noopener noreferrer">사진 원본 ↗</a> · <a href="${h(p.licenseUrl)}" target="_blank" rel="noopener noreferrer">이용허락 ↗</a></div></div>`).join('')}</div>`;}
+function photoCredits(){const en=state.contentLang==='en';return `<div class="credit-list">${PHOTO_ASSETS.map(p=>`<div class="credit-row"><b>${h(en?(catalogById(p.placeId)?.en||catalogById(p.placeId)?.de||p.title):p.title)}</b><span>${h(p.creator)} · ${h(p.license)}</span><div><a href="${h(p.source)}" target="_blank" rel="noopener noreferrer">${en?'Original photo':'사진 원본'} ↗</a> · <a href="${h(p.licenseUrl)}" target="_blank" rel="noopener noreferrer">${en?'Licence':'이용허락'} ↗</a></div></div>`).join('')}</div>`;}
 let vn46Auto=null;
 function vn46StopAuto(){
  if(vn46Auto){cancelAnimationFrame(vn46Auto.raf);vn46Auto=null;}
@@ -767,6 +767,7 @@ function editorialInfo(c){
 
 function vn44Guide(id,short=false){
  const d=LONG_GUIDES48[id];if(!d)return '';
+ if(state.contentLang==='en'){const p=(LONG_GUIDES48_EN[id]||[]).map(x=>'<p>'+h(x)+'</p>').join('');return short?p:'<section class="vn44-guide"><h3>The story behind this place</h3>'+p+'</section>';}
  const p=d.p.map(x=>'<p>'+h(x)+'</p>').join('');
  if(short)return p;
  // Original records put "**권장 체류:** ..." in h while leaving t blank.
@@ -796,7 +797,7 @@ function catalogDetailLayer(c){
  <p class="sub">${h(c.de)}</p>
  ${vn63SightNav(c.id)}
  ${editorialInfo(c)}
- ${state.contentLang==='en'?'':vn44Guide(c.id)}
+ ${vn44Guide(c.id)}
  </section></div>`;
 }
 
@@ -1734,7 +1735,7 @@ function detailLayer(){
  <p class="sub">${h(p.de)}</p>
  ${vn63SightNav(p.id)}
  ${editorialInfo(cat)}
- ${state.contentLang==='en'?'':vn44Guide(p.id)}
+ ${vn44Guide(p.id)}
  </section></div>`;
 }
 function mapsLink(p){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((p.de||p.ko||'Wien')+(p.address?', '+p.address:', Wien'))}
