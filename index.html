@@ -259,6 +259,20 @@
 .leaflet-popup-content:has(.vn34-sight-card){margin:0!important;width:220px!important}
 .leaflet-popup-content-wrapper:has(.vn34-sight-card){padding:0;overflow:hidden;border-radius:11px}
 .leaflet-popup-close-button:has(+ .vn34-sight-card){z-index:2}
+
+/* Restore essential Leaflet pane layering omitted from the bundled fallback CSS.
+   Without these z-indexes, a popup can exist but remain behind the tile or marker panes. */
+.leaflet-map-pane{z-index:auto}
+.leaflet-tile-pane{z-index:200;pointer-events:none}
+.leaflet-overlay-pane{z-index:400;pointer-events:none}
+.leaflet-shadow-pane{z-index:500;pointer-events:none}
+.leaflet-marker-pane{z-index:600;pointer-events:auto}
+.leaflet-tooltip-pane{z-index:650;pointer-events:none}
+.leaflet-popup-pane{z-index:700;pointer-events:auto}
+.leaflet-popup{z-index:700;pointer-events:auto}
+.leaflet-popup-content-wrapper,.leaflet-popup-content,.leaflet-popup-tip-container{pointer-events:auto}
+.near31-leaflet-marker,.near31-leaflet-marker .near31-pin{pointer-events:auto;cursor:pointer}
+.vn34-sight-card{position:relative;z-index:1;pointer-events:auto}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -1150,7 +1164,9 @@ function nearSightPopup32(p){
   </button>`;
 }
 function showPlaces(){if(!map||!layerGroup)return;layerGroup.clearLayers();PLACES.forEach(p=>{
- L.marker([p.lat,p.lon],{icon:nearPin31('sights')}).addTo(layerGroup).bindPopup(nearSightPopup32(p),{maxWidth:248,minWidth:200,closeButton:true,autoPan:true});
+ const sightMarker=L.marker([p.lat,p.lon],{icon:nearPin31('sights'),riseOnHover:true}).addTo(layerGroup);
+ sightMarker.bindPopup(nearSightPopup32(p),{maxWidth:248,minWidth:200,closeButton:true,autoPan:true,autoPanPadding:[25,45]});
+ sightMarker.on('click',()=>{if(map&&sightMarker.getPopup())sightMarker.openPopup();});
 });map.setView([anchor().lat,anchor().lon],13);}
 function showFacilities(kind){if(!map||!layerGroup)return;layerGroup.clearLayers();const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
  nearest(info.points,anchor(),{max:55,radius:3000}).forEach(p=>L.marker([p.lat,p.lon],{icon:nearPin31('wc')}).addTo(layerGroup).bindPopup(`<b>${h(p.name||'공공화장실')}</b><br><small>${h(p.details||'')}</small><br><small>실시간 개방 여부 미확인</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a>`));
