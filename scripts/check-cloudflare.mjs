@@ -69,3 +69,10 @@ console.log('Map-first regression gate OK: full-height map, Leaflet CSS, resize 
 for(const key of ['near-utility-chip','near-inline-tools','aria-label="내주변 기능 및 위치"'])assert.ok(index.includes(key),'missing map toolbar: '+key);
 assert.ok(!index.includes("L.control.zoom({position:'bottomright'})"),'zoom widget must remain disabled on mobile map');
 console.log('Map toolbar and touch zoom regression gate OK.');
+
+// basemap.at HighDPI release gate: both nearby and curated-route maps use the Austrian official tiles.
+const basemapUrl='https://mapsneu.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg';
+assert.equal(index.split(basemapUrl).length-1,2,'both maps must use basemap.at HiDPI');
+assert.ok(index.includes('Grundkarte: <a href="https://basemap.at/'), 'map attribution must link to basemap.at');
+assert.ok(!index.includes('tile.openstreetmap.org'), 'legacy public tile provider must not remain');
+console.log('Austrian HiDPI map regression gate OK: two layers and attribution.');
