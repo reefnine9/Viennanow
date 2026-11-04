@@ -2,7 +2,9 @@
   "schema_version": "1.0.0",
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
-  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added. Owner-designated must-visit venues: nine; list has 94 unique venues after adding Melker Stiftskeller and Griechenbeisl. UI may display these clearly labeled editorial candidates while all publication.approved flags remain false. The visit-warning filter is hidden from the app; operational caveats remain in individual venue details. Café Central is surfaced as an informational exception with winter 2026 reopening expectation (no specific confirmed date).",
+  "notes": [
+    "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록."
+  ],
   "category_labels": {
     "featured": "대표 맛집",
     "local_recommended": "현지 추천",
@@ -1133,9 +1135,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wuerstelstand%20Bitzinger.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Wuerstelstand%20Bitzinger.jpg",
+          "author": "Wienwiki / Johann Werfring",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "알베르티나 앞 비칭거 소시지 가판대"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wuerstelstand%20Bitzinger.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wuerstelstand%20Bitzinger.jpg",
+            "author": "Wienwiki / Johann Werfring",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "알베르티나 앞 비칭거 소시지 가판대"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -1192,9 +1218,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Trzesniewski%20001.JPG?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Trzesniewski%20001.JPG",
+          "author": "Gryffindor",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "트르제슈니에프스키 도로테어가세 지점"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Trzesniewski%20001.JPG?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Trzesniewski%20001.JPG",
+            "author": "Gryffindor",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "트르제슈니에프스키 도로테어가세 지점"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -1251,9 +1301,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zum%20Schwarzen%20Kameel%20interior%202007.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Zum%20Schwarzen%20Kameel%20interior%202007.jpg",
+          "author": "Gryffindor",
+          "license": "Public domain",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "슈바르첸 카멜 실내"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zum%20Schwarzen%20Kameel%20interior%202007.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Zum%20Schwarzen%20Kameel%20interior%202007.jpg",
+            "author": "Gryffindor",
+            "license": "Public domain",
+            "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "슈바르첸 카멜 실내"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -2050,9 +2124,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Meierei%20im%20Stadtpark.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Meierei%20im%20Stadtpark.jpg",
+          "author": "Richard Shaw",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "마이에라이에서 제공하는 치즈"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Meierei%20im%20Stadtpark.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Meierei%20im%20Stadtpark.jpg",
+            "author": "Richard Shaw",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "마이에라이에서 제공하는 치즈"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -2109,9 +2207,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%2003%20Steirereck%20a.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Wien%2003%20Steirereck%20a.jpg",
+          "author": "Gugerell",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "슈타이러에크 식당 외관"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%2003%20Steirereck%20a.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wien%2003%20Steirereck%20a.jpg",
+            "author": "Gugerell",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "슈타이러에크 식당 외관"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -3407,9 +3529,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LEO%20Wiener%20W%C3%BCrstelstand%2C%20Vienna.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:LEO%20Wiener%20W%C3%BCrstelstand%2C%20Vienna.jpg",
+          "author": "Herzi Pinki",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "비엔나 레오 소시지 가판대"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LEO%20Wiener%20W%C3%BCrstelstand%2C%20Vienna.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:LEO%20Wiener%20W%C3%BCrstelstand%2C%20Vienna.jpg",
+            "author": "Herzi Pinki",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "비엔나 레오 소시지 가판대"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -3643,9 +3789,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Leberkas-Pepi%20in%20Wien.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Leberkas-Pepi%20in%20Wien.jpg",
+          "author": "Sandor Somkuti",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "비엔나 레버카스 페피 매장"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Leberkas-Pepi%20in%20Wien.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Leberkas-Pepi%20in%20Wien.jpg",
+            "author": "Sandor Somkuti",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "비엔나 레버카스 페피 매장"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -3702,9 +3872,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/At%20Vienna%202025%20473.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:At%20Vienna%202025%20473.jpg",
+          "author": "Mike Peel / www.mikepeel.net",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "알테 카이저뮐레의 포르치니 라비올리"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/At%20Vienna%202025%20473.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:At%20Vienna%202025%20473.jpg",
+            "author": "Mike Peel / www.mikepeel.net",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "알테 카이저뮐레의 포르치니 라비올리"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -5543,9 +5737,33 @@
         "must_visit": false
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caf%C3%A9%20Central%20interior%2C%20Vienna.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9%20Central%20interior%2C%20Vienna.jpg",
+          "author": "Gryffindor",
+          "license": "Public domain",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "카페 센트럴의 역사적인 실내"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caf%C3%A9%20Central%20interior%2C%20Vienna.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9%20Central%20interior%2C%20Vienna.jpg",
+            "author": "Gryffindor",
+            "license": "Public domain",
+            "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "카페 센트럴의 역사적인 실내"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
