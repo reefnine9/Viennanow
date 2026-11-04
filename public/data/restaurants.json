@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
-  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added. Owner-designated must-visit venues: nine; list has 94 unique venues after adding Melker Stiftskeller and Griechenbeisl. UI may display these clearly labeled editorial candidates while all publication.approved flags remain false.",
+  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added. Owner-designated must-visit venues: nine; list has 94 unique venues after adding Melker Stiftskeller and Griechenbeisl. UI may display these clearly labeled editorial candidates while all publication.approved flags remain false. The visit-warning filter is hidden from the app; operational caveats remain in individual venue details. Café Central is surfaced as an informational exception with winter 2026 reopening expectation (no specific confirmed date).",
   "category_labels": {
     "featured": "대표 맛집",
     "local_recommended": "현지 추천",
@@ -4432,25 +4432,25 @@
       "id": "restaurant-cafe-central",
       "name": {
         "de": "Café Central",
-        "ko": null,
+        "ko": "카페 센트럴",
         "en": "Café Central"
       },
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Herrengasse / Strauchgasse, 1010 Wien, Austria",
       "location": {
         "lat": null,
         "lng": null
       },
       "recommended_dishes": [],
       "price_range": null,
-      "website": null,
+      "website": "https://cafecentral.wien/",
       "reservation_url": null,
       "description": {
-        "ko": null,
-        "en": null,
-        "de": null
+        "ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.",
+        "en": "Closed for renovation since 16 March 2026. Reopening is planned for winter 2026, with no exact date announced. The temporary DECENTRAL café operates at Freyung 3/1, 1010 Vienna.",
+        "de": "Wegen Generalsanierung seit 16. März 2026 geschlossen. Wiedereröffnung für Winter 2026 vorgesehen; kein genaues Datum bestätigt. Zwischenzeitlich ist das DECENTRAL, Freyung 3/1, geöffnet."
       },
       "personal_review": {
         "visited": false,
@@ -4459,19 +4459,35 @@
         "visited_at": null
       },
       "verification": {
-        "status": "unverified",
-        "last_checked": null,
-        "sources": []
+        "status": "verified",
+        "last_checked": "2026-11-04",
+        "sources": [
+          "https://cafecentral.wien/en/",
+          "https://www.wien.info/en/dine-drink/coffeehouses/in-the-old-city-348958"
+        ]
       },
       "operations": {
         "status": "temporarily_closed",
-        "note": null
+        "note": "공식 발표: 2026년 겨울 재개장 예정 (정확한 날짜 미정)",
+        "reopening": {
+          "expected_period": "2026년 겨울",
+          "confirmed_date": null,
+          "announcement_status": "planned",
+          "last_checked": "2026-11-04"
+        },
+        "temporary_alternative": {
+          "name": "DECENTRAL",
+          "address": "Freyung 3/1, 1010 Wien, Austria",
+          "hours": "매일 07:30–22:00",
+          "source": "https://cafecentral.wien/en/"
+        }
       },
       "publication": {
         "approved": false
       },
       "tags": [
-        "visit_warning"
+        "visit_warning",
+        "cafe_information"
       ],
       "editorial": {
         "must_visit": false
