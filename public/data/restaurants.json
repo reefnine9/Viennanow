@@ -32,7 +32,10 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "슈니첼",
+        "감자샐러드"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -62,6 +65,40 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Figlm%C3%BCller-Schnitzel%20in%20Wien.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Figlm%C3%BCller-Schnitzel%20in%20Wien.jpg",
+          "author": "Brücke-Osteuropa",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "피그뮐러의 슈니첼"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Figlm%C3%BCller-Schnitzel%20in%20Wien.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Figlm%C3%BCller-Schnitzel%20in%20Wien.jpg",
+            "author": "Brücke-Osteuropa",
+            "license": "CC0 1.0",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "피그뮐러의 슈니첼"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "접시를 가득 채우는 커다란 슈니첼로 유명한 비엔나 대표 맛집.",
+        "area_ko": "슈테판 대성당 주변",
+        "google_maps_query": "Figlmüller Wollzeile 5 1010 Wien"
       }
     },
     {
@@ -81,7 +118,9 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "타펠슈피츠"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -111,6 +150,52 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Plachutta%20Wien%20Wollzeile-DSC1272w.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Plachutta%20Wien%20Wollzeile-DSC1272w.jpg",
+          "author": "Peter Haas (P e z i)",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Plachutta Wollzeile 식당 외관"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Plachutta%20Wien%20Wollzeile-DSC1272w.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Plachutta%20Wien%20Wollzeile-DSC1272w.jpg",
+            "author": "Peter Haas (P e z i)",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Plachutta Wollzeile 식당 외관"
+          },
+          {
+            "type": "interior",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/In%20Plachutta%20Wollzeile.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:In%20Plachutta%20Wollzeile.jpg",
+            "author": "H.R. Tsua",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Plachutta Wollzeile 매장 내 식탁"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "진한 소고기 육수와 다양한 곁들임을 즐기는 비엔나 전통 요리 타펠슈피츠 전문점.",
+        "area_ko": "슈타트파크·구시가지",
+        "google_maps_query": "Plachutta Wollzeile 38 1010 Wien"
       }
     },
     {
@@ -160,6 +245,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -179,7 +274,9 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "폭립"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -209,6 +306,16 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "needs_photo"
+      },
+      "quick_pick": {
+        "summary_ko": "푸짐한 폭립을 즐기기 좋은 시내 중심가의 립 전문점.",
+        "area_ko": "비엔나 1구 중심가",
+        "google_maps_query": "Ribs of Vienna Weihburggasse 22 1010 Wien"
       }
     },
     {
@@ -228,7 +335,10 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돼지고기 요리",
+        "자체 양조 맥주"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -258,6 +368,40 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Salm%20Br%C3%A4u%20Honig-M%C3%A4rzen.JPG?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Salm%20Br%C3%A4u%20Honig-M%C3%A4rzen.JPG",
+          "author": "Michael Kranewitter",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Salm Bräu 맥주 관련 사진"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Salm%20Br%C3%A4u%20Honig-M%C3%A4rzen.JPG?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Salm%20Br%C3%A4u%20Honig-M%C3%A4rzen.JPG",
+            "author": "Michael Kranewitter",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Salm Bräu 맥주 관련 사진"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "벨베데레 근처의 양조장 식당. 맥주와 오스트리아식 돼지고기 요리로 알려진 곳.",
+        "area_ko": "벨베데레 궁전 주변",
+        "google_maps_query": "Salm Bräu Rennweg 8 1030 Wien"
       }
     },
     {
@@ -277,7 +421,10 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "슈니첼",
+        "굴라슈"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -307,6 +454,16 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "needs_photo"
+      },
+      "quick_pick": {
+        "summary_ko": "시내 중심가에서 슈니첼과 굴라슈 같은 전통적인 비엔나 가정식을 즐기는 식당.",
+        "area_ko": "알베르티나·오페라 주변",
+        "google_maps_query": "Reinthaler's Beisl Gluckgasse 5 1010 Wien"
       }
     },
     {
@@ -356,6 +513,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -405,6 +572,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -424,7 +601,10 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "슈텔체",
+        "맥주"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -454,6 +634,40 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schweizerhaus%20Stelze.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Schweizerhaus%20Stelze.jpg",
+          "author": "Johann Werfring / Wienwiki",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Schweizerhaus 슈텔체"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schweizerhaus%20Stelze.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Schweizerhaus%20Stelze.jpg",
+            "author": "Johann Werfring / Wienwiki",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Schweizerhaus 슈텔체"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "프라터 공원에서 커다란 돼지 족발 슈텔체와 맥주를 즐기는 전통 식당.",
+        "area_ko": "프라터 공원",
+        "google_maps_query": "Schweizerhaus Prater 116 1020 Wien"
       }
     },
     {
@@ -503,6 +717,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -552,6 +776,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -601,6 +835,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -651,6 +895,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -700,6 +954,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -749,6 +1013,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -798,6 +1072,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -847,6 +1131,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -896,6 +1190,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -945,6 +1249,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -994,6 +1308,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1043,6 +1367,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1092,6 +1426,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1111,7 +1455,9 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "폭립"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -1141,6 +1487,40 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Restaurant%20Strandcaf%C3%A9.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Restaurant%20Strandcaf%C3%A9.jpg",
+          "author": "Tauralbus",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "알테 도나우 Strandcafé 레스토랑의 야외 공간"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Restaurant%20Strandcaf%C3%A9.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Restaurant%20Strandcaf%C3%A9.jpg",
+            "author": "Tauralbus",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "알테 도나우 Strandcafé 레스토랑의 야외 공간"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "알테 도나우 물가에서 폭립을 즐기는 강변 레스토랑.",
+        "area_ko": "알테 도나우",
+        "google_maps_query": "Strandcafé an der Alten Donau Florian Berndl Gasse 20 1220 Wien"
       }
     },
     {
@@ -1191,6 +1571,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1241,6 +1631,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1290,6 +1690,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1340,6 +1750,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1390,6 +1810,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1440,6 +1870,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1489,6 +1929,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1539,6 +1989,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1588,6 +2048,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1637,6 +2107,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1686,6 +2166,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1735,6 +2225,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1784,6 +2284,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1833,6 +2343,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1882,6 +2402,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1931,6 +2461,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -1980,6 +2520,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2029,6 +2579,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2078,6 +2638,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2127,6 +2697,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2176,6 +2756,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2225,6 +2815,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2274,6 +2874,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2323,6 +2933,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2372,6 +2992,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2421,6 +3051,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2470,6 +3110,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2519,6 +3169,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2568,6 +3228,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2617,6 +3287,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2666,6 +3346,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2715,6 +3405,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2764,6 +3464,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2813,6 +3523,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2862,6 +3582,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2911,6 +3641,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -2960,6 +3700,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3009,6 +3759,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3056,6 +3816,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3105,6 +3875,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3154,6 +3934,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3203,6 +3993,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3252,6 +4052,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3301,6 +4111,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3350,6 +4170,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3399,6 +4229,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3448,6 +4288,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3497,6 +4347,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3546,6 +4406,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3595,6 +4465,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3644,6 +4524,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3691,6 +4581,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3740,6 +4640,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3789,6 +4699,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3838,6 +4758,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3887,6 +4817,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3936,6 +4876,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -3985,6 +4935,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4034,6 +4994,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4083,6 +5053,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4132,6 +5112,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4181,6 +5171,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4230,6 +5230,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4279,6 +5289,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4328,6 +5348,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4377,6 +5407,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4426,6 +5466,16 @@
       "tags": [],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4491,6 +5541,16 @@
       ],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4540,6 +5600,16 @@
       ],
       "editorial": {
         "must_visit": false
+      },
+      "media": {
+        "cover": null,
+        "gallery": [],
+        "review_status": "pending"
+      },
+      "quick_pick": {
+        "summary_ko": null,
+        "area_ko": null,
+        "google_maps_query": null
       }
     },
     {
@@ -4559,7 +5629,9 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "오스트리아 전통음식"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -4589,6 +5661,40 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Melker%20Stiftskeller%2C%20Kaisersteinstufen.JPG?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Melker%20Stiftskeller%2C%20Kaisersteinstufen.JPG",
+          "author": "Helmuth Furch",
+          "license": "CC BY-SA 3.0 DE",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Melker Stiftskeller 관련 건물 공간"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Melker%20Stiftskeller%2C%20Kaisersteinstufen.JPG?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Melker%20Stiftskeller%2C%20Kaisersteinstufen.JPG",
+            "author": "Helmuth Furch",
+            "license": "CC BY-SA 3.0 DE",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Melker Stiftskeller 관련 건물 공간"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "도심의 역사적인 분위기에서 오스트리아 전통음식을 맛볼 수 있는 식당.",
+        "area_ko": "쇼텐가세 주변",
+        "google_maps_query": "Melker Stiftskeller Schottengasse 3 1010 Wien"
       }
     },
     {
@@ -4608,7 +5714,9 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "오스트리아 전통음식"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
@@ -4638,7 +5746,52 @@
       "tags": [],
       "editorial": {
         "must_visit": true
+      },
+      "media": {
+        "cover": {
+          "type": "venue",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Griechenbeisl.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Griechenbeisl.jpg",
+          "author": "Clemens PFEIFFER, Vienna/Austria",
+          "license": "Attribution-only",
+          "license_url": "https://commons.wikimedia.org/wiki/File:Griechenbeisl.jpg",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Griechenbeisl 식당 외관"
+        },
+        "gallery": [
+          {
+            "type": "venue",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Griechenbeisl.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Griechenbeisl.jpg",
+            "author": "Clemens PFEIFFER, Vienna/Austria",
+            "license": "Attribution-only",
+            "license_url": "https://commons.wikimedia.org/wiki/File:Griechenbeisl.jpg",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Griechenbeisl 식당 외관"
+          }
+        ],
+        "review_status": "file_license_reviewed"
+      },
+      "quick_pick": {
+        "summary_ko": "오랜 역사를 가진 비엔나 전통 식당. 분위기 있는 옛 건물에서 현지 요리를 즐길 수 있는 곳.",
+        "area_ko": "구시가지·도나우 운하 주변",
+        "google_maps_query": "Griechenbeisl Fleischmarkt 11 1010 Wien"
       }
     }
-  ]
+  ],
+  "media_policy": {
+    "commercial_use_only": true,
+    "approved_sources": [
+      "Wikimedia Commons individual commercially reusable file license",
+      "Explicit photographer/restaurant commercial permission"
+    ],
+    "no_generic_photo_misrepresentation": true,
+    "missing_image_behavior": "text_only",
+    "attribution_display": "photo credit in restaurant card/details",
+    "notes": "Wikimedia images retain individual license obligations. CSS cropping is disclosed; ShareAlike images require careful derivative handling. Images not browser load-tested."
+  }
 }
