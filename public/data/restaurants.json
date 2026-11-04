@@ -4583,7 +4583,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Rechte Wienzeile 49, 1050 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -4593,7 +4593,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "동아시아식 풍미를 찾는 방문객을 위한 후보로 포함했다. 정확한 대표 요리와 추천 메뉴는 최신 식당 정보를 확인하는 편이 좋다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
+        "ko": "나슈마르크트 인근의 중국 요리 전문점으로, 수제 딤섬과 손으로 뽑은 면, 북경오리가 대표적인 강점이다. 미식 가이드 Falstaff도 이러한 메뉴와 합리적인 가격을 소개한다. 비엔나 여행 중 오스트리아 요리와 다른 풍미를 찾는 사람에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -4604,9 +4604,11 @@
         "visited_at": null
       },
       "verification": {
-        "status": "unverified",
+        "status": "partially_verified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.falstaff.com/at/restaurants/red-bowl-wien"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4618,7 +4620,7 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "동아시아식 풍미를 찾는 방문객을 위한 후보로 포함했다. 정확한 대표 요리와 추천 메뉴는 최신 식당 정보를 확인하는 편이 좋다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
+        "selection_reason_ko": "나슈마르크트 인근의 중국 요리 전문점으로, 수제 딤섬과 손으로 뽑은 면, 북경오리가 대표적인 강점이다. 미식 가이드 Falstaff도 이러한 메뉴와 합리적인 가격을 소개한다. 비엔나 여행 중 오스트리아 요리와 다른 풍미를 찾는 사람에게 추천한다.",
         "story_review": "editorial-draft-needs-verification"
       },
       "media": {
@@ -4629,8 +4631,10 @@
       "quick_pick": {
         "summary_ko": null,
         "area_ko": null,
-        "google_maps_query": null
-      }
+        "google_maps_query": "Red Bowl, Rechte Wienzeile 49, 1050 Wien"
+      },
+      "address_source": "https://www.falstaff.com/at/restaurants/red-bowl-wien",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-bibim",
