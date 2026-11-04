@@ -440,7 +440,13 @@
 .vn-settings-language{display:flex;flex-direction:column;gap:10px;border-color:#c5d9d1;background:#f4f9f6}
 .vn-settings-language-title{display:block;font-size:17px;font-weight:850;line-height:1.4;color:#163547}
 .vn-settings-language-select{width:100%;min-height:46px;border:1px solid #c3d4d0;border-radius:12px;padding:10px 12px;background:#fff;color:#163547;font-size:14px;font-weight:750}
-</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright"><button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
+
+/* Header language switch: flags only, aligned right */
+.header .vn-flag-switch{display:flex;align-items:center;justify-content:flex-end;gap:4px;margin-left:auto;flex:none}
+.header .vn-flag-button{width:35px;height:37px;padding:0;border:1px solid transparent;border-radius:9px;background:transparent;font-size:23px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.header .vn-flag-button.selected{background:#edf3ef;border-color:#b7d2c9}
+.header .vn-flag-button:focus-visible{outline:2px solid #26766b;outline-offset:2px}
+</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright vn-flag-switch" role="group" aria-label="Language selection"><button type="button" class="vn-flag-button" data-act="set-language" data-value="ko" aria-label="한국어" title="한국어">🇰🇷</button><button type="button" class="vn-flag-button" data-act="set-language" data-value="en" aria-label="English" title="English">🇬🇧</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 'use strict';
@@ -1765,26 +1771,6 @@ function facilityPanel(){
 }
 
 
-function vnSettingsLanguageControl(){
- return `<div class="card vn-settings-language"><label for="vn-language" class="vn-settings-language-title">Language / 언어</label><select id="vn-language" class="vn-settings-language-select" aria-label="Language / 언어"><option value="ko" ${state.contentLang==='ko'?'selected':''}>🇰🇷 한국어</option><option value="en" ${state.contentLang==='en'?'selected':''}>🇬🇧 English</option></select></div>`;
-}
-function vnSettingsEnglish(){
- return '<div class="drawerbg" data-act="close-settings"><section class="drawer" role="dialog" aria-modal="true" aria-label="App settings and information">'
- +'<div class="row between"><span class="kicker">APP SETTINGS</span><button class="miniopt" data-act="close-settings">✕ Close</button></div>'
- +'<div class="h1">Settings & App Information</div>'
- +vnSettingsLanguageControl()
- +'<div class="card"><b>Saved data</b>'
- +'<p class="sub">Your saved places and trip plans are stored locally in this browser on this device. Clearing browser data may delete them.</p></div>'
- +'<div class="card"><b>📷 Photo credits and licences</b><p class="sub"><a href="photo-check.html" target="_blank" rel="noopener noreferrer">Review photos of 48 sights and dining images ↗</a></p>'
- +'<p class="sub">Photo credits and usage conditions are recorded for individual Wikimedia Commons files. Before publication, verify each original file licence and any additional rights restrictions. Images may be cropped to fit the display and require an internet connection to load.</p>'
- +photoCredits()+'</div>'
- +'<div class="card soft"><b>🛠 Developer and data diagnostics</b><p class="sub">The tools below are for development and quality checks, not everyday travel use. Live API checks require the Cloudflare deployment.</p>'
- +'<div class="compact-list"><a class="btn outline block" href="health.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">Public data connections and coverage ↗</a>'
- +'<a class="btn outline block" href="route_qa.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">Walking directions API test ↗</a>'
- +'<a class="btn outline block" href="coordinate_review.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">Review coordinates for 16 sights ↗</a></div></div>'
- +'<p class="notice-info">This app has not yet been fully validated for real-world travel. Always verify reservations, opening hours and directions with official services.</p></section></div>';
-}
-function settingsLayer(){if(state.contentLang==='en')return vnSettingsEnglish();return `<div class="drawerbg" data-act="close-settings"><section class="drawer" role="dialog" aria-modal="true" aria-label="설정 및 데이터 진단"><div class="row between"><span class="kicker">APP SETTINGS</span><button class="miniopt" data-act="close-settings">✕ 닫기</button></div><div class="h1">설정·앱 정보</div>${vnSettingsLanguageControl()}<div class="card"><b>저장 데이터</b><p class="sub">저장: 현재 기기의 브라우저 로컬 저장소를 사용합니다. 브라우저 데이터를 삭제하면 일정도 사라질 수 있습니다.</p></div><div class="card"><b>📷 사진 출처 및 이용허락</b><p class="sub"><a href="photo-check.html" target="_blank" rel="noopener noreferrer">사진 48곳 및 먹거리 이미지 연결 점검 ↗</a></p><p class="sub">Wikimedia Commons 파일별 사용조건 기록을 보관합니다. 출시 전 원본 페이지의 실제 라이선스와 권리 제한을 다시 확인해야 합니다. 화면 맞춤에 따라 표시 영역이 잘려 보입니다. 사진은 온라인에서 로딩되므로 인터넷 연결이 필요합니다.</p>${photoCredits()}</div><div class="card soft"><b>🛠 개발·데이터 진단</b><p class="sub">아래 도구는 관광객용 기능이 아니라 개발자 품질 점검용입니다. 실제 API 검증에는 Cloudflare 배포가 필요합니다.</p><div class="compact-list"><a class="btn outline block" href="health.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">공공데이터 연결·수집 범위 ↗</a><a class="btn outline block" href="route_qa.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">도보 API 시험 ↗</a><a class="btn outline block" href="coordinate_review.html" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">명소 16곳 좌표 검토 ↗</a></div></div><p class="notice-info">본 앱은 아직 여행 실사용 검증 전입니다. 실제 예약, 관람시간, 길찾기는 공식 서비스에서 확인해야 합니다.</p></section></div>`}
 let lastScreenKey='';
 function render(){
  const main=$('main');
@@ -1796,7 +1782,6 @@ function render(){
  if(state.fullPhoto){vn46StopAuto();$('layer').innerHTML=photoLayer();vn46Init();return;}
  if(state.vn64FoodDetail){$('layer').innerHTML=vn64FoodDetail();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
- if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
  if(state.detail){$('layer').innerHTML=detailLayer();return;}
  if(state.routeEdit){$('layer').innerHTML=routeLayer();return;}
  const vn38Scroll=$('main').querySelector('.vn38-filterstrip')?.scrollLeft??0;
@@ -2142,7 +2127,7 @@ case'vn62-shop-open':state.vn62ShopView='list';state.vn62ShopDetail=value||id;sa
 case'vn62-shop-back':state.vn62ShopDetail=null;save();render();return;
 case'vn62-shop-home':state.vn62ShopView=null;state.vn62ShopDetail=null;save();render();return;
 case'vn62-shop-filter':state.vn62ShopFilter=value;save();render();return;
-case'go-guide':state.tab='home';state.homeView='overview';state.vn62ShopView=null;state.vn62ShopDetail=null;state.homeGuide=true;state.guideTopic=null;save();render();return;case'guide-topic':state.guideTopic=value;save();render();return;case'guide-back':state.guideTopic=null;state.homeGuide=true;save();render();return;case'vn62-guide-home':state.guideTopic=null;state.homeGuide=false;save();render();return;case'facility-shortcut':state.facility=['wc','water','stops'].includes(value)?value:'wc';state.nearSection=state.facility==='wc'?'wc':'map';navTo('map');return;case'settings':state.settingsOpen=true;render();return;case'close-settings':state.settingsOpen=false;render();return;case'detail-to-plan':{let pid=state.detail;if(pid)state.preferences[pid]='must';state.manualPlan=null;state.editDraft=null;state.detail=null;state.tab='itinerary';state.planView='places';state.itinerary=null;save();render();return;}case'go-map':navTo('map');return;case 'vn63-sight-slide':{const all=vn63SightSequence(),current=state.detail||state.expDetail19;const i=all.findIndex(p=>p.id===current);if(i<0||all.length<2)return;vn63OpenSight(all[(i+(Number(value)>0?1:-1)+all.length)%all.length].id);render();return;}
+case'go-guide':state.tab='home';state.homeView='overview';state.vn62ShopView=null;state.vn62ShopDetail=null;state.homeGuide=true;state.guideTopic=null;save();render();return;case'guide-topic':state.guideTopic=value;save();render();return;case'guide-back':state.guideTopic=null;state.homeGuide=true;save();render();return;case'vn62-guide-home':state.guideTopic=null;state.homeGuide=false;save();render();return;case'facility-shortcut':state.facility=['wc','water','stops'].includes(value)?value:'wc';state.nearSection=state.facility==='wc'?'wc':'map';navTo('map');return;case'set-language':{const next=value==='en'?'en':'ko';if(state.contentLang!==next){state.contentLang=next;save();render();}return;}case'detail-to-plan':{let pid=state.detail;if(pid)state.preferences[pid]='must';state.manualPlan=null;state.editDraft=null;state.detail=null;state.tab='itinerary';state.planView='places';state.itinerary=null;save();render();return;}case'go-map':navTo('map');return;case 'vn63-sight-slide':{const all=vn63SightSequence(),current=state.detail||state.expDetail19;const i=all.findIndex(p=>p.id===current);if(i<0||all.length<2)return;vn63OpenSight(all[(i+(Number(value)>0?1:-1)+all.length)%all.length].id);render();return;}
 case'detail':state.detail=id;render();return;case'close-detail':state.detail=null;render();return;case'must-detail':state.preferences[state.detail]='must';state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.detail=null;save();render();toast('필수 명소로 선택했습니다. 일정 재생성이 필요합니다.');return;case'focus':state.focus=value;save();render();return;case'choice':state.preferences[id]=({must:'no',no:'wish',wish:'must'})[state.preferences[id]||'wish'];state.manualPlan=null;state.editDraft=null;state.itinerary=null;save();render();return;case'visit-mode':state.options[id]=el.value||value;state.itinerary=null;save();render();return;case'add-event':{
  const title=String($('eventTitle')?.value||'').trim(),date=$('eventDate')?.value,start=$('eventStart')?.value,end=$('eventEnd')?.value,placeId=$('eventPlace')?.value||'';
  const ev={id:'evt_'+Date.now()+'_'+Math.floor(Math.random()*100000),title,date,start,end,placeId,bufferBefore:30,bufferAfter:15};
@@ -2238,8 +2223,7 @@ function vnTranslateText(text){
 }
 function vnTranslateDocument(){
  const english=state.contentLang==='en';document.documentElement.lang=english?'en':'ko';
- const settingsButton=document.querySelector('.header-settings');if(settingsButton){settingsButton.textContent=english?'⚙ Settings':'⚙ 설정';settingsButton.setAttribute('aria-label',english?'Settings and development information':'설정 및 개발 정보');}
- const dropdown=document.getElementById('vn-language');if(dropdown&&dropdown.value!==state.contentLang)dropdown.value=state.contentLang;
+ for(const btn of document.querySelectorAll('.vn-flag-button')){const selected=btn.dataset.value===state.contentLang;btn.classList.toggle('selected',selected);btn.setAttribute('aria-pressed',String(selected));}
  if(!english)return;
  for(const root of [document.getElementById('main'),document.getElementById('layer'),document.getElementById('bottom'),document.getElementById('ad-slot'),document.querySelector('.leaflet-popup-pane'),document.getElementById('toast')]){
   if(!root)continue;const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];let n;
@@ -2250,7 +2234,6 @@ function vnTranslateDocument(){
 }
 const vnOriginalRender=render;
 render=function(){vnOriginalRender();vnTranslateDocument();};
-document.addEventListener('change',e=>{if(e.target&&e.target.id==='vn-language'){state.contentLang=e.target.value==='en'?'en':'ko';save();render();}});
 const vnLanguageObserver=new MutationObserver(()=>{if(state.contentLang==='en')vnTranslateDocument();});
 vnLanguageObserver.observe(document.getElementById('main'),{childList:true,subtree:true});
 vnLanguageObserver.observe(document.getElementById('layer'),{childList:true,subtree:true});
