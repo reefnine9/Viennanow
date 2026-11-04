@@ -64,3 +64,8 @@ for (const feature of [
 ]) assert.ok(index.includes(feature),`Map-first layout regression: ${feature}`);
 assert.ok(!index.includes('CITY GUIDE · MAP FIX'), 'stale map fix header reappeared');
 console.log('Map-first regression gate OK: full-height map, Leaflet CSS, resize and grey WC pins.');
+
+// Map usability: one-row navigation/location controls; gestures without oversized zoom widget.
+for(const key of ['near-utility-chip','near-inline-tools','aria-label="내주변 기능 및 위치"'])assert.ok(index.includes(key),'missing map toolbar: '+key);
+assert.ok(!index.includes("L.control.zoom({position:'bottomright'})"),'zoom widget must remain disabled on mobile map');
+console.log('Map toolbar and touch zoom regression gate OK.');
