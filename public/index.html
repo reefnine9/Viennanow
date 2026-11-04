@@ -334,9 +334,9 @@
 .vn44-guide{margin:14px 0;padding:16px;background:#f8f9f7;border:1px solid #e1e8e1;border-radius:15px}.vn44-guide h3{font-size:18px;margin:0 0 14px}.vn44-guide p{font-size:13px;line-height:1.9;margin:0 0 14px}
 .vn44-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vn44-full .full-shadow{background:linear-gradient(180deg,#071b263e,#071b2620 22%,#071b269a 63%,#071b26e8);pointer-events:none}
 .vn44-full .photo-close{z-index:9}.vn44-title{position:absolute;left:22px;right:60px;bottom:15%;color:#fff;z-index:5;font:850 clamp(25px,7vw,35px)/1.25 -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;letter-spacing:-1px;text-shadow:0 2px 12px #000c}
-.vn44-story{position:absolute;inset:12% 20px 25%;overflow:hidden;z-index:4;mask-image:linear-gradient(transparent,black 16%,black 75%,transparent);-webkit-mask-image:linear-gradient(transparent,black 16%,black 75%,transparent);pointer-events:none}
-.vn44-track{font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;animation:vn44-rise var(--vn44-duration,100s) linear both;will-change:transform}.vn44-track p{margin:0 0 1.15em}
-@keyframes vn44-rise{from{transform:translateY(11.5vh)}to{transform:translateY(-100%)}}
+.vn44-story{position:absolute;inset:12% 20px 25%;overflow:hidden;z-index:4;mask-image:linear-gradient(transparent,black 12%,black 88%);-webkit-mask-image:linear-gradient(transparent,black 12%,black 88%);pointer-events:none}
+.vn44-track{position:absolute;width:100%;font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;animation:vn44-rise var(--vn44-duration,100s) linear both;will-change:transform}.vn44-track p{margin:0 0 1.15em}
+@keyframes vn44-rise{from{top:calc(100% - 76px);transform:translateY(0)}to{top:0;transform:translateY(-100%)}}
 .vn44-full.vn44-paused .vn44-track{animation-play-state:paused}
 .vn44-nav{position:absolute;right:13px;bottom:18px;display:flex;gap:8px;z-index:9}.vn44-nav button,.vn44-pause{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:white;background:#071b26ab;border:1px solid #ffffff70;font-size:23px;cursor:pointer}.vn44-pause{position:absolute;left:20px;bottom:18px;z-index:9;font-size:14px}
 @media(prefers-reduced-motion:reduce){.vn44-story{overflow-y:auto;pointer-events:auto;mask-image:none;-webkit-mask-image:none}.vn44-track{animation:none!important;padding-top:10px}}
