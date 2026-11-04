@@ -50,3 +50,17 @@ if(fs.existsSync(path.join(root,'index.html'))){
  assert.equal(rootIndex,index,'root index.html must be identical to public/index.html');
 }
 console.log('Deployment entrypoints synchronized: root and public index.html.');
+
+for (const feature of [
+ 'main.classList.toggle(\'near-map-main\'',
+ 'class="near-shell"',
+ 'class="near-mapframe"',
+ 'near-mapfilter',
+ 'near-mapstatus',
+ 'leaflet-map-pane',
+ 'requestAnimationFrame(()=>map?.invalidateSize({pan:false}))',
+ "map?.invalidateSize({pan:false}),700",
+ '.vn-pin-wc{background:#626b73'
+]) assert.ok(index.includes(feature),`Map-first layout regression: ${feature}`);
+assert.ok(!index.includes('CITY GUIDE · MAP FIX'), 'stale map fix header reappeared');
+console.log('Map-first regression gate OK: full-height map, Leaflet CSS, resize and grey WC pins.');
