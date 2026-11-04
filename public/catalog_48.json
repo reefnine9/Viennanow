@@ -17,7 +17,11 @@
     "source": "https://www.stephanskirche.at/visitCathedral.php",
     "schedule_reviewed": true,
     "summary": "관광: 월~토 09:00–11:30, 13:00–16:30 / 일·공휴일 13:00–16:30",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2085,
+    "lon": 16.3731,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A02",
@@ -37,7 +41,11 @@
     "source": "https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842",
     "schedule_reviewed": false,
     "summary": "외관·광장: 방문 시 현장 확인",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2065,
+    "lon": 16.3651,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A03",
@@ -57,7 +65,11 @@
     "source": "https://www.schoenbrunn.at/en/visitor-information/opening-times",
     "schedule_reviewed": true,
     "summary": "궁전 08:30–17:00 (계절·날짜 예외) / 공원 11~12월 06:30–17:30",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.1845,
+    "lon": 16.3122,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A04",
@@ -77,7 +89,11 @@
     "source": "https://www.belvedere.at/en/visit/upper-belvedere",
     "schedule_reviewed": true,
     "summary": "미술관 매일 09:00–18:00 (특별일 재확인)",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.191,
+    "lon": 16.3809,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A05",
@@ -96,7 +112,11 @@
     "source": "https://www.wiener-staatsoper.at/en/guided-tours/",
     "schedule_reviewed": false,
     "summary": "투어·공연: 날짜별 일정 확인",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2028,
+    "lon": 16.3692,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A06",
@@ -115,7 +135,11 @@
     "source": "https://www.khm.at/en/visit/only-in-vienna",
     "schedule_reviewed": true,
     "summary": "일반 10:00–18:00 / 목요일 21:00까지 (휴관·특별기간 확인)",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2038,
+    "lon": 16.3614,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A07",
@@ -133,7 +157,11 @@
     "source": "https://www.albertina.at/en/visit/opening-hours/",
     "schedule_reviewed": true,
     "summary": "매일 10:00–18:00 / 수·금 21:00까지",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2047,
+    "lon": 16.3685,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A08",
@@ -153,7 +181,11 @@
     "source": "https://www.onb.ac.at/en/museums/state-hall/opening-hours",
     "schedule_reviewed": true,
     "summary": "10~5월 월요일 휴관 / 화·수·금~일 09:00–18:00 / 목 21:00까지",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2065,
+    "lon": 16.367,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A09",
@@ -172,7 +204,11 @@
     "source": "https://www.karlskirche.at/en/visitor-information/",
     "schedule_reviewed": true,
     "summary": "유료 관람 월~토 09:00–18:00 / 일·공휴일 약 11:45~19:15",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.1988,
+    "lon": 16.3714,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A10",
@@ -191,7 +227,11 @@
     "source": "https://www.wien.gv.at/en/administration/city-hall-guided-tours",
     "schedule_reviewed": true,
     "summary": "내부 무료 투어: 월·수·금 13:00 (예외·예약)",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2109,
+    "lon": 16.357,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A11",
@@ -211,7 +251,11 @@
     "source": "https://www.mqw.at/en/",
     "schedule_reviewed": true,
     "summary": "광장·부지 24시간 출입; 내부 개별 시설 확인",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2035,
+    "lon": 16.359,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A12",
@@ -230,7 +274,11 @@
     "source": "https://wienerriesenrad.com/en/your-visit/",
     "schedule_reviewed": false,
     "summary": "날짜별 개방시간 확인 필수",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2167,
+    "lon": 16.3962,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A13",
@@ -249,7 +297,11 @@
     "source": "https://www.wien.info/en/see-do/sights-from-a-to-z/hundertwasser-house-vienna-348464",
     "schedule_reviewed": false,
     "summary": "외관 관람만 가능; 입주민 배려",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2073,
+    "lon": 16.3943,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A14",
@@ -269,7 +321,11 @@
     "source": "https://www.wien.info/en/dine-drink/markets/naschmarkt-353536",
     "schedule_reviewed": true,
     "summary": "시장 월~금 06:00–21:00 / 토 06:00–18:00 / 일 휴무",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.1986,
+    "lon": 16.3614,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A15",
@@ -289,7 +345,11 @@
     "source": "https://b2b.wien.info/en/traveltrade-salestools/planning-tips/itineraries/itinerary-24-hours-in-vienna-466314",
     "schedule_reviewed": false,
     "summary": "공공 거리 산책; 개별 상점은 별도",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2081,
+    "lon": 16.3708,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "A16",
@@ -309,7 +369,11 @@
     "source": "https://www.wien.info/en/livable-vienna/parks-green-spaces/stadtpark-994650",
     "schedule_reviewed": false,
     "summary": "공원 산책; 구역별 별도 확인",
-    "is_planner_enabled": true
+    "is_planner_enabled": true,
+    "lat": 48.2049,
+    "lon": 16.3791,
+    "coordinate_status": "existing_reference_not_entrance_verified",
+    "coordinate_note": "기존 앱의 참고 좌표"
   },
   {
     "id": "B01",
@@ -328,7 +392,11 @@
     "source": "https://www.sisimuseum-hofburg.at/en/visitor-information/opening-hours/",
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20862,
+    "lon": 16.36637,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "호프부르크 미하엘러돔 부근 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B02",
@@ -347,7 +415,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20583,
+    "lon": 16.36502,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "호프부르크 스위스 궁전 구역 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B03",
@@ -367,7 +439,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.2082,
+    "lon": 16.3666,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "미하엘러플라츠 승마학교 부근 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B04",
@@ -385,7 +461,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20259,
+    "lon": 16.35907,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "뮤지엄스콰르티어 레오폴트 미술관 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B05",
@@ -404,7 +484,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20525,
+    "lon": 16.35947,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "마리아 테레지아 광장 자연사박물관 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B06",
@@ -423,7 +507,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20082,
+    "lon": 16.36567,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "제체시온 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B07",
@@ -442,7 +530,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.21106,
+    "lon": 16.39348,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "쿤스트하우스 빈 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B08",
@@ -461,7 +553,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20814,
+    "lon": 16.37525,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "돔가세 모차르트하우스 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B09",
@@ -481,7 +577,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20423,
+    "lon": 16.37304,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "자일러슈테테 음악의 집 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B10",
@@ -501,7 +601,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20052,
+    "lon": 16.37255,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "무지크페라인 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B11",
@@ -521,7 +625,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20098,
+    "lon": 16.3777,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "콘체르트하우스 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B12",
@@ -540,7 +648,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.1824,
+    "lon": 16.30353,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "쇤브룬 동물원 중앙 구역 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B13",
@@ -560,7 +672,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.17859,
+    "lon": 16.30921,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "쇤브룬 글로리에테 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B14",
@@ -580,7 +696,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.19023,
+    "lon": 16.31825,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "기술박물관 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B15",
@@ -599,7 +719,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.2403,
+    "lon": 16.4091,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "도나우 전망탑 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B16",
@@ -618,7 +742,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.27645,
+    "lon": 16.33645,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "칼렌베르크 전망 장소 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B17",
@@ -637,7 +765,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20843,
+    "lon": 16.3579,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "국회의사당 건물 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "B18",
@@ -657,7 +789,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.15065,
+    "lon": 16.4425,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "중앙묘지 대표 구역 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C01",
@@ -676,7 +812,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20957,
+    "lon": 16.36994,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "페터 교회 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C02",
@@ -695,7 +835,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.21172,
+    "lon": 16.36917,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "유덴플라츠 광장 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C03",
@@ -714,7 +858,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.21195,
+    "lon": 16.37247,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "앙커 시계 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C04",
@@ -734,7 +882,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20861,
+    "lon": 16.36662,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "미하엘러 광장 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C05",
@@ -753,7 +905,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20916,
+    "lon": 16.36354,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "미노리텐 교회 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C06",
@@ -772,7 +928,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.2046,
+    "lon": 16.36032,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "마리아 테레지아 광장 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C07",
@@ -791,7 +951,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20769,
+    "lon": 16.35847,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "폴크스가르텐 공원 대표 지점 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C08",
@@ -810,7 +974,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20328,
+    "lon": 16.3655,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "부르크가르텐 공원 대표 지점 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C09",
@@ -830,7 +998,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20302,
+    "lon": 16.35619,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "슈피텔베르크 거리 대표 지점 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C10",
@@ -849,7 +1021,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.20016,
+    "lon": 16.36817,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "오토 바그너 카를스플라츠 파빌리온 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C11",
@@ -868,7 +1044,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.21899,
+    "lon": 16.37997,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "카르멜리터 시장 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C12",
@@ -888,7 +1068,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.21446,
+    "lon": 16.37861,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "도나우 운하 슈베덴플라츠 인근 대표 지점 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C13",
@@ -907,7 +1091,11 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.2251,
+    "lon": 16.37624,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "아우가르텐 공원 중앙 부근 (지도 대표 지점, 출입구 미검증)"
   },
   {
     "id": "C14",
@@ -927,6 +1115,10 @@
     "source": null,
     "schedule_reviewed": false,
     "summary": "",
-    "is_planner_enabled": false
+    "is_planner_enabled": false,
+    "lat": 48.23,
+    "lon": 16.4115,
+    "coordinate_status": "approximate_unverified",
+    "coordinate_note": "도나우섬 라이히스브뤼케 인근 대표 지점 (지도 대표 지점, 출입구 미검증)"
   }
 ]
