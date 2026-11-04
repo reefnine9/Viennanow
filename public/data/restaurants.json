@@ -10,7 +10,8 @@
     "2026-11-04: 숨은 맛집 7곳을 현지 추천 분류로 통합; 필수 맛집 9곳을 대표 맛집에서 분리하여 중복 제거.",
     "2026-11-04: NEW 분류와 소속 식당 15곳을 목록에서 제거 (요청에 따른 데이터 정리).",
     "2026-11-04: 내주변 지도용 식당 POI/건물 좌표 10곳을 공개 지도 자료와 대조하여 추가. 출입구 상세 좌표로 간주하지 않음.",
-    "2026-11-04: 공개 장소 POI/공식 식당 주소의 일치 여부를 근거로 24곳을 추가 연결. 이름이 같은 지점 또는 주소 불명 사례는 자동 추측하지 않음."
+    "2026-11-04: 공개 장소 POI/공식 식당 주소의 일치 여부를 근거로 24곳을 추가 연결. 이름이 같은 지점 또는 주소 불명 사례는 자동 추측하지 않음.",
+    "2026-11-04: 추가 13곳의 장소 위치를 지도/식당 공식 주소와 대조하고 기록. Tian Restaurant 좌표 재검증 교정."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -1578,10 +1579,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Graben 29a, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20829556,
+        "lng": 16.3704734,
+        "source": "https://directindex.org/r/chattanooga.at",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1637,10 +1641,13 @@
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Florian-Berndl-Gasse 20, 1220 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.23606,
+        "lng": 16.4316,
+        "source": "https://mapcarta.com/N2052777619",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "폭립"
@@ -1849,10 +1856,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Reznicekgasse 10, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.22823,
+        "lng": 16.35739,
+        "source": "https://mapcarta.com/N2377140839",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2332,10 +2342,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Am Heumarkt 2A, 1030 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2044578,
+        "lng": 16.3813958,
+        "source": "https://steller.co/d/steirereck-4DnbmXEPjZMHKeHBHmfu8TN",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2421,10 +2434,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Grinzinger Straße 86, 1190 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2539176,
+        "lng": 16.3585918,
+        "source": "https://directindex.org/r/restaurant-amador.com",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2554,10 +2570,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Wallensteinstraße 59, 1200 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2313635,
+        "lng": 16.3760632,
+        "source": "https://directindex.org/r/mrazundsohn.at",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2757,8 +2776,8 @@
       "district": null,
       "address": "Himmelpfortgasse 23, 1010 Wien",
       "location": {
-        "lat": 48.20597,
-        "lng": 16.37419,
+        "lat": 48.20526,
+        "lng": 16.37453,
         "source": "https://mapcarta.com/N902496931",
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
@@ -4394,10 +4413,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Krugerstraße 3, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2041137,
+        "lng": 16.371088,
+        "source": "https://directindex.org/r/shiki.at/de",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4580,10 +4602,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Rennweg 60, 1030 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.1926,
+        "lng": 16.39299,
+        "source": "https://mapcarta.com/N661599772",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4641,10 +4666,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Singerstraße 13, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20704,
+        "lng": 16.37439,
+        "source": "https://mapcarta.com/N269208762",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4702,10 +4730,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Wiesingerstraße 8, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21073,
+        "lng": 16.3817,
+        "source": "https://mapcarta.com/N4873549122",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5068,10 +5099,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Franz-Josefs-Kai 43, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2147623,
+        "lng": 16.3728465,
+        "source": "https://mapcarta.com/N14053247601",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5359,10 +5393,13 @@
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Schottengasse 3, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21227,
+        "lng": 16.36361,
+        "source": "https://mapcarta.com/N1483321286",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "오스트리아 전통음식"
@@ -5538,8 +5575,11 @@
       "district": null,
       "address": "Mariahilfer Straße 71A, 1060 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19826,
+        "lng": 16.3506,
+        "source": "https://aroundus.com/p/173818933-chez-bernard-restaurant-et-bar",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
