@@ -493,18 +493,27 @@ function vn46StartAuto(){
  const full=document.querySelector('.vn44-full'),scroller=full?.querySelector('.vn44-story'),track=full?.querySelector('.vn44-track');
  if(!scroller||!track)return;
  if(vn46Auto)cancelAnimationFrame(vn46Auto.raf);
+ const maxScroll=Math.max(0,scroller.scrollHeight-scroller.clientHeight);
+ if(maxScroll<2)return;
  full.classList.remove('vn44-paused');
  const button=full.querySelector('.vn44-pause');if(button){button.textContent='Ⅱ';button.setAttribute('aria-label','자동 스크롤 일시정지');}
- const duration=Number(track.dataset.duration)||70,speed=(scroller.scrollHeight-scroller.clientHeight)/(duration*1000);
- let last=0;const state={raf:0};
+ // Keep motion visible and consistent while allowing user gestures to take over immediately.
+ const duration=Number(track.dataset.duration)||70;
+ const speed=Math.max(.024,Math.min(.048,maxScroll/(duration*1000)));
+ let last=0,position=scroller.scrollTop;
+ const state={raf:0};
  function tick(t){
   if(vn46Auto!==state||!scroller.isConnected)return;
-  if(last)scroller.scrollTop+=Math.min(t-last,80)*speed;
+  if(last){
+   position=Math.min(maxScroll,position+Math.min(t-last,80)*speed);
+   scroller.scrollTop=position;
+  }
   last=t;
-  if(scroller.scrollTop>=scroller.scrollHeight-scroller.clientHeight-2){vn46StopAuto();return;}
+  if(position>=maxScroll-.5){vn46StopAuto();return;}
   state.raf=requestAnimationFrame(tick);
  }
- vn46Auto=state;state.raf=requestAnimationFrame(tick);
+ vn46Auto=state;
+ state.raf=requestAnimationFrame(tick);
 }
 function vn46Init(){
  const scroller=document.querySelector('.vn44-story'),track=scroller?.querySelector('.vn44-track');
@@ -512,6 +521,7 @@ function vn46Init(){
  // Leave approximately two lines visible before the automatic upward movement.
  track.style.paddingTop=Math.max(0,scroller.clientHeight-76)+'px';
  track.style.paddingBottom=Math.round(scroller.clientHeight*.75)+'px';
+ scroller.scrollTop=0;
  const interrupt=()=>vn46StopAuto();
  scroller.addEventListener('touchstart',interrupt,{passive:true});
  scroller.addEventListener('pointerdown',interrupt,{passive:true});
