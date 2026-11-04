@@ -8,7 +8,8 @@
     "2026-11-04: 각 식당별 차별점에 여행자 관점의 방문 맥락을 추가하고 확인 가능한 관광청/미쉐린 소개 링크 일부 첨부.",
     "2026-11-04: 미쉐린 가이드 오스트리아 2026 비엔나 시내 빕 구르망 8곳만 michelin 분류에 등록. 비엔나 근교 선정 식당 4곳은 제외. 공식 목록 https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
     "2026-11-04: 숨은 맛집 7곳을 현지 추천 분류로 통합; 필수 맛집 9곳을 대표 맛집에서 분리하여 중복 제거.",
-    "2026-11-04: NEW 분류와 소속 식당 15곳을 목록에서 제거 (요청에 따른 데이터 정리)."
+    "2026-11-04: NEW 분류와 소속 식당 15곳을 목록에서 제거 (요청에 따른 데이터 정리).",
+    "2026-11-04: 내주변 지도용 식당 POI/건물 좌표 10곳을 공개 지도 자료와 대조하여 추가. 출입구 상세 좌표로 간주하지 않음."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -32,8 +33,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20942,
+        "lng": 16.37484,
+        "source": "https://mapcarta.com/de/N1426806930",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "슈니첼",
@@ -118,8 +122,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20755,
+        "lng": 16.37876,
+        "source": "https://aroundus.com/p/172740435-plachutta",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "타펠슈피츠"
@@ -337,8 +344,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19659,
+        "lng": 16.3809,
+        "source": "https://mapcarta.com/de/N119371746",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "돼지고기 요리",
@@ -607,8 +617,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21392,
+        "lng": 16.40162,
+        "source": "https://mapcarta.com/W199116911",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "슈텔체",
@@ -830,8 +843,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.203154,
+        "lng": 16.357154,
+        "source": "https://yandex.com/maps/10371/vienna/house/ZU8YdQJnSEADQFpifX5xcn1mYA%3D%3D/",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1140,8 +1156,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20408,
+        "lng": 16.36847,
+        "source": "https://mapcarta.com/W202489567",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2162,8 +2181,11 @@
       "district": null,
       "address": "Am Heumarkt 2a, 1030 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20446,
+        "lng": 16.38128,
+        "source": "https://mapcarta.com/N333672130",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4137,8 +4159,11 @@
       "district": null,
       "address": "Praterstraße 15, 1020 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21362,
+        "lng": 16.38181,
+        "source": "https://mapcarta.com/de/N5257379816",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5064,8 +5089,11 @@
       "district": null,
       "address": "Herrengasse / Strauchgasse, 1010 Wien, Austria",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21037,
+        "lng": 16.36539,
+        "source": "https://mapcarta.com/N319734659",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5548,8 +5576,11 @@
       "district": null,
       "address": "Schrankgasse 4, 1070 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20296,
+        "lng": 16.35485,
+        "source": "https://mapcarta.com/de/N1371534685",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
