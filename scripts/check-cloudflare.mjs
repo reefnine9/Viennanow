@@ -131,8 +131,8 @@ for(const feature of [
  '.leaflet-tile-pane{z-index:200',
  '.leaflet-marker-pane{z-index:600',
  '.leaflet-popup-pane{z-index:700',
- "sightMarker.openPopup()",
- "sightMarker.bindPopup(nearSightPopup32(p)"
+ "m.openPopup()",
+ "m.bindPopup(nearSightPopup32(p)"
 ])assert.ok(index.includes(feature),'Popup visibility regression: '+feature);
 console.log('Map popup visibility gate OK: pane z-index and click-open handler present.');
 
