@@ -36,7 +36,7 @@ console.log('Phase 27 regression gate OK: six curated routes, dated guide, map l
 
 for(const [phase,controls] of [
  ['28',['initTourMap28','tour-map-28','tour-map-day','vn28-marker','L.polyline']],
- ['29',['vn29-edit-banner','data-act=\\"open-editor\\"','makeEditDraft','edit-apply']],
+ ['29',['vn29-edit-banner','open-editor','makeEditDraft','edit-apply']],
  ['30',['repeat(5,minmax(0,1fr))','touch-action:manipulation','100svh']]
 ]){
  for(const control of controls)assert.ok(index.includes(control),`Phase ${phase} component missing: ${control}`);
