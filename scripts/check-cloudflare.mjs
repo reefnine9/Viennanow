@@ -145,9 +145,11 @@ for(const c of coords48)assert.ok(c.lat>48.1&&c.lat<48.35&&c.lon>16.2&&c.lon<16.
 for(const feature of ['function mapSights48()','for(const p of mapSights48())','function refreshSightClusters48()',"map.on('zoomend',refreshSightClusters48)",'vn35-cluster','vn35-pin-note','nearSightPopup32(p)']){
  assert.ok(index.includes(feature),'48-attraction map missing: '+feature);
 }
-const mapCatMatch=index.match(/const CATALOG48=(\[[^;]+\]);/);
-assert.ok(mapCatMatch,'Embedded catalogue missing');
-const embedded=JSON.parse(mapCatMatch[1]);
+const embeddedStart=index.indexOf('const CATALOG48=');
+assert.ok(embeddedStart>=0,'Embedded catalogue missing');
+const embeddedEnd=index.indexOf('];',embeddedStart);
+assert.ok(embeddedEnd>embeddedStart,'Embedded catalogue terminator missing');
+const embedded=JSON.parse(index.slice(embeddedStart+'const CATALOG48='.length,embeddedEnd+1));
 assert.equal(embedded.length,48,'Embedded catalogue needs 48 records');
 for(const c of embedded){const source=coords48.find(x=>x.id===c.id);assert.equal(c.lat,source.lat,'Embedded map latitude out of sync: '+c.id);assert.equal(c.lon,source.lon,'Embedded map longitude out of sync: '+c.id);}
 console.log('Phase 35 sightseeing map gate OK: 48 coordinates, 32 marked provisional and marker clustering.');
