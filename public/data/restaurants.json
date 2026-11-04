@@ -9,7 +9,8 @@
     "2026-11-04: 미쉐린 가이드 오스트리아 2026 비엔나 시내 빕 구르망 8곳만 michelin 분류에 등록. 비엔나 근교 선정 식당 4곳은 제외. 공식 목록 https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
     "2026-11-04: 숨은 맛집 7곳을 현지 추천 분류로 통합; 필수 맛집 9곳을 대표 맛집에서 분리하여 중복 제거.",
     "2026-11-04: NEW 분류와 소속 식당 15곳을 목록에서 제거 (요청에 따른 데이터 정리).",
-    "2026-11-04: 내주변 지도용 식당 POI/건물 좌표 10곳을 공개 지도 자료와 대조하여 추가. 출입구 상세 좌표로 간주하지 않음."
+    "2026-11-04: 내주변 지도용 식당 POI/건물 좌표 10곳을 공개 지도 자료와 대조하여 추가. 출입구 상세 좌표로 간주하지 않음.",
+    "2026-11-04: 공개 장소 POI/공식 식당 주소의 일치 여부를 근거로 24곳을 추가 연결. 이름이 같은 지점 또는 주소 불명 사례는 자동 추측하지 않음."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -222,10 +223,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Walfischgasse 5–7, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20357,
+        "lng": 16.37114,
+        "source": "https://mapcarta.com/N1678557781",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -991,8 +995,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19394,
+        "lng": 16.35953,
+        "source": "https://mapcarta.com/N1439055403",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1050,10 +1057,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Prinz-Eugen-Straße 25, 1030 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19246,
+        "lng": 16.37898,
+        "source": "https://mapcarta.com/N7297115939",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1113,8 +1123,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20339,
+        "lng": 16.37306,
+        "source": "https://mapcarta.com/N526684628",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1349,10 +1362,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Bognergasse 5, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21,
+        "lng": 16.36832,
+        "source": "https://mapcarta.com/N549357085",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1434,10 +1450,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Judengasse 5, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21146,
+        "lng": 16.37357,
+        "source": "https://mapcarta.com/N567092894",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1895,10 +1914,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Nordwestbahnstraße 17, 1020 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.226698,
+        "lng": 16.381927,
+        "source": "https://www.bierkreiszeichen.at/lokal/am_nordpol_3-492.html",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2020,10 +2042,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Berggasse 24, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2187,
+        "lng": 16.36405,
+        "source": "https://mapcarta.com/N1234580663",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2144,8 +2169,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.18925,
+        "lng": 16.33036,
+        "source": "https://mapcarta.com/N693438046",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2458,10 +2486,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Dominikanerbastei 17, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21076,
+        "lng": 16.37978,
+        "source": "https://mapcarta.com/de/N2529267575",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2590,8 +2621,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20596,
+        "lng": 16.37688,
+        "source": "https://mapcarta.com/de/N3919963919",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2655,8 +2689,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2131661,
+        "lng": 16.3494066,
+        "source": "https://directindex.org/r/restaurantdoubek.at",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2718,10 +2755,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Himmelpfortgasse 23, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20597,
+        "lng": 16.37419,
+        "source": "https://mapcarta.com/N902496931",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2913,10 +2953,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Pramergasse 21, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.22207,
+        "lng": 16.36485,
+        "source": "https://mapcarta.com/N5974982807",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -2980,8 +3023,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20169,
+        "lng": 16.37113,
+        "source": "https://mapcarta.com/N11750315918",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3046,10 +3092,13 @@
         "제철·팜투테이블 요리"
       ],
       "district": null,
-      "address": null,
+      "address": "Porzellangasse 53, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.22499868,
+        "lng": 16.36155107,
+        "source": "https://directindex.org/r/mast.wine",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3116,10 +3165,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Gumpendorfer Straße 98, 1060 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19142,
+        "lng": 16.34752,
+        "source": "https://mapcarta.com/N3035413546",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3238,10 +3290,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Hietzinger Hauptstraße 28, 1130 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.18656,
+        "lng": 16.29946,
+        "source": "https://mapcarta.com/N538383574",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3421,10 +3476,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Tuchlauben 6, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20997,
+        "lng": 16.36981,
+        "source": "https://mapcarta.com/N1209007877",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3559,10 +3617,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Rauhensteingasse 12, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20598,
+        "lng": 16.37231,
+        "source": "https://mapcarta.com/N956159179",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3746,10 +3807,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Heiligenstädter Straße ggü 2, 1090 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.23192,
+        "lng": 16.35433,
+        "source": "https://mapcarta.com/W175515977",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4014,10 +4078,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Operngasse 12, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20226,
+        "lng": 16.36759,
+        "source": "https://mapcarta.com/de/N3728573326",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4099,10 +4166,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Fischerstrand 21A, 1220 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.23471,
+        "lng": 16.42646,
+        "source": "https://mapcarta.com/W89094508",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4385,10 +4455,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Vorgartenmarkt 12–29, 1020 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.22194,
+        "lng": 16.40239,
+        "source": "https://mapcarta.com/N4675478594",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
