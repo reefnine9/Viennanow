@@ -126,3 +126,12 @@ for(const feature of [
 ])assert.ok(index.includes(feature),'Phase 34 attraction preview missing: '+feature);
 assert.ok(index.includes("case'detail':state.detail=id;render();return;"),'second-tap details navigation missing');
 console.log('Phase 34 map attraction popup regression gate OK: photo preview then full details.');
+
+for(const feature of [
+ '.leaflet-tile-pane{z-index:200',
+ '.leaflet-marker-pane{z-index:600',
+ '.leaflet-popup-pane{z-index:700',
+ "sightMarker.openPopup()",
+ "sightMarker.bindPopup(nearSightPopup32(p)"
+])assert.ok(index.includes(feature),'Popup visibility regression: '+feature);
+console.log('Map popup visibility gate OK: pane z-index and click-open handler present.');
