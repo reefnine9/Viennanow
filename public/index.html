@@ -160,7 +160,48 @@
 .vn28-overview{padding:13px}.vn28-map{height:265px;width:100%;border-radius:12px;background:#e5ede8;border:1px solid #ccd9d3;z-index:0}.vn28-daytabs{display:flex;gap:7px;overflow-x:auto;margin:10px 0;scrollbar-width:thin}.vn28-daytabs button{min-height:42px;padding:8px 15px;border-radius:11px;border:1px solid #cdded6;background:#fff;color:#234855;font-weight:800;white-space:nowrap}.vn28-daytabs button.active{background:#234855;color:#fff}.vn28-marker-wrap{background:none;border:0}.vn28-marker{display:grid;place-items:center;width:31px;height:31px;background:#c36b4f;color:white;border:2px solid white;border-radius:50%;box-shadow:0 2px 8px #092a4266;font-size:13px;font-weight:900}.vn29-edit-banner{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;background:#e7f2eb;border:1px solid #c6ddd0;border-radius:13px}.vn29-edit-banner small{display:block;color:#59756b;font-size:11px;margin-top:4px}.vn29-edit-banner .btn{flex-shrink:0}
 @media(max-width:800px){.phone{height:100dvh;height:100svh}.main{scroll-padding-bottom:25px;-webkit-overflow-scrolling:touch}.bottom{grid-template-columns:repeat(5,minmax(0,1fr));height:calc(70px + env(safe-area-inset-bottom));padding:5px 3px calc(7px + env(safe-area-inset-bottom))}.tab{min-width:0;min-height:48px;gap:3px;touch-action:manipulation}.tab .vn-tab-symbol{display:grid;place-items:center}.tab span:last-child{font-size:11px}.btn,.miniopt,.sectionnav button,.edit-actions button{touch-action:manipulation}.vn28-map{height:min(50vh,310px)}.vn29-edit-banner{align-items:flex-start}.vn29-edit-banner .btn{min-height:44px}.daybar{overflow-x:auto}.daybar button{min-width:72px}.header{flex-shrink:0}}
 @media(max-width:360px){.tab span:last-child{font-size:10px}.vn29-edit-banner{flex-direction:column}.vn29-edit-banner .btn{width:100%}.main{padding:12px 11px 24px}}
-</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · PHASE 21</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
+/* Phase 24: essential Leaflet positioning bundled locally, independent of CDN stylesheet. */
+.leaflet-container{position:relative;overflow:hidden;outline:0;touch-action:pan-x pan-y;background:#e5ebe7}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}
+.leaflet-map-pane{position:absolute;left:0;top:0}
+.leaflet-tile{visibility:hidden;max-width:none!important;max-height:none!important;width:256px;height:256px;user-select:none;-webkit-user-select:none}
+.leaflet-tile-loaded{visibility:inherit}
+.leaflet-marker-icon,.leaflet-marker-shadow{display:block}
+.leaflet-container.leaflet-touch-drag{touch-action:none;touch-action:pinch-zoom}.leaflet-container img{max-width:none!important;max-height:none!important}
+.leaflet-control{position:relative;z-index:800;pointer-events:visiblePainted;pointer-events:auto}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+.leaflet-control-zoom{border:2px solid rgba(0,0,0,.16);border-radius:5px;overflow:hidden;background:white}
+.leaflet-control-zoom a{background:#fff;color:#17394b;display:block;width:32px;height:32px;text-align:center;text-decoration:none;font:23px/30px Arial,sans-serif;border-bottom:1px solid #ddd}
+.leaflet-control-attribution{background:#ffffffdc!important;color:#555;padding:2px 5px;line-height:1.35}
+.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}.leaflet-popup-content-wrapper{background:white;border-radius:12px;padding:10px;box-shadow:0 3px 14px #0003}
+.leaflet-popup-content{min-width:130px;line-height:1.6;margin:4px}.leaflet-popup-tip-container{position:absolute;left:50%;margin-left:-12px;width:24px;height:12px;overflow:hidden}
+.leaflet-popup-tip{width:15px;height:15px;background:white;transform:rotate(45deg);margin:-8px auto 0;box-shadow:0 3px 8px #0002}.leaflet-popup-close-button{position:absolute;right:4px;top:2px;z-index:1;background:#fff;border-radius:50%;text-decoration:none}
+/* Phase 24: map-first layout: the map uses the available viewport height. */
+.main.near-map-main{padding:0;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.near-shell{height:100%;width:100%;min-height:0;display:flex;flex-direction:column;background:var(--bg)}
+.near-top{flex:none;padding:9px 12px 8px;background:var(--bg);border-bottom:1px solid var(--line)}
+.near-titleline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+.near-titleline strong{font-size:17px}.near-location{font-size:11px;color:#4a7772;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:58%}
+.near-filter-row{display:flex;gap:5px;overflow-x:auto;padding:1px 0 3px;scrollbar-width:none;white-space:nowrap}
+.near-filter-row::-webkit-scrollbar{display:none}
+.near-filter-row .chip{padding:7px 11px;min-height:34px;font-size:11px}
+.near-quickrow{display:flex;align-items:center;gap:6px;margin-top:5px}
+.near-quickrow .near-action{font-size:11px;font-weight:750;min-height:35px;background:white;border:1px solid #d9e4de;border-radius:9px;padding:5px 10px;color:var(--navy)}
+.near-quickrow .near-action.primary{background:var(--navy);color:white}
+.near-mapframe{flex:1;min-height:0;position:relative;overflow:hidden;background:#e4eae5}
+.near-mapframe #map{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.near-mapfilter{position:absolute;left:10px;right:10px;top:8px;z-index:510;display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;pointer-events:auto}.near-mapfilter .chip{background:#ffffffed;box-shadow:0 2px 5px #1232;min-height:32px;padding:5px 10px}.near-mapfilter .chip.active{background:var(--navy);color:white}.near-mapstatus{position:absolute;left:10px;right:48px;top:48px;z-index:500;border-radius:10px;background:#fffffff0;box-shadow:0 2px 8px #14313918;padding:7px 9px;font-size:10px;color:#47636c;line-height:1.45;pointer-events:none;max-width:320px}
+.near-bottom{background:#fff;flex:none;border-top:1px solid #d7e2dd;max-height:160px;overflow:auto;padding:7px 12px calc(7px + env(safe-area-inset-bottom,0px))}
+.near-summary{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.near-summary b{font-size:12px}.near-summary small{color:var(--muted);font-size:10px}
+.near-more{margin-top:5px}.near-more summary{list-style:none;color:var(--teal);font-size:11px;font-weight:750;cursor:pointer}.near-more summary::-webkit-details-marker{display:none}
+.near-more[open]{max-height:110px;overflow:auto}.near-more .near-row{display:flex;align-items:center;justify-content:space-between;padding:7px 3px;border-top:1px solid #e5eae7;gap:8px;font-size:11px}
+.near-more .near-row button{border:1px solid #d8e5df;border-radius:7px;background:white;padding:5px;font-size:10px;white-space:nowrap}
+.near-footlink{color:var(--teal);font-size:11px;text-decoration:underline}
+@media(max-width:800px){.near-bottom{padding-bottom:7px}}
+
+</style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · PHASE 30 · MAP RESTORED</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
 'use strict';
@@ -913,23 +954,40 @@ function planPage21(){
 function googleNearby21(term){const a=anchor(),lat=a.lat.toFixed(5),lon=a.lon.toFixed(5);return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(term+' near '+lat+','+lon)}`;}
 function nearPage21(){
  const groups=[['map','지도'],['wc','화장실'],['rest','쉴곳'],['dining','주변맛집'],['sights','주변관광']];
- const a=anchor();let content='';
- if(state.nearSection==='map'||state.nearSection==='wc'){
-  content=mapPage();
- }else if(state.nearSection==='rest'){
-  const stops=[...CATALOG48.filter(c=>['park','neighborhood'].includes(c.category)&&['A16','C07','C08','C13','C14'].includes(c.id))];
-  const cafes=EXP19.filter(v=>v.kind==='cafe'&&v.status!=='renovation-closed').slice(0,8);
-  const flt=state.nearRestFilter;
-  const filters=[['all','전체'],['cafe','☕ 카페'],['park','🌳 공원·산책']];
-  content=`<div class="card soft"><b>잠시 쉴 곳이 필요할 때</b><p class="sub">기준점을 선택하고 카페 또는 공원·산책 장소를 골라보세요. 아래 목록은 거리순이 아니며 영업·혼잡도는 실시간으로 확인하지 않습니다.</p><a class="btn navy block" style="display:block;text-decoration:none" href="${h(googleNearby21(flt==='park'?'park': 'cafe'))}" target="_blank" rel="noopener noreferrer">${flt==='park'?'🌳':'☕'} 기준점 주변 ${flt==='park'?'공원':'카페'} 지도 검색 ↗</a></div><div class="chiprow">${filters.map(([key,label])=>`<button class="chip ${flt===key?'active':''}" data-act="near-rest-filter" data-value="${key}">${label}</button>`).join('')}</div>${flt!=='park'?`<div class="h2">분위기 좋은 카페</div>${photoPick21(cafes)}`:''}${flt!=='cafe'?`<div class="h2">산책하며 쉬기</div>${photoPick21(stops)}`:''}`;
- }else if(state.nearSection==='dining'){
-  const restaurants=EXP19.filter(v=>v.kind==='restaurant'&&(!state.nearDiningSaved||(state.expSaved19||[]).includes(v.id)));
-  content=`<div class="card soft"><b>주변에서 한 끼</b><p class="sub">외부 지도에서 현 기준점 주변 식당을 검색합니다. 아래의 ${restaurants.length}곳은 실제 거리순이 아니므로 위치·도보시간을 확인하세요.</p><a class="btn navy block" style="display:block;text-decoration:none" href="${h(googleNearby21('restaurant'))}" target="_blank" rel="noopener noreferrer">🍽️ 주변 식당 지도에서 찾기 ↗</a></div><div class="chiprow"><button class="chip ${state.nearDiningSaved?'':'active'}" data-act="near-dining-filter" data-value="all">전체 식당</button><button class="chip ${state.nearDiningSaved?'active':''}" data-act="near-dining-filter" data-value="saved">♥ 저장한 식당</button></div>${restaurants.length?photoPick21(restaurants):'<div class="card soft">아직 저장한 식당이 없습니다. 먹거리에서 하트를 눌러 저장하세요.</div>'}`;
+ const section=state.nearSection||'map',a=anchor();
+ const filterButtons=groups.map(([key,label])=>`<button class="chip ${section===key?'active':''}" data-act="section-near" data-value="${key}">${label}</button>`).join('');
+ const types=section==='map'?[['places','명소'],['wc','화장실'],['water','식수대'],['stops','정류장']]:[];
+ const subFilter=types.length?`<div class="near-mapfilter" aria-label="지도 표시 항목">${types.map(([key,label])=>`<button class="chip ${state.facility===key?'active':''}" data-act="facility" data-value="${key}">${label}</button>`).join('')}</div>`:'';
+ const restTypes=section==='rest'?`<button class="near-action ${state.nearRestFilter==='park'?'primary':''}" data-act="near-rest-filter" data-value="park">🌳 공원</button><button class="near-action ${state.nearRestFilter==='cafe'?'primary':''}" data-act="near-rest-filter" data-value="cafe">☕ 카페</button>`:'';
+ const diningTypes=section==='dining'?`<button class="near-action" data-act="near-dining-filter" data-value="${state.nearDiningSaved?'all':'saved'}">${state.nearDiningSaved?'전체 식당':'♥ 저장한 식당'}</button>`:'';
+ const info=loadedFacilities[state.facility];
+ let caption='관광명소는 출입구 검증 전 근사 좌표입니다';
+ if(section==='wc'||(section==='map'&&state.facility!=='places'))caption=info?.status==='ok'?`공식 시설 데이터 ${info.stats?.accepted??info.points?.length??0}개 수신 · 실시간 운영 확인 안 됨`:info?.status==='failed'?'공공데이터 연결 실패 · 지도 기준점 확인 가능':'공공시설을 조회 중이거나 아직 불러오지 않았습니다';
+ if(section==='rest')caption='카페 위치는 외부 지도에서 확인 · 공원은 참고 위치';
+ if(section==='dining')caption='식당은 외부 지도에서 검색 · 정확한 거리 미제공';
+ const btns=`<button class="near-action" data-act="use-gps">◎ 내 위치</button><button class="near-action" data-act="reset-anchor">⌂ 시내 중심</button>${restTypes}${diningTypes}`;
+ let rows='';let resultTitle='내 주변 지도';let link='';
+ if(section==='wc'||(section==='map'&&state.facility!=='places')){
+   const typ=section==='wc'?'wc':state.facility, data=loadedFacilities[typ];
+   resultTitle=FACILITIES[typ]?.label||'공공시설';
+   const points=data?.status==='ok'?nearest(data.points,a,{max:6,radius:3000}):[];
+   rows=points.map(p=>`<div class="near-row"><span>${h(p.name||resultTitle)} <small>${Math.round((p.distance||0))}m 직선</small></span><a class="near-footlink" target="_blank" rel="noopener noreferrer" href="${facilityRouteLink(p)}">길찾기</a></div>`).join('')||'<div class="near-row">표시 가능한 공식 시설 없음 · 온라인 연결을 확인하세요.</div>';
+   if(data?.status==='failed')rows=`<div class="near-row">${h(data.message||'데이터 조회 실패')}</div>`;
+ }else if(section==='rest'){
+   const parks=PLACES.filter(p=>['A16'].includes(p.id));
+   resultTitle='휴식 장소';rows=parks.map(p=>`<div class="near-row"><span>${h(p.ko)} · 공원</span><button data-act="detail" data-id="${p.id}">상세</button></div>`).join('');
+   link=`<a class="near-footlink" href="${h(googleNearby21(state.nearRestFilter==='park'?'park':'cafe'))}" target="_blank" rel="noopener noreferrer">근처 카페·공원 검색 ↗</a>`;
+ }else if(section==='dining'){
+   const restaurants=EXP19.filter(v=>v.kind==='restaurant'&&(!state.nearDiningSaved||(state.expSaved19||[]).includes(v.id)));
+   resultTitle=`식당 ${restaurants.length}곳`;
+   rows=restaurants.slice(0,8).map(v=>`<div class="near-row"><span>${h(v.ko)}</span><button data-act="experience-detail" data-id="${v.id}">상세</button></div>`).join('')||'<div class="near-row">저장한 식당이 없습니다.</div>';
+   link=`<a class="near-footlink" href="${h(googleNearby21('restaurant'))}" target="_blank" rel="noopener noreferrer">내 주변 식당 지도 검색 ↗</a>`;
  }else{
-  const sorted=[...PLACES].map(p=>({p,dist:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.dist-y.dist).slice(0,10);
-  content=`<div class="card soft"><b>선택한 기준점 주변 관광명소</b><p class="sub">관광지의 위치값이 아직 입구 검증 전의 근사값이므로 직선거리 기준의 참고 순서입니다. 도보시간이나 실제 경로를 의미하지 않습니다.</p></div><div class="near-pill-list">${sorted.map(({p,dist})=>`<div class="near-item"><div class="placeicon visual">${photoImg(p.id)}</div><div class="grow"><b>${h(p.ko)}</b><div class="tiny">약 ${dist.toFixed(1)}km · 직선거리·좌표 추정</div></div><button data-act="detail" data-id="${p.id}">상세</button></div>`).join('')}</div>`;
+   const nearestPlaces=[...PLACES].map(p=>({p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d).slice(0,6);
+   resultTitle=section==='sights'?'주변 관광명소':'관광명소';
+   rows=nearestPlaces.map(({p,d})=>`<div class="near-row"><span>${h(p.ko)} <small>약 ${d.toFixed(1)}km 직선·근사 좌표</small></span><button data-act="detail" data-id="${p.id}">상세</button></div>`).join('');
  }
- return `<div class="stack"><div class="kicker">AROUND YOU</div><div class="h1">내주변</div><p class="sub">현 위치나 선택한 관광지 주변에서 필요한 곳을 찾아보세요.</p>${sectionNav21('near',groups)}<div class="card soft"><div class="row between"><b>📍 ${h(a.label)}</b></div><p class="tiny">GPS는 ‘내 위치 사용’을 직접 누를 때만 요청합니다. 허용하지 않아도 시내 중심 기준 검색 가능</p><div class="two">${btn('◎ 내 위치 사용','use-gps','outline block')}${btn('⌂ 시내 중심','reset-anchor','outline block')}</div></div>${content}</div>`;
+ return `<section class="near-shell" aria-label="내주변 지도"><div class="near-top"><div class="near-titleline"><strong>내주변</strong><span class="near-location">📍 ${h(a.label)}</span></div><div class="near-filter-row" aria-label="내주변 기능">${filterButtons}</div><div class="near-quickrow">${btns}</div></div><div class="near-mapframe">${subFilter}<div id="map" role="application" aria-label="비엔나 내 주변 지도"><div class="mapfallback">지도를 불러오는 중입니다</div></div><div class="near-mapstatus">${h(caption)}</div></div><div class="near-bottom"><div class="near-summary"><b>${h(resultTitle)}</b>${link||'<small>지도 핀을 눌러 장소 확인</small>'}</div><details class="near-more"><summary>장소 목록 펼치기 ▾</summary>${rows}</details></div></section>`;
 }
 function distKm21(lat1,lon1,lat2,lon2){const r=Math.PI/180,dlat=(lat2-lat1)*r,dlon=(lon2-lon1)*r;return 6371*2*Math.asin(Math.sqrt(Math.sin(dlat/2)**2+Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dlon/2)**2))}
 function guide(){
@@ -971,6 +1029,7 @@ function settingsLayer(){return `<div class="drawerbg" data-act="close-settings"
 let lastScreenKey='';
 function render(){
  const main=$('main');
+ main.classList.toggle('near-map-main',state.tab==='map');
  if(state.fullPhoto){$('layer').innerHTML=photoLayer();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
  if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
@@ -981,7 +1040,7 @@ function render(){
  if(state.tab==='itinerary'&&state.planSection==='premium'&&state.tourDetail)setTimeout(initTourMap28,80);else if(tourMap28){tourMap28.remove();tourMap28=null;}
  const key=[state.tab,state.homeView,state.homeGuide?'guide':'',state.sightSection,state.foodSection,state.nearSection,state.planSection,state.planView,state.live?'live':'prep'].join('/');
  if(lastScreenKey!==key){main.scrollTop=0;lastScreenKey=key;}
- if(state.tab==='map'&&['map','wc'].includes(state.nearSection))setTimeout(initMap,80);
+ if(state.tab==='map'){requestAnimationFrame(()=>requestAnimationFrame(initMap));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);}
 }
 function mapIcon(emoji){const type=emoji==='🚻'?'wc':emoji==='🚰'?'water':emoji==='🚉'?'stops':'sights';return L.divIcon({className:'vn-leaflet-marker',html:`<div class="vn-map-pin vn-pin-${type}">${icon25(type,type==='wc'?21:17)}</div>`,iconSize:[36,36],iconAnchor:[18,31]})}
 function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)return;
@@ -989,12 +1048,15 @@ function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)
  try{
   if(map){map.remove();map=null;}target.innerHTML='';map=L.map(target,{zoomControl:false}).setView([anchor().lat,anchor().lon],13);
   L.control.zoom({position:'bottomright'}).addTo(map);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:19}).addTo(map);
+  const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:19,keepBuffer:2,updateWhenIdle:true});
+  tiles.on('tileerror',()=>{const msg=document.querySelector('.near-mapstatus');if(msg&&/근사 좌표/.test(msg.textContent))msg.textContent='지도 타일 서버 연결 불안정 · 다시 시도하거나 인터넷 연결을 확인하세요';});tiles.addTo(map);
   layerGroup=L.layerGroup().addTo(map);
-  if(state.facility==='places')showPlaces();else if(loadedFacilities[state.facility]?.status==='ok')showFacilities(state.facility);else if(!loadedFacilities[state.facility]&&loadingFacility!==state.facility)startFetch(state.facility);
-  setTimeout(()=>map?.invalidateSize(),100);
+  if(state.nearSection==='rest'){showPlacesFiltered(['A16']);}else if(state.nearSection==='sights'){showPlaces();}else if(state.nearSection==='dining'){layerGroup.clearLayers();L.marker([anchor().lat,anchor().lon],{icon:mapIcon('📍')}).addTo(layerGroup);}
+  else if(state.facility==='places')showPlaces();else if(loadedFacilities[state.facility]?.status==='ok')showFacilities(state.facility);else if(!loadedFacilities[state.facility]&&loadingFacility!==state.facility)startFetch(state.facility);
+  requestAnimationFrame(()=>map?.invalidateSize({pan:false}));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);
  }catch(e){target.innerHTML='<div class="mapfallback">지도를 표시하지 못했습니다. 주소 또는 좌표 링크로 길을 찾을 수 있습니다.</div>';}
 }
+function showPlacesFiltered(ids){if(!map||!layerGroup)return;layerGroup.clearLayers();PLACES.filter(p=>ids.includes(p.id)).forEach(p=>{let marker=L.marker([p.lat,p.lon],{icon:mapIcon('🌳')}).addTo(layerGroup);marker.bindPopup(`<b>${h(p.ko)}</b><br>근사 좌표 · <a href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">길찾기</a>`);});map.setView([anchor().lat,anchor().lon],13);}
 function showPlaces(){if(!map||!layerGroup)return;layerGroup.clearLayers();PLACES.forEach(p=>{
  let m=L.marker([p.lat,p.lon],{icon:mapIcon(emoji(p))}).addTo(layerGroup);
  m.bindPopup(`<b>${h(p.ko)}</b><br>${h(p.de)}<br><small>기획용 근사 좌표 · 공식 대조 전</small><br><a href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">주소로 길 찾기 ↗</a>`);
@@ -1083,7 +1145,7 @@ case 'near-nightlife':{window.open(googleNearby21('bar nightclub'),'_blank','noo
 case 'section-sights':state.sightSection=value;state.sightDeckIndex=0;save();render();return;
 case 'section-food':state.foodSection=value;state.foodDeckIndex=0;save();render();return;
 case 'section-plan':state.tourDetail=null;state.tourError='';state.planSection=value;state.planView=value==='mine'?'result':value==='build'?'basic':state.planView;save();render();return;
-case 'section-near':state.nearSection=value;state.facility=value==='wc'?'wc':'places';save();render();return;
+case 'section-near':state.nearSection=value;state.facility=value==='wc'?'wc':state.facility||'places';save();render();return;
 case 'near-rest-filter':state.nearRestFilter=['all','cafe','park'].includes(value)?value:'all';save();render();return;
 case 'near-dining-filter':state.nearDiningSaved=value==='saved';save();render();return;
 case 'deck-next':case 'deck-prev':{const key=value==='sights'?'sightDeckIndex':'foodDeckIndex';const length=value==='sights'?(state.sightSection==='performance'?EXP19.filter(v=>v.kind==='performance').length:CATALOG48.filter(c=>state.sightSection==='museum'?c.category==='museum':c.category!=='museum'&&c.category!=='music').length):EXP19.filter(v=>v.kind===state.foodSection).length;if(length){state[key]=((Number(state[key])||0)+(a==='deck-next'?1:-1)+length)%length;save();render();}return;}
