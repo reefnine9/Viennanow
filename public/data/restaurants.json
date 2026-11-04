@@ -6,12 +6,12 @@
     "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록.",
     "2026-11-04: 전체 94개 식당 상세 한국어 설명과 선정 이유 작성. 개별 확인 근거가 불충분한 식당은 보수적인 후보 설명과 검증 필요를 명시.",
     "2026-11-04: 각 식당별 차별점에 여행자 관점의 방문 맥락을 추가하고 확인 가능한 관광청/미쉐린 소개 링크 일부 첨부.",
-    "2026-11-04: 미쉐린 가이드 오스트리아 2026 비엔나 시내 빕 구르망 8곳만 michelin 분류에 등록. 비엔나 근교 선정 식당 4곳은 제외. 공식 목록 https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand"
+    "2026-11-04: 미쉐린 가이드 오스트리아 2026 비엔나 시내 빕 구르망 8곳만 michelin 분류에 등록. 비엔나 근교 선정 식당 4곳은 제외. 공식 목록 https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
+    "2026-11-04: 숨은 맛집 7곳을 현지 추천 분류로 통합; 필수 맛집 9곳을 대표 맛집에서 분리하여 중복 제거."
   ],
   "category_labels": {
     "featured": "대표 맛집",
     "local_recommended": "현지 추천",
-    "hidden_gem": "숨은 맛집",
     "asian": "한식·아시아 맛집",
     "new": "NEW 맛집",
     "michelin": "미슐랭 · 빕 구르망"
@@ -27,9 +27,7 @@
         "ko": null,
         "en": "Figlmüller"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -115,9 +113,7 @@
         "ko": null,
         "en": "Plachutta Wollzeile"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -275,9 +271,7 @@
         "ko": null,
         "en": "Ribs of Vienna"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -338,9 +332,7 @@
         "ko": null,
         "en": "Salm Bräu"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -426,9 +418,7 @@
         "ko": null,
         "en": "Reinthaler’s Beisl"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -612,9 +602,7 @@
         "ko": null,
         "en": "Schweizerhaus"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -902,7 +890,7 @@
       },
       "categories": [
         "featured",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -1587,9 +1575,7 @@
         "ko": null,
         "en": "Strandcafé an der Alten Donau"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -1675,8 +1661,7 @@
         "en": "Gasthaus Grünauer"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -1737,8 +1722,7 @@
         "en": "Gasthaus Wolf"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -1864,8 +1848,7 @@
         "en": "Am Nordpol 3"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -1926,8 +1909,7 @@
         "en": "Gasthaus Kopp"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -1988,8 +1970,7 @@
         "en": "Gasthaus Rebhuhn"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -2111,8 +2092,7 @@
         "en": "Gasthaus Quell"
       },
       "categories": [
-        "local_recommended",
-        "hidden_gem"
+        "local_recommended"
       ],
       "cuisine": [],
       "district": null,
@@ -6160,9 +6140,7 @@
         "ko": null,
         "en": "Melker Stiftskeller"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -6247,9 +6225,7 @@
         "ko": null,
         "en": "Griechenbeisl"
       },
-      "categories": [
-        "featured"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
