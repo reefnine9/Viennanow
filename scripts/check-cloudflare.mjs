@@ -23,3 +23,13 @@ if(fs.existsSync(rootIndexPath)){
   if(legacy!==index)console.warn('DEPLOY WARNING: root index.html is older than public/index.html. Configure Cloudflare Pages output directory = public.');
 }
 console.log('Phase 26 release gate OK: tour preview/apply controls present; output directory must be public.');
+
+const curatedRoutes=['old','art','music','imperial','classiccenter','palaces'];
+for(const id of curatedRoutes){
+  assert.ok(index.includes(id==='imperial'?'id:"imperial"':id==='classiccenter'?'id:"classiccenter"':id==='palaces'?'id:"palaces"':'"id":"'+id+'"'),`curated route not found: ${id}`);
+}
+for(const key of ['tourVisitMinutes27','tourVisitSummary27','tourPlaceMap27','data-tour-date-index','vn27-stoplink','tour-start-date','tour-start-time']){
+  assert.ok(index.includes(key),`missing Phase 27 guide component: ${key}`);
+}
+assert.ok(index.includes('Phase 27'), 'public index page version not updated');
+console.log('Phase 27 regression gate OK: six curated routes, dated guide, map links and visit-time summary.');
