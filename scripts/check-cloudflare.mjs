@@ -53,8 +53,8 @@ console.log('Deployment entrypoints synchronized: root and public index.html.');
 
 for (const feature of [
  'main.classList.toggle(\'near-map-main\'',
- 'class="near-shell"',
- 'class="near-mapframe"',
+ 'class="near-shell near31-shell"',
+ 'class="near-mapframe near31-mapframe"',
  'near-mapfilter',
  'near-mapstatus',
  'leaflet-map-pane',
@@ -66,7 +66,7 @@ assert.ok(!index.includes('CITY GUIDE · MAP FIX'), 'stale map fix header reappe
 console.log('Map-first regression gate OK: full-height map, Leaflet CSS, resize and grey WC pins.');
 
 // Map usability: one-row navigation/location controls; gestures without oversized zoom widget.
-for(const key of ['near-utility-chip','near-inline-tools','aria-label="내주변 기능 및 위치"'])assert.ok(index.includes(key),'missing map toolbar: '+key);
+for(const key of ['near31-locations','near31-tabs','aria-label="지도 표시 내용"'])assert.ok(index.includes(key),'missing map toolbar: '+key);
 assert.ok(!index.includes("L.control.zoom({position:'bottomright'})"),'zoom widget must remain disabled on mobile map');
 console.log('Map toolbar and touch zoom regression gate OK.');
 
@@ -76,3 +76,11 @@ assert.equal(index.split(basemapUrl).length-1,2,'both maps must use basemap.at H
 assert.ok(index.includes('Grundkarte: <a href="https://basemap.at/'), 'map attribution must link to basemap.at');
 assert.ok(!index.includes('tile.openstreetmap.org'), 'legacy public tile provider must not remain');
 console.log('Austrian HiDPI map regression gate OK: two layers and attribution.');
+
+const newTabs=["['map','지도']","['sights','볼거리']","['food','먹거리']","['wc','화장실']","['plan','계획']"];
+let prev=-1;for(const t of newTabs){const pos=index.indexOf(t);assert.ok(pos>prev,'Five near-me categories must appear in requested order: '+t);prev=pos;}
+for(const feature of ['nearSearch31','nearFoodLayer31','nearPlanLayer31','nearPin31','near31-search','near31-planbar','data-act="use-gps"','data-act="reset-anchor"','showFacilities(\'wc\')']){
+ assert.ok(index.includes(feature),'missing new nearby map feature: '+feature);
+}
+assert.ok(!index.includes('<div class="near-mapstatus">${h(caption)}</div>'),'obsolete public-data status overlay must be removed');
+console.log('Nearby five-tab map regression gate OK.');
