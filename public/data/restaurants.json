@@ -13,7 +13,8 @@
     "2026-11-04: 공개 장소 POI/공식 식당 주소의 일치 여부를 근거로 24곳을 추가 연결. 이름이 같은 지점 또는 주소 불명 사례는 자동 추측하지 않음.",
     "2026-11-04: 추가 13곳의 장소 위치를 지도/식당 공식 주소와 대조하고 기록. Tian Restaurant 좌표 재검증 교정.",
     "2026-11-04: 추가 식당 3곳의 실좌표 및 9곳의 공식/영업자 주소 기록; 좌표가 없다고 주소를 추정 좌표로 변환하지 않음.",
-    "2026-11-04: Trzesniewski Dorotheergasse 1 본점 좌표와 Kim Shop Währinger Straße 44 위치 추가."
+    "2026-11-04: Trzesniewski Dorotheergasse 1 본점 좌표와 Kim Shop Währinger Straße 44 위치 추가.",
+    "2026-11-04: Heidenkummer 식당 OSM 장소 좌표 및 나머지 일부 식당 공식 주소·지점 구분을 검증해서 저장."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -2129,8 +2130,11 @@
       "district": null,
       "address": "Breitenfelder Gasse 18, 1080 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21425,
+        "lng": 16.34245,
+        "source": "https://mapcarta.com/N1031098737",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3455,7 +3459,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Schönlaterngasse 11, 1010 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -3502,7 +3506,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://rossini-ristorante.at/kontakt/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-fabios",
@@ -3721,7 +3727,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Pfeilgasse 1, 1080 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -3768,7 +3774,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.google.com/maps/search/?api=1&query=Wiener+W%C3%BCrstelstand+Pfeilgasse+1+Wien",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-alles-wurscht",
@@ -3999,7 +4007,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Simmeringer Hauptstraße 234, 2. Tor, 1110 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -4046,7 +4054,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://ehschowuascht.at/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-wurstelstand-christian-lange",
@@ -4821,7 +4831,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Währinger Straße 46, 1090 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -4868,7 +4878,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://kimkocht.at/impressum/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-kim-shop",
@@ -5074,7 +5086,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Julius-Tandler-Platz 4, 1090 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -5110,7 +5122,8 @@
       "editorial": {
         "must_visit": false,
         "selection_reason_ko": "초밥과 일본식 메뉴를 간편하게 선택할 수 있는 아시아 외식 브랜드다. 전통 오스트리아식 메뉴 외에 빠르고 익숙한 식사를 원하는 사람에게 적합하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline"
+        "story_review": "public-source-supported-outline",
+        "branch_note_ko": "아카키코는 여러 지점이 있는 체인입니다. 지도 링크는 Julius-Tandler-Platz 4 지점을 안내합니다."
       },
       "media": {
         "cover": null,
@@ -5120,8 +5133,10 @@
       "quick_pick": {
         "summary_ko": null,
         "area_ko": null,
-        "google_maps_query": null
-      }
+        "google_maps_query": "Akakiko Julius-Tandler-Platz 4, 1090 Wien"
+      },
+      "address_source": "https://akakiko.at/lokale/julius-tandler-platz",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-addiert",
