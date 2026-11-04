@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
-  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record.",
+  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added.",
   "category_labels": {
     "featured": "대표 맛집",
     "local_recommended": "현지 추천",
@@ -2835,9 +2835,7 @@
         "ko": null,
         "en": "NENI am Naschmarkt"
       },
-      "categories": [
-        "asian"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
@@ -3433,9 +3431,7 @@
         "ko": null,
         "en": "Art Corner Restaurant"
       },
-      "categories": [
-        "asian"
-      ],
+      "categories": [],
       "cuisine": [],
       "district": null,
       "address": null,
