@@ -1170,9 +1170,33 @@
         "story_review": "public-source-supported-outline"
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "interior",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/1516%20Brewing%20Company%20-%20Bar%2001.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:1516%20Brewing%20Company%20-%20Bar%2001.jpg",
+          "author": "Michael Kranewitter",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "1516 Brewing Company의 바 내부"
+        },
+        "gallery": [
+          {
+            "type": "interior",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/1516%20Brewing%20Company%20-%20Bar%2001.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:1516%20Brewing%20Company%20-%20Bar%2001.jpg",
+            "author": "Michael Kranewitter",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "1516 Brewing Company의 바 내부"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -1568,9 +1592,33 @@
         "story_review": "public-source-supported-outline"
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "building",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20-%20Der%20Regensburger%20Hof%20am%20Lugeck.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Wien%20-%20Der%20Regensburger%20Hof%20am%20Lugeck.jpg",
+          "author": "Marek Śliwecki",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Lugeck 레스토랑이 위치한 레겐스부르거 호프 건물"
+        },
+        "gallery": [
+          {
+            "type": "building",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wien%20-%20Der%20Regensburger%20Hof%20am%20Lugeck.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Wien%20-%20Der%20Regensburger%20Hof%20am%20Lugeck.jpg",
+            "author": "Marek Śliwecki",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Lugeck 레스토랑이 위치한 레겐스부르거 호프 건물"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -4433,9 +4481,33 @@
         "story_review": "public-source-supported-outline"
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hamshuka%20Neni%20Vienna.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hamshuka%20Neni%20Vienna.jpg",
+          "author": "Benreis",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "NENI 나슈마르크트에서 촬영한 함슈카"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hamshuka%20Neni%20Vienna.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Hamshuka%20Neni%20Vienna.jpg",
+            "author": "Benreis",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "NENI 나슈마르크트에서 촬영한 함슈카"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
