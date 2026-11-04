@@ -838,9 +838,8 @@ function vn62ShoppingPage(){
   const query=encodeURIComponent(selected.de+' Wien');
   return `<div class="stack vn62-shop-page"><button class="backbtn" data-act="vn62-shop-back">← 쇼핑목록</button><article class="vn62-shop-detail">${vn62ShopPhoto(selected)}${selected.photoNote?`<p class="tiny">${h(selected.photoNote)}</p>`:""}<h2>${h(selected.name)}</h2><p class="sub">${h(selected.de)} · ${h(selected.category)}</p><p>${h(selected.text)}</p><p><b>찾기 쉬운 곳</b> · ${h(selected.where)}</p>${selected.reviewUrl?`<a class="vn62-source" target="_blank" rel="noopener noreferrer" href="${h(selected.reviewUrl)}">한국 여행자 후기 참고 ↗</a>`:selected.reviewNote?`<p class="tiny">${h(selected.reviewNote)}</p>`:""}${selected.file?`<p class="tiny">사진: ${h(selected.credit||"저작자 및 사용조건은 원본에서 확인")}${selected.photoNote?" · "+h(selected.photoNote):""}</p><a class="vn62-source" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(selected.file)}">사진 원본·저작자·라이선스 ↗</a>`:''}</article></div>`;
  }
- const filters=['전체','과자','초콜릿','음료','식료품','커피','선물'],active=state.vn62ShopFilter||'전체';
- const shown=VN62_SHOP_ITEMS.filter(p=>active==='전체'||p.category===active);
- return `<div class="stack vn62-shop-page"><button class="backbtn" data-act="vn62-shop-home">← 홈</button><h2>추천 쇼핑목록</h2><p class="sub">비엔나에서 살펴볼 만한 과자·초콜릿·식료품 등 ${VN62_SHOP_ITEMS.length}가지. 실제 재고와 상품구성은 매장별로 다릅니다.</p><nav class="vn62-shop-filters">${filters.map(f=>`<button type="button" data-act="vn62-shop-filter" data-value="${h(f)}" class="${active===f?'active':''}">${f}</button>`).join('')}</nav><div class="vn52-items">${shown.map(vn62ShopCard).join('')}</div></div>`;
+ const shown=VN62_SHOP_ITEMS;
+ return `<div class="stack vn62-shop-page"><button class="backbtn" data-act="vn62-shop-home">← 홈</button><h2>추천 쇼핑목록</h2><p class="sub">비엔나에서 살펴볼 만한 과자·초콜릿·식료품 등 ${VN62_SHOP_ITEMS.length}가지. 실제 재고와 상품구성은 매장별로 다릅니다.</p><div class="vn52-items">${shown.map(vn62ShopCard).join('')}</div></div>`;
 }
 
 function vn52Preview(){return `<section class="vn52-preview"><div class="row between"><b class="sectionheading">비엔나 이야기</b><button class="backbtn" data-act="vn52-list">더보기 →</button></div><div class="vn52-items">${[VN52_INTRO,vn52Get('VS17'),vn52Get('VS1'),vn52Get('VS94')].map(vn52Card).join('')}</div></section>`}
