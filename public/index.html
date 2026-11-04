@@ -757,7 +757,7 @@ function editorialInfo(c){
  const isEn=state.contentLang==='en';
  const highlights=isEn?x.highlights_en:x.highlights_ko;
  return `<section class="editorial-feature" aria-label="관광지 소개">
- <div class="editorial-language"><span>${isEn?'TRAVEL NOTE · VISITOR GUIDE':'TRAVEL NOTE · 여행 가이드'}</span><div class="language-switch"><button data-act="content-lang" data-value="ko" class="${isEn?'':'active'}" aria-pressed="${!isEn}">한국어</button><button data-act="content-lang" data-value="en" class="${isEn?'active':''}" aria-pressed="${isEn}">EN</button></div></div>
+ <div class="editorial-language"><span>${isEn?'TRAVEL NOTE · VISITOR GUIDE':'TRAVEL NOTE · 여행 가이드'}</span></div>
  <p class="editorial-lede">${h(isEn?x.overview_en:x.overview_ko)}</p>
  <div class="editorial-kicker">${isEn?'HIGHLIGHTS':'놓치지 마세요'}</div>
  <div class="editorial-highlights">${highlights.map((v,i)=>`<div><span>0${i+1}</span>${h(v)}</div>`).join('')}</div>
