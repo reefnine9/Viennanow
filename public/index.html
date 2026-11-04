@@ -335,6 +335,7 @@
 .vn44-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vn44-full .full-shadow{background:linear-gradient(180deg,#071b263e,#071b2620 22%,#071b269a 63%,#071b26e8);pointer-events:none}
 .vn44-full .photo-close{z-index:9}.vn44-title{position:absolute;left:22px;right:60px;bottom:15%;color:#fff;z-index:5;font:850 clamp(25px,7vw,35px)/1.25 -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;letter-spacing:-1px;text-shadow:0 2px 12px #000c}
 .vn44-story{position:absolute;inset:12% 20px 25%;overflow-y:auto;overflow-x:hidden;z-index:4;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:none;mask-image:linear-gradient(transparent,black 12%,black 88%);-webkit-mask-image:linear-gradient(transparent,black 12%,black 88%);pointer-events:auto}.vn44-story::-webkit-scrollbar{display:none}
+@media(hover:hover) and (pointer:fine){.vn44-story{cursor:grab}.vn44-story.vn46-dragging{cursor:grabbing;user-select:none}.vn44-story.vn46-dragging *{user-select:none;-webkit-user-select:none}}
 .vn44-track{position:relative;width:100%;font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;user-select:text;-webkit-user-select:text}.vn44-track p{margin:0 0 1.15em}
 
 
@@ -515,6 +516,47 @@ function vn46Init(){
  scroller.addEventListener('touchstart',interrupt,{passive:true});
  scroller.addEventListener('pointerdown',interrupt,{passive:true});
  scroller.addEventListener('wheel',interrupt,{passive:true});
+ // Desktop Chrome: enable grab-and-drag and a decaying fling, while retaining
+ // the browser's native touch scrolling/momentum on phones and tablets.
+ let mouseDrag=null,flingFrame=0;
+ const stopFling=()=>{if(flingFrame){cancelAnimationFrame(flingFrame);flingFrame=0;}};
+ scroller.addEventListener('pointerdown',e=>{
+  if(e.pointerType!=='mouse'||e.button!==0)return;
+  interrupt();stopFling();
+  mouseDrag={id:e.pointerId,y:e.clientY,last:performance.now(),velocity:0,moved:false};
+  scroller.setPointerCapture(e.pointerId);
+  scroller.classList.add('vn46-dragging');
+ });
+ scroller.addEventListener('pointermove',e=>{
+  if(!mouseDrag||e.pointerId!==mouseDrag.id)return;
+  const now=performance.now(),dy=e.clientY-mouseDrag.y,dt=Math.max(1,now-mouseDrag.last);
+  if(Math.abs(dy)>1)mouseDrag.moved=true;
+  scroller.scrollTop-=dy;
+  const v=-dy/dt;
+  mouseDrag.velocity=mouseDrag.velocity*.45+v*.55;
+  mouseDrag.y=e.clientY;mouseDrag.last=now;
+ });
+ function releaseDrag(e){
+  if(!mouseDrag||e.pointerId!==mouseDrag.id)return;
+  const v=mouseDrag.velocity;
+  mouseDrag=null;scroller.classList.remove('vn46-dragging');
+  if(scroller.hasPointerCapture(e.pointerId))scroller.releasePointerCapture(e.pointerId);
+  if(Math.abs(v)<.12)return;
+  let velocity=v,last=performance.now();
+  const fling=t=>{
+   if(!scroller.isConnected)return;
+   const dt=Math.min(35,t-last);last=t;
+   const old=scroller.scrollTop;
+   scroller.scrollTop+=velocity*dt;
+   velocity*=Math.exp(-dt/290);
+   if(Math.abs(velocity)>.035&&Math.abs(scroller.scrollTop-old)>.05)flingFrame=requestAnimationFrame(fling);
+   else flingFrame=0;
+  };
+  flingFrame=requestAnimationFrame(fling);
+ }
+ scroller.addEventListener('pointerup',releaseDrag);
+ scroller.addEventListener('pointercancel',releaseDrag);
+ scroller.addEventListener('wheel',stopFling,{passive:true});
  scroller.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' '].includes(e.key))interrupt();});
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){vn46StopAuto();return;}
  vn46StartAuto();
