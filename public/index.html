@@ -1202,9 +1202,10 @@ function vn47StreetViewLink(r){
 }
 function foodPage21(){
  if(!VN42_DB&&!VN42_LOADING&&!VN42_ERROR)vn42Load();
- const opts=[['all','전체'],['must','필수 맛집'],['featured','대표 맛집'],['local_recommended','현지 추천'],['michelin','미슐랭'],['asian','한식·아시아'],['new','NEW']];
+ const opts=[['all','전체'],['must','필수 맛집'],['featured','대표 맛집'],['local_recommended','현지 추천'],['michelin','미슐랭'],['asian','한식·아시아']];
  if(state.vn42FoodCategory==='personal')state.vn42FoodCategory='michelin';
  if(state.vn42FoodCategory==='hidden_gem')state.vn42FoodCategory='local_recommended';
+ if(state.vn42FoodCategory==='new')state.vn42FoodCategory='all';
  const cat=state.vn42FoodCategory||'all';
  const nav=opts.map(([id,label])=>'<button class="vn42-chip '+(cat===id?'on':'')+'" aria-pressed="'+(cat===id)+'" data-act="vn42-food-filter" data-value="'+h(id)+'">'+h(label)+'</button>').join('');
  const top='<div class="vn42-top"><div class="vn42-logo"><span class="vn37-v">V</span><strong>먹거리</strong></div><div class="vn42-filters">'+nav+'</div></div>';
@@ -1215,7 +1216,7 @@ function foodPage21(){
  const items=base.filter(r=>cat==='all'||(cat==='must'?!!r.editorial?.must_visit:cat==='michelin'?r.editorial?.michelin?.distinction==='Bib Gourmand':cat==='featured'?!r.editorial?.must_visit&&(r.categories||[]).includes('featured'):(r.categories||[]).includes(cat))).sort((a,b)=>cat==='michelin'?(a.name?.de||'').localeCompare(b.name?.de||''):0);
  const q=(state.foodQuery||'').trim().toLocaleLowerCase();
  const shown=items.filter(r=>!q||[r.name?.de,r.name?.ko,r.name?.en,r.description?.ko,...(r.recommended_dishes||[])].filter(Boolean).join(' ').toLocaleLowerCase().includes(q));
- const label={featured:'대표 맛집',local_recommended:'현지 추천',asian:'한식·아시아',new:'NEW',michelin:'빕 구르망'};
+ const label={featured:'대표 맛집',local_recommended:'현지 추천',asian:'한식·아시아',michelin:'빕 구르망'};
  const cards=shown.map(r=>{
   const name=r.name?.ko||r.name?.de||'';
   const secondary=name===r.name?.de?(r.quick_pick?.area_ko||'비엔나 · 오스트리아'):r.name?.de;
