@@ -85,7 +85,7 @@ for(const feature of ['nearSearch31','nearFoodLayer31','nearPlanLayer31','nearPi
 assert.ok(!index.includes('<div class="near-mapstatus">${h(caption)}</div>'),'obsolete public-data status overlay must be removed');
 console.log('Nearby four-tab map regression gate OK.');
 
-for (const feature of ['nearSightPopup32','vn32-sight-pop','vn32-brand','near32-logo','id="ad-slot"','vn32-ad-slot','vn32-near-screen','near31-pin-sights{color:#2563eb}','near31-pin-food{color:#dc2626}','near31-pin-wc{color:#166534']){
+for (const feature of ['nearSightPopup32','vn32-sight-pop','near32-brand','near32-logo','id="ad-slot"','vn32-ad-slot','vn32-near-screen','near31-pin-sights{color:#2563eb}','near31-pin-food{color:#dc2626}','near31-pin-wc{color:#166534']){
  assert.ok(index.includes(feature),'Missing Phase 32 map feature: '+feature);
 }
 assert.ok(index.includes("choices=[['sights','볼거리'],['food','먹거리'],['wc','화장실'],['plan','계획']]"),'nearby categories must be exactly four in requested order');
