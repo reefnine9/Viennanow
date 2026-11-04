@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
-  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added.",
+  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added. Owner-designated must-visit venues: nine; list has 94 unique venues after adding Melker Stiftskeller and Griechenbeisl. UI may display these clearly labeled editorial candidates while all publication.approved flags remain false.",
   "category_labels": {
     "featured": "대표 맛집",
     "local_recommended": "현지 추천",
@@ -59,7 +59,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-plachutta-wollzeile",
@@ -105,7 +108,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-plachuttas-gasthaus-zur-oper",
@@ -151,7 +157,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-ribs-of-vienna",
@@ -197,7 +206,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-salm-brau",
@@ -243,7 +255,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-reinthaler-s-beisl",
@@ -289,7 +304,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-gasthaus-poschl",
@@ -335,7 +353,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-schnitzelwirt",
@@ -381,7 +402,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-schweizerhaus",
@@ -427,7 +451,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-meissl-schadn",
@@ -473,7 +500,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gasthaus-tante-liesl",
@@ -519,7 +549,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-glacis-beisl",
@@ -565,7 +598,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-wiener-wiazhaus",
@@ -612,7 +648,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-sixta",
@@ -658,7 +697,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-stockl-im-park",
@@ -704,7 +746,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-1516-brewing-company",
@@ -750,7 +795,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-bitzinger-bei-der-albertina",
@@ -796,7 +844,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-trzesniewski",
@@ -842,7 +893,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-zum-schwarzen-kameel",
@@ -888,7 +942,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-schachtelwirt",
@@ -934,7 +991,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-lugeck",
@@ -980,7 +1040,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-chattanooga",
@@ -1026,14 +1089,17 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-strandcafe",
       "name": {
-        "de": "Strandcafé",
+        "de": "Strandcafé an der Alten Donau",
         "ko": null,
-        "en": "Strandcafé"
+        "en": "Strandcafé an der Alten Donau"
       },
       "categories": [
         "featured"
@@ -1072,7 +1138,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     },
     {
       "id": "restaurant-gasthaus-grunauer",
@@ -1119,7 +1188,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gasthaus-wolf",
@@ -1166,7 +1238,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-reznicek",
@@ -1212,7 +1287,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-am-nordpol-3",
@@ -1259,7 +1337,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gasthaus-kopp",
@@ -1306,7 +1387,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gasthaus-rebhuhn",
@@ -1353,7 +1437,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gastwirtschaft-heidenkummer",
@@ -1399,7 +1486,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-gasthaus-quell",
@@ -1446,7 +1536,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-meierei-im-stadtpark",
@@ -1492,7 +1585,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-steirereck-im-stadtpark",
@@ -1538,7 +1634,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-amador",
@@ -1584,7 +1683,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-konstantin-filippou",
@@ -1630,7 +1732,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-mraz-sohn",
@@ -1676,7 +1781,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-silvio-nickol",
@@ -1722,7 +1830,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-doubek",
@@ -1768,7 +1879,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-tian",
@@ -1814,7 +1928,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-jola",
@@ -1860,7 +1977,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-apron",
@@ -1906,7 +2026,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-pramerl-the-wolf",
@@ -1952,7 +2075,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-glasswing",
@@ -1998,7 +2124,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-mast-weinbistro",
@@ -2044,7 +2173,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-disco-volante",
@@ -2090,7 +2222,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-via-toledo-enopizzeria",
@@ -2136,7 +2271,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-da-ferdinando",
@@ -2182,7 +2320,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-l-autentico",
@@ -2228,7 +2369,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-ristorante-rossini",
@@ -2274,7 +2418,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-fabios",
@@ -2320,7 +2467,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-lola",
@@ -2366,7 +2516,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-wrenkh",
@@ -2412,7 +2565,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-wiener-wurstelstand-pfeilgasse",
@@ -2458,7 +2614,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-alles-wurscht",
@@ -2504,7 +2663,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-wurstelstand-leo",
@@ -2550,7 +2712,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-speisekammer",
@@ -2596,7 +2761,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-eh-scho-wuascht",
@@ -2642,7 +2810,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-wurstelstand-christian-lange",
@@ -2688,7 +2859,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-leberkas-pepi",
@@ -2734,7 +2908,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-zur-alten-kaisermuhle",
@@ -2780,7 +2957,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-mochi",
@@ -2826,7 +3006,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-neni-am-naschmarkt",
@@ -2870,7 +3053,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-shiki-japanese-cuisine",
@@ -2916,7 +3102,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-mochi-ramen-bar",
@@ -2962,7 +3151,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-red-bowl",
@@ -3008,7 +3200,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-bibim",
@@ -3054,7 +3249,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-sura",
@@ -3100,7 +3298,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-yori",
@@ -3146,7 +3347,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-kim-kocht",
@@ -3192,7 +3396,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-kim-shop",
@@ -3238,7 +3445,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-babida",
@@ -3284,7 +3494,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-koinonia",
@@ -3330,7 +3543,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-akakiko",
@@ -3376,7 +3592,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-addiert",
@@ -3422,7 +3641,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-art-corner-restaurant",
@@ -3466,7 +3688,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-m-eins19",
@@ -3512,7 +3737,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-donauhof",
@@ -3558,7 +3786,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-sophie7",
@@ -3604,7 +3835,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-kikko-ba",
@@ -3650,7 +3884,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-prunkraume",
@@ -3696,7 +3933,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-pomali",
@@ -3742,7 +3982,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-artig",
@@ -3788,7 +4031,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-carioca",
@@ -3834,7 +4080,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-dampha-kitchen",
@@ -3880,7 +4129,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-ossa",
@@ -3926,7 +4178,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-tisch-matte",
@@ -3972,7 +4227,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-seameboilin",
@@ -4018,7 +4276,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-arici",
@@ -4064,7 +4325,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-pescobar",
@@ -4110,7 +4374,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-le-sept",
@@ -4156,7 +4423,10 @@
       "publication": {
         "approved": false
       },
-      "tags": []
+      "tags": [],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-cafe-central",
@@ -4202,7 +4472,10 @@
       },
       "tags": [
         "visit_warning"
-      ]
+      ],
+      "editorial": {
+        "must_visit": false
+      }
     },
     {
       "id": "restaurant-hinterholz",
@@ -4248,7 +4521,108 @@
       },
       "tags": [
         "visit_warning"
-      ]
+      ],
+      "editorial": {
+        "must_visit": false
+      }
+    },
+    {
+      "id": "restaurant-melker-stiftskeller",
+      "name": {
+        "de": "Melker Stiftskeller",
+        "ko": null,
+        "en": "Melker Stiftskeller"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
+    },
+    {
+      "id": "restaurant-griechenbeisl",
+      "name": {
+        "de": "Griechenbeisl",
+        "ko": null,
+        "en": "Griechenbeisl"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": [],
+      "editorial": {
+        "must_visit": true
+      }
     }
   ]
 }
