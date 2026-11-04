@@ -1915,7 +1915,7 @@ function vn59WcPhoto(p){
   if(hasCoords)return distKm21(p.lat,p.lon,x.lat,x.lon)*1000<=35;
   return x.match.test(location);
  });
- if(!found)return '<div class="vn59-wc-no-photo">이 시설의 실제 사진은 아직 확보하지 못했습니다.</div>';
+ if(!found)return '';
  const file=encodeURIComponent(found.file),src='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+file+'?width=640',original='https://commons.wikimedia.org/wiki/File:'+file;
  return `<figure class="vn59-wc-photo"><img src="${h(src)}" alt="${h(found.caption)}" loading="lazy" onerror="this.parentElement.hidden=true"><figcaption>${h(found.caption)} · ${h(found.author)} · ${h(found.licence)} · <a href="${h(original)}" target="_blank" rel="noopener noreferrer">사진 출처·라이선스 ↗</a></figcaption></figure>`;
 }
@@ -1924,7 +1924,7 @@ function showFacilities(kind){
  const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
  const points=nearest(info.points,anchor(),{max:55,radius:3000}).map((p,i)=>({
   key:String(i),title:p.name||'공공화장실',lat:p.lat,lon:p.lon,type:'wc',action:'noop',
-  popup:`<div class="vn59-wc-popup"><b>${h(p.name||'공공화장실')}</b>${vn59WcPhoto(p)}<p>${h(p.details||'')}</p><small>사진은 과거 촬영 자료이며 같은 지역 내 시설도 외관이 다를 수 있습니다. 실시간 개방 여부는 확인되지 않았습니다.</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a></div>`
+  popup:`<div class="vn59-wc-popup"><b>${h(p.name|| (state.contentLang==='en'?'Public toilet':'공공화장실'))}</b>${p.address?`<p>${h(p.address)}</p>`:''}${vn59WcPhoto(p)}<div style="margin-top:8px"><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">${state.contentLang==='en'?'Directions':'길찾기'} ↗</a></div></div>`
  }));
  map.setView([anchor().lat,anchor().lon],14);
  vn60Clusters(points,{label:'공공화장실'});
