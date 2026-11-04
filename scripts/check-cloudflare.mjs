@@ -33,3 +33,13 @@ for(const key of ['tourVisitMinutes27','tourVisitSummary27','tourPlaceMap27','da
 }
 assert.ok(index.includes('Phase 27'), 'public index page version not updated');
 console.log('Phase 27 regression gate OK: six curated routes, dated guide, map links and visit-time summary.');
+
+for(const [phase,controls] of [
+ ['28',['initTourMap28','tour-map-28','tour-map-day','vn28-marker','L.polyline']],
+ ['29',['vn29-edit-banner','data-act=\\"open-editor\\"','makeEditDraft','edit-apply']],
+ ['30',['repeat(5,minmax(0,1fr))','touch-action:manipulation','100svh']]
+]){
+ for(const control of controls)assert.ok(index.includes(control),`Phase ${phase} component missing: ${control}`);
+}
+assert.ok(index.includes('Phase 30'),'public app title must identify Phase 30');
+console.log('Phases 28–30 regression gate OK: course map, itinerary editing and mobile layout.');
