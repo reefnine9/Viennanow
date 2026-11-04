@@ -512,7 +512,7 @@ let state={...DEFAULT,anchor:{...DEFAULT.anchor},preferences:{...DEFAULT.prefere
 if(state.tab==='guide')state.tab='home';if(state.homeView==='explore'){state.tab='sights';state.homeView='overview';}if(!['home','sights','food','itinerary','map'].includes(state.tab))state.tab='home';
 state.planView=state.planView || (state.itinerary?'result':'basic');
 state.homeView=state.homeView || 'overview';
-state.guideTopic=null;state.settingsOpen=false;state.placeSearch=state.placeSearch||'';state.explore19=false;state.expDetail19=null;state.expPlan19=null;state.expFilter19=state.expFilter19||'all';state.expSearch19='';state.expSaved19=Array.isArray(state.expSaved19)?state.expSaved19:[];state.savedRestaurants=Array.isArray(state.savedRestaurants)?[...new Set(state.savedRestaurants.filter(x=>typeof x==='string'))]:[];
+state.guideTopic=null;state.settingsOpen=false;state.placeSearch=state.placeSearch||'';state.explore19=false;state.expDetail19=null;state.expPlan19=null;state.expFilter19=state.expFilter19||'all';state.expSearch19='';state.expSaved19=Array.isArray(state.expSaved19)?state.expSaved19:[];state.savedRestaurants=Array.isArray(state.savedRestaurants)?[...new Set(state.savedRestaurants.filter(x=>typeof x==='string'))]:[];state.vn64FoodDetail=null;
 state.sightSection=state.sightSection||'all';if(!state.vnAllSightsCategory57){state.sightSection='all';state.sightDeckIndex=0;state.vnAllSightsCategory57=true;}state.foodSection=state.foodSection||'cafe';state.nearSection=state.nearSection||'map';state.nearRestFilter=['all','cafe','park'].includes(state.nearRestFilter)?state.nearRestFilter:'all';state.nearDiningSaved=!!state.nearDiningSaved;state.planSection=['premium','mine'].includes(state.planSection)?state.planSection:'premium';if(!state.vnCatalogMigration36){state.planSection='premium';state.vnCatalogMigration36=true;}state.sightDeckIndex=Number(state.sightDeckIndex)||0;state.foodDeckIndex=Number(state.foodDeckIndex)||0;state.sightQuery=state.sightQuery||'';state.foodQuery=state.foodQuery||'';state.homeGuide=false;state.manualPlan=state.manualPlan&&Array.isArray(state.manualPlan.days)?state.manualPlan:null;state.editDraft=null;state.editPreviewOpen=false;
 state.dayWindows=state.dayWindows&&typeof state.dayWindows==='object'?state.dayWindows:{};state.fixedEvents=Array.isArray(state.fixedEvents)?state.fixedEvents:[];state.planError='';state.eventDone=state.eventDone&&typeof state.eventDone==='object'?state.eventDone:{};
 state.skipped=state.skipped||{};state.liveOverrides=state.liveOverrides||{};state.liveHistory=Array.isArray(state.liveHistory)?state.liveHistory:[];state.livePending=state.livePending||{};state.livePreview=null;state.liveClock=state.liveClock||'15:30';state.fullPhoto=null;state.contentLang=state.contentLang==='en'?'en':'ko';state.routeOverrides=state.routeOverrides||{};state.diagnostics=state.diagnostics||{};state.routeEdit=null;state.routeApiError='';let routeBusy=false;let map=null,layerGroup=null,loadedFacilities={};let fetchId=0,loadingFacility=null;
@@ -656,7 +656,7 @@ function navTo(t){
  state.vn52View=null;state.vn62ShopView=null;state.vn62ShopDetail=null;state.guideTopic=null;
  // Enter the restaurant tab with a full list, not a persisted restaurant-specific search.
  if(t==='food'&&state.tab!=='food'){state.foodQuery='';state.vn42FoodCategory='all';}
- state.tab=t;state.detail=null;state.expDetail19=null;state.routeEdit=null;state.settingsOpen=false;
+ state.tab=t;state.detail=null;state.expDetail19=null;state.vn64FoodDetail=null;state.routeEdit=null;state.settingsOpen=false;
  state.explore19=false;state.homeGuide=false;
  if(t==='home')state.homeView='overview';
  if(t==='itinerary')state.planSection=['premium','mine'].includes(state.planSection)?state.planSection:'premium';
@@ -1723,6 +1723,7 @@ function render(){
  main.closest('.phone')?.classList.toggle('vn37-plan-screen',state.tab==='itinerary');
  main.closest('.phone')?.classList.toggle('vn50-food-screen',state.tab==='food');
  if(state.fullPhoto){vn46StopAuto();$('layer').innerHTML=photoLayer();vn46Init();return;}
+ if(state.vn64FoodDetail){$('layer').innerHTML=vn64FoodDetail();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
  if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
  if(state.detail){$('layer').innerHTML=detailLayer();return;}
@@ -1937,7 +1938,7 @@ async function autoDayWalk(){
 }
 function act(a,el){let id=el?.dataset?.id,value=el?.dataset?.value;switch(a){
 case 'vn51-food-map':{state.vn51FocusFood=id;state.nearSection='food';state.tab='map';save();render();return;}
-case 'vn48-food-open':{const restaurant=VN42_DB?.restaurants?.find(r=>r.id===id);state.tab='food';state.vn42FoodCategory='all';state.vn42Open=id;state.foodQuery=restaurant?.name?.de||'';save();render();return;}
+case 'vn48-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.tab='food';state.vn42FoodCategory='all';state.vn64FoodDetail=id;state.detail=null;state.expDetail19=null;state.foodQuery='';save();render();return;}
 case 'vn-filter-scroll':{const strip=document.querySelector('.vn40-filter-wrap .vn38-filterstrip');if(strip){strip.scrollBy({left:(value==='prev'?-1:1)*Math.max(170,strip.clientWidth*.75),behavior:'smooth'});}return;}
 case 'vn-course-filter':state.vnCourseFilter39=value;state.vnCourseDetail=null;save();render();return;
 case 'vn-course-detail':state.vnCourseDetail=id;save();render();$('main').scrollTop=0;return;
@@ -1954,10 +1955,17 @@ case 'plan-premium':state.vnCourseDetail=null;state.planSection='premium';state.
 case 'near-rest':state.nearSection='rest';navTo('map');return;
 case 'near-nightlife':{window.open(googleNearby21('bar nightclub'),'_blank','noopener,noreferrer');return;}
 case 'section-sights':state.sightSection=value;state.sightDeckIndex=0;save();render();return;
-case 'vn42-food-filter':state.vn42FoodCategory=value;state.foodQuery='';state.vn42Open=null;save();render();requestAnimationFrame(vn42RevealSelectedFilter);return;
+case 'vn42-food-filter':state.vn42FoodCategory=value;state.foodQuery='';state.vn42Open=null;state.foodDeckIndex=0;save();render();requestAnimationFrame(vn42RevealSelectedFilter);return;
 case 'vn42-food-reset':state.foodQuery='';state.vn42FoodCategory='all';state.vn42Open=null;save();render();return;
 case 'vn42-retry':VN42_DB=null;VN42_ERROR='';VN42_LOADING=false;vn42Load();render();return;
-case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn42-food-open':state.vn42Open=state.vn42Open===id?null:id;render();return;
+case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn64-food-open':case 'vn42-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;save();render();return;}
+case 'vn64-food-close':state.vn64FoodDetail=null;save();render();return;
+case 'vn64-food-slide':{
+ const records=vn64FoodRecords(),index=records.findIndex(p=>p.id===state.vn64FoodDetail);
+ if(index<0||records.length<2)return;
+ state.vn64FoodDetail=records[(index+(Number(value)>0?1:-1)+records.length)%records.length].id;
+ save();render();return;
+}
 case 'section-food':state.foodSection=value;state.foodDeckIndex=0;save();render();return;
 case 'section-plan':state.vnCourseDetail=null;state.tourDetail=null;state.tourError='';state.planSection=value==='mine'?'mine':'premium';save();render();return;
 case 'near-search':nearSearch31();return;
@@ -1971,7 +1979,7 @@ case 'vn61-near-category':{
 case 'section-near':state.nearSection=['sights','food','saved','stories','wc','plan'].includes(value)?value:'sights';if(state.nearSection==='wc')state.facility='wc';if(state.tab!=='map')state.tab='map';save();render();return;
 case 'near-rest-filter':state.nearRestFilter=['all','cafe','park'].includes(value)?value:'all';save();render();return;
 case 'near-dining-filter':state.nearDiningSaved=value==='saved';save();render();return;
-case 'deck-next':case 'deck-prev':{const key=value==='sights'?'sightDeckIndex':'foodDeckIndex';const length=value==='sights'?vn57SightRecords().length:EXP19.filter(v=>v.kind===state.foodSection).length;if(length){state[key]=((Number(state[key])||0)+(a==='deck-next'?1:-1)+length)%length;save();render();}return;}
+case 'deck-next':case 'deck-prev':{const key=value==='sights'?'sightDeckIndex':'foodDeckIndex';const length=value==='sights'?vn57SightRecords().length:value==='restaurants'?vn64FoodRecords().length:EXP19.filter(v=>v.kind===state.foodSection).length;if(length){state[key]=((Number(state[key])||0)+(a==='deck-next'?1:-1)+length)%length;save();render();}return;}
 case 'tour-detail':{const t=CURATED21.find(x=>x.id===id);if(!t)return;state.tourDetail=id;state.tourMapDay=0;state.tourError="";state.tourDate=state.date;state.tourStart=state.dayWindows?.[state.date]?.start||"09:30";save();render();return;}
 case 'tour-back':state.tourDetail=null;state.tourError="";save();render();return;
 case 'preset-tour':state.tourDetail=id;state.tourError="";save();render();return;
@@ -2080,8 +2088,8 @@ case'run-diagnostic':runDiagnostic(value);return;}}
 document.addEventListener('submit',e=>{if(e.target?.id==='near-search-form'){e.preventDefault();nearSearch31();}});
 document.addEventListener('click',e=>{let x=e.target.closest('[data-act]');if(!x)return;if(x.matches('input'))return;if(x.classList.contains('drawerbg')&&e.target.closest('.drawer'))return;act(x.dataset.act,x)});
 let photoTouch=null;
-document.addEventListener('touchstart',e=>{if((e.target.closest('.photo-story')||e.target.closest('.full-photo')||e.target.closest('.deck-area'))&&e.touches.length===1){photoTouch={x:e.touches[0].clientX,y:e.touches[0].clientY};}}, {passive:true});
-document.addEventListener('touchend',e=>{if(!photoTouch)return;let t=e.changedTouches[0];let dx=t.clientX-photoTouch.x,dy=t.clientY-photoTouch.y;photoTouch=null;if(Math.abs(dx)>65&&Math.abs(dx)>1.4*Math.abs(dy)){let deck=e.target.closest('.deck-area');if(deck)act(dx<0?'deck-next':'deck-prev',{dataset:{value:deck.dataset.deck}});else act(state.fullPhoto?(dx<0?'photo-next':'photo-prev'):(dx<0?'story-next':'story-prev'),{dataset:{}});}}, {passive:true});
+document.addEventListener('touchstart',e=>{if((e.target.closest('.photo-story')||e.target.closest('.full-photo')||e.target.closest('.deck-area')||e.target.closest('.vn63-swipe'))&&e.touches.length===1){photoTouch={x:e.touches[0].clientX,y:e.touches[0].clientY};}}, {passive:true});
+document.addEventListener('touchend',e=>{if(!photoTouch)return;let t=e.changedTouches[0];let dx=t.clientX-photoTouch.x,dy=t.clientY-photoTouch.y;photoTouch=null;if(Math.abs(dx)>65&&Math.abs(dx)>1.4*Math.abs(dy)){let deck=e.target.closest('.deck-area');if(deck)act(dx<0?'deck-next':'deck-prev',{dataset:{value:deck.dataset.deck}});else if(e.target.closest('.vn63-swipe')){const kind=e.target.closest('.vn63-swipe').dataset.swipeKind;act(kind==='food'?'vn64-food-slide':'vn63-sight-slide',{dataset:{value:dx<0?'1':'-1'}});}else act(state.fullPhoto?(dx<0?'photo-next':'photo-prev'):(dx<0?'story-next':'story-prev'),{dataset:{}});}}, {passive:true});
 document.addEventListener('change',e=>{let x=e.target;if(x.id==='near-plan-choice'){state.nearPlanChoice=x.value;save();render();return;}if(x.id==='near-plan-day'){state.nearPlanDay=Number(x.value)||0;save();render();return;}if(x.id==='tour-start-date'){if(/^\d{4}-\d{2}-\d{2}$/.test(x.value)){state.tourDate=x.value;const dates=tripDates(x.value,(CURATED21.find(t=>t.id===state.tourDetail)?.days)||1);document.querySelectorAll('[data-tour-date-index]').forEach(el=>{el.textContent=dates[Number(el.dataset.tourDateIndex)]||'';});state.tourError='';save();}return;}if(x.id==='tour-start-time'){state.tourStart=x.value;state.tourError='';save();return;}if(x.id==='live-clock'){state.liveClock=x.value;state.livePreview=null;save();render();return;}if(x.dataset.editMove){let next=editMove(state.editDraft,x.dataset.editMove,Number(x.value));if(next){state.editDraft=next;state.editPreviewOpen=false;state.currentDay=Number(x.value);save();render();}return;}if(x.dataset.windowDate){let date=x.dataset.windowDate,field=x.dataset.windowField;state.dayWindows[date]={...DEFAULT_WINDOW,...state.dayWindows[date],[field]:x.value};state.itinerary=null;state.planError='';save();return;}if(x.name==='visitOpt'){act('visit-mode',x);return}if(x.id==='tripDate'){if(!/^\d{4}-\d{2}-\d{2}$/.test(x.value)){toast('올바른 여행 날짜를 선택하세요');render();return;}state.date=x.value;state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='days'){state.days=Number(x.value);state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='pace'){state.pace=x.value;state.itinerary=null;save()}});
 document.addEventListener('input',e=>{if(e.target.id==='foodSearch21'){const key='foodQuery';state[key]=e.target.value;const pos=e.target.selectionStart;save();render();const input=$(e.target.id);if(input){input.focus();input.setSelectionRange(pos,pos);}return;}if(e.target.id==='expSearch19'){state.expSearch19=e.target.value;let pos=e.target.selectionStart;render();let i=$('expSearch19');if(i){i.focus();i.setSelectionRange(pos,pos)}return;}
 if(e.target.id==='placeSearch'){state.placeSearch=e.target.value;let pos=e.target.selectionStart;save();render();let input=$('placeSearch');if(input){input.focus();input.setSelectionRange(pos,pos)}return;}if(e.target.id==='search'){state.query=e.target.value;let pos=e.target.selectionStart;save();render();let input=$('search');if(input){input.focus();input.setSelectionRange(pos,pos)}}});
