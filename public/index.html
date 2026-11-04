@@ -347,6 +347,8 @@
 .vn45-directions{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:7px 11px;border:1px solid #b8ccc6;border-radius:9px;background:#fff;color:#216b65;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}
 .vn45-directions:focus-visible{outline:3px solid #45a8ab}
 .vn44-guide{margin-top:2px}
+
+.vn47-links{display:flex;flex-direction:column;gap:4px;margin-top:8px}.vn47-links .vn43-maplink{margin:0}.vn47-streetlink{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:9px 10px;min-height:35px;border:1px solid #cbdad4;background:#f3f7f4;color:#205b58;border-radius:8px;text-decoration:none;font-size:12px;font-weight:750}.vn47-streetlink:focus-visible{outline:3px solid #45a8ab;outline-offset:2px}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -1183,6 +1185,14 @@ function vn42RevealSelectedFilter(){
  const left=strip.scrollLeft+item.left-parent.left-(strip.clientWidth-item.width)/2;
  strip.scrollTo({left:Math.max(0,left),behavior:'smooth'});
 }
+function vn47StreetViewLink(r){
+ const lat=r.location?.lat,lng=r.location?.lng;
+ if(typeof lat==='number'&&typeof lng==='number'&&Number.isFinite(lat)&&Number.isFinite(lng)){
+  return {url:'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint='+encodeURIComponent(lat+','+lng),direct:true};
+ }
+ const query=r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,r.address||'Vienna, Austria'].filter(Boolean).join(', ');
+ return {url:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query),direct:false};
+}
 function foodPage21(){
  if(!VN42_DB&&!VN42_LOADING&&!VN42_ERROR)vn42Load();
  const opts=[['all','전체'],['must','필수 맛집'],['featured','대표 맛집'],['local_recommended','현지 추천'],['hidden_gem','숨은 맛집'],['personal','주민 맛집 노트'],['asian','한식·아시아'],['new','NEW']];
@@ -1210,15 +1220,17 @@ function foodPage21(){
   const menu=(r.recommended_dishes||[]).slice(0,3).join(' · ');
   const mapQuery=r.quick_pick?.google_maps_query||((r.name?.de||name)+', Vienna, Austria');
   const mapUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(mapQuery);
+  const street=vn47StreetViewLink(r);
+  const streetAction='<a class="vn47-streetlink" href="'+h(street.url)+'" target="_blank" rel="noopener noreferrer" aria-label="'+h(name)+' 구글 지도 거리뷰 찾기">◎ '+(street.direct?'거리뷰 바로 보기':'Google 지도에서 거리뷰 찾기')+' ↗</a>';
   const expanded=state.vn42Open===r.id;
   const reopen=r.operations?.reopening?.expected_period?'재개장 예정: '+r.operations.reopening.expected_period+' (정확한 날짜 미정)':'';
   const alternative=r.operations?.temporary_alternative?'임시 카페: '+r.operations.temporary_alternative.name+' · '+r.operations.temporary_alternative.address:'';
   const credit=photo?'<p class="vn43-credit">사진: '+h(photo.author)+' · '+h(photo.license)+' · <a href="'+h(photo.source_page)+'" target="_blank" rel="noopener noreferrer">출처·이용 조건</a> (화면 맞춤 자르기)</p>':'';
   const gallery=expanded&&(r.media?.gallery||[]).length>1?'<div class="vn43-gallery">'+r.media.gallery.slice(1,3).filter(p=>p.commercial_use_verified).map(p=>'<figure><img loading="lazy" src="'+h(p.url)+'" alt="'+h(p.caption_ko||name)+'"><figcaption>사진: '+h(p.author)+' · '+h(p.license)+' · <a href="'+h(p.source_page)+'" target="_blank" rel="noopener noreferrer">원본</a></figcaption></figure>').join('')+'</div>':'';
   const detail=expanded?'<div class="vn42-detail">'+(reopen?'<p><b>'+h(reopen)+'</b></p>':'')+(alternative?'<p>'+h(alternative)+'</p>':'')+'<p>최신 위치·영업시간·메뉴·리뷰를 Google 지도에서 확인하세요. 예약 방법은 식당별로 다를 수 있습니다.</p>'+gallery+credit+'</div>':'';
-  return '<article class="vn42-card vn43-card"><div class="vn43-top">'+media+'<div class="vn43-info"><button class="vn42-item" data-act="vn42-food-open" data-id="'+h(r.id)+'" aria-expanded="'+expanded+'"><span><strong>'+h(name)+'</strong><small>'+h(secondary)+'</small></span><b aria-hidden="true">'+(expanded?'⌃':'›')+'</b></button><div class="vn42-tags">'+badges+'</div><p class="vn43-brief">'+h(brief)+'</p>'+(menu?'<p class="vn43-menu">추천 메뉴 · '+h(menu)+'</p>':'')+'</div></div>'+(photo?'<div class="vn43-inline-credit">사진: '+h(photo.author)+' · '+h(photo.license)+' · <a href="'+h(photo.source_page)+'" target="_blank" rel="noopener noreferrer">출처/라이선스</a> · 화면 맞춤 자르기</div>':'')+'<a class="vn43-maplink" href="'+h(mapUrl)+'" target="_blank" rel="noopener noreferrer">Google 지도에서 자세히 보기 ↗</a>'+detail+'</article>';
+  return '<article class="vn42-card vn43-card"><div class="vn43-top">'+media+'<div class="vn43-info"><button class="vn42-item" data-act="vn42-food-open" data-id="'+h(r.id)+'" aria-expanded="'+expanded+'"><span><strong>'+h(name)+'</strong><small>'+h(secondary)+'</small></span><b aria-hidden="true">'+(expanded?'⌃':'›')+'</b></button><div class="vn42-tags">'+badges+'</div><p class="vn43-brief">'+h(brief)+'</p>'+(menu?'<p class="vn43-menu">추천 메뉴 · '+h(menu)+'</p>':'')+'</div></div>'+(photo?'<div class="vn43-inline-credit">사진: '+h(photo.author)+' · '+h(photo.license)+' · <a href="'+h(photo.source_page)+'" target="_blank" rel="noopener noreferrer">출처/라이선스</a> · 화면 맞춤 자르기</div>':'')+'<div class="vn47-links"><a class="vn43-maplink" href="'+h(mapUrl)+'" target="_blank" rel="noopener noreferrer">Google 지도에서 자세히 보기 ↗</a>'+streetAction+'</div>'+detail+'</article>';
  }).join('');
- return '<div class="vn42-wrap">'+top+'<div class="vn42-content"><input id="foodSearch21" class="search" value="'+h(state.foodQuery||'')+'" placeholder="맛집 이름 검색" aria-label="맛집 검색"><div class="vn42-summary"><b>'+shown.length+'곳</b><small>'+h(opts.find(v=>v[0]===cat)?.[1]||'전체')+' · 전체 '+base.length+'곳</small></div>'+(cards||'<div class="card soft">해당 분류의 맛집이 아직 없습니다.</div>')+'<p class="vn42-note">ViennaNow의 식당 추천 후보입니다. 자세한 위치, 최신 메뉴, 영업시간 및 예약 방법은 각 식당의 Google 지도를 확인해 주세요. 사진은 사용 조건을 확인한 것만 표시합니다.</p></div></div>';
+ return '<div class="vn42-wrap">'+top+'<div class="vn42-content"><input id="foodSearch21" class="search" value="'+h(state.foodQuery||'')+'" placeholder="맛집 이름 검색" aria-label="맛집 검색"><div class="vn42-summary"><b>'+shown.length+'곳</b><small>'+h(opts.find(v=>v[0]===cat)?.[1]||'전체')+' · 전체 '+base.length+'곳</small></div>'+(cards||'<div class="card soft">해당 분류의 맛집이 아직 없습니다.</div>')+'<p class="vn42-note">ViennaNow의 식당 추천 후보입니다. 자세한 위치, 최신 메뉴, 영업시간 및 예약 방법은 각 식당의 Google 지도를 확인해 주세요. 사진은 사용 조건을 확인한 것만 표시합니다. 거리뷰 버튼은 Google 지도로 연결되며, 해당 위치를 선택해 거리뷰를 열 수 있습니다.</p></div></div>';
 }
 
 
