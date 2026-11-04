@@ -3,7 +3,8 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
-    "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록."
+    "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록.",
+    "2026-11-04: 전체 94개 식당 상세 한국어 설명과 선정 이유 작성. 개별 확인 근거가 불충분한 식당은 보수적인 후보 설명과 검증 필요를 명시."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -42,7 +43,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "접시보다 크게 펼쳐지는 바삭한 비너 슈니첼로 유명하다. 감자샐러드와 함께 비엔나에서 꼭 먹어볼 음식의 전형적인 조합을 경험할 수 있어 첫 방문자에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -66,7 +67,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "접시보다 크게 펼쳐지는 바삭한 비너 슈니첼로 유명하다. 감자샐러드와 함께 비엔나에서 꼭 먹어볼 음식의 전형적인 조합을 경험할 수 있어 첫 방문자에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -127,7 +130,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "삶은 소고기인 타펠슈피츠와 진한 육수, 사과고추냉이 등 곁들임을 한 끼로 즐기는 비엔나 전통 요리 전문점이다. 슈니첼 외의 황실 식문화를 맛보고 싶은 여행자에게 적합하다.",
         "en": null,
         "de": null
       },
@@ -151,7 +154,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "삶은 소고기인 타펠슈피츠와 진한 육수, 사과고추냉이 등 곁들임을 한 끼로 즐기는 비엔나 전통 요리 전문점이다. 슈니첼 외의 황실 식문화를 맛보고 싶은 여행자에게 적합하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -222,7 +227,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오페라극장 주변에서 전통적인 비엔나식 식사를 계획하기 좋은 플라후타 계열의 식당이다. 공연 전후 식사 동선과 클래식 요리의 조합을 위해 선정했다.",
         "en": null,
         "de": null
       },
@@ -246,7 +251,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오페라극장 주변에서 전통적인 비엔나식 식사를 계획하기 좋은 플라후타 계열의 식당이다. 공연 전후 식사 동선과 클래식 요리의 조합을 위해 선정했다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -283,7 +290,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "시내 중심가에서 돼지 폭립을 푸짐하게 즐기려는 여행자를 위한 선택이다. 슈니첼과는 다른 바비큐 스타일의 든든한 식사에 초점을 맞춘다.",
         "en": null,
         "de": null
       },
@@ -307,7 +314,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "시내 중심가에서 돼지 폭립을 푸짐하게 즐기려는 여행자를 위한 선택이다. 슈니첼과는 다른 바비큐 스타일의 든든한 식사에 초점을 맞춘다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -345,7 +354,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "벨베데레 인근의 양조장형 식당으로 자체 맥주와 전통 오스트리아식 돼지고기 요리를 함께 즐기기 좋다. 궁전 산책 뒤 현지 맥주 문화를 체험할 수 있다.",
         "en": null,
         "de": null
       },
@@ -369,7 +378,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "벨베데레 인근의 양조장형 식당으로 자체 맥주와 전통 오스트리아식 돼지고기 요리를 함께 즐기기 좋다. 궁전 산책 뒤 현지 맥주 문화를 체험할 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -431,7 +442,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "구시가지에서 슈니첼과 굴라슈 같은 비엔나 가정식 메뉴를 편안하게 즐길 수 있는 전통식당이다. 고급 레스토랑보다 소박한 현지 식당 분위기가 매력이다.",
         "en": null,
         "de": null
       },
@@ -455,7 +466,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "구시가지에서 슈니첼과 굴라슈 같은 비엔나 가정식 메뉴를 편안하게 즐길 수 있는 전통식당이다. 고급 레스토랑보다 소박한 현지 식당 분위기가 매력이다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -490,7 +503,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나 구시가지에서 전통적인 가스트하우스 분위기를 경험할 만한 곳이다. 화려한 파인다이닝보다 소박한 지역 요리를 찾는 여행자에게 소개한다.",
         "en": null,
         "de": null
       },
@@ -514,7 +527,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나 구시가지에서 전통적인 가스트하우스 분위기를 경험할 만한 곳이다. 화려한 파인다이닝보다 소박한 지역 요리를 찾는 여행자에게 소개한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -549,7 +564,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "이름 그대로 슈니첼을 중심으로 푸짐한 오스트리아식 식사를 즐기는 곳이다. 캐주얼하게 비엔나의 대표 음식을 맛보고 싶은 여행자에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -573,7 +588,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "이름 그대로 슈니첼을 중심으로 푸짐한 오스트리아식 식사를 즐기는 곳이다. 캐주얼하게 비엔나의 대표 음식을 맛보고 싶은 여행자에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -611,7 +628,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "프라터 공원의 맥주 정원 문화와 커다란 돼지 족발 슈텔체(Stelze)로 유명하다. 놀이공원 산책과 야외 식사를 묶기 좋아 선정했다.",
         "en": null,
         "de": null
       },
@@ -635,7 +652,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "프라터 공원의 맥주 정원 문화와 커다란 돼지 족발 슈텔체(Stelze)로 유명하다. 놀이공원 산책과 야외 식사를 묶기 좋아 선정했다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -694,7 +713,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비너 슈니첼 같은 비엔나 대표 요리를 중심으로 식사하는 도심 레스토랑이다. 전통 메뉴를 조금 더 차분한 공간에서 즐기려는 사람에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -718,7 +737,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비너 슈니첼 같은 비엔나 대표 요리를 중심으로 식사하는 도심 레스토랑이다. 전통 메뉴를 조금 더 차분한 공간에서 즐기려는 사람에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -753,7 +774,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "동네 식당 특유의 분위기를 즐기면서 비엔나식 식사를 할 수 있는 후보이다. 관광 중심가의 유명 상호에서 벗어나 지역의 식문화를 살펴볼 수 있다.",
         "en": null,
         "de": null
       },
@@ -777,7 +798,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "동네 식당 특유의 분위기를 즐기면서 비엔나식 식사를 할 수 있는 후보이다. 관광 중심가의 유명 상호에서 벗어나 지역의 식문화를 살펴볼 수 있다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -812,7 +835,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "뮤지엄스콰르티어의 안뜰 정원과 고전적인 비엔나식 음식이 이곳의 매력이다. 여름에는 나무 그늘 아래에서 굴라슈나 타펠슈피츠 같은 요리를 즐길 수 있다.",
         "en": null,
         "de": null
       },
@@ -836,7 +859,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "뮤지엄스콰르티어의 안뜰 정원과 고전적인 비엔나식 음식이 이곳의 매력이다. 여름에는 나무 그늘 아래에서 굴라슈나 타펠슈피츠 같은 요리를 즐길 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -872,7 +897,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "현지의 소박한 비엔나 가스트하우스 문화를 경험하려는 여행자에게 소개한다. 인기 메뉴와 정확한 운영 정보는 방문 전에 확인할 필요가 있다.",
         "en": null,
         "de": null
       },
@@ -896,7 +921,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "현지의 소박한 비엔나 가스트하우스 문화를 경험하려는 여행자에게 소개한다. 인기 메뉴와 정확한 운영 정보는 방문 전에 확인할 필요가 있다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -931,7 +958,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "격식에 얽매이지 않는 식사를 원하는 사람을 위한 비엔나의 캐주얼한 음식점 후보다. 구체적인 인기 메뉴는 방문 전 확인이 필요하다.",
         "en": null,
         "de": null
       },
@@ -955,7 +982,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "격식에 얽매이지 않는 식사를 원하는 사람을 위한 비엔나의 캐주얼한 음식점 후보다. 구체적인 인기 메뉴는 방문 전 확인이 필요하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -990,7 +1019,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "벨베데레 궁전 인근에서 공원과 식사를 묶기 좋은 장소로 소개한다. 관광 동선 중 여유롭게 쉬어 가는 식사 공간을 찾는 사람에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -1014,7 +1043,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "벨베데레 궁전 인근에서 공원과 식사를 묶기 좋은 장소로 소개한다. 관광 동선 중 여유롭게 쉬어 가는 식사 공간을 찾는 사람에게 어울린다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1049,7 +1080,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "직접 양조한 맥주와 캐주얼한 펍 요리를 즐기는 분위기가 특징이다. 궁전·카페 중심 일정과 다른 활기찬 비엔나의 맥주 문화를 경험할 수 있다.",
         "en": null,
         "de": null
       },
@@ -1073,7 +1104,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "직접 양조한 맥주와 캐주얼한 펍 요리를 즐기는 분위기가 특징이다. 궁전·카페 중심 일정과 다른 활기찬 비엔나의 맥주 문화를 경험할 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -1108,7 +1141,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "알베르티나와 국립오페라극장 옆 소시지 가판대로, 케제크라이너 등 비엔나 길거리 음식을 간단하게 맛볼 수 있다. 공연이나 도심 산책 도중 들르기 좋다.",
         "en": null,
         "de": null
       },
@@ -1132,7 +1165,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "알베르티나와 국립오페라극장 옆 소시지 가판대로, 케제크라이너 등 비엔나 길거리 음식을 간단하게 맛볼 수 있다. 공연이나 도심 산책 도중 들르기 좋다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -1191,7 +1226,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "1904년에 시작한 오픈 샌드위치 전문점으로, 작은 검은빵에 달걀과 다양한 스프레드를 올리는 것이 특징이다. 여러 종류를 조금씩 골라 먹는 비엔나식 간식 경험이 독특하다.",
         "en": null,
         "de": null
       },
@@ -1215,7 +1250,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "1904년에 시작한 오픈 샌드위치 전문점으로, 작은 검은빵에 달걀과 다양한 스프레드를 올리는 것이 특징이다. 여러 종류를 조금씩 골라 먹는 비엔나식 간식 경험이 독특하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -1274,7 +1311,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "역사적인 구시가지 델리 겸 식당으로, 작은 오픈 샌드위치와 오래된 비엔나 미식 문화가 매력이다. 긴 식사 대신 가볍고 개성 있는 먹거리를 찾는 사람에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -1298,7 +1335,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "역사적인 구시가지 델리 겸 식당으로, 작은 오픈 샌드위치와 오래된 비엔나 미식 문화가 매력이다. 긴 식사 대신 가볍고 개성 있는 먹거리를 찾는 사람에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -1357,7 +1396,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오스트리아식 식사를 포장해 간단히 즐기기 좋은 선택지다. 박물관과 관광지를 돌아다니는 중 시간을 아끼면서 현지 음식을 먹고 싶을 때 적합하다.",
         "en": null,
         "de": null
       },
@@ -1381,7 +1420,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오스트리아식 식사를 포장해 간단히 즐기기 좋은 선택지다. 박물관과 관광지를 돌아다니는 중 시간을 아끼면서 현지 음식을 먹고 싶을 때 적합하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -1416,7 +1457,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "전통 비엔나식 메뉴를 현대적인 레스토랑 공간에서 즐기고 싶은 여행자를 위한 곳이다. 일행과 함께 도심에서 식사 장소를 고를 때 고려할 만하다.",
         "en": null,
         "de": null
       },
@@ -1440,7 +1481,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "전통 비엔나식 메뉴를 현대적인 레스토랑 공간에서 즐기고 싶은 여행자를 위한 곳이다. 일행과 함께 도심에서 식사 장소를 고를 때 고려할 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -1475,7 +1518,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "전통 오스트리아 요리 외에 캐주얼한 바·그릴 계열 음식을 찾는 여행자의 대안이다. 구시가지에서 선택의 폭을 넓힐 수 있다.",
         "en": null,
         "de": null
       },
@@ -1499,7 +1542,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "전통 오스트리아 요리 외에 캐주얼한 바·그릴 계열 음식을 찾는 여행자의 대안이다. 구시가지에서 선택의 폭을 넓힐 수 있다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1536,7 +1581,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "알테 도나우 물가를 바라보며 돼지 립을 즐기는 강변 식당이다. 특히 따뜻한 계절에는 음식뿐 아니라 수변 산책과 야외 식사 분위기를 함께 즐기는 것이 선정 이유다. 대표 메뉴로 폭립을(를) 먼저 살펴볼 만하다.",
         "en": null,
         "de": null
       },
@@ -1560,7 +1605,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "알테 도나우 물가를 바라보며 돼지 립을 즐기는 강변 식당이다. 특히 따뜻한 계절에는 음식뿐 아니라 수변 산책과 야외 식사 분위기를 함께 즐기는 것이 선정 이유다. 대표 메뉴로 폭립을(를) 먼저 살펴볼 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -1620,7 +1667,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "전통 비엔나식 가스트하우스의 메뉴와 동네 식당 분위기를 경험할 만한 곳이다. 유명 관광지보다 지역적인 식사를 중시하는 사람에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -1644,7 +1691,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "전통 비엔나식 가스트하우스의 메뉴와 동네 식당 분위기를 경험할 만한 곳이다. 유명 관광지보다 지역적인 식사를 중시하는 사람에게 어울린다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1680,7 +1729,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나의 전통적인 동네 식당 분위기와 오스트리아식 한 끼를 즐기려는 여행자의 선택지다. 시그니처 메뉴는 추가 확인이 필요하다.",
         "en": null,
         "de": null
       },
@@ -1704,7 +1753,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나의 전통적인 동네 식당 분위기와 오스트리아식 한 끼를 즐기려는 여행자의 선택지다. 시그니처 메뉴는 추가 확인이 필요하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1739,7 +1790,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "전통적인 비엔나 요리를 현대적으로 해석하며 특히 코르동 블뢰로 알려져 있다. 클래식한 비즐의 편안함과 수준 높은 요리를 함께 원하는 여행자에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -1763,7 +1814,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "전통적인 비엔나 요리를 현대적으로 해석하며 특히 코르동 블뢰로 알려져 있다. 클래식한 비즐의 편안함과 수준 높은 요리를 함께 원하는 여행자에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -1799,7 +1852,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오스트리아·중부유럽 요리와 오래된 동네 식당의 분위기를 찾아볼 만한 곳이다. 구시가지의 대표 관광식당 외에 다른 경험을 원하는 사람에게 소개한다.",
         "en": null,
         "de": null
       },
@@ -1823,7 +1876,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오스트리아·중부유럽 요리와 오래된 동네 식당의 분위기를 찾아볼 만한 곳이다. 구시가지의 대표 관광식당 외에 다른 경험을 원하는 사람에게 소개한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1859,7 +1914,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나의 전통적인 대중식당 문화를 경험하고 싶은 사람을 위한 후보다. 관광 동선에서 벗어나 지역 식사의 소박한 매력을 찾아볼 수 있다.",
         "en": null,
         "de": null
       },
@@ -1883,7 +1938,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나의 전통적인 대중식당 문화를 경험하고 싶은 사람을 위한 후보다. 관광 동선에서 벗어나 지역 식사의 소박한 매력을 찾아볼 수 있다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -1919,7 +1976,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오래된 비엔나식 비즐 분위기를 느낄 수 있는 9구의 식당이다. 지그문트 프로이트 박물관 주변 동선과 결합해 동네 식당 문화를 경험하기 좋다.",
         "en": null,
         "de": null
       },
@@ -1943,7 +2000,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오래된 비엔나식 비즐 분위기를 느낄 수 있는 9구의 식당이다. 지그문트 프로이트 박물관 주변 동선과 결합해 동네 식당 문화를 경험하기 좋다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -1978,7 +2037,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "지역 식당에서 전통적인 오스트리아식 식사를 경험할 만한 곳이다. 화려한 인테리어보다 익숙한 현지식 한 끼를 원하는 사람에게 소개한다.",
         "en": null,
         "de": null
       },
@@ -2002,7 +2061,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "지역 식당에서 전통적인 오스트리아식 식사를 경험할 만한 곳이다. 화려한 인테리어보다 익숙한 현지식 한 끼를 원하는 사람에게 소개한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -2038,7 +2099,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오래된 비엔나 동네 식당의 분위기를 경험하고 싶을 때 고려할 만한 후보다. 메뉴와 영업 상태는 현장이나 공식 안내를 확인해야 한다.",
         "en": null,
         "de": null
       },
@@ -2062,7 +2123,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오래된 비엔나 동네 식당의 분위기를 경험하고 싶을 때 고려할 만한 후보다. 메뉴와 영업 상태는 현장이나 공식 안내를 확인해야 한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -2097,7 +2160,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "슈타트파크 산책과 묶기 좋은 식당으로 치즈·유제품을 활용한 요리와 편안한 미식 경험에 초점을 맞춘다. 스테이러에크의 고급 코스와는 다른 선택지다.",
         "en": null,
         "de": null
       },
@@ -2121,7 +2184,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "슈타트파크 산책과 묶기 좋은 식당으로 치즈·유제품을 활용한 요리와 편안한 미식 경험에 초점을 맞춘다. 스테이러에크의 고급 코스와는 다른 선택지다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -2180,7 +2245,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나의 현대 오스트리아 미식을 대표하는 파인다이닝 중 하나로, 지역 식재료를 창의적으로 다룬다. 슈타트파크의 녹지와 함께 특별한 식사를 계획하는 사람에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -2204,7 +2269,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나의 현대 오스트리아 미식을 대표하는 파인다이닝 중 하나로, 지역 식재료를 창의적으로 다룬다. 슈타트파크의 녹지와 함께 특별한 식사를 계획하는 사람에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -2263,7 +2330,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "창의적인 고급 코스 요리로 유명한 비엔나의 파인다이닝 레스토랑이다. 여행에서 음식 자체를 중요한 이벤트로 계획하는 미식가에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -2287,7 +2354,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "창의적인 고급 코스 요리로 유명한 비엔나의 파인다이닝 레스토랑이다. 여행에서 음식 자체를 중요한 이벤트로 계획하는 미식가에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2322,7 +2391,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "정교한 현대 요리와 코스 다이닝으로 알려진 레스토랑이다. 오스트리아식 전통 메뉴와 다른 독창적인 미식 경험을 찾는 여행자에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -2346,7 +2415,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "정교한 현대 요리와 코스 다이닝으로 알려진 레스토랑이다. 오스트리아식 전통 메뉴와 다른 독창적인 미식 경험을 찾는 여행자에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2381,7 +2452,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "예상치 못한 식재료 조합과 창의적인 구성의 코스 요리로 알려져 있다. 새로운 맛과 미식 실험을 즐기는 여행자에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -2405,7 +2476,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "예상치 못한 식재료 조합과 창의적인 구성의 코스 요리로 알려져 있다. 새로운 맛과 미식 실험을 즐기는 여행자에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2440,7 +2513,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "역사적인 팔레 코부르크의 분위기 속에서 정교한 고급 코스 요리를 경험할 수 있다. 기념일이나 특별한 저녁을 위해 고려할 만하다.",
         "en": null,
         "de": null
       },
@@ -2464,7 +2537,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "역사적인 팔레 코부르크의 분위기 속에서 정교한 고급 코스 요리를 경험할 수 있다. 기념일이나 특별한 저녁을 위해 고려할 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2499,7 +2574,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "불을 적극적으로 활용하는 조리와 창의적인 요리가 특징인 현대적 미식 공간이다. 불향과 조리 방식 자체를 즐기는 여행자에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -2523,7 +2598,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "불을 적극적으로 활용하는 조리와 창의적인 요리가 특징인 현대적 미식 공간이다. 불향과 조리 방식 자체를 즐기는 여행자에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2558,7 +2635,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "채소와 식물성 식재료를 중심에 둔 창의적인 고급 요리로 유명하다. 채식이 단순한 대체 메뉴가 아니라 세련된 미식 경험이 되는 곳이다.",
         "en": null,
         "de": null
       },
@@ -2582,7 +2659,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "채소와 식물성 식재료를 중심에 둔 창의적인 고급 요리로 유명하다. 채식이 단순한 대체 메뉴가 아니라 세련된 미식 경험이 되는 곳이다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2617,7 +2696,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비건 코스 다이닝을 창의적으로 풀어내는 식당이다. 고기 없이도 풍성한 맛과 다양한 조리법을 경험할 수 있다는 점에서 선정했다.",
         "en": null,
         "de": null
       },
@@ -2641,7 +2720,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비건 코스 다이닝을 창의적으로 풀어내는 식당이다. 고기 없이도 풍성한 맛과 다양한 조리법을 경험할 수 있다는 점에서 선정했다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2676,7 +2757,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "현대적인 고급 코스 요리와 정교한 접객을 경험할 수 있는 비엔나의 미식 장소다. 여유 있는 저녁을 계획할 때 어울린다.",
         "en": null,
         "de": null
       },
@@ -2700,7 +2781,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "현대적인 고급 코스 요리와 정교한 접객을 경험할 수 있는 비엔나의 미식 장소다. 여유 있는 저녁을 계획할 때 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2735,7 +2818,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "창의적인 코스 구성과 예상치 못한 맛의 조합으로 알려진 현대 레스토랑이다. 전통 레스토랑과 다른 비엔나의 미식 장면을 보여준다.",
         "en": null,
         "de": null
       },
@@ -2759,7 +2842,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "창의적인 코스 구성과 예상치 못한 맛의 조합으로 알려진 현대 레스토랑이다. 전통 레스토랑과 다른 비엔나의 미식 장면을 보여준다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2794,7 +2879,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "현대적인 분위기의 파인다이닝으로, 세련된 메뉴와 공간을 함께 즐기는 식사 경험이 강점이다. 기념일 저녁을 고려할 만하다.",
         "en": null,
         "de": null
       },
@@ -2818,7 +2903,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "현대적인 분위기의 파인다이닝으로, 세련된 메뉴와 공간을 함께 즐기는 식사 경험이 강점이다. 기념일 저녁을 고려할 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2853,7 +2940,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "와인과 음식의 조합을 편안한 비스트로 분위기에서 즐기는 식당이다. 전통 가스트하우스와 고급 코스 요리 사이의 선택지를 넓혀 준다.",
         "en": null,
         "de": null
       },
@@ -2877,7 +2964,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "와인과 음식의 조합을 편안한 비스트로 분위기에서 즐기는 식당이다. 전통 가스트하우스와 고급 코스 요리 사이의 선택지를 넓혀 준다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2912,7 +3001,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "나폴리 스타일 피자와 활기찬 분위기를 즐기기 좋은 식당이다. 오스트리아 전통 음식을 먹은 뒤 다른 캐주얼한 메뉴를 찾을 때 매력적이다.",
         "en": null,
         "de": null
       },
@@ -2936,7 +3025,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "나폴리 스타일 피자와 활기찬 분위기를 즐기기 좋은 식당이다. 오스트리아 전통 음식을 먹은 뒤 다른 캐주얼한 메뉴를 찾을 때 매력적이다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -2971,7 +3062,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "피자 반죽과 화덕 조리에 중점을 둔 이탈리아식 피자 전문점이다. 간단하지만 음식 자체의 완성도를 중시하는 식사를 찾는 사람에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -2995,7 +3086,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "피자 반죽과 화덕 조리에 중점을 둔 이탈리아식 피자 전문점이다. 간단하지만 음식 자체의 완성도를 중시하는 식사를 찾는 사람에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3030,7 +3123,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오스트리아 전통 음식에 이어 이탈리아식 피자를 즐기고 싶을 때 살펴볼 만한 곳이다. 캐주얼한 식사를 원하는 일행에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -3054,7 +3147,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오스트리아 전통 음식에 이어 이탈리아식 피자를 즐기고 싶을 때 살펴볼 만한 곳이다. 캐주얼한 식사를 원하는 일행에게 어울린다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3089,7 +3184,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "피자를 중심으로 한 이탈리아식 식사에 관심 있는 여행자를 위한 후보다. 구체적인 화덕 메뉴와 지점 정보는 최신 내용을 확인해야 한다.",
         "en": null,
         "de": null
       },
@@ -3113,7 +3208,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "피자를 중심으로 한 이탈리아식 식사에 관심 있는 여행자를 위한 후보다. 구체적인 화덕 메뉴와 지점 정보는 최신 내용을 확인해야 한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3148,7 +3245,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "이탈리아식 파스타와 레스토랑 분위기를 즐기고 싶을 때 고려할 만하다. 오스트리아식 메뉴와 다른 저녁 식사를 계획하는 여행자에게 소개한다.",
         "en": null,
         "de": null
       },
@@ -3172,7 +3269,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "이탈리아식 파스타와 레스토랑 분위기를 즐기고 싶을 때 고려할 만하다. 오스트리아식 메뉴와 다른 저녁 식사를 계획하는 여행자에게 소개한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3207,7 +3306,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "세련된 이탈리아식 레스토랑의 분위기와 지중해풍 식사에 관심 있는 여행자를 위한 선택지다. 특별한 식사 분위기를 찾는 사람에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -3231,7 +3330,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "세련된 이탈리아식 레스토랑의 분위기와 지중해풍 식사에 관심 있는 여행자를 위한 선택지다. 특별한 식사 분위기를 찾는 사람에게 어울린다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3266,7 +3367,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "스페인식 타파스처럼 여러 종류를 나눠 먹는 식사 문화를 경험하고 싶은 여행자를 위한 선택이다. 슈니첼 외의 메뉴를 찾는 사람에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -3290,7 +3391,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "스페인식 타파스처럼 여러 종류를 나눠 먹는 식사 문화를 경험하고 싶은 여행자를 위한 선택이다. 슈니첼 외의 메뉴를 찾는 사람에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3325,7 +3428,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "채소와 제철 재료 중심의 식사 문화에 관심 있는 여행자를 위한 곳이다. 오스트리아 요리를 다양한 식재료의 관점에서 즐길 수 있다.",
         "en": null,
         "de": null
       },
@@ -3349,7 +3452,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "채소와 제철 재료 중심의 식사 문화에 관심 있는 여행자를 위한 곳이다. 오스트리아 요리를 다양한 식재료의 관점에서 즐길 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3384,7 +3489,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나의 현대적인 소시지 가판대 문화에 관심 있는 사람에게 어울린다. 짧은 관광 동선에서도 지역의 거리 음식을 즐길 수 있다.",
         "en": null,
         "de": null
       },
@@ -3408,7 +3513,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나의 현대적인 소시지 가판대 문화에 관심 있는 사람에게 어울린다. 짧은 관광 동선에서도 지역의 거리 음식을 즐길 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3443,7 +3550,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "전통 소시지 가판대에 창의적인 곁들임과 요리를 더한 것으로 알려져 있다. 비엔나 길거리 음식의 새로운 흐름을 보여주는 후보이다.",
         "en": null,
         "de": null
       },
@@ -3467,7 +3574,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "전통 소시지 가판대에 창의적인 곁들임과 요리를 더한 것으로 알려져 있다. 비엔나 길거리 음식의 새로운 흐름을 보여주는 후보이다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3502,7 +3611,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "오래된 비엔나 소시지 가판대 문화를 경험하는 대표적인 선택이다. 한밤의 간식이나 간단한 한 끼로 현지식 소시지를 주문해 보고 싶을 때 좋다.",
         "en": null,
         "de": null
       },
@@ -3526,7 +3635,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "오래된 비엔나 소시지 가판대 문화를 경험하는 대표적인 선택이다. 한밤의 간식이나 간단한 한 끼로 현지식 소시지를 주문해 보고 싶을 때 좋다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -3585,7 +3696,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
         "en": null,
         "de": null
       },
@@ -3609,7 +3720,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3644,7 +3757,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
         "en": null,
         "de": null
       },
@@ -3668,7 +3781,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3703,7 +3818,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
         "en": null,
         "de": null
       },
@@ -3727,7 +3842,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -3762,7 +3879,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "레버케제를 따뜻한 빵에 넣어 먹는 오스트리아식 간식으로 알려져 있다. 슈니첼 외에 비엔나의 간편한 현지 식사를 맛볼 만하다.",
         "en": null,
         "de": null
       },
@@ -3786,7 +3903,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "레버케제를 따뜻한 빵에 넣어 먹는 오스트리아식 간식으로 알려져 있다. 슈니첼 외에 비엔나의 간편한 현지 식사를 맛볼 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -3845,7 +3964,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "알테 도나우 물가 풍경을 즐기며 여유로운 식사를 할 수 있다. 관광 중심가에서 벗어나 강변 산책과 저녁을 함께 계획하기 좋다.",
         "en": null,
         "de": null
       },
@@ -3869,7 +3988,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "알테 도나우 물가 풍경을 즐기며 여유로운 식사를 할 수 있다. 관광 중심가에서 벗어나 강변 산책과 저녁을 함께 계획하기 좋다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -3928,7 +4049,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "현대적인 일본식 작은 접시 요리와 감각적인 분위기로 알려진 곳이다. 비엔나에서 창의적인 일본 요리를 즐기는 선택지를 보여준다.",
         "en": null,
         "de": null
       },
@@ -3952,7 +4073,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "현대적인 일본식 작은 접시 요리와 감각적인 분위기로 알려진 곳이다. 비엔나에서 창의적인 일본 요리를 즐기는 선택지를 보여준다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -3985,7 +4108,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "나슈마르크트 시장의 활기찬 분위기 속에서 중동·지중해풍 공유 메뉴를 즐기는 식당이다. 시장 산책과 음식 경험을 한 번에 연결하기 좋다.",
         "en": null,
         "de": null
       },
@@ -4009,7 +4132,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "나슈마르크트 시장의 활기찬 분위기 속에서 중동·지중해풍 공유 메뉴를 즐기는 식당이다. 시장 산책과 음식 경험을 한 번에 연결하기 좋다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4044,7 +4169,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "고급스러운 공간에서 일본 요리를 차분하게 즐기고 싶은 여행자에게 어울린다. 초밥 외의 구성과 분위기를 고려할 만하다.",
         "en": null,
         "de": null
       },
@@ -4068,7 +4193,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "고급스러운 공간에서 일본 요리를 차분하게 즐기고 싶은 여행자에게 어울린다. 초밥 외의 구성과 분위기를 고려할 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4103,7 +4230,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "따뜻한 라멘과 일본식 국물 면 요리를 즐기는 곳이다. 오스트리아 요리가 이어지는 여행 중 다른 종류의 한 끼를 찾을 때 추천한다.",
         "en": null,
         "de": null
       },
@@ -4127,7 +4254,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "따뜻한 라멘과 일본식 국물 면 요리를 즐기는 곳이다. 오스트리아 요리가 이어지는 여행 중 다른 종류의 한 끼를 찾을 때 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4162,7 +4291,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "동아시아식 풍미를 찾는 방문객을 위한 후보로 포함했다. 정확한 대표 요리와 추천 메뉴는 최신 식당 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -4186,7 +4315,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "동아시아식 풍미를 찾는 방문객을 위한 후보로 포함했다. 정확한 대표 요리와 추천 메뉴는 최신 식당 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4221,7 +4352,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나 여행 중 한국식 밥과 양념이 그리울 때 살펴볼 만한 후보이다. 구체적인 대표 메뉴는 공식 메뉴 확인이 필요하다.",
         "en": null,
         "de": null
       },
@@ -4245,7 +4376,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나 여행 중 한국식 밥과 양념이 그리울 때 살펴볼 만한 후보이다. 구체적인 대표 메뉴는 공식 메뉴 확인이 필요하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4280,7 +4413,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "익숙한 한식 한 끼를 찾는 여행자에게 도움이 되는 선택지다. 관광 중 오스트리아 요리와 다른 식사가 당길 때 고려할 만하다.",
         "en": null,
         "de": null
       },
@@ -4304,7 +4437,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "익숙한 한식 한 끼를 찾는 여행자에게 도움이 되는 선택지다. 관광 중 오스트리아 요리와 다른 식사가 당길 때 고려할 만하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4339,7 +4474,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "한국식 요리를 선택할 수 있는 식당으로 여행 중 익숙한 밥과 반찬이 당길 때 후보가 된다. 대표 메뉴는 최신 정보를 확인해야 한다.",
         "en": null,
         "de": null
       },
@@ -4363,7 +4498,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "한국식 요리를 선택할 수 있는 식당으로 여행 중 익숙한 밥과 반찬이 당길 때 후보가 된다. 대표 메뉴는 최신 정보를 확인해야 한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4398,7 +4535,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "한국식 식재료와 조리법을 창의적으로 해석한 요리로 알려져 있다. 익숙한 한식과는 조금 다른 스타일을 경험하고 싶은 여행자에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -4422,7 +4559,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "한국식 식재료와 조리법을 창의적으로 해석한 요리로 알려져 있다. 익숙한 한식과는 조금 다른 스타일을 경험하고 싶은 여행자에게 어울린다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4457,7 +4596,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "한국 음식과 식재료를 만날 수 있는 곳이지만 식당의 운영 형태를 먼저 확인하는 것이 좋다. 식사 가능 여부와 메뉴는 현지 정보로 확인하도록 안내한다.",
         "en": null,
         "de": null
       },
@@ -4481,7 +4620,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "한국 음식과 식재료를 만날 수 있는 곳이지만 식당의 운영 형태를 먼저 확인하는 것이 좋다. 식사 가능 여부와 메뉴는 현지 정보로 확인하도록 안내한다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4516,7 +4657,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "한국식 식사 경험을 찾는 여행자를 위한 선택지다. 구체적인 메뉴와 현재 영업 상태는 방문 전에 확인해 볼 만하다.",
         "en": null,
         "de": null
       },
@@ -4540,7 +4681,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "한국식 식사 경험을 찾는 여행자를 위한 선택지다. 구체적인 메뉴와 현재 영업 상태는 방문 전에 확인해 볼 만하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4575,7 +4718,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 한국 음식을 찾는 사람을 위해 포함한 후보이다. 지역 식당으로서의 운영 형태와 대표 메뉴는 추가 확인이 필요하다.",
         "en": null,
         "de": null
       },
@@ -4599,7 +4742,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 한국 음식을 찾는 사람을 위해 포함한 후보이다. 지역 식당으로서의 운영 형태와 대표 메뉴는 추가 확인이 필요하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4634,7 +4779,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "초밥과 일본식 메뉴를 간편하게 선택할 수 있는 아시아 외식 브랜드다. 전통 오스트리아식 메뉴 외에 빠르고 익숙한 식사를 원하는 사람에게 적합하다.",
         "en": null,
         "de": null
       },
@@ -4658,7 +4803,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "초밥과 일본식 메뉴를 간편하게 선택할 수 있는 아시아 외식 브랜드다. 전통 오스트리아식 메뉴 외에 빠르고 익숙한 식사를 원하는 사람에게 적합하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4693,7 +4840,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "현대적인 한국 요리를 고급 미식 형식으로 선보이는 레스토랑이다. 한식이 비엔나의 현대 미식 문화에서 어떻게 재해석되는지 궁금한 방문객에게 추천한다.",
         "en": null,
         "de": null
       },
@@ -4717,7 +4864,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "현대적인 한국 요리를 고급 미식 형식으로 선보이는 레스토랑이다. 한식이 비엔나의 현대 미식 문화에서 어떻게 재해석되는지 궁금한 방문객에게 추천한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -4750,7 +4899,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "벨베데레 주변 관광을 마친 후 식사 장소를 찾는 여행자를 위한 후보이다. 대표 요리의 특성은 아직 개별 검증이 필요하다.",
         "en": null,
         "de": null
       },
@@ -4774,7 +4923,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "벨베데레 주변 관광을 마친 후 식사 장소를 찾는 여행자를 위한 후보이다. 대표 요리의 특성은 아직 개별 검증이 필요하다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4809,7 +4960,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -4833,7 +4984,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4868,7 +5021,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -4892,7 +5045,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4927,7 +5082,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -4951,7 +5106,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -4986,7 +5143,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5010,7 +5167,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5045,7 +5204,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5069,7 +5228,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5104,7 +5265,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5128,7 +5289,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5163,7 +5326,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5187,7 +5350,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5222,7 +5387,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 브라질식 음식 문화를 경험하고 싶은 여행자를 위해 포함했다. 오스트리아 음식과 다른 남미식 맛을 탐색하는 선택지다.",
         "en": null,
         "de": null
       },
@@ -5246,7 +5411,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 브라질식 음식 문화를 경험하고 싶은 여행자를 위해 포함했다. 오스트리아 음식과 다른 남미식 맛을 탐색하는 선택지다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -5281,7 +5448,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5305,7 +5472,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5340,7 +5509,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5364,7 +5533,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5399,7 +5570,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5423,7 +5594,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5458,7 +5631,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5482,7 +5655,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5517,7 +5692,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5541,7 +5716,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5576,7 +5753,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
         "en": null,
         "de": null
       },
@@ -5600,7 +5777,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나에서 새롭게 발견해 볼 만한 식당 후보로 등록했다. 현재 확인된 자료만으로 특정 대표 메뉴나 유명세를 단정하기 어려우므로, 실제 방문 전에 공식 메뉴와 최근 영업 정보를 확인하는 편이 좋다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5635,7 +5814,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "해산물을 중심으로 한 고급 식사를 원하는 사람을 위한 레스토랑이다. 비엔나에서 생선·해산물 요리를 특별한 식사로 경험할 수 있다.",
         "en": null,
         "de": null
       },
@@ -5659,7 +5838,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "해산물을 중심으로 한 고급 식사를 원하는 사람을 위한 레스토랑이다. 비엔나에서 생선·해산물 요리를 특별한 식사로 경험할 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": null,
@@ -5692,7 +5873,7 @@
       "website": "https://cafecentral.wien/",
       "reservation_url": null,
       "description": {
-        "ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.",
+        "ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.\n\n이곳을 소개하는 이유: 비엔나의 대표적인 역사적 카페로, 문학가들이 드나들던 공간과 아름다운 실내, 커피·케이크로 유명하다. 다만 2026년 3월부터 보수공사로 휴업해 재개장 공지를 확인해야 한다.",
         "en": "Closed for renovation since 16 March 2026. Reopening is planned for winter 2026, with no exact date announced. The temporary DECENTRAL café operates at Freyung 3/1, 1010 Vienna.",
         "de": "Wegen Generalsanierung seit 16. März 2026 geschlossen. Wiedereröffnung für Winter 2026 vorgesehen; kein genaues Datum bestätigt. Zwischenzeitlich ist das DECENTRAL, Freyung 3/1, geöffnet."
       },
@@ -5734,7 +5915,9 @@
         "cafe_information"
       ],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.\n\n이곳을 소개하는 이유: 비엔나의 대표적인 역사적 카페로, 문학가들이 드나들던 공간과 아름다운 실내, 커피·케이크로 유명하다. 다만 2026년 3월부터 보수공사로 휴업해 재개장 공지를 확인해야 한다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -5791,7 +5974,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "잘 알려진 관광 식당만이 아니라 비엔나의 동네 식문화를 경험할 수 있는 후보로 포함했다. 격식 있는 코스 요리보다 편안한 현지 식당의 분위기를 찾는 여행자에게 어울린다.",
         "en": null,
         "de": null
       },
@@ -5817,7 +6000,9 @@
         "visit_warning"
       ],
       "editorial": {
-        "must_visit": false
+        "must_visit": false,
+        "selection_reason_ko": "잘 알려진 관광 식당만이 아니라 비엔나의 동네 식문화를 경험할 수 있는 후보로 포함했다. 격식 있는 코스 요리보다 편안한 현지 식당의 분위기를 찾는 여행자에게 어울린다.",
+        "story_review": "editorial-draft-needs-verification"
       },
       "media": {
         "cover": null,
@@ -5854,7 +6039,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "수도원과 관련된 역사적 공간에서 오스트리아 전통음식을 즐기는 것이 매력이다. 지하 저장고 같은 분위기에서 비엔나의 오래된 식문화에 다가갈 수 있다.",
         "en": null,
         "de": null
       },
@@ -5878,7 +6063,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "수도원과 관련된 역사적 공간에서 오스트리아 전통음식을 즐기는 것이 매력이다. 지하 저장고 같은 분위기에서 비엔나의 오래된 식문화에 다가갈 수 있다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
@@ -5939,7 +6126,7 @@
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": null,
+        "ko": "유서 깊은 구시가지 건물과 오스트리아 전통 음식으로 알려져 있다. 식사뿐 아니라 비엔나의 오래된 식당 분위기를 경험하고 싶은 방문객에게 추천한다. 대표 메뉴로 오스트리아 전통음식을(를) 먼저 살펴볼 만하다.",
         "en": null,
         "de": null
       },
@@ -5963,7 +6150,9 @@
       },
       "tags": [],
       "editorial": {
-        "must_visit": true
+        "must_visit": true,
+        "selection_reason_ko": "유서 깊은 구시가지 건물과 오스트리아 전통 음식으로 알려져 있다. 식사뿐 아니라 비엔나의 오래된 식당 분위기를 경험하고 싶은 방문객에게 추천한다. 대표 메뉴로 오스트리아 전통음식을(를) 먼저 살펴볼 만하다.",
+        "story_review": "public-source-supported-outline"
       },
       "media": {
         "cover": {
