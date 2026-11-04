@@ -283,8 +283,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20571,
+        "lng": 16.37499,
+        "source": "https://mapcarta.com/N1968774258",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "폭립"
@@ -1494,8 +1497,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2097,
+        "lng": 16.37515,
+        "source": "https://mapcarta.com/N3811363936",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1952,8 +1958,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.23787,
+        "lng": 16.3871,
+        "source": "https://mapcarta.com/N1205089151",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5364,8 +5373,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21075,
+        "lng": 16.37727,
+        "source": "https://mapcarta.com/N418134093",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "오스트리아 전통음식"
