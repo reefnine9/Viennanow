@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+const src=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const exp=JSON.parse(fs.readFileSync(new URL('../experiences_18.json',import.meta.url),'utf8'));
+const places=JSON.parse(fs.readFileSync(new URL('../catalog_48.json',import.meta.url),'utf8'));
+const records=Array.isArray(exp)?exp:exp.items||exp.experiences||[];
+const placesRows=Array.isArray(places)?places:places.items||places.places||[];
+test('Five bottom menu items: home sights food plan nearby',()=>{
+ assert.match(src,/\['home','⌂','홈'\]/);assert.match(src,/\['sights','◈','볼거리'\]/);assert.match(src,/\['food','☕','먹거리'\]/);assert.match(src,/\['itinerary','▤','계획'\]/);assert.match(src,/\['map','⌖','내주변'\]/);
+});
+test('Home photo carousel covers the existing 48 tourist places',()=>{assert.equal(placesRows.length,48);assert.match(src,/FEATURED_PHOTOS=\[\.\.\.HOME_TOP_PHOTOS,\.\.\.CATALOG48\.map/)});
+test('Sights include attractions, museum and performance venue subcategories',()=>{for(const n of ['관광명소','박물관','공연장']) assert.match(src,new RegExp(n));assert.match(src,/function sightsPage21\(\)/)});
+test('Food includes cafe, restaurant and populated nightlife section',()=>{for(const n of ['카페','맛집','술집\/클럽']) assert.match(src,new RegExp(n));assert.match(src,/실제 장소 6곳을 추가했어요/)});
+test('All 18 prior venue records remain available',()=>{assert.equal(records.length,18);for(const [kind,count] of [['cafe',9],['restaurant',6],['performance',3]])assert.equal(records.filter(x=>x.kind===kind).length,count)});
+test('Plan features are grouped in create, mine, curated presets',()=>{assert.match(src,/\['build','계획짜기'\]/);assert.match(src,/\['mine','내계획'\]/);assert.match(src,/\['premium','명품계획'\]/);assert.match(src,/const CURATED21=\[/)});
+test('Nearby has map, toilet, rest, dining, sightseeing',()=>{for(const text of ['지도','화장실','쉴곳','주변맛집','주변관광'])assert.match(src,new RegExp(text));assert.match(src,/function nearPage21\(/)});
+test('Existing original planner and fixed reservations remain reachable',()=>{assert.match(src,/function itinerary\(/);assert.match(src,/function validateTrip\(/);assert.match(src,/function experienceDetail19\(/);assert.match(src,/experience-add-event/);assert.match(src,/function previewRemaining\(/)});
+test('Location is requested only on user interaction and distances are labeled as estimates',()=>{assert.match(src,/case'use-gps':useGps\(\)/);assert.match(src,/직선·근사 좌표/);assert.match(src,/case'use-gps':useGps\(\)/)});

@@ -1,0 +1,19 @@
+{
+  "name": "viennanow-cloudflare",
+  "version": "0.24.1",
+  "private": true,
+  "type": "module",
+  "description": "ViennaNow five-tab Vienna travel guide; Cloudflare Pages with Pages Functions and GitHub CI",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check-cloudflare.mjs",
+    "dev": "wrangler pages dev public",
+    "deploy:manual": "wrangler pages deploy public --project-name viennanow"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/health.html
+  X-Robots-Tag: noindex, nofollow
+
+/deploy-check.html
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/photo-check.html
+  X-Robots-Tag: noindex, nofollow
+
+/coordinate_review.html
+  X-Robots-Tag: noindex, nofollow
+
+/route_qa.html
+  X-Robots-Tag: noindex, nofollow

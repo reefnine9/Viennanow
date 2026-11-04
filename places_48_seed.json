@@ -1,0 +1,2308 @@
+[
+  {
+    "id": "A01",
+    "tier": "A",
+    "name": {
+      "ko": "슈테판 대성당",
+      "de": "Stephansdom",
+      "en": "Stephansdom"
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "view"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2085,
+      "longitude": 16.3731,
+      "address": "Stephansplatz 3, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 20,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 60,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.stephanskirche.at/visitCathedral.php",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "sightseeing_hours"
+    ],
+    "hours_summary_ko": "관광: 월~토 09:00–11:30, 13:00–16:30 / 일·공휴일 13:00–16:30",
+    "visitor_warning_ko": "대성당 개방 시간과 관광 관람 가능 시간은 다름; 종교행사 예외",
+    "hours_rule_id": "stephans"
+  },
+  {
+    "id": "A02",
+    "tier": "A",
+    "name": {
+      "ko": "호프부르크 왕궁",
+      "de": "Hofburg",
+      "en": "Hofburg"
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "imperial"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2065,
+      "longitude": 16.3651,
+      "address": "Heldenplatz, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 35,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "name",
+      "location_context"
+    ],
+    "hours_summary_ko": "외관·광장: 방문 시 현장 확인",
+    "visitor_warning_ko": "왕궁 외관은 상시 산책형; 시시 박물관 등 내부시설은 별개",
+    "hours_rule_id": "external"
+  },
+  {
+    "id": "A03",
+    "tier": "A",
+    "name": {
+      "ko": "쇤브룬 궁전",
+      "de": "Schloss Schönbrunn",
+      "en": "Schloss Schönbrunn"
+    },
+    "region_id": "R6",
+    "region_ko": "쇤브룬",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "park"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.1845,
+      "longitude": 16.3122,
+      "address": "Schönbrunner Schlossstraße, 1130 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 30,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "park",
+        "label_ko": "정원 산책",
+        "estimate_minutes": 75,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 150,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.schoenbrunn.at/en/visitor-information/opening-times",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "seasonal_opening",
+      "last_admission",
+      "park_hours"
+    ],
+    "hours_summary_ko": "궁전 08:30–17:00 (계절·날짜 예외) / 공원 11~12월 06:30–17:30",
+    "visitor_warning_ko": "궁전 내부 11/3~3/31 08:30–17:00, 특정 12월/1월 연장 운영; 마지막 입장 45분 전, 정원 11~12월 06:30–17:30",
+    "hours_rule_id": "schon"
+  },
+  {
+    "id": "A04",
+    "tier": "A",
+    "name": {
+      "ko": "상벨베데레 궁전",
+      "de": "Oberes Belvedere",
+      "en": "Oberes Belvedere"
+    },
+    "region_id": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.191,
+      "longitude": 16.3809,
+      "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 30,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 120,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.belvedere.at/en/visit/upper-belvedere",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "museum_hours",
+      "time_slot_policy"
+    ],
+    "hours_summary_ko": "미술관 매일 09:00–18:00 (특별일 재확인)",
+    "visitor_warning_ko": "상벨베데레 내부 일반 09:00–18:00; 일반 입장권 시간대 지정 필요. 정원과 내부 입장 별개",
+    "hours_rule_id": "belvedere"
+  },
+  {
+    "id": "A05",
+    "tier": "A",
+    "name": {
+      "ko": "비엔나 국립오페라극장",
+      "de": "Wiener Staatsoper",
+      "en": "Wiener Staatsoper"
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "music",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2028,
+      "longitude": 16.3692,
+      "address": "Opernring 2, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "tour",
+        "label_ko": "가이드 투어",
+        "estimate_minutes": 40,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "date_specific",
+        "operational_status": "confirm_before_visit"
+      },
+      {
+        "mode": "performance",
+        "label_ko": "공연 관람",
+        "estimate_minutes": 150,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.wiener-staatsoper.at/en/guided-tours/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "tour_length",
+      "tour_booking"
+    ],
+    "hours_summary_ko": "투어·공연: 날짜별 일정 확인",
+    "visitor_warning_ko": "일반 가이드 투어 약 40분. 투어 날짜·시각은 행사 일정에 따라 변함",
+    "hours_rule_id": "fixed_event"
+  },
+  {
+    "id": "A06",
+    "tier": "A",
+    "name": {
+      "ko": "미술사박물관",
+      "de": "Kunsthistorisches Museum Wien",
+      "en": "Kunsthistorisches Museum Wien"
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2038,
+      "longitude": 16.3614,
+      "address": "Maria-Theresien-Platz, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 140,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.khm.at/en/visit/only-in-vienna",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "museum_hours",
+      "address"
+    ],
+    "hours_summary_ko": "일반 10:00–18:00 / 목요일 21:00까지 (휴관·특별기간 확인)",
+    "visitor_warning_ko": "개방시간 공식 안내 평일 10:00–18:00 목요일 21:00; 2026년 말 특별 매일 개관기간 있으므로 다른 날짜 확인",
+    "hours_rule_id": "khm"
+  },
+  {
+    "id": "A07",
+    "tier": "A",
+    "name": {
+      "ko": "알베르티나 미술관",
+      "de": "Albertina",
+      "en": "Albertina"
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "art"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2047,
+      "longitude": 16.3685,
+      "address": "Albertinaplatz 1, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 100,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.albertina.at/en/visit/opening-hours/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "museum_hours"
+    ],
+    "hours_summary_ko": "매일 10:00–18:00 / 수·금 21:00까지",
+    "visitor_warning_ko": "본관 10:00–18:00, 수·금 21:00까지; 알베르티나 모던은 별개",
+    "hours_rule_id": "albertina"
+  },
+  {
+    "id": "A08",
+    "tier": "A",
+    "name": {
+      "ko": "오스트리아 국립도서관 프룽크잘",
+      "de": "Prunksaal der Österreichischen Nationalbibliothek",
+      "en": "Prunksaal der Österreichischen Nationalbibliothek"
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "architecture",
+      "books"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2065,
+      "longitude": 16.367,
+      "address": "Josefsplatz 1, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "exterior",
+        "label_ko": "외관",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.onb.ac.at/en/museums/state-hall/opening-hours",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "seasonal_hours",
+      "exceptions"
+    ],
+    "hours_summary_ko": "10~5월 월요일 휴관 / 화·수·금~일 09:00–18:00 / 목 21:00까지",
+    "visitor_warning_ko": "10~5월 월요일 휴관, 목요일 21:00; 2026년 12월 월요일 개방 및 행사용 임시 변경",
+    "hours_rule_id": "prunksaal"
+  },
+  {
+    "id": "A09",
+    "tier": "A",
+    "name": {
+      "ko": "카를 성당",
+      "de": "Karlskirche",
+      "en": "Karlskirche"
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.1988,
+      "longitude": 16.3714,
+      "address": "Karlsplatz 10, 1040 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 20,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.karlskirche.at/en/visitor-information/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "visitor_hours_caveat"
+    ],
+    "hours_summary_ko": "유료 관람 월~토 09:00–18:00 / 일·공휴일 약 11:45~19:15",
+    "visitor_warning_ko": "유료 관람 월~토 09:00–18:00, 일·공휴일 11:45~19:15 공식 페이지에 복수 표기가 있어 최종 확인",
+    "hours_rule_id": "karl"
+  },
+  {
+    "id": "A10",
+    "tier": "A",
+    "name": {
+      "ko": "비엔나 시청사",
+      "de": "Wiener Rathaus",
+      "en": "Wiener Rathaus"
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2109,
+      "longitude": 16.357,
+      "address": "Friedrich-Schmidt-Platz 1, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 25,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.wien.gv.at/en/administration/city-hall-guided-tours",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "tour_schedule",
+      "registration"
+    ],
+    "hours_summary_ko": "내부 무료 투어: 월·수·금 13:00 (예외·예약)",
+    "visitor_warning_ko": "시청사 외관과 내부 무료 투어 별도; 투어는 월·수·금 13:00, 사전등록 및 행사일 제외",
+    "hours_rule_id": "rathaus"
+  },
+  {
+    "id": "A11",
+    "tier": "A",
+    "name": {
+      "ko": "박물관지구",
+      "de": "MuseumsQuartier",
+      "en": "MuseumsQuartier"
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "art",
+      "architecture",
+      "cafe"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2035,
+      "longitude": 16.359,
+      "address": "Museumsplatz 1, 1070 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 35,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.mqw.at/en/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "area_access"
+    ],
+    "hours_summary_ko": "광장·부지 24시간 출입; 내부 개별 시설 확인",
+    "visitor_warning_ko": "MQ 부지 24시간 출입 가능; 내부 각 미술관은 별도 입장료·운영시간",
+    "hours_rule_id": "open_all"
+  },
+  {
+    "id": "A12",
+    "tier": "A",
+    "name": {
+      "ko": "비엔나 대관람차",
+      "de": "Wiener Riesenrad",
+      "en": "Wiener Riesenrad"
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "experience",
+    "tags": [
+      "family",
+      "view"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2167,
+      "longitude": 16.3962,
+      "address": "Riesenradplatz 1, 1020 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "ride",
+        "label_ko": "탑승",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://wienerriesenrad.com/en/your-visit/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "ride_duration"
+    ],
+    "hours_summary_ko": "날짜별 개방시간 확인 필수",
+    "visitor_warning_ko": "탑승은 약 12~15분, 영업시간 날짜별 변동; 대기시간 추가",
+    "hours_rule_id": "unknown"
+  },
+  {
+    "id": "A13",
+    "tier": "A",
+    "name": {
+      "ko": "훈데르트바서하우스",
+      "de": "Hundertwasserhaus",
+      "en": "Hundertwasserhaus"
+    },
+    "region_id": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2073,
+      "longitude": 16.3943,
+      "address": "Kegelgasse 34–38, 1030 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 25,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.wien.info/en/see-do/sights-from-a-to-z/hundertwasser-house-vienna-348464",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "no_inside_access"
+    ],
+    "hours_summary_ko": "외관 관람만 가능; 입주민 배려",
+    "visitor_warning_ko": "주거건물로 실내 공개 없음. 외관만 관광 가능",
+    "hours_rule_id": "external"
+  },
+  {
+    "id": "A14",
+    "tier": "A",
+    "name": {
+      "ko": "나슈마르크트",
+      "de": "Naschmarkt",
+      "en": "Naschmarkt"
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "market",
+    "tags": [
+      "food",
+      "shopping",
+      "local"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.1986,
+      "longitude": 16.3614,
+      "address": "Wienzeile, 1060 Wien (Naschmarkt)",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 50,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.wien.info/en/dine-drink/markets/naschmarkt-353536",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": true,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "market_hours",
+      "sunday_exception"
+    ],
+    "hours_summary_ko": "시장 월~금 06:00–21:00 / 토 06:00–18:00 / 일 휴무",
+    "visitor_warning_ko": "시장 상점 월~금 06:00–21:00, 토 06:00–18:00, 일요일 휴무. 식당은 별도",
+    "hours_rule_id": "naschmarkt"
+  },
+  {
+    "id": "A15",
+    "tier": "A",
+    "name": {
+      "ko": "그라벤 거리와 페스트 기념탑",
+      "de": "Graben / Pestsäule",
+      "en": "Graben / Pestsäule"
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "neighborhood",
+    "tags": [
+      "shopping",
+      "architecture",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2081,
+      "longitude": 16.3708,
+      "address": "Graben, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 25,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://b2b.wien.info/en/traveltrade-salestools/planning-tips/itineraries/itinerary-24-hours-in-vienna-466314",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "name",
+      "location_context"
+    ],
+    "hours_summary_ko": "공공 거리 산책; 개별 상점은 별도",
+    "visitor_warning_ko": "구시가지 산책 동선; 상점 운영시간과 공공 도로 접근성은 별개",
+    "hours_rule_id": "external"
+  },
+  {
+    "id": "A16",
+    "tier": "A",
+    "name": {
+      "ko": "시립공원과 요한 슈트라우스 기념상",
+      "de": "Stadtpark / Johann-Strauß-Denkmal",
+      "en": "Stadtpark / Johann-Strauß-Denkmal"
+    },
+    "region_id": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo",
+      "music"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": 48.2049,
+      "longitude": 16.3791,
+      "address": "Stadtpark, Parkring, 1010 Wien",
+      "coordinates_verified": false,
+      "coordinate_note": "근사 좌표 (기획용). 공식 GIS 점 위치 개별 대조 필요."
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 35,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": "https://www.wien.info/en/livable-vienna/parks-green-spaces/stadtpark-994650",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": "2026-11-03",
+    "review_status": "partial_official_review",
+    "notes": "위치의 근사 좌표는 지도 프로토타입 전용이며 검증된 정밀 좌표가 아님. 가격은 확정된 데이터가 없어서 표시하지 않음.",
+    "verified_fields": [
+      "address",
+      "location_context"
+    ],
+    "hours_summary_ko": "공원 산책; 구역별 별도 확인",
+    "visitor_warning_ko": "공원과 요한 슈트라우스 기념상 산책, 행사·공사 시 접근성 달라질 수 있음",
+    "hours_rule_id": "external"
+  },
+  {
+    "id": "B01",
+    "tier": "B",
+    "name": {
+      "ko": "시시 박물관",
+      "de": "Sisi Museum",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "imperial"
+    ],
+    "parent_place_id": "A02",
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 75,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": "https://www.sisimuseum-hofburg.at/en/visitor-information/opening-hours/",
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B02",
+    "tier": "B",
+    "name": {
+      "ko": "황실 보물관",
+      "de": "Kaiserliche Schatzkammer Wien",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "imperial"
+    ],
+    "parent_place_id": "A02",
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 65,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B03",
+    "tier": "B",
+    "name": {
+      "ko": "스페인 승마학교",
+      "de": "Spanische Hofreitschule",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "experience",
+    "tags": [
+      "history",
+      "performance",
+      "animals"
+    ],
+    "parent_place_id": "A02",
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "tour",
+        "label_ko": "가이드 투어",
+        "estimate_minutes": 60,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      },
+      {
+        "mode": "performance",
+        "label_ko": "공연 관람",
+        "estimate_minutes": 90,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B04",
+    "tier": "B",
+    "name": {
+      "ko": "레오폴트 미술관",
+      "de": "Leopold Museum",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "art"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 120,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B05",
+    "tier": "B",
+    "name": {
+      "ko": "자연사박물관",
+      "de": "Naturhistorisches Museum Wien",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "family",
+      "science"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 140,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B06",
+    "tier": "B",
+    "name": {
+      "ko": "제체시온",
+      "de": "Secession",
+      "en": null
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "art",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B07",
+    "tier": "B",
+    "name": {
+      "ko": "쿤스트하우스 빈",
+      "de": "Kunst Haus Wien",
+      "en": null
+    },
+    "region_id": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "museum",
+    "tags": [
+      "art",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 75,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B08",
+    "tier": "B",
+    "name": {
+      "ko": "모차르트 하우스",
+      "de": "Mozarthaus Vienna",
+      "en": null
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "museum",
+    "tags": [
+      "music",
+      "history"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 65,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B09",
+    "tier": "B",
+    "name": {
+      "ko": "음악의 집",
+      "de": "Haus der Musik",
+      "en": null
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "family",
+      "music",
+      "interactive"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 120,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B10",
+    "tier": "B",
+    "name": {
+      "ko": "무지크페라인",
+      "de": "Musikverein",
+      "en": null
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "music",
+    "tags": [
+      "music",
+      "performance",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "tour",
+        "label_ko": "가이드 투어",
+        "estimate_minutes": 55,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      },
+      {
+        "mode": "performance",
+        "label_ko": "공연 관람",
+        "estimate_minutes": 135,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B11",
+    "tier": "B",
+    "name": {
+      "ko": "비엔나 콘체르트하우스",
+      "de": "Wiener Konzerthaus",
+      "en": null
+    },
+    "region_id": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "music",
+    "tags": [
+      "music",
+      "performance",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "tour",
+        "label_ko": "가이드 투어",
+        "estimate_minutes": 55,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      },
+      {
+        "mode": "performance",
+        "label_ko": "공연 관람",
+        "estimate_minutes": 135,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B12",
+    "tier": "B",
+    "name": {
+      "ko": "쇤브룬 동물원",
+      "de": "Tiergarten Schönbrunn",
+      "en": null
+    },
+    "region_id": "R6",
+    "region_ko": "쇤브룬",
+    "category": "experience",
+    "tags": [
+      "family",
+      "animals"
+    ],
+    "parent_place_id": "A03",
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "zoo",
+        "label_ko": "동물원 관람",
+        "estimate_minutes": 180,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B13",
+    "tier": "B",
+    "name": {
+      "ko": "글로리에테",
+      "de": "Gloriette Schönbrunn",
+      "en": null
+    },
+    "region_id": "R6",
+    "region_ko": "쇤브룬",
+    "category": "view",
+    "tags": [
+      "view",
+      "park",
+      "photo"
+    ],
+    "parent_place_id": "A03",
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "terrace",
+        "label_ko": "전망 테라스",
+        "estimate_minutes": 60,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B14",
+    "tier": "B",
+    "name": {
+      "ko": "기술박물관",
+      "de": "Technisches Museum Wien",
+      "en": null
+    },
+    "region_id": "R6",
+    "region_ko": "쇤브룬",
+    "category": "museum",
+    "tags": [
+      "family",
+      "science",
+      "interactive"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "museum",
+        "label_ko": "미술관·박물관 관람",
+        "estimate_minutes": 140,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B15",
+    "tier": "B",
+    "name": {
+      "ko": "도나우 전망탑",
+      "de": "Donauturm",
+      "en": null
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "view",
+    "tags": [
+      "view",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "viewing",
+        "label_ko": "전망시설",
+        "estimate_minutes": 60,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B16",
+    "tier": "B",
+    "name": {
+      "ko": "칼렌베르크 전망지역",
+      "de": "Kahlenberg",
+      "en": null
+    },
+    "region_id": "R8",
+    "region_ko": "외곽 특화 지역",
+    "category": "view",
+    "tags": [
+      "view",
+      "park"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 70,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B17",
+    "tier": "B",
+    "name": {
+      "ko": "오스트리아 국회의사당",
+      "de": "Parlament Österreich",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "tour",
+        "label_ko": "가이드 투어",
+        "estimate_minutes": 60,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "B18",
+    "tier": "B",
+    "name": {
+      "ko": "비엔나 중앙묘지",
+      "de": "Wiener Zentralfriedhof",
+      "en": null
+    },
+    "region_id": "R8",
+    "region_ko": "외곽 특화 지역",
+    "category": "heritage",
+    "tags": [
+      "history",
+      "music",
+      "park"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 90,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C01",
+    "tier": "C",
+    "name": {
+      "ko": "성 페터 교회",
+      "de": "Peterskirche",
+      "en": null
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 20,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C02",
+    "tier": "C",
+    "name": {
+      "ko": "유덴플라츠",
+      "de": "Judenplatz",
+      "en": null
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 20,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C03",
+    "tier": "C",
+    "name": {
+      "ko": "앙커 시계",
+      "de": "Ankeruhr",
+      "en": null
+    },
+    "region_id": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C04",
+    "tier": "C",
+    "name": {
+      "ko": "미하엘러 광장",
+      "de": "Michaelerplatz",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "architecture",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C05",
+    "tier": "C",
+    "name": {
+      "ko": "미노리텐 교회",
+      "de": "Minoritenkirche",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 10,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label_ko": "내부 관람",
+        "estimate_minutes": 25,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "confirm_before_visit"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C06",
+    "tier": "C",
+    "name": {
+      "ko": "마리아 테레지아 광장",
+      "de": "Maria-Theresien-Platz",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 20,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C07",
+    "tier": "C",
+    "name": {
+      "ko": "폴크스가르텐",
+      "de": "Volksgarten",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 30,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C08",
+    "tier": "C",
+    "name": {
+      "ko": "부르크가르텐",
+      "de": "Burggarten",
+      "en": null
+    },
+    "region_id": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 30,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C09",
+    "tier": "C",
+    "name": {
+      "ko": "슈피텔베르크 거리",
+      "de": "Spittelberg",
+      "en": null
+    },
+    "region_id": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "local",
+      "architecture",
+      "food"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C10",
+    "tier": "C",
+    "name": {
+      "ko": "오토 바그너 카를스플라츠 역사",
+      "de": "Otto Wagner Pavillon Karlsplatz",
+      "en": null
+    },
+    "region_id": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "external",
+        "label_ko": "외관·사진",
+        "estimate_minutes": 15,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C11",
+    "tier": "C",
+    "name": {
+      "ko": "카르멜리터마르크트",
+      "de": "Karmelitermarkt",
+      "en": null
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "market",
+    "tags": [
+      "local",
+      "food"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C12",
+    "tier": "C",
+    "name": {
+      "ko": "도나우 운하 산책로",
+      "de": "Donaukanal",
+      "en": null
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "local",
+      "streetart"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C13",
+    "tier": "C",
+    "name": {
+      "ko": "아우가르텐",
+      "de": "Augarten",
+      "en": null
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "history"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 45,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  },
+  {
+    "id": "C14",
+    "tier": "C",
+    "name": {
+      "ko": "도나우섬",
+      "de": "Donauinsel",
+      "en": null
+    },
+    "region_id": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "view",
+      "nature"
+    ],
+    "parent_place_id": null,
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "address": null,
+      "coordinates_verified": false
+    },
+    "visit_options": [
+      {
+        "mode": "walk",
+        "label_ko": "산책·시장 탐방",
+        "estimate_minutes": 90,
+        "duration_is_official": false,
+        "pricing_eur": null,
+        "booking_rule": "unknown",
+        "operational_status": "physical_access_review"
+      }
+    ],
+    "official_operator_url": null,
+    "tourism_directory_url": "https://www.wien.info/de/sehen-erleben/sehenswuerdigkeiten-a-z",
+    "schedule_reviewed": false,
+    "fee_reviewed": false,
+    "last_content_reviewed": null,
+    "review_status": "identity_catalogued_dynamic_data_pending",
+    "notes": "초기 후보. 명칭·좌표·영업시간·관람요금·예약조건은 개별 검토 후 공개."
+  }
+]

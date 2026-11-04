@@ -1,0 +1,559 @@
+[
+  {
+    "id": "A01",
+    "ko": "슈테판 대성당",
+    "de": "Stephansdom",
+    "region": "R1",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "view"
+    ],
+    "address": "Stephansplatz 3, 1010 Wien",
+    "lat": 48.2085,
+    "lon": 16.3731,
+    "source": "https://www.stephanskirche.at/visitCathedral.php",
+    "hours": "관광: 월~토 09:00–11:30, 13:00–16:30 / 일·공휴일 13:00–16:30",
+    "note": "대성당 개방 시간과 관광 관람 가능 시간은 다름; 종교행사 예외",
+    "rule": "stephans",
+    "verified": [
+      "address",
+      "sightseeing_hours"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 20,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label": "내부 관람",
+        "mins": 60,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A02",
+    "ko": "호프부르크 왕궁",
+    "de": "Hofburg",
+    "region": "R2",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "imperial"
+    ],
+    "address": "Heldenplatz, 1010 Wien",
+    "lat": 48.2065,
+    "lon": 16.3651,
+    "source": "https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842",
+    "hours": "외관·광장: 방문 시 현장 확인",
+    "note": "왕궁 외관은 상시 산책형; 시시 박물관 등 내부시설은 별개",
+    "rule": "external",
+    "verified": [
+      "name",
+      "location_context"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 35,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A03",
+    "ko": "쇤브룬 궁전",
+    "de": "Schloss Schönbrunn",
+    "region": "R6",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "park"
+    ],
+    "address": "Schönbrunner Schlossstraße, 1130 Wien",
+    "lat": 48.1845,
+    "lon": 16.3122,
+    "source": "https://www.schoenbrunn.at/en/visitor-information/opening-times",
+    "hours": "궁전 08:30–17:00 (계절·날짜 예외) / 공원 11~12월 06:30–17:30",
+    "note": "궁전 내부 11/3~3/31 08:30–17:00, 특정 12월/1월 연장 운영; 마지막 입장 45분 전, 정원 11~12월 06:30–17:30",
+    "rule": "schon",
+    "verified": [
+      "seasonal_opening",
+      "last_admission",
+      "park_hours"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 30,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "park",
+        "label": "정원 산책",
+        "mins": 75,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label": "내부 관람",
+        "mins": 150,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A04",
+    "ko": "상벨베데레 궁전",
+    "de": "Oberes Belvedere",
+    "region": "R5",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history",
+      "architecture"
+    ],
+    "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+    "lat": 48.191,
+    "lon": 16.3809,
+    "source": "https://www.belvedere.at/en/visit/upper-belvedere",
+    "hours": "미술관 매일 09:00–18:00 (특별일 재확인)",
+    "note": "상벨베데레 내부 일반 09:00–18:00; 일반 입장권 시간대 지정 필요. 정원과 내부 입장 별개",
+    "rule": "belvedere",
+    "verified": [
+      "address",
+      "museum_hours",
+      "time_slot_policy"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 30,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label": "미술관·박물관 관람",
+        "mins": 120,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A05",
+    "ko": "비엔나 국립오페라극장",
+    "de": "Wiener Staatsoper",
+    "region": "R4",
+    "category": "music",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "address": "Opernring 2, 1010 Wien",
+    "lat": 48.2028,
+    "lon": 16.3692,
+    "source": "https://www.wiener-staatsoper.at/en/guided-tours/",
+    "hours": "투어·공연: 날짜별 일정 확인",
+    "note": "일반 가이드 투어 약 40분. 투어 날짜·시각은 행사 일정에 따라 변함",
+    "rule": "fixed_event",
+    "verified": [
+      "tour_length",
+      "tour_booking"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 15,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "tour",
+        "label": "가이드 투어",
+        "mins": 40,
+        "status": "confirm_before_visit"
+      },
+      {
+        "mode": "performance",
+        "label": "공연 관람",
+        "mins": 150,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A06",
+    "ko": "미술사박물관",
+    "de": "Kunsthistorisches Museum Wien",
+    "region": "R3",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history"
+    ],
+    "address": "Maria-Theresien-Platz, 1010 Wien",
+    "lat": 48.2038,
+    "lon": 16.3614,
+    "source": "https://www.khm.at/en/visit/only-in-vienna",
+    "hours": "일반 10:00–18:00 / 목요일 21:00까지 (휴관·특별기간 확인)",
+    "note": "개방시간 공식 안내 평일 10:00–18:00 목요일 21:00; 2026년 말 특별 매일 개관기간 있으므로 다른 날짜 확인",
+    "rule": "khm",
+    "verified": [
+      "museum_hours",
+      "address"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 15,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label": "미술관·박물관 관람",
+        "mins": 140,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A07",
+    "ko": "알베르티나 미술관",
+    "de": "Albertina",
+    "region": "R4",
+    "category": "museum",
+    "tags": [
+      "art"
+    ],
+    "address": "Albertinaplatz 1, 1010 Wien",
+    "lat": 48.2047,
+    "lon": 16.3685,
+    "source": "https://www.albertina.at/en/visit/opening-hours/",
+    "hours": "매일 10:00–18:00 / 수·금 21:00까지",
+    "note": "본관 10:00–18:00, 수·금 21:00까지; 알베르티나 모던은 별개",
+    "rule": "albertina",
+    "verified": [
+      "museum_hours"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 15,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "museum",
+        "label": "미술관·박물관 관람",
+        "mins": 100,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A08",
+    "ko": "오스트리아 국립도서관 프룽크잘",
+    "de": "Prunksaal der Österreichischen Nationalbibliothek",
+    "region": "R2",
+    "category": "museum",
+    "tags": [
+      "history",
+      "architecture",
+      "books"
+    ],
+    "address": "Josefsplatz 1, 1010 Wien",
+    "lat": 48.2065,
+    "lon": 16.367,
+    "source": "https://www.onb.ac.at/en/museums/state-hall/opening-hours",
+    "hours": "10~5월 월요일 휴관 / 화·수·금~일 09:00–18:00 / 목 21:00까지",
+    "note": "10~5월 월요일 휴관, 목요일 21:00; 2026년 12월 월요일 개방 및 행사용 임시 변경",
+    "rule": "prunksaal",
+    "verified": [
+      "address",
+      "seasonal_hours",
+      "exceptions"
+    ],
+    "options": [
+      {
+        "mode": "exterior",
+        "label": "외관",
+        "mins": 10,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label": "내부 관람",
+        "mins": 45,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A09",
+    "ko": "카를 성당",
+    "de": "Karlskirche",
+    "region": "R4",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": "Karlsplatz 10, 1040 Wien",
+    "lat": 48.1988,
+    "lon": 16.3714,
+    "source": "https://www.karlskirche.at/en/visitor-information/",
+    "hours": "유료 관람 월~토 09:00–18:00 / 일·공휴일 약 11:45~19:15",
+    "note": "유료 관람 월~토 09:00–18:00, 일·공휴일 11:45~19:15 공식 페이지에 복수 표기가 있어 최종 확인",
+    "rule": "karl",
+    "verified": [
+      "address",
+      "visitor_hours_caveat"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 20,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "interior",
+        "label": "내부 관람",
+        "mins": 45,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A10",
+    "ko": "비엔나 시청사",
+    "de": "Wiener Rathaus",
+    "region": "R3",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": "Friedrich-Schmidt-Platz 1, 1010 Wien",
+    "lat": 48.2109,
+    "lon": 16.357,
+    "source": "https://www.wien.gv.at/en/administration/city-hall-guided-tours",
+    "hours": "내부 무료 투어: 월·수·금 13:00 (예외·예약)",
+    "note": "시청사 외관과 내부 무료 투어 별도; 투어는 월·수·금 13:00, 사전등록 및 행사일 제외",
+    "rule": "rathaus",
+    "verified": [
+      "address",
+      "tour_schedule",
+      "registration"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 25,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A11",
+    "ko": "박물관지구",
+    "de": "MuseumsQuartier",
+    "region": "R3",
+    "category": "neighborhood",
+    "tags": [
+      "art",
+      "architecture",
+      "cafe"
+    ],
+    "address": "Museumsplatz 1, 1070 Wien",
+    "lat": 48.2035,
+    "lon": 16.359,
+    "source": "https://www.mqw.at/en/",
+    "hours": "광장·부지 24시간 출입; 내부 개별 시설 확인",
+    "note": "MQ 부지 24시간 출입 가능; 내부 각 미술관은 별도 입장료·운영시간",
+    "rule": "open_all",
+    "verified": [
+      "address",
+      "area_access"
+    ],
+    "options": [
+      {
+        "mode": "walk",
+        "label": "산책·시장 탐방",
+        "mins": 35,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A12",
+    "ko": "비엔나 대관람차",
+    "de": "Wiener Riesenrad",
+    "region": "R7",
+    "category": "experience",
+    "tags": [
+      "family",
+      "view"
+    ],
+    "address": "Riesenradplatz 1, 1020 Wien",
+    "lat": 48.2167,
+    "lon": 16.3962,
+    "source": "https://wienerriesenrad.com/en/your-visit/",
+    "hours": "날짜별 개방시간 확인 필수",
+    "note": "탑승은 약 12~15분, 영업시간 날짜별 변동; 대기시간 추가",
+    "rule": "unknown",
+    "verified": [
+      "address",
+      "ride_duration"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 15,
+        "status": "physical_access_review"
+      },
+      {
+        "mode": "ride",
+        "label": "탑승",
+        "mins": 45,
+        "status": "confirm_before_visit"
+      }
+    ]
+  },
+  {
+    "id": "A13",
+    "ko": "훈데르트바서하우스",
+    "de": "Hundertwasserhaus",
+    "region": "R5",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "address": "Kegelgasse 34–38, 1030 Wien",
+    "lat": 48.2073,
+    "lon": 16.3943,
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z/hundertwasser-house-vienna-348464",
+    "hours": "외관 관람만 가능; 입주민 배려",
+    "note": "주거건물로 실내 공개 없음. 외관만 관광 가능",
+    "rule": "external",
+    "verified": [
+      "address",
+      "no_inside_access"
+    ],
+    "options": [
+      {
+        "mode": "external",
+        "label": "외관·사진",
+        "mins": 25,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A14",
+    "ko": "나슈마르크트",
+    "de": "Naschmarkt",
+    "region": "R4",
+    "category": "market",
+    "tags": [
+      "food",
+      "shopping",
+      "local"
+    ],
+    "address": "Wienzeile, 1060 Wien (Naschmarkt)",
+    "lat": 48.1986,
+    "lon": 16.3614,
+    "source": "https://www.wien.info/en/dine-drink/markets/naschmarkt-353536",
+    "hours": "시장 월~금 06:00–21:00 / 토 06:00–18:00 / 일 휴무",
+    "note": "시장 상점 월~금 06:00–21:00, 토 06:00–18:00, 일요일 휴무. 식당은 별도",
+    "rule": "naschmarkt",
+    "verified": [
+      "market_hours",
+      "sunday_exception"
+    ],
+    "options": [
+      {
+        "mode": "walk",
+        "label": "산책·시장 탐방",
+        "mins": 50,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A15",
+    "ko": "그라벤 거리와 페스트 기념탑",
+    "de": "Graben / Pestsäule",
+    "region": "R1",
+    "category": "neighborhood",
+    "tags": [
+      "shopping",
+      "architecture",
+      "photo"
+    ],
+    "address": "Graben, 1010 Wien",
+    "lat": 48.2081,
+    "lon": 16.3708,
+    "source": "https://b2b.wien.info/en/traveltrade-salestools/planning-tips/itineraries/itinerary-24-hours-in-vienna-466314",
+    "hours": "공공 거리 산책; 개별 상점은 별도",
+    "note": "구시가지 산책 동선; 상점 운영시간과 공공 도로 접근성은 별개",
+    "rule": "external",
+    "verified": [
+      "name",
+      "location_context"
+    ],
+    "options": [
+      {
+        "mode": "walk",
+        "label": "산책·시장 탐방",
+        "mins": 25,
+        "status": "physical_access_review"
+      }
+    ]
+  },
+  {
+    "id": "A16",
+    "ko": "시립공원과 요한 슈트라우스 기념상",
+    "de": "Stadtpark / Johann-Strauß-Denkmal",
+    "region": "R5",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo",
+      "music"
+    ],
+    "address": "Stadtpark, Parkring, 1010 Wien",
+    "lat": 48.2049,
+    "lon": 16.3791,
+    "source": "https://www.wien.info/en/livable-vienna/parks-green-spaces/stadtpark-994650",
+    "hours": "공원 산책; 구역별 별도 확인",
+    "note": "공원과 요한 슈트라우스 기념상 산책, 행사·공사 시 접근성 달라질 수 있음",
+    "rule": "external",
+    "verified": [
+      "address",
+      "location_context"
+    ],
+    "options": [
+      {
+        "mode": "walk",
+        "label": "산책·시장 탐방",
+        "mins": 35,
+        "status": "physical_access_review"
+      }
+    ]
+  }
+]

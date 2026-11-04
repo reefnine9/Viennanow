@@ -1,0 +1,49 @@
+﻿id,name_ko,official_url,official_link_status,operational_status,planner_eligible,price_type,duration_range_minutes,review_date
+A01,슈테판 대성당,https://www.stephanskirche.at/visitCathedral.php,direct_source_checked,partially_checked,True,mixed,30-90,2026-11-04
+A02,호프부르크 왕궁,https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842,direct_source_checked,needs_date_check,True,verify,30-120,2026-11-04
+A03,쇤브룬 궁전,https://www.schoenbrunn.at/en/visitor-information/opening-times,direct_source_checked,partially_checked,True,mixed,90-240,2026-11-04
+A04,상벨베데레 궁전,https://www.belvedere.at/en/visit/upper-belvedere,direct_source_checked,partially_checked,True,paid_indoor,70-150,2026-11-04
+A05,비엔나 국립오페라극장,https://www.wiener-staatsoper.at/en/guided-tours/,direct_source_checked,needs_date_check,True,mixed,20-160,2026-11-04
+A06,미술사박물관,https://www.khm.at/en/visit/only-in-vienna,direct_source_checked,partially_checked,True,paid_indoor,90-210,2026-11-04
+A07,알베르티나 미술관,https://www.albertina.at/en/visit/opening-hours/,direct_source_checked,partially_checked,True,paid_indoor,60-150,2026-11-04
+A08,오스트리아 국립도서관 프룽크잘,https://www.onb.ac.at/en/museums/state-hall/opening-hours,direct_source_checked,partially_checked,True,paid_indoor,30-75,2026-11-04
+A09,카를 성당,https://www.karlskirche.at/en/visitor-information/,direct_source_checked,partially_checked,True,mixed,20-75,2026-11-04
+A10,비엔나 시청사,https://www.wien.gv.at/en/administration/city-hall-guided-tours,direct_source_checked,partially_checked,True,mixed,20-65,2026-11-04
+A11,박물관지구,https://www.mqw.at/en/,direct_source_checked,partially_checked,True,free_grounds,30-120,2026-11-04
+A12,비엔나 대관람차,https://wienerriesenrad.com/en/your-visit/,direct_source_checked,needs_date_check,True,paid_indoor,30-90,2026-11-04
+A13,훈데르트바서하우스,https://www.wien.info/en/see-do/sights-from-a-to-z/hundertwasser-house-vienna-348464,direct_source_checked,needs_date_check,True,mixed,15-35,2026-11-04
+A14,나슈마르크트,https://www.wien.info/en/dine-drink/markets/naschmarkt-353536,direct_source_checked,partially_checked,True,verify,30-90,2026-11-04
+A15,그라벤 거리와 페스트 기념탑,https://b2b.wien.info/en/traveltrade-salestools/planning-tips/itineraries/itinerary-24-hours-in-vienna-466314,direct_source_checked,needs_date_check,True,free_public,20-50,2026-11-04
+A16,시립공원과 요한 슈트라우스 기념상,https://www.wien.info/en/livable-vienna/parks-green-spaces/stadtpark-994650,direct_source_checked,needs_date_check,True,free_grounds,20-60,2026-11-04
+B01,시시 박물관,https://www.sisimuseum-hofburg.at/en/visitor-information/opening-hours/,direct_source_checked,partially_checked,False,paid_indoor,60-105,2026-11-04
+B02,황실 보물관,https://www.kaiserliche-schatzkammer.at/besuchen/besucherinformation/oeffnungszeiten-eintrittspreise/,direct_source_checked,partially_checked,False,paid_indoor,45-100,2026-11-04
+B03,스페인 승마학교,https://www.srs.at/en/visitor-information/vienna/opening-hours,direct_source_checked,needs_date_check,False,mixed,45-120,2026-11-04
+B04,레오폴트 미술관,https://www.leopoldmuseum.org/en/visit/opening-hours,direct_source_checked,partially_checked,False,paid_indoor,60-120,2026-11-04
+B05,자연사박물관,https://www.nhm.at/en/information,direct_source_checked,partially_checked,False,paid_indoor,90-180,2026-11-04
+B06,제체시온,https://secession.at/en/information_tickets,direct_source_checked,partially_checked,False,paid_indoor,30-90,2026-11-04
+B07,쿤스트하우스 빈,https://www.wien.info/en/art-culture/museums-exhibitions/top-museums/kunsthauswien-350408?pp=1,direct_source_checked,partially_checked,False,paid_indoor,60-120,2026-11-04
+B08,모차르트 하우스,https://www.mozarthausvienna.at/en/plan-your-visit,direct_source_checked,partially_checked,False,paid_indoor,60-100,2026-11-04
+B09,음악의 집,https://www.hdm.at/faq/,direct_source_checked,partially_checked,False,paid_indoor,75-150,2026-11-04
+B10,무지크페라인,https://www.musikverein.com/en/fuehrungen/,direct_source_checked,partially_checked,False,mixed,30-150,2026-11-04
+B11,비엔나 콘체르트하우스,https://konzerthaus.at/en/guided-tours,direct_source_checked,partially_checked,False,mixed,45-150,2026-11-04
+B12,쇤브룬 동물원,https://www.zoovienna.at/besuch-und-tickets/besucherinformation/,direct_source_checked,partially_checked,False,paid_indoor,120-240,2026-11-04
+B13,글로리에테,https://www.schoenbrunn.at/en/visitor-information/opening-times,direct_source_checked,partially_checked,False,mixed,30-90,2026-11-04
+B14,기술박물관,https://www.technischesmuseum.at/visitor-info/lang/en,direct_source_checked,partially_checked,False,paid_indoor,90-180,2026-11-04
+B15,도나우 전망탑,https://www.donauturm.at/en/opening-times/,direct_source_checked,partially_checked,False,paid_indoor,45-90,2026-11-04
+B16,칼렌베르크 전망지역,https://www.wien.info/en/livable-vienna/parks-green-spaces/kahlenberg-337908,direct_source_checked,needs_date_check,False,free_grounds,45-150,2026-11-04
+B17,오스트리아 국회의사당,https://www.parlament.gv.at/en/experience/visitor-center,direct_source_checked,partially_checked,False,mixed,35-100,2026-11-04
+B18,비엔나 중앙묘지,https://www.bestattungwien.at/web/friedhofe-wien/visit-vienna-central-cemetery,direct_source_checked,partially_checked,False,mixed,60-150,2026-11-04
+C01,성 페터 교회,https://www.peterskirche.at/,direct_source_checked,partially_checked,False,mixed,15-40,2026-11-04
+C02,유덴플라츠,https://www.wien.info/en/judenplatz-133050,direct_source_checked,needs_date_check,False,free_public,15-35,2026-11-04
+C03,앙커 시계,https://www.wien.info/en/see-do/sights-from-a-to-z/anker-clock-339092,direct_source_checked,partially_checked,False,verify,10-25,2026-11-04
+C04,미하엘러 광장,https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842,direct_source_checked,needs_date_check,False,free_public,15-35,2026-11-04
+C05,미노리텐 교회,https://www.wien.info/en/art-culture/architecture/churches-343056,direct_source_checked,needs_date_check,False,mixed,15-40,2026-11-04
+C06,마리아 테레지아 광장,https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842,direct_source_checked,needs_date_check,False,free_public,15-35,2026-11-04
+C07,폴크스가르텐,https://www.wien.info/en/livable-vienna/parks-green-spaces/parks-gardens-center-354980,direct_source_checked,partially_checked,False,free_grounds,20-50,2026-11-04
+C08,부르크가르텐,https://www.wien.info/en/livable-vienna/parks-green-spaces/parks-gardens-center-354980,direct_source_checked,partially_checked,False,free_grounds,20-45,2026-11-04
+C09,슈피텔베르크 거리,https://www.wien.info/en/dine-drink/markets/spittelberg-wining-dining-359532,direct_source_checked,needs_date_check,False,free_public,30-75,2026-11-04
+C10,오토 바그너 카를스플라츠 역사,https://www.wienmuseum.at/otto_wagner_pavillon_karlsplatz,direct_source_checked,partially_checked,False,mixed,15-45,2026-11-04
+C11,카르멜리터마르크트,https://www.wien.gv.at/freizeit/karmelitermarkt-1020,direct_source_checked,partially_checked,False,verify,30-70,2026-11-04
+C12,도나우 운하 산책로,https://www.wien.info/en/livable-vienna/water-in-vienna/relaxing-on-the-danube-356414,direct_source_checked,needs_date_check,False,free_public,30-90,2026-11-04
+C13,아우가르텐,https://www.bundesgaerten.at/augarten/oeffnungszeiten.html,direct_source_checked,partially_checked,False,free_grounds,30-90,2026-11-04
+C14,도나우섬,https://www.wien.info/en/see-do/families/outdoor/danube-island-344064,direct_source_checked,needs_date_check,False,free_public,45-150,2026-11-04

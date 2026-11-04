@@ -1,0 +1,17 @@
+﻿id,ko,de,lat_approx,lon_approx,manual_review,official_coordinate,entrance_coordinate,evidence_url,comments
+A01,슈테판 대성당,Stephansdom,48.2085,16.3731,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A02,호프부르크 왕궁,Hofburg,48.2065,16.3651,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A03,쇤브룬 궁전,Schloss Schönbrunn,48.1845,16.3122,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A04,상벨베데레 궁전,Oberes Belvedere,48.191,16.3809,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A05,비엔나 국립오페라극장,Wiener Staatsoper,48.2028,16.3692,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A06,미술사박물관,Kunsthistorisches Museum Wien,48.2038,16.3614,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A07,알베르티나 미술관,Albertina,48.2047,16.3685,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A08,오스트리아 국립도서관 프룽크잘,Prunksaal der Österreichischen Nationalbibliothek,48.2065,16.367,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A09,카를 성당,Karlskirche,48.1988,16.3714,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A10,비엔나 시청사,Wiener Rathaus,48.2109,16.357,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A11,박물관지구,MuseumsQuartier,48.2035,16.359,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A12,비엔나 대관람차,Wiener Riesenrad,48.2167,16.3962,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A13,훈데르트바서하우스,Hundertwasserhaus,48.2073,16.3943,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A14,나슈마르크트,Naschmarkt,48.1986,16.3614,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A15,그라벤 거리와 페스트 기념탑,Graben / Pestsäule,48.2081,16.3708,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인
+A16,시립공원과 요한 슈트라우스 기념상,Stadtpark / Johann-Strauß-Denkmal,48.2049,16.3791,PENDING,,,,공식 GIS 및 실제 입구를 별도로 확인

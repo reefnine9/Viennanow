@@ -1,0 +1,7 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","id":"wc-a","geometry":{"type":"Point","coordinates":[16.3738,48.2085]},"properties":{"NAME":"테스트 화장실 1","Oeffnungszeit":"06:00-22:00"}},
+{"type":"Feature","id":"wc-b","geometry":{"type":"Point","coordinates":[48.2088,16.3741]},"properties":{"NAME":"테스트 화장실 2","Oeffnungszeit":"운영시간 확인 필요"}},
+{"type":"Feature","id":"wc-out","geometry":{"type":"Point","coordinates":[9,50]},"properties":{"NAME":"범위 밖"}},
+{"type":"Feature","id":"wc-geo","geometry":{"type":"Point","coordinates":[1825736,6133300]},"properties":{"NAME":"투영 좌표"}},
+{"type":"Feature","id":"wc-bad","geometry":{"type":"Polygon","coordinates":[]},"properties":{"NAME":"점이 아님"}}
+]}

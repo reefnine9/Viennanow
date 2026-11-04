@@ -1,0 +1,932 @@
+[
+  {
+    "id": "A01",
+    "tier": "A",
+    "ko": "슈테판 대성당",
+    "de": "Stephansdom",
+    "en": "Stephansdom",
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "view"
+    ],
+    "address": "Stephansplatz 3, 1010 Wien",
+    "source": "https://www.stephanskirche.at/visitCathedral.php",
+    "schedule_reviewed": true,
+    "summary": "관광: 월~토 09:00–11:30, 13:00–16:30 / 일·공휴일 13:00–16:30",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A02",
+    "tier": "A",
+    "ko": "호프부르크 왕궁",
+    "de": "Hofburg",
+    "en": "Hofburg",
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "imperial"
+    ],
+    "address": "Heldenplatz, 1010 Wien",
+    "source": "https://www.wien.info/en/art-culture/imperial-sights/imperial-palace-348842",
+    "schedule_reviewed": false,
+    "summary": "외관·광장: 방문 시 현장 확인",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A03",
+    "tier": "A",
+    "ko": "쇤브룬 궁전",
+    "de": "Schloss Schönbrunn",
+    "en": "Schloss Schönbrunn",
+    "region": "R6",
+    "region_ko": "쇤브룬",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture",
+      "park"
+    ],
+    "address": "Schönbrunner Schlossstraße, 1130 Wien",
+    "source": "https://www.schoenbrunn.at/en/visitor-information/opening-times",
+    "schedule_reviewed": true,
+    "summary": "궁전 08:30–17:00 (계절·날짜 예외) / 공원 11~12월 06:30–17:30",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A04",
+    "tier": "A",
+    "ko": "상벨베데레 궁전",
+    "de": "Oberes Belvedere",
+    "en": "Oberes Belvedere",
+    "region": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history",
+      "architecture"
+    ],
+    "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+    "source": "https://www.belvedere.at/en/visit/upper-belvedere",
+    "schedule_reviewed": true,
+    "summary": "미술관 매일 09:00–18:00 (특별일 재확인)",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A05",
+    "tier": "A",
+    "ko": "비엔나 국립오페라극장",
+    "de": "Wiener Staatsoper",
+    "en": "Wiener Staatsoper",
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "music",
+    "tags": [
+      "music",
+      "architecture"
+    ],
+    "address": "Opernring 2, 1010 Wien",
+    "source": "https://www.wiener-staatsoper.at/en/guided-tours/",
+    "schedule_reviewed": false,
+    "summary": "투어·공연: 날짜별 일정 확인",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A06",
+    "tier": "A",
+    "ko": "미술사박물관",
+    "de": "Kunsthistorisches Museum Wien",
+    "en": "Kunsthistorisches Museum Wien",
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "art",
+      "history"
+    ],
+    "address": "Maria-Theresien-Platz, 1010 Wien",
+    "source": "https://www.khm.at/en/visit/only-in-vienna",
+    "schedule_reviewed": true,
+    "summary": "일반 10:00–18:00 / 목요일 21:00까지 (휴관·특별기간 확인)",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A07",
+    "tier": "A",
+    "ko": "알베르티나 미술관",
+    "de": "Albertina",
+    "en": "Albertina",
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "art"
+    ],
+    "address": "Albertinaplatz 1, 1010 Wien",
+    "source": "https://www.albertina.at/en/visit/opening-hours/",
+    "schedule_reviewed": true,
+    "summary": "매일 10:00–18:00 / 수·금 21:00까지",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A08",
+    "tier": "A",
+    "ko": "오스트리아 국립도서관 프룽크잘",
+    "de": "Prunksaal der Österreichischen Nationalbibliothek",
+    "en": "Prunksaal der Österreichischen Nationalbibliothek",
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "architecture",
+      "books"
+    ],
+    "address": "Josefsplatz 1, 1010 Wien",
+    "source": "https://www.onb.ac.at/en/museums/state-hall/opening-hours",
+    "schedule_reviewed": true,
+    "summary": "10~5월 월요일 휴관 / 화·수·금~일 09:00–18:00 / 목 21:00까지",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A09",
+    "tier": "A",
+    "ko": "카를 성당",
+    "de": "Karlskirche",
+    "en": "Karlskirche",
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": "Karlsplatz 10, 1040 Wien",
+    "source": "https://www.karlskirche.at/en/visitor-information/",
+    "schedule_reviewed": true,
+    "summary": "유료 관람 월~토 09:00–18:00 / 일·공휴일 약 11:45~19:15",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A10",
+    "tier": "A",
+    "ko": "비엔나 시청사",
+    "de": "Wiener Rathaus",
+    "en": "Wiener Rathaus",
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": "Friedrich-Schmidt-Platz 1, 1010 Wien",
+    "source": "https://www.wien.gv.at/en/administration/city-hall-guided-tours",
+    "schedule_reviewed": true,
+    "summary": "내부 무료 투어: 월·수·금 13:00 (예외·예약)",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A11",
+    "tier": "A",
+    "ko": "박물관지구",
+    "de": "MuseumsQuartier",
+    "en": "MuseumsQuartier",
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "art",
+      "architecture",
+      "cafe"
+    ],
+    "address": "Museumsplatz 1, 1070 Wien",
+    "source": "https://www.mqw.at/en/",
+    "schedule_reviewed": true,
+    "summary": "광장·부지 24시간 출입; 내부 개별 시설 확인",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A12",
+    "tier": "A",
+    "ko": "비엔나 대관람차",
+    "de": "Wiener Riesenrad",
+    "en": "Wiener Riesenrad",
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "experience",
+    "tags": [
+      "family",
+      "view"
+    ],
+    "address": "Riesenradplatz 1, 1020 Wien",
+    "source": "https://wienerriesenrad.com/en/your-visit/",
+    "schedule_reviewed": false,
+    "summary": "날짜별 개방시간 확인 필수",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A13",
+    "tier": "A",
+    "ko": "훈데르트바서하우스",
+    "de": "Hundertwasserhaus",
+    "en": "Hundertwasserhaus",
+    "region": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "address": "Kegelgasse 34–38, 1030 Wien",
+    "source": "https://www.wien.info/en/see-do/sights-from-a-to-z/hundertwasser-house-vienna-348464",
+    "schedule_reviewed": false,
+    "summary": "외관 관람만 가능; 입주민 배려",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A14",
+    "tier": "A",
+    "ko": "나슈마르크트",
+    "de": "Naschmarkt",
+    "en": "Naschmarkt",
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "market",
+    "tags": [
+      "food",
+      "shopping",
+      "local"
+    ],
+    "address": "Wienzeile, 1060 Wien (Naschmarkt)",
+    "source": "https://www.wien.info/en/dine-drink/markets/naschmarkt-353536",
+    "schedule_reviewed": true,
+    "summary": "시장 월~금 06:00–21:00 / 토 06:00–18:00 / 일 휴무",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A15",
+    "tier": "A",
+    "ko": "그라벤 거리와 페스트 기념탑",
+    "de": "Graben / Pestsäule",
+    "en": "Graben / Pestsäule",
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "neighborhood",
+    "tags": [
+      "shopping",
+      "architecture",
+      "photo"
+    ],
+    "address": "Graben, 1010 Wien",
+    "source": "https://b2b.wien.info/en/traveltrade-salestools/planning-tips/itineraries/itinerary-24-hours-in-vienna-466314",
+    "schedule_reviewed": false,
+    "summary": "공공 거리 산책; 개별 상점은 별도",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "A16",
+    "tier": "A",
+    "ko": "시립공원과 요한 슈트라우스 기념상",
+    "de": "Stadtpark / Johann-Strauß-Denkmal",
+    "en": "Stadtpark / Johann-Strauß-Denkmal",
+    "region": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo",
+      "music"
+    ],
+    "address": "Stadtpark, Parkring, 1010 Wien",
+    "source": "https://www.wien.info/en/livable-vienna/parks-green-spaces/stadtpark-994650",
+    "schedule_reviewed": false,
+    "summary": "공원 산책; 구역별 별도 확인",
+    "is_planner_enabled": true
+  },
+  {
+    "id": "B01",
+    "tier": "B",
+    "ko": "시시 박물관",
+    "de": "Sisi Museum",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "imperial"
+    ],
+    "address": null,
+    "source": "https://www.sisimuseum-hofburg.at/en/visitor-information/opening-hours/",
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B02",
+    "tier": "B",
+    "ko": "황실 보물관",
+    "de": "Kaiserliche Schatzkammer Wien",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "museum",
+    "tags": [
+      "history",
+      "imperial"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B03",
+    "tier": "B",
+    "ko": "스페인 승마학교",
+    "de": "Spanische Hofreitschule",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "experience",
+    "tags": [
+      "history",
+      "performance",
+      "animals"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B04",
+    "tier": "B",
+    "ko": "레오폴트 미술관",
+    "de": "Leopold Museum",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "art"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B05",
+    "tier": "B",
+    "ko": "자연사박물관",
+    "de": "Naturhistorisches Museum Wien",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "museum",
+    "tags": [
+      "family",
+      "science"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B06",
+    "tier": "B",
+    "ko": "제체시온",
+    "de": "Secession",
+    "en": null,
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "art",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B07",
+    "tier": "B",
+    "ko": "쿤스트하우스 빈",
+    "de": "Kunst Haus Wien",
+    "en": null,
+    "region": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "museum",
+    "tags": [
+      "art",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B08",
+    "tier": "B",
+    "ko": "모차르트 하우스",
+    "de": "Mozarthaus Vienna",
+    "en": null,
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "museum",
+    "tags": [
+      "music",
+      "history"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B09",
+    "tier": "B",
+    "ko": "음악의 집",
+    "de": "Haus der Musik",
+    "en": null,
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "museum",
+    "tags": [
+      "family",
+      "music",
+      "interactive"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B10",
+    "tier": "B",
+    "ko": "무지크페라인",
+    "de": "Musikverein",
+    "en": null,
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "music",
+    "tags": [
+      "music",
+      "performance",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B11",
+    "tier": "B",
+    "ko": "비엔나 콘체르트하우스",
+    "de": "Wiener Konzerthaus",
+    "en": null,
+    "region": "R5",
+    "region_ko": "벨베데레·란트슈트라세",
+    "category": "music",
+    "tags": [
+      "music",
+      "performance",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B12",
+    "tier": "B",
+    "ko": "쇤브룬 동물원",
+    "de": "Tiergarten Schönbrunn",
+    "en": null,
+    "region": "R6",
+    "region_ko": "쇤브룬",
+    "category": "experience",
+    "tags": [
+      "family",
+      "animals"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B13",
+    "tier": "B",
+    "ko": "글로리에테",
+    "de": "Gloriette Schönbrunn",
+    "en": null,
+    "region": "R6",
+    "region_ko": "쇤브룬",
+    "category": "view",
+    "tags": [
+      "view",
+      "park",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B14",
+    "tier": "B",
+    "ko": "기술박물관",
+    "de": "Technisches Museum Wien",
+    "en": null,
+    "region": "R6",
+    "region_ko": "쇤브룬",
+    "category": "museum",
+    "tags": [
+      "family",
+      "science",
+      "interactive"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B15",
+    "tier": "B",
+    "ko": "도나우 전망탑",
+    "de": "Donauturm",
+    "en": null,
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "view",
+    "tags": [
+      "view",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B16",
+    "tier": "B",
+    "ko": "칼렌베르크 전망지역",
+    "de": "Kahlenberg",
+    "en": null,
+    "region": "R8",
+    "region_ko": "외곽 특화 지역",
+    "category": "view",
+    "tags": [
+      "view",
+      "park"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B17",
+    "tier": "B",
+    "ko": "오스트리아 국회의사당",
+    "de": "Parlament Österreich",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "B18",
+    "tier": "B",
+    "ko": "비엔나 중앙묘지",
+    "de": "Wiener Zentralfriedhof",
+    "en": null,
+    "region": "R8",
+    "region_ko": "외곽 특화 지역",
+    "category": "heritage",
+    "tags": [
+      "history",
+      "music",
+      "park"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C01",
+    "tier": "C",
+    "ko": "성 페터 교회",
+    "de": "Peterskirche",
+    "en": null,
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "history"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C02",
+    "tier": "C",
+    "ko": "유덴플라츠",
+    "de": "Judenplatz",
+    "en": null,
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C03",
+    "tier": "C",
+    "ko": "앙커 시계",
+    "de": "Ankeruhr",
+    "en": null,
+    "region": "R1",
+    "region_ko": "구시가지 동부",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C04",
+    "tier": "C",
+    "ko": "미하엘러 광장",
+    "de": "Michaelerplatz",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "architecture",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C05",
+    "tier": "C",
+    "ko": "미노리텐 교회",
+    "de": "Minoritenkirche",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "landmark",
+    "tags": [
+      "history",
+      "architecture"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C06",
+    "tier": "C",
+    "ko": "마리아 테레지아 광장",
+    "de": "Maria-Theresien-Platz",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "history",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C07",
+    "tier": "C",
+    "ko": "폴크스가르텐",
+    "de": "Volksgarten",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C08",
+    "tier": "C",
+    "ko": "부르크가르텐",
+    "de": "Burggarten",
+    "en": null,
+    "region": "R2",
+    "region_ko": "호프부르크·서부 구시가지",
+    "category": "park",
+    "tags": [
+      "park",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C09",
+    "tier": "C",
+    "ko": "슈피텔베르크 거리",
+    "de": "Spittelberg",
+    "en": null,
+    "region": "R3",
+    "region_ko": "링 거리·박물관지구",
+    "category": "neighborhood",
+    "tags": [
+      "local",
+      "architecture",
+      "food"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C10",
+    "tier": "C",
+    "ko": "오토 바그너 카를스플라츠 역사",
+    "de": "Otto Wagner Pavillon Karlsplatz",
+    "en": null,
+    "region": "R4",
+    "region_ko": "카를스플라츠·나슈마르크트",
+    "category": "landmark",
+    "tags": [
+      "architecture",
+      "photo"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C11",
+    "tier": "C",
+    "ko": "카르멜리터마르크트",
+    "de": "Karmelitermarkt",
+    "en": null,
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "market",
+    "tags": [
+      "local",
+      "food"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C12",
+    "tier": "C",
+    "ko": "도나우 운하 산책로",
+    "de": "Donaukanal",
+    "en": null,
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "local",
+      "streetart"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C13",
+    "tier": "C",
+    "ko": "아우가르텐",
+    "de": "Augarten",
+    "en": null,
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "history"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  },
+  {
+    "id": "C14",
+    "tier": "C",
+    "ko": "도나우섬",
+    "de": "Donauinsel",
+    "en": null,
+    "region": "R7",
+    "region_ko": "프라터·도나우",
+    "category": "park",
+    "tags": [
+      "park",
+      "view",
+      "nature"
+    ],
+    "address": null,
+    "source": null,
+    "schedule_reviewed": false,
+    "summary": "",
+    "is_planner_enabled": false
+  }
+]

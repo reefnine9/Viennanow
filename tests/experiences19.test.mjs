@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const venues=JSON.parse(readFileSync(new URL('../experiences_18.json',import.meta.url),'utf-8'));
+const ids=new Set(venues.map(v=>v.id));
+test('exactly 18 unique verified-context entries',()=>{assert.equal(venues.length,18);assert.equal(ids.size,18)});
+test('9 cafés, 6 restaurants and 3 concert venues',()=>{assert.equal(venues.filter(v=>v.kind==='cafe').length,9);assert.equal(venues.filter(v=>v.kind==='restaurant').length,6);assert.equal(venues.filter(v=>v.kind==='performance').length,3)});
+test('all venues include precise address and useful description',()=>{for(const x of venues){assert.match(x.address,/Wien/);assert.ok(x.ko&&x.de&&x.descKo.length>15&&x.tipKo.length>8)}});
+test('only HTTPS official or reservation links and no invented availability',()=>{for(const x of venues){for(const key of ['official','bookingPage'])if(x[key])assert.match(x[key],/^https:\/\//);assert.ok(!('available' in x));assert.ok(!('price' in x))}});
+test('Café Central is renovation-closed and has no active reservation URL',()=>{const x=venues.find(v=>v.de==='Café Central');assert.equal(x.status,'renovation-closed');assert.equal(x.bookingPage,'')});
+test('licensed images have explicit credit, license and source link',()=>{for(const x of venues.filter(v=>v.photo)){assert.equal(x.photo.length,5);assert.match(x.photo[3],/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);assert.match(x.photo[4],/^https:\/\/creativecommons\.org\//)}});
+test('the user-provided opera reservation is associated with existing A05, not fabricated availability',()=>{const x=venues.find(v=>v.id==='E16');assert.equal(x.relatedPlaceId,'A05');assert.equal(x.kind,'performance')});
