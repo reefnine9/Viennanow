@@ -334,12 +334,12 @@
 .vn44-guide{margin:14px 0;padding:16px;background:#f8f9f7;border:1px solid #e1e8e1;border-radius:15px}.vn44-guide h3{font-size:18px;margin:0 0 14px}.vn44-guide p{font-size:13px;line-height:1.9;margin:0 0 14px}
 .vn44-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vn44-full .full-shadow{background:linear-gradient(180deg,#071b263e,#071b2620 22%,#071b269a 63%,#071b26e8);pointer-events:none}
 .vn44-full .photo-close{z-index:9}.vn44-title{position:absolute;left:22px;right:60px;bottom:15%;color:#fff;z-index:5;font:850 clamp(25px,7vw,35px)/1.25 -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;letter-spacing:-1px;text-shadow:0 2px 12px #000c}
-.vn44-story{position:absolute;inset:12% 20px 25%;overflow:hidden;z-index:4;mask-image:linear-gradient(transparent,black 12%,black 88%);-webkit-mask-image:linear-gradient(transparent,black 12%,black 88%);pointer-events:none}
-.vn44-track{position:absolute;width:100%;font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;animation:vn44-rise var(--vn44-duration,100s) linear both;will-change:transform}.vn44-track p{margin:0 0 1.15em}
-@keyframes vn44-rise{from{top:calc(100% - 76px);transform:translateY(0)}to{top:0;transform:translateY(-100%)}}
-.vn44-full.vn44-paused .vn44-track{animation-play-state:paused}
+.vn44-story{position:absolute;inset:12% 20px 25%;overflow-y:auto;overflow-x:hidden;z-index:4;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-width:none;mask-image:linear-gradient(transparent,black 12%,black 88%);-webkit-mask-image:linear-gradient(transparent,black 12%,black 88%);pointer-events:auto}.vn44-story::-webkit-scrollbar{display:none}
+.vn44-track{position:relative;width:100%;font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;user-select:text;-webkit-user-select:text}.vn44-track p{margin:0 0 1.15em}
+
+
 .vn44-nav{position:absolute;right:13px;bottom:18px;display:flex;gap:8px;z-index:9}.vn44-nav button,.vn44-pause{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:white;background:#071b26ab;border:1px solid #ffffff70;font-size:23px;cursor:pointer}.vn44-pause{position:absolute;left:20px;bottom:18px;z-index:9;font-size:14px}
-@media(prefers-reduced-motion:reduce){.vn44-story{overflow-y:auto;pointer-events:auto;mask-image:none;-webkit-mask-image:none}.vn44-track{animation:none!important;padding-top:10px}}
+@media(prefers-reduced-motion:reduce){.vn44-story{mask-image:none;-webkit-mask-image:none}}
 
 .vn45-place-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 3px}
 .vn45-place-head .h1{flex:1;min-width:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif}
@@ -482,7 +482,45 @@ function storyHero(){
  return `<section class="photo-story" aria-label="비엔나 명소 사진 갤러리"><img class="story-image" src="${h(p.url)}" data-legacy-photo="${h(p.legacyUrl||'')}" referrerpolicy="no-referrer" alt="${h(p.title)} 여행 사진" fetchpriority="high" onerror="photoFail23(this)"><div class="story-shade"></div><div class="story-top"><span>VIENNA, BEYOND THE POSTCARD</span><button class="story-expand" data-act="photo-full" data-id="${id}">⤢ 사진 확대</button></div><div class="story-caption"><span class="story-label">DISCOVER VIENNA · ${i+1} / ${FEATURED_PHOTOS.length}</span><h2>${h(p.title)}</h2><div class="story-sub">${h(c?.de||'Wien, Österreich')}</div><div class="story-actions"><button data-act="story-prev" class="circle-control" aria-label="이전 사진">‹</button><button data-act="story-next" class="circle-control" aria-label="다음 사진">›</button><button class="story-discover" data-act="detail" data-id="${id}">이 장소 둘러보기 ↗</button></div><div class="story-progress" aria-label="사진 갤러리 진행률"><i style="width:${Math.round((i+1)/FEATURED_PHOTOS.length*100)}%"></i></div></div></section>`}
 function photoTiles(ids=['A01','A03','A04','A09','A12','A14']){return `<div class="photo-tiles">${ids.map(id=>{const p=byId(id);if(!p)return '';return `<button class="photo-tile" data-act="detail" data-id="${id}">${photoImg(id,'tile-image')}<span class="tile-gradient"></span><span class="tile-label"><strong>${h(p.ko)}</strong><small>${h(p.de)}</small></span></button>`}).join('')}</div>`;}
 function photoCredits(){return `<div class="credit-list">${PHOTO_ASSETS.map(p=>`<div class="credit-row"><b>${h(p.title)}</b><span>${h(p.creator)} · ${h(p.license)}</span><div><a href="${h(p.source)}" target="_blank" rel="noopener noreferrer">사진 원본 ↗</a> · <a href="${h(p.licenseUrl)}" target="_blank" rel="noopener noreferrer">이용허락 ↗</a></div></div>`).join('')}</div>`;}
-function photoLayer(){const p=photoFor(state.fullPhoto);if(!p)return '';const c=catalogById(p.placeId),d=LONG_GUIDES48[p.placeId],seconds=Math.max(38,Math.min(92,Math.round(24+(d?.p.join(' ').length||0)/12)));const body=state.contentLang==='en'?'<p>'+h(contentById(p.placeId)?.overview_en||'')+'</p>':vn44Guide(p.placeId,true);return `<div class="full-photo vn44-full" role="dialog" aria-modal="true" aria-label="${h(c?.ko||p.title)}"><img src="${h(p.url)}" data-legacy-photo="${h(p.legacyUrl||'')}" referrerpolicy="no-referrer" alt="${h(c?.ko||p.title)}" onerror="photoFail23(this)"><div class="full-shadow"></div><button class="photo-close" data-act="photo-close" aria-label="닫기">✕</button><div class="vn44-title">${h(state.contentLang==='en'?(c?.en||p.title):(c?.ko||p.title))}</div><div class="vn44-story"><div class="vn44-track" style="--vn44-duration:${seconds}s">${body}</div></div><button class="vn44-pause" data-act="photo-pause" aria-label="설명 일시정지">Ⅱ</button><div class="vn44-nav"><button data-act="photo-prev" aria-label="이전 사진">‹</button><button data-act="photo-detail" data-id="${h(p.placeId)}" aria-label="상세정보">⌕</button><button data-act="photo-next" aria-label="다음 사진">›</button></div></div>`;}
+let vn46Auto=null;
+function vn46StopAuto(){
+ if(vn46Auto){cancelAnimationFrame(vn46Auto.raf);vn46Auto=null;}
+ const full=document.querySelector('.vn44-full');
+ if(full){full.classList.add('vn44-paused');const b=full.querySelector('.vn44-pause');if(b){b.textContent='▶';b.setAttribute('aria-label','자동 스크롤 다시 시작');}}
+}
+function vn46StartAuto(){
+ const full=document.querySelector('.vn44-full'),scroller=full?.querySelector('.vn44-story'),track=full?.querySelector('.vn44-track');
+ if(!scroller||!track)return;
+ if(vn46Auto)cancelAnimationFrame(vn46Auto.raf);
+ full.classList.remove('vn44-paused');
+ const button=full.querySelector('.vn44-pause');if(button){button.textContent='Ⅱ';button.setAttribute('aria-label','자동 스크롤 일시정지');}
+ const duration=Number(track.dataset.duration)||70,speed=(scroller.scrollHeight-scroller.clientHeight)/(duration*1000);
+ let last=0;const state={raf:0};
+ function tick(t){
+  if(vn46Auto!==state||!scroller.isConnected)return;
+  if(last)scroller.scrollTop+=Math.min(t-last,80)*speed;
+  last=t;
+  if(scroller.scrollTop>=scroller.scrollHeight-scroller.clientHeight-2){vn46StopAuto();return;}
+  state.raf=requestAnimationFrame(tick);
+ }
+ vn46Auto=state;state.raf=requestAnimationFrame(tick);
+}
+function vn46Init(){
+ const scroller=document.querySelector('.vn44-story'),track=scroller?.querySelector('.vn44-track');
+ if(!scroller||!track)return;
+ // Leave approximately two lines visible before the automatic upward movement.
+ track.style.paddingTop=Math.max(0,scroller.clientHeight-76)+'px';
+ track.style.paddingBottom=Math.round(scroller.clientHeight*.75)+'px';
+ const interrupt=()=>vn46StopAuto();
+ scroller.addEventListener('touchstart',interrupt,{passive:true});
+ scroller.addEventListener('pointerdown',interrupt,{passive:true});
+ scroller.addEventListener('wheel',interrupt,{passive:true});
+ scroller.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' '].includes(e.key))interrupt();});
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){vn46StopAuto();return;}
+ vn46StartAuto();
+}
+
+function photoLayer(){const p=photoFor(state.fullPhoto);if(!p)return '';const c=catalogById(p.placeId),d=LONG_GUIDES48[p.placeId],seconds=Math.max(38,Math.min(92,Math.round(24+(d?.p.join(' ').length||0)/12)));const body=state.contentLang==='en'?'<p>'+h(contentById(p.placeId)?.overview_en||'')+'</p>':vn44Guide(p.placeId,true);return `<div class="full-photo vn44-full" role="dialog" aria-modal="true" aria-label="${h(c?.ko||p.title)}"><img src="${h(p.url)}" data-legacy-photo="${h(p.legacyUrl||'')}" referrerpolicy="no-referrer" alt="${h(c?.ko||p.title)}" onerror="photoFail23(this)"><div class="full-shadow"></div><button class="photo-close" data-act="photo-close" aria-label="닫기">✕</button><div class="vn44-title">${h(state.contentLang==='en'?(c?.en||p.title):(c?.ko||p.title))}</div><div class="vn44-story" tabindex="0" aria-label="여행 가이드 설명을 위아래로 스크롤"><div class="vn44-track" data-duration="${seconds}">${body}</div></div><button class="vn44-pause" data-act="photo-pause" aria-label="설명 일시정지">Ⅱ</button><div class="vn44-nav"><button data-act="photo-prev" aria-label="이전 사진">‹</button><button data-act="photo-detail" data-id="${h(p.placeId)}" aria-label="상세정보">⌕</button><button data-act="photo-next" aria-label="다음 사진">›</button></div></div>`;}
 
 
 const anchor=()=>state.anchor&&Number.isFinite(state.anchor.lat)&&Number.isFinite(state.anchor.lon)?state.anchor:DEFAULT.anchor;
@@ -1282,7 +1320,7 @@ function render(){
  main.closest('.phone')?.classList.toggle('vn32-near-screen',state.tab==='map');
  main.closest('.phone')?.classList.toggle('vn33-sights-screen',state.tab==='sights');
  main.closest('.phone')?.classList.toggle('vn37-plan-screen',state.tab==='itinerary');
- if(state.fullPhoto){$('layer').innerHTML=photoLayer();return;}
+ if(state.fullPhoto){vn46StopAuto();$('layer').innerHTML=photoLayer();vn46Init();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
  if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
  if(state.detail){$('layer').innerHTML=detailLayer();return;}
@@ -1506,7 +1544,7 @@ case'story-prev':state.storyIndex=(Number(state.storyIndex)||0)+FEATURED_PHOTOS.
 case'story-index':state.storyIndex=Number(value)||0;save();render();return;
 case'photo-full':state.fullPhoto=id;render();return;
 case'photo-close':state.fullPhoto=null;render();return;
-case'photo-pause':{const el=document.querySelector('.vn44-full');if(el){const paused=el.classList.toggle('vn44-paused'),btn=el.querySelector('.vn44-pause');if(btn){btn.textContent=paused?'▶':'Ⅱ';btn.setAttribute('aria-label',paused?'설명 재생':'설명 일시정지');}}return;}
+case'photo-pause':{if(vn46Auto)vn46StopAuto();else vn46StartAuto();return;}
 case'photo-detail':state.fullPhoto=null;state.detail=id;render();return;
 case'photo-next':{let ix=PHOTO_ASSETS.findIndex(p=>p.placeId===state.fullPhoto);state.fullPhoto=PHOTO_ASSETS[(ix+1)%PHOTO_ASSETS.length].placeId;render();return;}
 case'photo-prev':{let ix=PHOTO_ASSETS.findIndex(p=>p.placeId===state.fullPhoto);state.fullPhoto=PHOTO_ASSETS[(ix-1+PHOTO_ASSETS.length)%PHOTO_ASSETS.length].placeId;render();return;}
