@@ -91,3 +91,16 @@ for (const feature of ['nearSightPopup32','vn32-sight-pop','vn32-brand','near32-
 assert.ok(index.includes("choices=[['sights','볼거리'],['food','먹거리'],['wc','화장실'],['plan','계획']]"),'nearby categories must be exactly four in requested order');
 assert.ok(index.includes('grid-template-columns:repeat(4,minmax(0,1fr))'),'nearby tabs must be four columns');
 console.log('Phase 32 map layout, colored ball-head pins, popup and ad-slot checks OK.');
+
+const photoManifest=JSON.parse(fs.readFileSync(path.join(pub,'photo_manifest.json'),'utf8'));
+assert.equal(photoManifest.length,48,'Expected 48 catalogued sightseeing photos');
+assert.equal(new Set(photoManifest.map(x=>x.placeId)).size,48,'Each place needs a distinct photo record');
+for(const p of photoManifest){
+ assert.ok(p.file&&p.source&&p.creator&&p.license&&p.licenseUrl,'Missing photo credit or source for '+p.placeId);
+ assert.ok(p.url.startsWith('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/'),'Unsupported image delivery for '+p.placeId);
+ assert.ok(p.legacyUrl?.startsWith('https://upload.wikimedia.org/'),'Missing independent fallback URL for '+p.placeId);
+}
+assert.ok(index.includes('data-legacy-photo'),'Photo failure recovery is missing from app');
+assert.ok(index.includes('img.dataset.retry23'),'Photo retry logic is missing');
+assert.ok(index.includes('referrerpolicy="no-referrer"'),'Image requests must omit app referral information');
+console.log('Photo delivery regression gate OK: 48 credited images, Commons redirect and fallback.');
