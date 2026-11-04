@@ -11,7 +11,8 @@
     "2026-11-04: NEW 분류와 소속 식당 15곳을 목록에서 제거 (요청에 따른 데이터 정리).",
     "2026-11-04: 내주변 지도용 식당 POI/건물 좌표 10곳을 공개 지도 자료와 대조하여 추가. 출입구 상세 좌표로 간주하지 않음.",
     "2026-11-04: 공개 장소 POI/공식 식당 주소의 일치 여부를 근거로 24곳을 추가 연결. 이름이 같은 지점 또는 주소 불명 사례는 자동 추측하지 않음.",
-    "2026-11-04: 추가 13곳의 장소 위치를 지도/식당 공식 주소와 대조하고 기록. Tian Restaurant 좌표 재검증 교정."
+    "2026-11-04: 추가 13곳의 장소 위치를 지도/식당 공식 주소와 대조하고 기록. Tian Restaurant 좌표 재검증 교정.",
+    "2026-11-04: 추가 식당 3곳의 실좌표 및 9곳의 공식/영업자 주소 기록; 좌표가 없다고 주소를 추정 좌표로 변환하지 않음."
   ],
   "category_labels": {
     "featured": "대표 맛집",
@@ -933,7 +934,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Karlsgasse 22, 1040 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -980,7 +981,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.wiener-wiazhaus.com/kontakt",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-sixta",
@@ -1274,7 +1277,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Dorotheergasse 1, 1010 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -1349,7 +1352,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.wien.info/en/dine-drink/viennese-cuisine/trzesniewski-362100",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-zum-schwarzen-kameel",
@@ -1795,7 +1800,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Große Neugasse 20, 1040 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -1842,7 +1847,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.gasthauswolf.at/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-reznicek",
@@ -2116,7 +2123,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Breitenfelder Gasse 18, 1080 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -2163,7 +2170,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://heidenkummer.at/kontakt/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-gasthaus-quell",
@@ -2842,7 +2851,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Salzgries 15/4, 1010 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -2893,7 +2902,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://firmen.wko.at/jola-kg-restaurant-jola/wien/?firmaid=c5a2968c-79c5-49c8-973d-5d80ef0c061f",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-apron",
@@ -2907,7 +2918,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Am Heumarkt 35, 1030 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -2958,7 +2969,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://guide.michelin.com/my/en/vienna/wien/restaurant/apron",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-pramerl-the-wolf",
@@ -3248,7 +3261,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Laudongasse 13, 1080 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -3295,7 +3308,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://viatoledo.at/contacts/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-da-ferdinando",
@@ -3373,7 +3388,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Schottenfeldgasse 22, 1070 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -3420,7 +3435,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://www.leisure.at/de/presse/7320/Das-Fuenfte-im-Siebten-lautentico-kommt-mit-Ritterschlag-nach-Neubau--BILD",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-ristorante-rossini",
@@ -4352,10 +4369,13 @@
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Naschmarkt 510, 1060 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.1979,
+        "lng": 16.36213,
+        "source": "https://aroundus.com/p/172286257-neni",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4918,8 +4938,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.21219,
+        "lng": 16.37484,
+        "source": "https://mapcarta.com/N3375759782",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -4977,10 +5000,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Albertgasse 39, 1080 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.212117,
+        "lng": 16.3438377,
+        "source": "https://directindex.org/r/koinoniaplus.at",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5332,7 +5358,7 @@
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Hernalser Gürtel 47, 1170 Wien",
       "location": {
         "lat": null,
         "lng": null
@@ -5381,7 +5407,9 @@
         "summary_ko": null,
         "area_ko": null,
         "google_maps_query": null
-      }
+      },
+      "address_source": "https://hinterholz-wien.sta.io/kontakt/",
+      "address_checked_on": "2026-11-04"
     },
     {
       "id": "restaurant-melker-stiftskeller",
