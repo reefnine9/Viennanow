@@ -43,3 +43,10 @@ for(const [phase,controls] of [
 }
 assert.ok(index.includes('Phase 30'),'public app title must identify Phase 30');
 console.log('Phases 28–30 regression gate OK: course map, itinerary editing and mobile layout.');
+
+// Prevent a stale root entrypoint from being served by alternative deployment configurations.
+if(fs.existsSync(path.join(root,'index.html'))){
+ const rootIndex=fs.readFileSync(path.join(root,'index.html'),'utf8');
+ assert.equal(rootIndex,index,'root index.html must be identical to public/index.html');
+}
+console.log('Deployment entrypoints synchronized: root and public index.html.');
