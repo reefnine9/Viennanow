@@ -1203,7 +1203,7 @@ function vn47StreetViewLink(r){
  if(typeof lat==='number'&&typeof lng==='number'&&Number.isFinite(lat)&&Number.isFinite(lng)){
   return {url:'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint='+encodeURIComponent(lat+','+lng),direct:true};
  }
- const query=r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,r.address||'Vienna, Austria'].filter(Boolean).join(', ');
+ const query=r.address?[r.name?.de||r.name?.ko,r.address,'Austria'].filter(Boolean).join(', '):(r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,'Vienna, Austria'].filter(Boolean).join(', '));
  return {url:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query),direct:false};
 }
 function foodPage21(){
@@ -1234,7 +1234,7 @@ function foodPage21(){
   const media=photo?'<div class="vn43-imagebox">'+thumb+'</div>':'';
   const brief=r.description?.ko||r.quick_pick?.summary_ko||'비엔나 맛집 후보로 등록된 식당입니다. 대표 메뉴와 추천 정보를 확인 중입니다.';
   const menu=(r.recommended_dishes||[]).slice(0,3).join(' · ');
-  const mapQuery=r.quick_pick?.google_maps_query||((r.name?.de||name)+', Vienna, Austria');
+  const mapQuery=r.address?[r.name?.de||name,r.address,'Austria'].join(', '):(r.quick_pick?.google_maps_query||((r.name?.de||name)+', Vienna, Austria'));
   const mapUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(mapQuery);
   const street=vn47StreetViewLink(r);
   const mapped=Number.isFinite(r.location?.lat)&&Number.isFinite(r.location?.lng)||!!VN48_FOOD_GEO[r.id];
@@ -1328,7 +1328,7 @@ const NEAR_FOOD_COORDS31={E01:[48.1974,16.3584],E02:[48.2112,16.3615],E03:[48.20
 let VN48_FOOD_GEO={},VN48_GEO_STATE='idle';
 function vn48NormalizeName(x){return String(x||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');}
 function vn48FoodRecords(){return VN42_DB?.restaurants||[];}
-function vn48FoodMapLink(r){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,r.address||'Wien, Austria'].filter(Boolean).join(', '));}
+function vn48FoodMapLink(r){const query=r.address?[r.name?.de||r.name?.ko,r.address,'Austria'].filter(Boolean).join(', '):(r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,'Wien, Austria'].filter(Boolean).join(', '));return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query);}
 function vn48LoadFoodGeo(){
  if(VN48_GEO_STATE!=='idle'||!VN42_DB)return;
  VN48_GEO_STATE='loading';
