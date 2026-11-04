@@ -1,0 +1,4254 @@
+{
+  "schema_version": "1.0.0",
+  "catalog": "ViennaNow Restaurants",
+  "as_of": "2026-11-04",
+  "notes": "Research candidates, not a verified or published recommendations list. Cafes, desserts, bars, and Heuriger are outside current scope; Café Central retained only as an unpublished closure caution record. NENI am Naschmarkt and Art Corner Restaurant remain uncategorized until a general international-cuisine filter is added.",
+  "category_labels": {
+    "featured": "대표 맛집",
+    "local_recommended": "현지 추천",
+    "hidden_gem": "숨은 맛집",
+    "personal": "비엔나 주민의 맛집 노트",
+    "asian": "한식·아시아 맛집",
+    "new": "NEW 맛집"
+  },
+  "special_tags": {
+    "visit_warning": "방문 주의"
+  },
+  "restaurants": [
+    {
+      "id": "restaurant-figlmuller",
+      "name": {
+        "de": "Figlmüller",
+        "ko": null,
+        "en": "Figlmüller"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-plachutta-wollzeile",
+      "name": {
+        "de": "Plachutta Wollzeile",
+        "ko": null,
+        "en": "Plachutta Wollzeile"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-plachuttas-gasthaus-zur-oper",
+      "name": {
+        "de": "Plachuttas Gasthaus zur Oper",
+        "ko": null,
+        "en": "Plachuttas Gasthaus zur Oper"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-ribs-of-vienna",
+      "name": {
+        "de": "Ribs of Vienna",
+        "ko": null,
+        "en": "Ribs of Vienna"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-salm-brau",
+      "name": {
+        "de": "Salm Bräu",
+        "ko": null,
+        "en": "Salm Bräu"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-reinthaler-s-beisl",
+      "name": {
+        "de": "Reinthaler’s Beisl",
+        "ko": null,
+        "en": "Reinthaler’s Beisl"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-poschl",
+      "name": {
+        "de": "Gasthaus Pöschl",
+        "ko": null,
+        "en": "Gasthaus Pöschl"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-schnitzelwirt",
+      "name": {
+        "de": "Schnitzelwirt",
+        "ko": null,
+        "en": "Schnitzelwirt"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-schweizerhaus",
+      "name": {
+        "de": "Schweizerhaus",
+        "ko": null,
+        "en": "Schweizerhaus"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-meissl-schadn",
+      "name": {
+        "de": "Meissl & Schadn",
+        "ko": null,
+        "en": "Meissl & Schadn"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-tante-liesl",
+      "name": {
+        "de": "Gasthaus Tante Liesl",
+        "ko": null,
+        "en": "Gasthaus Tante Liesl"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-glacis-beisl",
+      "name": {
+        "de": "Glacis Beisl",
+        "ko": null,
+        "en": "Glacis Beisl"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-wiener-wiazhaus",
+      "name": {
+        "de": "Wiener Wiazhaus",
+        "ko": null,
+        "en": "Wiener Wiazhaus"
+      },
+      "categories": [
+        "featured",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-sixta",
+      "name": {
+        "de": "Sixta",
+        "ko": null,
+        "en": "Sixta"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-stockl-im-park",
+      "name": {
+        "de": "Stöckl im Park",
+        "ko": null,
+        "en": "Stöckl im Park"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-1516-brewing-company",
+      "name": {
+        "de": "1516 Brewing Company",
+        "ko": null,
+        "en": "1516 Brewing Company"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-bitzinger-bei-der-albertina",
+      "name": {
+        "de": "Bitzinger bei der Albertina",
+        "ko": null,
+        "en": "Bitzinger bei der Albertina"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-trzesniewski",
+      "name": {
+        "de": "Trześniewski",
+        "ko": null,
+        "en": "Trześniewski"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-zum-schwarzen-kameel",
+      "name": {
+        "de": "Zum Schwarzen Kameel",
+        "ko": null,
+        "en": "Zum Schwarzen Kameel"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-schachtelwirt",
+      "name": {
+        "de": "Schachtelwirt",
+        "ko": null,
+        "en": "Schachtelwirt"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-lugeck",
+      "name": {
+        "de": "Lugeck",
+        "ko": null,
+        "en": "Lugeck"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-chattanooga",
+      "name": {
+        "de": "Chattanooga",
+        "ko": null,
+        "en": "Chattanooga"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-strandcafe",
+      "name": {
+        "de": "Strandcafé",
+        "ko": null,
+        "en": "Strandcafé"
+      },
+      "categories": [
+        "featured"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-grunauer",
+      "name": {
+        "de": "Gasthaus Grünauer",
+        "ko": null,
+        "en": "Gasthaus Grünauer"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-wolf",
+      "name": {
+        "de": "Gasthaus Wolf",
+        "ko": null,
+        "en": "Gasthaus Wolf"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-reznicek",
+      "name": {
+        "de": "Reznicek",
+        "ko": null,
+        "en": "Reznicek"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-am-nordpol-3",
+      "name": {
+        "de": "Am Nordpol 3",
+        "ko": null,
+        "en": "Am Nordpol 3"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-kopp",
+      "name": {
+        "de": "Gasthaus Kopp",
+        "ko": null,
+        "en": "Gasthaus Kopp"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-rebhuhn",
+      "name": {
+        "de": "Gasthaus Rebhuhn",
+        "ko": null,
+        "en": "Gasthaus Rebhuhn"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gastwirtschaft-heidenkummer",
+      "name": {
+        "de": "Gastwirtschaft Heidenkummer",
+        "ko": null,
+        "en": "Gastwirtschaft Heidenkummer"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-gasthaus-quell",
+      "name": {
+        "de": "Gasthaus Quell",
+        "ko": null,
+        "en": "Gasthaus Quell"
+      },
+      "categories": [
+        "local_recommended",
+        "hidden_gem"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-meierei-im-stadtpark",
+      "name": {
+        "de": "Meierei im Stadtpark",
+        "ko": null,
+        "en": "Meierei im Stadtpark"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-steirereck-im-stadtpark",
+      "name": {
+        "de": "Steirereck im Stadtpark",
+        "ko": null,
+        "en": "Steirereck im Stadtpark"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-amador",
+      "name": {
+        "de": "Amador",
+        "ko": null,
+        "en": "Amador"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-konstantin-filippou",
+      "name": {
+        "de": "Konstantin Filippou",
+        "ko": null,
+        "en": "Konstantin Filippou"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-mraz-sohn",
+      "name": {
+        "de": "Mraz & Sohn",
+        "ko": null,
+        "en": "Mraz & Sohn"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-silvio-nickol",
+      "name": {
+        "de": "Silvio Nickol",
+        "ko": null,
+        "en": "Silvio Nickol"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-doubek",
+      "name": {
+        "de": "Doubek",
+        "ko": null,
+        "en": "Doubek"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-tian",
+      "name": {
+        "de": "Tian",
+        "ko": null,
+        "en": "Tian"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-jola",
+      "name": {
+        "de": "JOLA",
+        "ko": null,
+        "en": "JOLA"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-apron",
+      "name": {
+        "de": "Apron",
+        "ko": null,
+        "en": "Apron"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-pramerl-the-wolf",
+      "name": {
+        "de": "Pramerl & the Wolf",
+        "ko": null,
+        "en": "Pramerl & the Wolf"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-glasswing",
+      "name": {
+        "de": "Glasswing",
+        "ko": null,
+        "en": "Glasswing"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-mast-weinbistro",
+      "name": {
+        "de": "MAST Weinbistro",
+        "ko": null,
+        "en": "MAST Weinbistro"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-disco-volante",
+      "name": {
+        "de": "Disco Volante",
+        "ko": null,
+        "en": "Disco Volante"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-via-toledo-enopizzeria",
+      "name": {
+        "de": "Via Toledo Enopizzeria",
+        "ko": null,
+        "en": "Via Toledo Enopizzeria"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-da-ferdinando",
+      "name": {
+        "de": "Da Ferdinando",
+        "ko": null,
+        "en": "Da Ferdinando"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-l-autentico",
+      "name": {
+        "de": "L’autentico",
+        "ko": null,
+        "en": "L’autentico"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-ristorante-rossini",
+      "name": {
+        "de": "Ristorante Rossini",
+        "ko": null,
+        "en": "Ristorante Rossini"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-fabios",
+      "name": {
+        "de": "Fabios",
+        "ko": null,
+        "en": "Fabios"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-lola",
+      "name": {
+        "de": "LOLA",
+        "ko": null,
+        "en": "LOLA"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-wrenkh",
+      "name": {
+        "de": "Wrenkh",
+        "ko": null,
+        "en": "Wrenkh"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-wiener-wurstelstand-pfeilgasse",
+      "name": {
+        "de": "Wiener Würstelstand Pfeilgasse",
+        "ko": null,
+        "en": "Wiener Würstelstand Pfeilgasse"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-alles-wurscht",
+      "name": {
+        "de": "Alles Wurscht",
+        "ko": null,
+        "en": "Alles Wurscht"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-wurstelstand-leo",
+      "name": {
+        "de": "Würstelstand Leo",
+        "ko": null,
+        "en": "Würstelstand Leo"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-speisekammer",
+      "name": {
+        "de": "Speisekammer",
+        "ko": null,
+        "en": "Speisekammer"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-eh-scho-wuascht",
+      "name": {
+        "de": "eh scho wuascht",
+        "ko": null,
+        "en": "eh scho wuascht"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-wurstelstand-christian-lange",
+      "name": {
+        "de": "Würstelstand Christian Lange",
+        "ko": null,
+        "en": "Würstelstand Christian Lange"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-leberkas-pepi",
+      "name": {
+        "de": "Leberkas-Pepi",
+        "ko": null,
+        "en": "Leberkas-Pepi"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-zur-alten-kaisermuhle",
+      "name": {
+        "de": "Zur Alten Kaisermühle",
+        "ko": null,
+        "en": "Zur Alten Kaisermühle"
+      },
+      "categories": [
+        "local_recommended"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-mochi",
+      "name": {
+        "de": "Mochi",
+        "ko": null,
+        "en": "Mochi"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-neni-am-naschmarkt",
+      "name": {
+        "de": "NENI am Naschmarkt",
+        "ko": null,
+        "en": "NENI am Naschmarkt"
+      },
+      "categories": [],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-shiki-japanese-cuisine",
+      "name": {
+        "de": "SHIKI Japanese Cuisine",
+        "ko": null,
+        "en": "SHIKI Japanese Cuisine"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-mochi-ramen-bar",
+      "name": {
+        "de": "Mochi Ramen Bar",
+        "ko": null,
+        "en": "Mochi Ramen Bar"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-red-bowl",
+      "name": {
+        "de": "Red Bowl",
+        "ko": null,
+        "en": "Red Bowl"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-bibim",
+      "name": {
+        "de": "Bibim",
+        "ko": null,
+        "en": "Bibim"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-sura",
+      "name": {
+        "de": "Sura",
+        "ko": null,
+        "en": "Sura"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-yori",
+      "name": {
+        "de": "Yori",
+        "ko": null,
+        "en": "Yori"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-kim-kocht",
+      "name": {
+        "de": "Kim Kocht",
+        "ko": null,
+        "en": "Kim Kocht"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-kim-shop",
+      "name": {
+        "de": "Kim Shop",
+        "ko": null,
+        "en": "Kim Shop"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-babida",
+      "name": {
+        "de": "Babida",
+        "ko": null,
+        "en": "Babida"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-koinonia",
+      "name": {
+        "de": "Koinonia",
+        "ko": null,
+        "en": "Koinonia"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-akakiko",
+      "name": {
+        "de": "Akakiko",
+        "ko": null,
+        "en": "Akakiko"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-addiert",
+      "name": {
+        "de": "Addiert",
+        "ko": null,
+        "en": "Addiert"
+      },
+      "categories": [
+        "asian"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-art-corner-restaurant",
+      "name": {
+        "de": "Art Corner Restaurant",
+        "ko": null,
+        "en": "Art Corner Restaurant"
+      },
+      "categories": [],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-m-eins19",
+      "name": {
+        "de": "M.eins19",
+        "ko": null,
+        "en": "M.eins19"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-donauhof",
+      "name": {
+        "de": "Donauhof",
+        "ko": null,
+        "en": "Donauhof"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-sophie7",
+      "name": {
+        "de": "sophie7",
+        "ko": null,
+        "en": "sophie7"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-kikko-ba",
+      "name": {
+        "de": "Kikko Bā",
+        "ko": null,
+        "en": "Kikko Bā"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-prunkraume",
+      "name": {
+        "de": "Prunkräume",
+        "ko": null,
+        "en": "Prunkräume"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-pomali",
+      "name": {
+        "de": "Pomali",
+        "ko": null,
+        "en": "Pomali"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-artig",
+      "name": {
+        "de": "Artig",
+        "ko": null,
+        "en": "Artig"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-carioca",
+      "name": {
+        "de": "Carioca",
+        "ko": null,
+        "en": "Carioca"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-dampha-kitchen",
+      "name": {
+        "de": "Dampha Kitchen",
+        "ko": null,
+        "en": "Dampha Kitchen"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-ossa",
+      "name": {
+        "de": "Ossa",
+        "ko": null,
+        "en": "Ossa"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-tisch-matte",
+      "name": {
+        "de": "Tisch & Matte",
+        "ko": null,
+        "en": "Tisch & Matte"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-seameboilin",
+      "name": {
+        "de": "SeaMeBoilin",
+        "ko": null,
+        "en": "SeaMeBoilin"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-arici",
+      "name": {
+        "de": "Arici",
+        "ko": null,
+        "en": "Arici"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-pescobar",
+      "name": {
+        "de": "Pescobar",
+        "ko": null,
+        "en": "Pescobar"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-le-sept",
+      "name": {
+        "de": "Le Sept",
+        "ko": null,
+        "en": "Le Sept"
+      },
+      "categories": [
+        "new"
+      ],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "unknown",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": []
+    },
+    {
+      "id": "restaurant-cafe-central",
+      "name": {
+        "de": "Café Central",
+        "ko": null,
+        "en": "Café Central"
+      },
+      "categories": [],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "temporarily_closed",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": [
+        "visit_warning"
+      ]
+    },
+    {
+      "id": "restaurant-hinterholz",
+      "name": {
+        "de": "Hinterholz",
+        "ko": null,
+        "en": "Hinterholz"
+      },
+      "categories": [],
+      "cuisine": [],
+      "district": null,
+      "address": null,
+      "location": {
+        "lat": null,
+        "lng": null
+      },
+      "recommended_dishes": [],
+      "price_range": null,
+      "website": null,
+      "reservation_url": null,
+      "description": {
+        "ko": null,
+        "en": null,
+        "de": null
+      },
+      "personal_review": {
+        "visited": false,
+        "rating": null,
+        "note": null,
+        "visited_at": null
+      },
+      "verification": {
+        "status": "unverified",
+        "last_checked": null,
+        "sources": []
+      },
+      "operations": {
+        "status": "reported_closed",
+        "note": null
+      },
+      "publication": {
+        "approved": false
+      },
+      "tags": [
+        "visit_warning"
+      ]
+    }
+  ]
+}
