@@ -284,6 +284,20 @@
 .vn35-pin-note{color:#8b6c52!important;font-size:9px!important}
 
 .vn36-catalog .vn36-filter{display:flex;gap:7px;flex-wrap:wrap}.vn36-catalog .vn36-categories{padding:4px 0 7px}.vn36-count{font-weight:700;font-size:13px;color:var(--muted)}.vn36-stats{font-weight:700;color:var(--teal);font-size:13px}.vn36-card{overflow:hidden}.vn36-image,.vn36-detail-img{height:158px;overflow:hidden;background:#e7e8e5}.vn36-image img,.vn36-detail-img img{width:100%;height:100%;object-fit:cover}.vn36-meta{font-size:12px;color:var(--teal);margin:8px 0}.vn36-detail-img{height:230px}.vn36-tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.vn36-story{line-height:1.85;white-space:normal}.vn36-stops{padding-left:25px;margin:10px 0;line-height:1.8}.vn36-stops li{padding:9px 0;border-bottom:1px solid var(--line)}.vn36-detail .pro-body{padding:18px}
+
+/* Phase 37: compact plan heading; keep global header on all other tabs. */
+.phone.vn37-plan-screen>.header{display:none!important}
+.vn37-planbar{display:flex;align-items:center;gap:9px;min-width:0;padding:2px 0 5px;margin:0}
+.vn37-title{display:flex;align-items:center;gap:5px;flex:none;white-space:nowrap}
+.vn37-v{display:grid;place-items:center;width:27px;height:27px;border-radius:8px;background:var(--navy);color:#fff;font-weight:850;font-size:19px;line-height:1}
+.vn37-title strong{font-weight:800;font-size:17px;letter-spacing:-.06em}
+.vn37-planbar .sectionnav{display:flex;flex:1;min-width:0;align-items:center;gap:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin:0;padding:0}
+.vn37-planbar .sectionnav::-webkit-scrollbar{display:none}
+.vn37-planbar .sectionnav button{flex:none;font-size:11px;letter-spacing:-.045em;padding:8px 5px}
+.vn37-catalog{gap:11px}
+.vn37-plan-screen .vn36-catalog{gap:11px}
+.vn37-plan-screen .vn36-filter{margin-top:0}
+@media(max-width:360px){.vn37-planbar{gap:5px}.vn37-planbar .sectionnav button{font-size:10px;padding:7px 4px}.vn37-title strong{font-size:16px}.vn37-v{width:24px;height:24px;font-size:17px}}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -1039,7 +1053,7 @@ function courseCatalog36(){
  const cat=state.vnCourseCategory||'전체',duration=state.vnCourseDuration||'전체';
  const filtered=VN_COURSES36.filter(c=>(cat==='전체'||c.category===cat)&&(duration==='전체'||c.duration===duration));
  if(state.vnCourseDetail){const c=VN_COURSES36.find(x=>x.id===state.vnCourseDetail);if(c)return courseDetail36(c);}
- return `<div class="stack plan-wrapper vn36-catalog"><div class="card soft"><b>비엔나 추천 여행 코스</b><p class="sub">기본 코스 4개와 테마 코스 24개. 관심 있는 코스를 골라 하루 또는 반나절의 동선과 설명을 살펴보세요.</p><div class="vn36-stats">전체 28개 · 반나절 12개 · 하루 16개</div></div><div class="vn36-filter" role="group" aria-label="코스 소요시간">${['전체','반나절','하루'].map(x=>`<button class="chip ${duration===x?'active':''}" data-act="vn-course-duration" data-value="${h(x)}">${x}</button>`).join('')}</div><div class="vn36-filter vn36-categories" role="group" aria-label="코스 주제">${VN_CATEGORIES36.map(x=>`<button class="chip ${cat===x?'active':''}" data-act="vn-course-category" data-value="${h(x)}">${h(x)}</button>`).join('')}</div><div class="vn36-count">${filtered.length}개 코스</div>${filtered.map(c=>`<article class="pro-plan vn36-card"><div class="vn36-image">${photoImg(c.cover,'deck-photo')}</div><div class="pro-body"><div class="kicker">${h(c.category)} · ${h(c.duration)} · ${h(c.hours)}</div><h3>${h(c.title)}</h3><p>${h(c.summary)}</p><div class="vn36-meta">이동량 ${h(c.mobility)} · 추천 시기 ${h(c.season)}</div><p class="tiny">${h(c.stops.slice(0,4).join(' → '))}${c.stops.length>4?' …':''}</p><button class="btn primary block" data-act="vn-course-detail" data-id="${h(c.id)}">코스 자세히 보기 →</button></div></article>`).join('')}<p class="footer">방문지 정보는 여행 계획용 추천 초안입니다. 실제 운영시간·입장권·이동시간은 여행일에 다시 확인해 주세요.</p></div>`;
+ return `<div class="stack plan-wrapper vn36-catalog"><div class="vn36-filter" role="group" aria-label="코스 소요시간">${['전체','반나절','하루'].map(x=>`<button class="chip ${duration===x?'active':''}" data-act="vn-course-duration" data-value="${h(x)}">${x}</button>`).join('')}</div><div class="vn36-filter vn36-categories" role="group" aria-label="코스 주제">${VN_CATEGORIES36.map(x=>`<button class="chip ${cat===x?'active':''}" data-act="vn-course-category" data-value="${h(x)}">${h(x)}</button>`).join('')}</div><div class="vn36-count">${filtered.length}개 코스</div>${filtered.map(c=>`<article class="pro-plan vn36-card"><div class="vn36-image">${photoImg(c.cover,'deck-photo')}</div><div class="pro-body"><div class="kicker">${h(c.category)} · ${h(c.duration)} · ${h(c.hours)}</div><h3>${h(c.title)}</h3><p>${h(c.summary)}</p><div class="vn36-meta">이동량 ${h(c.mobility)} · 추천 시기 ${h(c.season)}</div><p class="tiny">${h(c.stops.slice(0,4).join(' → '))}${c.stops.length>4?' …':''}</p><button class="btn primary block" data-act="vn-course-detail" data-id="${h(c.id)}">코스 자세히 보기 →</button></div></article>`).join('')}<p class="footer">방문지 정보는 여행 계획용 추천 초안입니다. 실제 운영시간·입장권·이동시간은 여행일에 다시 확인해 주세요.</p></div>`;
 }
 function courseDetail36(c){
  return `<div class="stack plan-wrapper vn36-detail"><button class="btn outline" data-act="vn-course-back">← 전체 코스 보기</button><div class="pro-plan"><div class="vn36-detail-img">${photoImg(c.cover,'deck-photo')}</div><div class="pro-body"><div class="kicker">${h(c.category)} · ${h(c.id)}</div><div class="h1">${h(c.title)}</div><div class="vn36-tags"><span class="pill">${h(c.duration)} · ${h(c.hours)}</span><span class="pill gray">이동량 ${h(c.mobility)}</span><span class="pill gray">${h(c.season)}</span></div><p class="vn36-story">${h(c.summary)}</p></div></div><section class="card"><div class="h2">추천 방문 순서</div><p class="sub">여행자가 장소를 쉽게 이해할 수 있도록 주요 지점을 순서대로 정리했습니다.</p><ol class="vn36-stops">${c.stops.map(s=>`<li>${h(s)}</li>`).join('')}</ol></section><div class="card soft"><b>여행 전 확인</b><p class="sub">일부 장소는 외관 관람 또는 선택 방문입니다. 박물관 휴관일, 입장시간 예약, 상점 영업일, 행사·공연 일정은 변경될 수 있습니다. 소요시간은 추천 기준이며 실시간 경로 계산 결과가 아닙니다.</p><a class="btn outline block" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(c.stops[c.stops.length-1]+', Wien Austria')}&origin=${encodeURIComponent(c.stops[0]+', Wien Austria')}">구글 지도에서 출발·도착 확인 ↗</a></div><p class="footer">내 여행 일정으로 자동 가져오기 기능은 다음 단계에서 연결할 예정입니다.</p></div>`;
@@ -1047,7 +1061,7 @@ function courseDetail36(c){
 
 function planPage21(){
  const groups=[['premium','추천 코스'],['mine','내 계획'],['build','내 여행 짜기']];
- const bar=`<div class="kicker">PLAN YOUR JOURNEY</div><div class="h1">계획</div>${sectionNav21('plan',groups)}`;
+ const bar=`<div class="vn37-planbar"><div class="vn37-title"><span class="vn37-v">V</span><strong>계획</strong></div>${sectionNav21('plan',groups)}</div>`;
  if(state.planSection==='build')return `<div class="stack plan-wrapper">${bar}${itinerary()}</div>`;
  if(state.planSection==='mine')return `<div class="stack plan-wrapper">${bar}${state.itinerary&&state.tourId?`<div class="vn29-edit-banner"><div><b>추천 코스를 내 일정으로 가져왔어요</b><small>관광지의 방문 순서·날짜를 직접 조정할 수 있습니다. 고정 예약은 보호됩니다.</small></div><button class="btn navy small" data-act="open-editor">일정 편집</button></div>`:''}${state.itinerary?itinerary():`<div class="card soft"><div class="h2">아직 만든 여행 계획이 없어요</div><p class="sub">사진에서 저장한 장소를 바탕으로 나만의 계획을 만들어보세요.</p>${btn('계획짜기 시작','plan-build','primary block')}</div>`}<div class="card"><b>저장한 장소</b><p class="sub">볼거리 ${(state.savedPlaces||[]).length}곳 · 먹거리 ${(state.expSaved19||[]).length}곳</p>${btn('저장한 볼거리 보기','open-sights','outline block')}</div></div>`;
  return `<div class="stack plan-wrapper">${bar}${courseCatalog36()}</div>`;
@@ -1121,6 +1135,7 @@ function render(){
  main.classList.toggle('near-map-main',state.tab==='map');
  main.closest('.phone')?.classList.toggle('vn32-near-screen',state.tab==='map');
  main.closest('.phone')?.classList.toggle('vn33-sights-screen',state.tab==='sights');
+ main.closest('.phone')?.classList.toggle('vn37-plan-screen',state.tab==='itinerary');
  if(state.fullPhoto){$('layer').innerHTML=photoLayer();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
  if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
