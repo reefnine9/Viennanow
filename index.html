@@ -208,6 +208,14 @@
 .near-inline-tools{display:inline-flex;gap:5px;flex:none}
 .near-inline-tools .near-action{font-size:11px;font-weight:750;min-height:38px;background:white;border:1px solid #d9e4de;border-radius:22px;padding:6px 11px;color:var(--navy)}
 .near-inline-tools .near-action.primary{background:var(--navy);color:white}
+
+.near31-top{padding:9px 12px 7px}.near31-title{margin-bottom:8px;gap:5px}.near31-title strong{font-size:17px;white-space:nowrap}
+.near31-locations{display:flex;gap:6px;align-items:center}.near31-locations button{border:1px solid #d3e1db;border-radius:20px;background:#fff;color:#315d61;padding:7px 9px;min-height:36px;font-weight:800;font-size:11px;white-space:nowrap;touch-action:manipulation}.near31-locations button.active{background:#e9f2ec;border-color:#95c4b2;color:#185e53}
+.near31-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;overflow:visible;white-space:normal}.near31-tabs .chip{width:100%;padding:9px 1px;min-height:39px;font-size:11px;white-space:nowrap;border-radius:11px}
+.near31-search,.near31-planbar{position:absolute;top:12px;left:11px;right:11px;z-index:510;display:flex;gap:7px;pointer-events:auto}.near31-search{background:#fff;border-radius:13px;border:1px solid #ccdcd5;box-shadow:0 3px 13px #122a3b26;overflow:hidden}.near31-input{width:100%;min-width:0;flex:1;padding:10px 12px;font-size:13px;border:0;background:white;outline:0}.near31-search button{border:0;background:#234855;color:#fff;padding:8px 17px;font-size:20px}
+.near31-planbar select{min-width:0;flex:1;background:#fff;color:#234855;border:1px solid #c7d9cf;border-radius:10px;min-height:43px;padding:6px 7px;font-weight:700;box-shadow:0 3px 10px #122a3b24}.near31-planbar select:last-child{flex:0 0 93px}
+.near31-note{color:#71838a;font-size:10px;line-height:1.4;margin:4px 0 0}.near31-leaflet-marker{background:transparent;border:0}.near31-pin{width:32px;height:41px;filter:drop-shadow(0 3px 3px #122a3c69)}.near31-pin svg{display:block;overflow:visible}.near31-pin-sights{color:#214b63}.near31-pin-food{color:#c36a45}.near31-pin-wc{color:#616c75}.near31-pin-plan{color:#16786d}
+@media(max-width:360px){.near31-top{padding:7px 7px 6px}.near31-locations button{padding:6px 7px;font-size:10px}.near31-tabs{gap:3px}.near31-tabs .chip{font-size:10px}}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -357,7 +365,7 @@ function navTo(t){
  state.explore19=false;state.homeGuide=false;
  if(t==='home')state.homeView='overview';
  if(t==='itinerary')state.planSection=state.itinerary?'mine':'build';
- if(t==='map')state.nearSection=state.nearSection||'map';
+ if(t==='map')state.nearSection=nearMode31();
  save();render();
 }
 function sectionBack(act,label='돌아가기'){return `<button class="backbtn" data-act="${act}">← ${h(label)}</button>`}
@@ -959,42 +967,26 @@ function planPage21(){
  return `<div class="stack plan-wrapper">${bar}<div class="card soft"><b>선별한 명품계획</b><p class="sub">코스의 출발·도착·이동경로를 확인한 뒤 날짜에 맞춰 내 계획으로 가져올 수 있습니다. 실제 여행자 공유 일정은 아닙니다.</p></div>${CURATED21.map(t=>`<article class="pro-plan"><div class="pro-img">${photoImg(t.cover,'deck-photo')}</div><div class="pro-body"><div class="kicker">${h(t.tone)} · ${t.days}일</div><h3>${h(t.title)}</h3><p>${h(t.summary)}</p><p class="tiny">${t.daysPlan.map((d,i)=>`${i+1}일차 ${h(d.from)} → ${h(d.to)}`).join(' · ')}</p><button class="btn primary block" data-act="tour-detail" data-id="${t.id}">코스 상세 보기 · 이동 계획 확인 →</button></div></article>`).join('')}<p class="footer">방문일의 개방시간과 실제 이동시간은 확인이 필요합니다.</p></div>`;
 }
 function googleNearby21(term){const a=anchor(),lat=a.lat.toFixed(5),lon=a.lon.toFixed(5);return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(term+' near '+lat+','+lon)}`;}
+
+function nearMode31(){const m=state.nearSection;return m==='dining'?'food':m==='sights'?'sights':m==='wc'?'wc':m==='plan'?'plan':'map'}
+const NEAR_FOOD_COORDS31={E01:[48.1974,16.3584],E02:[48.2112,16.3615],E03:[48.2086,16.3665],E04:[48.2084,16.3712],E05:[48.2013,16.3635],E09:[48.2103,16.3650],E10:[48.2095,16.3770],E12:[48.2095,16.3805]};
+function nearFood31(){return EXP19.filter(v=>['restaurant','cafe'].includes(v.kind)&&v.status!=='renovation-closed').filter(v=>NEAR_FOOD_COORDS31[v.id]||v.relatedPlaceId&&byId(v.relatedPlaceId)).map(v=>{const p=v.relatedPlaceId?byId(v.relatedPlaceId):null,coord=NEAR_FOOD_COORDS31[v.id];return {...v,lat:p?.lat??coord?.[0],lon:p?.lon??coord?.[1]};}).filter(v=>Number.isFinite(Number(v.lat))&&Number.isFinite(Number(v.lon)))}
+function nearPlanChoices31(){return [...(state.itinerary?[{id:'mine',name:'내가 저장한 계획',days:state.days}]:[]),...CURATED21.map(t=>({id:t.id,name:t.title,days:t.days}))]}
+function nearSelectedPlan31(){const choices=nearPlanChoices31(),id=choices.some(v=>v.id===state.nearPlanChoice)?state.nearPlanChoice:choices[0]?.id;if(id==='mine'){const raw=state.manualPlan?.days||state.itinerary?.days?.map(day=>day.map(item=>item.id).filter(Boolean))||[];return {id,name:'내가 저장한 계획',daysPlan:raw.map(ids=>({ids})),days:raw.length}}return CURATED21.find(t=>t.id===id)||null}
 function nearPage21(){
- const groups=[['map','지도'],['wc','화장실'],['rest','쉴곳'],['dining','주변맛집'],['sights','주변관광']];
- const section=state.nearSection||'map',a=anchor();
- const filterButtons=groups.map(([key,label])=>`<button class="chip ${section===key?'active':''}" data-act="section-near" data-value="${key}">${label}</button>`).join('')+`<button class="chip near-utility-chip" data-act="use-gps" aria-label="현재 위치를 지도 중심으로">◎ 내 위치</button><button class="chip near-utility-chip" data-act="reset-anchor" aria-label="비엔나 시내 중심으로">⌂ 시내 중심</button>`;
- const types=section==='map'?[['places','명소'],['wc','화장실'],['water','식수대'],['stops','정류장']]:[];
- const subFilter=types.length?`<div class="near-mapfilter" aria-label="지도 표시 항목">${types.map(([key,label])=>`<button class="chip ${state.facility===key?'active':''}" data-act="facility" data-value="${key}">${label}</button>`).join('')}</div>`:'';
- const restTypes=section==='rest'?`<button class="near-action ${state.nearRestFilter==='park'?'primary':''}" data-act="near-rest-filter" data-value="park">🌳 공원</button><button class="near-action ${state.nearRestFilter==='cafe'?'primary':''}" data-act="near-rest-filter" data-value="cafe">☕ 카페</button>`:'';
- const diningTypes=section==='dining'?`<button class="near-action" data-act="near-dining-filter" data-value="${state.nearDiningSaved?'all':'saved'}">${state.nearDiningSaved?'전체 식당':'♥ 저장한 식당'}</button>`:'';
- const info=loadedFacilities[state.facility];
- let caption='관광명소는 출입구 검증 전 근사 좌표입니다';
- if(section==='wc'||(section==='map'&&state.facility!=='places'))caption=info?.status==='ok'?`공식 시설 데이터 ${info.stats?.accepted??info.points?.length??0}개 수신 · 실시간 운영 확인 안 됨`:info?.status==='failed'?'공공데이터 연결 실패 · 지도 기준점 확인 가능':'공공시설을 조회 중이거나 아직 불러오지 않았습니다';
- if(section==='rest')caption='카페 위치는 외부 지도에서 확인 · 공원은 참고 위치';
- if(section==='dining')caption='식당은 외부 지도에서 검색 · 정확한 거리 미제공';
- const btns=`${restTypes}${diningTypes}`;
- let rows='';let resultTitle='내 주변 지도';let link='';
- if(section==='wc'||(section==='map'&&state.facility!=='places')){
-   const typ=section==='wc'?'wc':state.facility, data=loadedFacilities[typ];
-   resultTitle=FACILITIES[typ]?.label||'공공시설';
-   const points=data?.status==='ok'?nearest(data.points,a,{max:6,radius:3000}):[];
-   rows=points.map(p=>`<div class="near-row"><span>${h(p.name||resultTitle)} <small>${Math.round((p.distance||0))}m 직선</small></span><a class="near-footlink" target="_blank" rel="noopener noreferrer" href="${facilityRouteLink(p)}">길찾기</a></div>`).join('')||'<div class="near-row">표시 가능한 공식 시설 없음 · 온라인 연결을 확인하세요.</div>';
-   if(data?.status==='failed')rows=`<div class="near-row">${h(data.message||'데이터 조회 실패')}</div>`;
- }else if(section==='rest'){
-   const parks=PLACES.filter(p=>['A16'].includes(p.id));
-   resultTitle='휴식 장소';rows=parks.map(p=>`<div class="near-row"><span>${h(p.ko)} · 공원</span><button data-act="detail" data-id="${p.id}">상세</button></div>`).join('');
-   link=`<a class="near-footlink" href="${h(googleNearby21(state.nearRestFilter==='park'?'park':'cafe'))}" target="_blank" rel="noopener noreferrer">근처 카페·공원 검색 ↗</a>`;
- }else if(section==='dining'){
-   const restaurants=EXP19.filter(v=>v.kind==='restaurant'&&(!state.nearDiningSaved||(state.expSaved19||[]).includes(v.id)));
-   resultTitle=`식당 ${restaurants.length}곳`;
-   rows=restaurants.slice(0,8).map(v=>`<div class="near-row"><span>${h(v.ko)}</span><button data-act="experience-detail" data-id="${v.id}">상세</button></div>`).join('')||'<div class="near-row">저장한 식당이 없습니다.</div>';
-   link=`<a class="near-footlink" href="${h(googleNearby21('restaurant'))}" target="_blank" rel="noopener noreferrer">내 주변 식당 지도 검색 ↗</a>`;
- }else{
-   const nearestPlaces=[...PLACES].map(p=>({p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d).slice(0,6);
-   resultTitle=section==='sights'?'주변 관광명소':'관광명소';
-   rows=nearestPlaces.map(({p,d})=>`<div class="near-row"><span>${h(p.ko)} <small>약 ${d.toFixed(1)}km 직선·근사 좌표</small></span><button data-act="detail" data-id="${p.id}">상세</button></div>`).join('');
- }
- return `<section class="near-shell" aria-label="내주변 지도"><div class="near-top"><div class="near-titleline"><strong>내주변</strong><span class="near-location">📍 ${h(a.label)}</span></div><div class="near-filter-row" aria-label="내주변 기능 및 위치">${filterButtons}${btns?`<span class="near-inline-tools">${btns}</span>`:""}</div></div><div class="near-mapframe">${subFilter}<div id="map" role="application" aria-label="비엔나 내 주변 지도"><div class="mapfallback">지도를 불러오는 중입니다</div></div><div class="near-mapstatus">${h(caption)}</div></div><div class="near-bottom"><div class="near-summary"><b>${h(resultTitle)}</b>${link||'<small>지도 핀을 눌러 장소 확인</small>'}</div><details class="near-more"><summary>장소 목록 펼치기 ▾</summary>${rows}</details></div></section>`;
+ const section=nearMode31(),a=anchor(),choices=[['map','지도'],['sights','볼거리'],['food','먹거리'],['wc','화장실'],['plan','계획']];
+ const menus=choices.map(([id,title])=>`<button type="button" class="chip ${section===id?'active':''}" data-act="section-near" data-value="${id}" aria-pressed="${section===id}">${title}</button>`).join('');
+ const plan=section==='plan'?nearSelectedPlan31():null,day=Math.max(0,Math.min((plan?.daysPlan?.length||1)-1,Number(state.nearPlanDay)||0)),options=nearPlanChoices31();
+ const tools=section==='map'?`<form class="near31-search" id="near-search-form" role="search"><input id="near-search-input" type="search" class="near31-input" placeholder="명소·카페 이름 검색" aria-label="지도 장소 검색" value="${h(state.nearSearch||'')}"><button type="submit" aria-label="장소 찾기">⌕</button></form>`:section==='plan'?`<div class="near31-planbar"><select id="near-plan-choice" aria-label="지도에서 볼 계획">${options.map(x=>`<option value="${h(x.id)}" ${plan?.id===x.id?'selected':''}>${h(x.name)}</option>`).join('')}</select><select id="near-plan-day" aria-label="일차 선택">${(plan?.daysPlan||[]).map((d,i)=>`<option value="${i}" ${i===day?'selected':''}>DAY ${i+1}</option>`).join('')}</select></div>`:'';
+ let items=[],resultTitle='';
+ if(section==='wc'){const info=loadedFacilities.wc;items=info?.status==='ok'?nearest(info.points,a,{max:10,radius:3000}):[];resultTitle=info?.status==='failed'?'화장실 데이터를 불러오지 못했습니다':`공공화장실 · ${items.length}곳 (가까운 위치)`;}
+ else if(section==='sights'){items=[...PLACES].map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d).slice(0,10);resultTitle='볼거리 · 지도에서 명소 선택';}
+ else if(section==='food'){items=nearFood31().map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d);resultTitle='먹거리 · 참고 좌표가 있는 장소 '+items.length+'곳';}
+ else if(section==='plan')resultTitle=(plan?.name||'계획 없음')+' · DAY '+(day+1);
+ else resultTitle='원하는 명소를 검색하세요';
+ const rows=section==='wc'?items.map(p=>`<div class="near-row"><span>${h(p.name||'공공화장실')} · 약 ${Math.round(p.distance||0)}m 직선</span><a class="near-footlink" target="_blank" rel="noopener noreferrer" href="${h(facilityRouteLink(p))}">길찾기</a></div>`).join(''):section==='sights'?items.map(p=>`<div class="near-row"><span>${h(p.ko)}</span><button data-act="detail" data-id="${h(p.id)}">상세</button></div>`).join(''):section==='food'?items.map(p=>`<div class="near-row"><span>${h(p.ko)} <small>위치 참고용</small></span><a target="_blank" rel="noopener noreferrer" href="${h(expMap19(p))}">주소 확인 ↗</a></div>`).join(''):'';
+ const note=section==='wc'?'공공데이터 위치이며 개방 여부는 실시간으로 확인되지 않습니다.':section==='food'?'일부 장소는 검증 전 참고 좌표입니다. 방문 전 주소 링크에서 정확한 위치를 확인하세요.':section==='plan'?'번호는 방문 순서, 점선은 단순 연결선입니다. 실제 도보 경로가 아닙니다.':section==='sights'?'관광명소 핀은 일부 근사 좌표입니다. 실제 출입구를 확인하세요.':'등록된 명소를 이름으로 검색할 수 있습니다.';
+ return `<section class="near-shell near31-shell" aria-label="내주변 지도"><div class="near-top near31-top"><div class="near-titleline near31-title"><strong>내주변</strong><div class="near31-locations"><button data-act="use-gps" title="GPS로 내 위치 찾기" class="${a.label.startsWith('내 위치')?'active':''}">◎ 내 위치</button><button data-act="reset-anchor" title="슈테판 대성당 중심으로 이동" class="${!a.label.startsWith('내 위치')?'active':''}">⌂ 슈테판</button></div></div><nav class="near-filter-row near31-tabs" aria-label="지도 표시 내용">${menus}</nav></div><div class="near-mapframe near31-mapframe">${tools}<div id="map" role="application" aria-label="비엔나 지도"><div class="mapfallback">지도를 불러오는 중입니다</div></div></div><div class="near-bottom"><div class="near-summary"><b>${h(resultTitle)}</b></div><p class="near31-note">${h(note)}</p>${rows?`<details class="near-more"><summary>장소 목록 펼치기 ▾</summary>${rows}</details>`:''}</div></section>`;
 }
 function distKm21(lat1,lon1,lat2,lon2){const r=Math.PI/180,dlat=(lat2-lat1)*r,dlon=(lon2-lon1)*r;return 6371*2*Math.asin(Math.sqrt(Math.sin(dlat/2)**2+Math.cos(lat1*r)*Math.cos(lat2*r)*Math.sin(dlon/2)**2))}
 function guide(){
@@ -1049,29 +1041,59 @@ function render(){
  if(lastScreenKey!==key){main.scrollTop=0;lastScreenKey=key;}
  if(state.tab==='map'){requestAnimationFrame(()=>requestAnimationFrame(initMap));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);}
 }
+
+function nearPin31(type='sights',number=null){
+ const cls=['sights','food','wc','plan'].includes(type)?type:'sights';
+ const inner=Number.isInteger(number)?`<text x="16" y="19.2" text-anchor="middle" font-size="12" font-weight="850" fill="#fff" stroke="none">${number}</text>`:`<g transform="translate(8.5 5) scale(.64)">${ICON_PATH25[cls==='sights'?'museum':cls==='food'?'food':'wc']||ICON_PATH25.pin}</g>`;
+ const svg=`<svg viewBox="0 0 32 41" width="32" height="41" aria-hidden="true"><path d="M16 1.5C7.7 1.5 2 7.9 2 15.4c0 9.2 14 23 14 23s14-13.8 14-23C30 7.9 24.3 1.5 16 1.5Z" fill="currentColor" stroke="#fff" stroke-width="2"/><circle cx="16" cy="15" r="10.5" fill="#ffffff19"/><g fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${inner}</g></svg>`;
+ return L.divIcon({className:'near31-leaflet-marker',html:`<div class="near31-pin near31-pin-${cls}">${svg}</div>`,iconSize:[32,41],iconAnchor:[16,39],popupAnchor:[0,-32]});
+}
+function nearPlanLayer31(){
+ const plan=nearSelectedPlan31();if(!plan||!layerGroup)return;
+ const d=Math.max(0,Math.min((plan.daysPlan?.length||1)-1,Number(state.nearPlanDay)||0));
+ const pts=(plan.daysPlan?.[d]?.ids||[]).map(id=>byId(id)).filter(p=>p&&Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon)));
+ const lines=pts.map(p=>[Number(p.lat),Number(p.lon)]);
+ pts.forEach((p,i)=>L.marker(lines[i],{icon:nearPin31('plan',i+1)}).addTo(layerGroup).bindPopup(`<b>${h(i+1+'. '+p.ko)}</b><br>${h(p.de||'')}<br><small>명소 좌표는 참고용</small>`));
+ if(lines.length>1)L.polyline(lines,{color:'#16786d',weight:3,opacity:.88,dashArray:'5 8'}).addTo(layerGroup);
+ if(lines.length)map.fitBounds(L.latLngBounds(lines).pad(.26),{maxZoom:15});
+}
+function nearFoodLayer31(){
+ nearFood31().forEach(v=>{const m=L.marker([Number(v.lat),Number(v.lon)],{icon:nearPin31('food')}).addTo(layerGroup);m.bindPopup(`<b>${h(v.ko)}</b><br><small>참고 위치 (입구 좌표 미검증)</small><br><a target="_blank" rel="noopener noreferrer" href="${h(expMap19(v))}">주소로 정확한 위치 확인 ↗</a>`);});
+ map.setView([anchor().lat,anchor().lon],13);
+}
+function nearSearch31(){
+ const q=String(document.getElementById('near-search-input')?.value||'').trim().toLocaleLowerCase();state.nearSearch=q;save();
+ if(!q){toast('검색할 장소명을 입력하세요');return;}
+ const place=PLACES.find(p=>[p.ko,p.de,p.en,p.address].filter(Boolean).some(x=>String(x).toLocaleLowerCase().includes(q)));
+ if(place&&map){map.setView([place.lat,place.lon],16);layerGroup.clearLayers();L.marker([place.lat,place.lon],{icon:nearPin31('sights')}).addTo(layerGroup).bindPopup(`<b>${h(place.ko)}</b><br><small>참고 좌표</small>`).openPopup();return;}
+ const eat=nearFood31().find(p=>[p.ko,p.de,p.en].filter(Boolean).some(x=>String(x).toLocaleLowerCase().includes(q)));
+ if(eat&&map){map.setView([eat.lat,eat.lon],16);layerGroup.clearLayers();L.marker([eat.lat,eat.lon],{icon:nearPin31('food')}).addTo(layerGroup).bindPopup(`<b>${h(eat.ko)}</b><br><small>참고 좌표 · 주소 재확인 필요</small>`).openPopup();return;}
+ toast('등록된 명소·카페에서 일치하는 장소를 찾지 못했습니다.');
+}
+
 function mapIcon(emoji){const type=emoji==='🚻'?'wc':emoji==='🚰'?'water':emoji==='🚉'?'stops':'sights';return L.divIcon({className:'vn-leaflet-marker',html:`<div class="vn-map-pin vn-pin-${type}">${icon25(type,type==='wc'?21:17)}</div>`,iconSize:[36,36],iconAnchor:[18,31]})}
-function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)return;
- if(!window.L){target.innerHTML='<div class="mapfallback"><b>지도 타일 연결 불가</b>외부 지도 CDN이 차단되었거나 오프라인입니다. 아래 시설 목록과 길 찾기 링크는 사용할 수 있습니다.</div>';if(state.facility!=='places'&&!loadedFacilities[state.facility]&&loadingFacility!==state.facility)startFetch(state.facility);return;}
+
+function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)return;const section=nearMode31();
+ if(!window.L){target.innerHTML='<div class="mapfallback">지도 라이브러리를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.</div>';return;}
  try{
-  if(map){map.remove();map=null;}target.innerHTML='';map=L.map(target,{zoomControl:false}).setView([anchor().lat,anchor().lon],13);
-  // Phase 30 mobile: touch pinch and double-tap zoom remain enabled; oversized zoom buttons removed.
-  const tiles=L.tileLayer('https://mapsneu.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg',{attribution:'Grundkarte: <a href="https://basemap.at/" target="_blank" rel="noopener noreferrer">basemap.at</a>',tileSize:256,maxZoom:19,keepBuffer:2,updateWhenIdle:true});
-  tiles.on('tileerror',()=>{const msg=document.querySelector('.near-mapstatus');if(msg&&/근사 좌표/.test(msg.textContent))msg.textContent='지도 타일 서버 연결 불안정 · 다시 시도하거나 인터넷 연결을 확인하세요';});tiles.addTo(map);
+  if(map){map.remove();map=null;}target.innerHTML='';
+  map=L.map(target,{zoomControl:false,scrollWheelZoom:true}).setView([anchor().lat,anchor().lon],13);
+  L.tileLayer('https://mapsneu.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg',{attribution:'Grundkarte: <a href="https://basemap.at/" target="_blank" rel="noopener noreferrer">basemap.at</a>',tileSize:256,maxZoom:19,keepBuffer:2,updateWhenIdle:true}).addTo(map);
   layerGroup=L.layerGroup().addTo(map);
-  if(state.nearSection==='rest'){showPlacesFiltered(['A16']);}else if(state.nearSection==='sights'){showPlaces();}else if(state.nearSection==='dining'){layerGroup.clearLayers();L.marker([anchor().lat,anchor().lon],{icon:mapIcon('📍')}).addTo(layerGroup);}
-  else if(state.facility==='places')showPlaces();else if(loadedFacilities[state.facility]?.status==='ok')showFacilities(state.facility);else if(!loadedFacilities[state.facility]&&loadingFacility!==state.facility)startFetch(state.facility);
+  if(section==='sights')showPlaces();
+  else if(section==='food')nearFoodLayer31();
+  else if(section==='wc'){if(loadedFacilities.wc?.status==='ok')showFacilities('wc');else if(!loadedFacilities.wc&&loadingFacility!=='wc')startFetch('wc');}
+  else if(section==='plan')nearPlanLayer31();
   requestAnimationFrame(()=>map?.invalidateSize({pan:false}));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);
- }catch(e){target.innerHTML='<div class="mapfallback">지도를 표시하지 못했습니다. 주소 또는 좌표 링크로 길을 찾을 수 있습니다.</div>';}
+ }catch(e){target.innerHTML='<div class="mapfallback">지도 로딩 오류 · 새로고침을 시도하세요.</div>';}
 }
 function showPlacesFiltered(ids){if(!map||!layerGroup)return;layerGroup.clearLayers();PLACES.filter(p=>ids.includes(p.id)).forEach(p=>{let marker=L.marker([p.lat,p.lon],{icon:mapIcon('🌳')}).addTo(layerGroup);marker.bindPopup(`<b>${h(p.ko)}</b><br>근사 좌표 · <a href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">길찾기</a>`);});map.setView([anchor().lat,anchor().lon],13);}
+
 function showPlaces(){if(!map||!layerGroup)return;layerGroup.clearLayers();PLACES.forEach(p=>{
- let m=L.marker([p.lat,p.lon],{icon:mapIcon(emoji(p))}).addTo(layerGroup);
- m.bindPopup(`<b>${h(p.ko)}</b><br>${h(p.de)}<br><small>기획용 근사 좌표 · 공식 대조 전</small><br><a href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">주소로 길 찾기 ↗</a>`);
-});map.setView([anchor().lat,anchor().lon],12)}
-function showFacilities(kind){if(!map||!layerGroup)return;layerGroup.clearLayers();let info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
- const points=nearest(info.points,anchor(),{max:55,radius:3000});
- for(const p of points){let m=L.marker([p.lat,p.lon],{icon:mapIcon(FACILITIES[kind].icon)}).addTo(layerGroup);
- m.bindPopup(`<b>${h(p.name)}</b><br><small>${h(p.details)}</small><br><small>정기 공개 지점 · 개방/작동 여부 미확인</small><br><a href="${facilityRouteLink(p)}" target="_blank" rel="noopener noreferrer">좌표로 길 찾기 ↗</a>`);}
+ L.marker([p.lat,p.lon],{icon:nearPin31('sights')}).addTo(layerGroup).bindPopup(`<b>${h(p.ko)}</b><br>${h(p.de||'')}<br><small>명소 위치는 참고 좌표</small><br><a href="${h(mapsLink(p))}" target="_blank" rel="noopener noreferrer">정확한 주소 확인 ↗</a>`);
+});map.setView([anchor().lat,anchor().lon],13);}
+function showFacilities(kind){if(!map||!layerGroup)return;layerGroup.clearLayers();const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
+ nearest(info.points,anchor(),{max:55,radius:3000}).forEach(p=>L.marker([p.lat,p.lon],{icon:nearPin31('wc')}).addTo(layerGroup).bindPopup(`<b>${h(p.name||'공공화장실')}</b><br><small>${h(p.details||'')}</small><br><small>실시간 개방 여부 미확인</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a>`));
  map.setView([anchor().lat,anchor().lon],14);
 }
 async function fetchAsJson(url,controller){const r=await fetch(url,{mode:'cors',signal:controller.signal,headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}
@@ -1152,7 +1174,8 @@ case 'near-nightlife':{window.open(googleNearby21('bar nightclub'),'_blank','noo
 case 'section-sights':state.sightSection=value;state.sightDeckIndex=0;save();render();return;
 case 'section-food':state.foodSection=value;state.foodDeckIndex=0;save();render();return;
 case 'section-plan':state.tourDetail=null;state.tourError='';state.planSection=value;state.planView=value==='mine'?'result':value==='build'?'basic':state.planView;save();render();return;
-case 'section-near':state.nearSection=value;state.facility=value==='wc'?'wc':state.facility||'places';save();render();return;
+case 'near-search':nearSearch31();return;
+case 'section-near':state.nearSection=['map','sights','food','wc','plan'].includes(value)?value:'map';if(state.nearSection==='wc')state.facility='wc';save();render();return;
 case 'near-rest-filter':state.nearRestFilter=['all','cafe','park'].includes(value)?value:'all';save();render();return;
 case 'near-dining-filter':state.nearDiningSaved=value==='saved';save();render();return;
 case 'deck-next':case 'deck-prev':{const key=value==='sights'?'sightDeckIndex':'foodDeckIndex';const length=value==='sights'?(state.sightSection==='performance'?EXP19.filter(v=>v.kind==='performance').length:CATALOG48.filter(c=>state.sightSection==='museum'?c.category==='museum':c.category!=='museum'&&c.category!=='music').length):EXP19.filter(v=>v.kind===state.foodSection).length;if(length){state[key]=((Number(state[key])||0)+(a==='deck-next'?1:-1)+length)%length;save();render();}return;}
@@ -1253,11 +1276,12 @@ case'close-route':state.routeEdit=null;render();return;
 case'clear-route':{let r=state.routeEdit;if(r)delete state.routeOverrides[legKey(byId(r.from),byId(r.to))];state.routeEdit=null;save();generate({preserveDone:true});return;}
 case'save-route':{let r=state.routeEdit;if(!r)return;let raw=Number($('routeMinutes')?.value);if(!Number.isInteger(raw)||raw<3||raw>180){toast('3~180분 사이의 정수 시간을 입력해주세요');return;}let mode=$('routeMode')?.value==='walking'?'walking':'transit';state.routeOverrides[legKey(byId(r.from),byId(r.to))]={minutes:raw,mode,source:'user-entry',savedAt:new Date().toISOString()};state.routeEdit=null;save();generate({preserveDone:true});return;}
 case'run-diagnostic':runDiagnostic(value);return;}}
+document.addEventListener('submit',e=>{if(e.target?.id==='near-search-form'){e.preventDefault();nearSearch31();}});
 document.addEventListener('click',e=>{let x=e.target.closest('[data-act]');if(!x)return;if(x.matches('input'))return;if(x.classList.contains('drawerbg')&&e.target.closest('.drawer'))return;act(x.dataset.act,x)});
 let photoTouch=null;
 document.addEventListener('touchstart',e=>{if((e.target.closest('.photo-story')||e.target.closest('.full-photo')||e.target.closest('.deck-area'))&&e.touches.length===1){photoTouch={x:e.touches[0].clientX,y:e.touches[0].clientY};}}, {passive:true});
 document.addEventListener('touchend',e=>{if(!photoTouch)return;let t=e.changedTouches[0];let dx=t.clientX-photoTouch.x,dy=t.clientY-photoTouch.y;photoTouch=null;if(Math.abs(dx)>65&&Math.abs(dx)>1.4*Math.abs(dy)){let deck=e.target.closest('.deck-area');if(deck)act(dx<0?'deck-next':'deck-prev',{dataset:{value:deck.dataset.deck}});else act(state.fullPhoto?(dx<0?'photo-next':'photo-prev'):(dx<0?'story-next':'story-prev'),{dataset:{}});}}, {passive:true});
-document.addEventListener('change',e=>{let x=e.target;if(x.id==='tour-start-date'){if(/^\d{4}-\d{2}-\d{2}$/.test(x.value)){state.tourDate=x.value;const dates=tripDates(x.value,(CURATED21.find(t=>t.id===state.tourDetail)?.days)||1);document.querySelectorAll('[data-tour-date-index]').forEach(el=>{el.textContent=dates[Number(el.dataset.tourDateIndex)]||'';});state.tourError='';save();}return;}if(x.id==='tour-start-time'){state.tourStart=x.value;state.tourError='';save();return;}if(x.id==='live-clock'){state.liveClock=x.value;state.livePreview=null;save();render();return;}if(x.dataset.editMove){let next=editMove(state.editDraft,x.dataset.editMove,Number(x.value));if(next){state.editDraft=next;state.editPreviewOpen=false;state.currentDay=Number(x.value);save();render();}return;}if(x.dataset.windowDate){let date=x.dataset.windowDate,field=x.dataset.windowField;state.dayWindows[date]={...DEFAULT_WINDOW,...state.dayWindows[date],[field]:x.value};state.itinerary=null;state.planError='';save();return;}if(x.name==='visitOpt'){act('visit-mode',x);return}if(x.id==='tripDate'){if(!/^\d{4}-\d{2}-\d{2}$/.test(x.value)){toast('올바른 여행 날짜를 선택하세요');render();return;}state.date=x.value;state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='days'){state.days=Number(x.value);state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='pace'){state.pace=x.value;state.itinerary=null;save()}});
+document.addEventListener('change',e=>{let x=e.target;if(x.id==='near-plan-choice'){state.nearPlanChoice=x.value;state.nearPlanDay=0;save();render();return;}if(x.id==='near-plan-day'){state.nearPlanDay=Number(x.value)||0;save();render();return;}if(x.id==='tour-start-date'){if(/^\d{4}-\d{2}-\d{2}$/.test(x.value)){state.tourDate=x.value;const dates=tripDates(x.value,(CURATED21.find(t=>t.id===state.tourDetail)?.days)||1);document.querySelectorAll('[data-tour-date-index]').forEach(el=>{el.textContent=dates[Number(el.dataset.tourDateIndex)]||'';});state.tourError='';save();}return;}if(x.id==='tour-start-time'){state.tourStart=x.value;state.tourError='';save();return;}if(x.id==='live-clock'){state.liveClock=x.value;state.livePreview=null;save();render();return;}if(x.dataset.editMove){let next=editMove(state.editDraft,x.dataset.editMove,Number(x.value));if(next){state.editDraft=next;state.editPreviewOpen=false;state.currentDay=Number(x.value);save();render();}return;}if(x.dataset.windowDate){let date=x.dataset.windowDate,field=x.dataset.windowField;state.dayWindows[date]={...DEFAULT_WINDOW,...state.dayWindows[date],[field]:x.value};state.itinerary=null;state.planError='';save();return;}if(x.name==='visitOpt'){act('visit-mode',x);return}if(x.id==='tripDate'){if(!/^\d{4}-\d{2}-\d{2}$/.test(x.value)){toast('올바른 여행 날짜를 선택하세요');render();return;}state.date=x.value;state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='days'){state.days=Number(x.value);state.manualPlan=null;state.editDraft=null;state.itinerary=null;state.planError='';save();render()}if(x.id==='pace'){state.pace=x.value;state.itinerary=null;save()}});
 document.addEventListener('input',e=>{if(e.target.id==='sightSearch21'||e.target.id==='foodSearch21'){const key=e.target.id==='sightSearch21'?'sightQuery':'foodQuery';state[key]=e.target.value;const pos=e.target.selectionStart;save();render();const input=$(e.target.id);if(input){input.focus();input.setSelectionRange(pos,pos);}return;}if(e.target.id==='expSearch19'){state.expSearch19=e.target.value;let pos=e.target.selectionStart;render();let i=$('expSearch19');if(i){i.focus();i.setSelectionRange(pos,pos)}return;}
 if(e.target.id==='placeSearch'){state.placeSearch=e.target.value;let pos=e.target.selectionStart;save();render();let input=$('placeSearch');if(input){input.focus();input.setSelectionRange(pos,pos)}return;}if(e.target.id==='search'){state.query=e.target.value;let pos=e.target.selectionStart;save();render();let input=$('search');if(input){input.focus();input.setSelectionRange(pos,pos)}}});
 window.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(state.expDetail19){state.expDetail19=null;state.expPlan19=null;render()}else if(state.explore19){state.explore19=false;render()}else if(state.settingsOpen){state.settingsOpen=false;render()}else if(state.detail){state.detail=null;render()}else if(state.routeEdit){state.routeEdit=null;render()}else if(state.guideTopic){state.guideTopic=null;render()}else if(state.homeGuide){state.homeGuide=false;state.guideTopic=null;render()}else if(state.homeView==='explore'){state.homeView='overview';render()}});
