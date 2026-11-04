@@ -113,3 +113,16 @@ for(const item of ['vn33-sights-screen','vn33-sight-head','vn33-sight-brand','vn
 }
 assert.ok(!index.includes('큰 사진을 좌우로 넘기며 가고 싶은 곳을 찾아보세요.'),'old sight instructions must be removed');
 console.log('Phase 33 placement checks OK: ad at top, compact V sight header and inline categories.');
+
+for(const feature of [
+ 'function nearSightPopup32(p)',
+ "photoImg(p.id,'vn34-popup-image')",
+ 'class="vn34-sight-card" data-act="detail"',
+ 'vn34-sight-media',
+ 'vn34-sight-caption',
+ 'vn34-sight-hint',
+ '.bindPopup(nearSightPopup32(p)',
+ 'onerror="photoFail23(this)"'
+])assert.ok(index.includes(feature),'Phase 34 attraction preview missing: '+feature);
+assert.ok(index.includes("case'detail':state.detail=id;render();return;"),'second-tap details navigation missing');
+console.log('Phase 34 map attraction popup regression gate OK: photo preview then full details.');
