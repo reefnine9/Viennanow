@@ -782,7 +782,15 @@ function vn52Card(s){return `<button type="button" class="vn52-card" data-act="v
 function vn52Preview(){return `<section class="vn52-preview"><div class="row between"><b class="sectionheading">비엔나 이야기</b><button class="backbtn" data-act="vn52-list">더보기 →</button></div><div class="vn52-items">${[VN52_INTRO,vn52Get('VS17'),vn52Get('VS1'),vn52Get('VS94')].map(vn52Card).join('')}</div></section>`}
 function vn52List(){return `<div class="stack vn52-page"><div class="vn52-bar"><button class="backbtn" data-act="vn52-back">← 홈</button><b>비엔나 이야기</b></div><h2>골목마다 숨은 비엔나의 이야기</h2><p class="sub">역사와 전설을 품은 장소 ${VN52_STORIES.length}곳을 소개합니다.</p>${vn52Card(VN52_INTRO)}<div class="vn52-items">${VN52_STORIES.map(vn52Card).join('')}</div><p class="tiny">개별 건물의 역사 자료를 바탕으로 썼습니다. 빨강·흰색 표식의 현재 설치 여부는 별도 확인이 필요합니다.</p><button class="btn outline block" data-act="vn52-map">내주변에서 위치 보기</button></div>`}
 function vn52Detail(){const s=vn52Get(state.vn52Id);return `<div class="stack vn52-page"><div class="vn52-bar"><button class="backbtn" data-act="vn52-back">← 돌아가기</button><b>비엔나 이야기</b></div><article class="vn52-article"><div class="vn52-hero"><div><small>${h(s.name)}</small><h2>${h(s.title)}</h2></div></div><figure class="vn53-figure">${vn53Photo(s,true)}<figcaption>① 장소 사진 · <a href="${h(VN53_STORY_PHOTOS[s.id]?.source||'https://commons.wikimedia.org')}" target="_blank" rel="noopener noreferrer">원본 · 저작자 · 라이선스 ↗</a></figcaption></figure>${vn54ContextPhoto(s)}${s.id==='intro'?'':`<p class="vn52-location">⌖ ${h(s.address)} · 비엔나 1구</p>`}<div class="vn52-body">${s.story.split(/\n\s*\n/).filter(Boolean).map(p=>`<p>${h(p)}</p>`).join('')}</div>${s.id==='intro'?'':`<a class="btn outline block" target="_blank" rel="noopener noreferrer" href="${h(vn52Maps(s))}">Google 지도에서 주소 확인 ↗</a>`}<div class="vn52-source"><b>출처</b>${s.source?`<a target="_blank" rel="noopener noreferrer" href="${h(s.source)}">역사적 사실 참고 자료 ↗</a>`:''}${s.extra&&s.extra!==s.source?`<a target="_blank" rel="noopener noreferrer" href="${h(s.extra)}">추가 자료 ↗</a>`:''}<p>안내판의 현존과 원문은 별도 확인이 필요하며, 지도 핀은 건물 주변 참고 좌표입니다.</p></div></article></div>`}
-function vn52MapPins(){if(!map||!layerGroup)return;VN52_STORIES.forEach(s=>{const icon=L.divIcon({className:'vn52-marker-wrap',html:'<span class="vn52-pin">✦</span>',iconSize:[32,35],iconAnchor:[16,33],popupAnchor:[0,-30]});L.marker([s.lat,s.lon],{icon}).addTo(layerGroup).bindPopup(`<div class="vn52-popup">${vn53Photo(s)}<b>${h(s.title)}</b><small>${h(s.name)} · ${h(s.address)}</small><p>${h(s.excerpt.slice(0,95))}…</p><button data-act="vn52-open" data-id="${h(s.id)}" class="btn navy small">이야기 읽기</button><a target="_blank" rel="noopener noreferrer" href="${h(vn52Maps(s))}">주소 확인 ↗</a></div>`)});map.fitBounds(L.latLngBounds(VN52_STORIES.map(s=>[s.lat,s.lon])).pad(.17),{maxZoom:15})}
+function vn52MapPins(){
+ if(!map||!layerGroup)return;
+ const entries=VN52_STORIES.filter(p=>Number.isFinite(p.lat)&&Number.isFinite(p.lon)).map(p=>({
+  key:p.id,title:p.title,lat:p.lat,lon:p.lon,type:'sights',action:'vn52-open',
+  popup:`<div class="vn52-popup">${vn53Photo(p)}<b>${h(p.title)}</b><small>${h(p.name)} · ${h(p.address)}</small><p>${h(p.excerpt.slice(0,95))}…</p><button data-act="vn52-open" data-id="${h(p.id)}" class="btn navy small">이야기 읽기</button><a target="_blank" rel="noopener noreferrer" href="${h(vn52Maps(p))}">주소 확인 ↗</a></div>`
+ }));
+ if(entries.length)map.fitBounds(L.latLngBounds(entries.map(p=>[p.lat,p.lon])).pad(.17),{maxZoom:15});
+ vn60Clusters(entries,{label:'비엔나 이야기'});
+}
 
 function home(){
  if(state.vn52View==='list')return vn52List();
@@ -1647,35 +1655,68 @@ function nearPin31(type='sights',number=null){
  const svg=`<svg viewBox="0 0 32 42" width="32" height="42" aria-hidden="true"><path d="M16 1.7c-8 0-14 6.1-14 14.1 0 9.3 14 24.2 14 24.2s14-14.9 14-24.2C30 7.8 24 1.7 16 1.7Z" fill="currentColor" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="15.5" r="10.6" fill="#fff" opacity=".10"/><g>${label}</g></svg>`;
  return L.divIcon({className:'near31-leaflet-marker',html:`<div class="near31-pin near31-pin-${cls}">${svg}</div>`,iconSize:[32,42],iconAnchor:[16,40],popupAnchor:[0,-34]});
 }
+/* Phase 60: shared pixel-distance clustering for all Nearby map categories.
+   The route layer is restored after each redraw to preserve route semantics. */
+function vn60Clusters(records,{label='장소',route=null,focusId=null}={}){
+ if(!map||!layerGroup)return;
+ const all=records.filter(p=>Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))).map(p=>({...p,lat:Number(p.lat),lon:Number(p.lon)}));
+ const maxZoom=19;
+ function draw(){
+  if(!map||!layerGroup)return;
+  layerGroup.clearLayers();
+  if(route?.length>1)L.polyline(route,{color:'#16786d',weight:3,opacity:.88,dashArray:'5 8'}).addTo(layerGroup);
+  const zoom=map.getZoom(),radius=zoom<13?62:zoom<16?49:28,clusters=[];
+  for(const p of all){
+   const pt=map.project([p.lat,p.lon],zoom);
+   const cluster=clusters.find(c=>Math.hypot(c.x-pt.x,c.y-pt.y)<radius);
+   if(!cluster){clusters.push({x:pt.x,y:pt.y,items:[p]});continue;}
+   cluster.items.push(p);
+   const n=cluster.items.length;cluster.x+=(pt.x-cluster.x)/n;cluster.y+=(pt.y-cluster.y)/n;
+  }
+  for(const group of clusters){
+   if(group.items.length===1){
+    const p=group.items[0];
+    const marker=L.marker([p.lat,p.lon],{icon:p.icon||nearPin31(p.type||'sights',p.order),title:p.title||p.name||label,riseOnHover:true}).addTo(layerGroup);
+    marker.bindPopup(p.popup||'<b>'+h(p.title||p.name||label)+'</b>',{maxWidth:270,autoPan:true});
+    if(focusId&&p.key===focusId)marker.openPopup();
+    continue;
+   }
+   const loc=map.unproject(L.point(group.x,group.y),zoom);
+   const n=group.items.length;
+   const icon=L.divIcon({className:'vn35-cluster-wrap',html:'<span class="vn35-cluster"><span class="vn35-cluster-num">'+n+'</span></span>',iconSize:[42,42],iconAnchor:[21,21]});
+   const marker=L.marker(loc,{icon,keyboard:true,title:n+'개 '+label}).addTo(layerGroup);
+   marker.on('click',()=>{
+    if(map.getZoom()<maxZoom){map.setView(loc,Math.min(map.getZoom()+2,maxZoom),{animate:true});return;}
+    const list=group.items.map(p=>'<button type="button" data-act="'+h(p.action||'noop')+'" data-id="'+h(p.key||'')+'">'+h(p.title||p.name||label)+' ›</button>').join('');
+    marker.bindPopup('<div class="vn35-cluster-list"><strong>주변 '+h(label)+' '+n+'곳</strong>'+list+'</div>',{maxWidth:245}).openPopup();
+   });
+  }
+ }
+ map.on('zoomend',draw);
+ draw();
+}
+function vn60FoodPopup(v){
+ const reason=v.description?.ko||v.quick_pick?.summary_ko||'대표 메뉴는 식당 정보에서 확인하세요.';
+ return `<div class="vn48-popup"><b>${h(v.ko)}</b><p>${h(reason)}</p><small>${v.mapSource==='verified'?'공개 지도에서 확인한 위치':'OpenStreetMap 이름 일치 위치'} · 실제 출입구는 확인 필요${v.operations?.status==='temporarily_closed'?' · 임시휴업':''}</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">맛집 자세히 보기</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google 지도 ↗</a></div></div>`;
+}
 function nearPlanLayer31(){
  const plan=nearSelectedPlan31();if(!plan||!layerGroup)return;
  const pts=vnCoursePoints41(plan),lines=pts.map(p=>[p.lat,p.lon]);
- pts.forEach((p,i)=>L.marker(lines[i],{icon:nearPin31('plan',p.order)}).addTo(layerGroup).bindPopup(`<b>${h(p.order+'. '+p.name)}</b><br><small>위치 참고용 · 길찾기 경로가 아닙니다.</small>`));
- if(lines.length>1)L.polyline(lines,{color:'#16786d',weight:3,opacity:.88,dashArray:'5 8'}).addTo(layerGroup);
  if(lines.length)map.fitBounds(L.latLngBounds(lines).pad(.26),{maxZoom:15});
+ vn60Clusters(pts.map((p,i)=>({lat:p.lat,lon:p.lon,type:'plan',order:p.order,key:String(p.order),title:p.order+'. '+p.name,icon:nearPin31('plan',p.order),popup:'<b>'+h(p.order+'. '+p.name)+'</b><br><small>위치 참고용 · 길찾기 경로가 아닙니다.</small>',action:'noop'})),{label:'코스 경유지',route:lines});
 }
 function vn59SavedMapLayer(){
  if(!map||!layerGroup)return;
- const f=vn59Favorites();let count=0;
- f.sights.filter(p=>Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))).forEach(p=>{
-  L.marker([Number(p.lat),Number(p.lon)],{icon:nearPin31('sights')}).addTo(layerGroup).bindPopup(nearSightPopup32(p));count++;
- });
- nearFood31().filter(p=>(state.savedRestaurants||[]).includes(p.id)).forEach(p=>{
-  L.marker([p.lat,p.lon],{icon:nearPin31('food')}).addTo(layerGroup).bindPopup(`<div class="vn48-popup"><b>${h(p.ko)}</b><p>♥ 찜한 맛집</p><button data-act="vn48-food-open" data-id="${h(p.id)}">상세 보기</button></div>`);count++;
- });
+ const f=vn59Favorites(),sights=f.sights.filter(p=>Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))).map(p=>({key:p.id,title:p.ko,type:'sights',lat:p.lat,lon:p.lon,popup:nearSightPopup32(p),action:'detail'}));
+ const food=nearFood31().filter(p=>(state.savedRestaurants||[]).includes(p.id)).map(p=>({key:p.id,title:p.ko,type:'food',lat:p.lat,lon:p.lon,popup:'<div class="vn48-popup"><b>'+h(p.ko)+'</b><p>♥ 찜한 맛집</p><button data-act="vn48-food-open" data-id="'+h(p.id)+'">상세 보기</button></div>',action:'vn48-food-open'}));
  map.setView([anchor().lat,anchor().lon],13);
+ vn60Clusters([...sights,...food],{label:'찜한 장소'});
 }
 function nearFoodLayer31(){
- const markers={};
- nearFood31().forEach(v=>{
-  const m=L.marker([Number(v.lat),Number(v.lon)],{icon:nearPin31('food'),title:v.ko}).addTo(layerGroup);
-  markers[v.id]=m;
-  const reason=v.description?.ko||v.quick_pick?.summary_ko||'대표 메뉴는 식당 정보에서 확인하세요.';
-  m.bindPopup(`<div class="vn48-popup"><b>${h(v.ko)}</b><p>${h(reason)}</p><small>${v.mapSource==='verified'?'공개 지도에서 확인한 위치':'OpenStreetMap 이름 일치 위치'} · 실제 출입구는 확인 필요${v.operations?.status==='temporarily_closed'?' · 임시휴업':''}</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">맛집 자세히 보기</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google 지도 ↗</a></div></div>`,{maxWidth:260});
- });
- const target=nearFood31().find(r=>r.id===state.vn51FocusFood);
- if(target&&markers[target.id]){map.setView([target.lat,target.lon],16);markers[target.id].openPopup();}
- else map.setView([anchor().lat,anchor().lon],13);
+ const food=nearFood31();
+ const target=food.find(p=>p.id===state.vn51FocusFood);
+ if(target)map.setView([target.lat,target.lon],17);else map.setView([anchor().lat,anchor().lon],13);
+ vn60Clusters(food.map(v=>({key:v.id,title:v.ko,type:'food',lat:v.lat,lon:v.lon,popup:vn60FoodPopup(v),action:'vn48-food-open'})),{label:'맛집',focusId:target?.id});
 }
 function nearSearch31(){
  const q=String(document.getElementById('near-search-input')?.value||'').trim().toLocaleLowerCase();state.nearSearch=q;save();
@@ -1759,9 +1800,15 @@ function vn59WcPhoto(p){
  const file=encodeURIComponent(found.file),src='https://commons.wikimedia.org/wiki/Special:Redirect/file/'+file+'?width=640',original='https://commons.wikimedia.org/wiki/File:'+file;
  return `<figure class="vn59-wc-photo"><img src="${h(src)}" alt="${h(found.caption)}" loading="lazy" onerror="this.parentElement.hidden=true"><figcaption>${h(found.caption)} · ${h(found.author)} · ${h(found.licence)} · <a href="${h(original)}" target="_blank" rel="noopener noreferrer">사진 출처·라이선스 ↗</a></figcaption></figure>`;
 }
-function showFacilities(kind){if(!map||!layerGroup)return;layerGroup.clearLayers();const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
- nearest(info.points,anchor(),{max:55,radius:3000}).forEach(p=>L.marker([p.lat,p.lon],{icon:nearPin31('wc')}).addTo(layerGroup).bindPopup(`<div class="vn59-wc-popup"><b>${h(p.name||'공공화장실')}</b>${vn59WcPhoto(p)}<p>${h(p.details||'')}</p><small>사진은 과거 촬영 자료입니다. 현장 상태·실시간 개방 여부는 확인되지 않았습니다.</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a></div>`,{maxWidth:270}));
+function showFacilities(kind){
+ if(!map||!layerGroup)return;
+ const info=loadedFacilities[kind];if(!info||info.status!=='ok')return;
+ const points=nearest(info.points,anchor(),{max:55,radius:3000}).map((p,i)=>({
+  key:String(i),title:p.name||'공공화장실',lat:p.lat,lon:p.lon,type:'wc',action:'noop',
+  popup:`<div class="vn59-wc-popup"><b>${h(p.name||'공공화장실')}</b>${vn59WcPhoto(p)}<p>${h(p.details||'')}</p><small>사진은 과거 촬영 자료입니다. 현장 상태·실시간 개방 여부는 확인되지 않았습니다.</small><br><a href="${h(facilityRouteLink(p))}" target="_blank" rel="noopener noreferrer">길 찾기 ↗</a></div>`
+ }));
  map.setView([anchor().lat,anchor().lon],14);
+ vn60Clusters(points,{label:'공공화장실'});
 }
 async function fetchAsJson(url,controller){const r=await fetch(url,{mode:'cors',signal:controller.signal,headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}
 async function startFetch(kind){if(!FACILITIES[kind]||loadingFacility===kind)return;let reqId=++fetchId;loadingFacility=kind;
