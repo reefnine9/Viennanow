@@ -135,3 +135,19 @@ for(const feature of [
  "sightMarker.bindPopup(nearSightPopup32(p)"
 ])assert.ok(index.includes(feature),'Popup visibility regression: '+feature);
 console.log('Map popup visibility gate OK: pane z-index and click-open handler present.');
+
+const coords48=JSON.parse(fs.readFileSync(path.join(pub,'catalog_48.json'),'utf8'));
+assert.equal(coords48.length,48,'Map must retain all 48 sightseeing records');
+assert.equal(new Set(coords48.map(x=>x.id)).size,48,'Map IDs must be unique');
+assert.equal(coords48.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lon)).length,48,'Every sightseeing point requires coordinates');
+assert.equal(coords48.filter(x=>x.coordinate_status==='approximate_unverified').length,32,'Provisional coordinates require explicit status labels');
+for(const c of coords48)assert.ok(c.lat>48.1&&c.lat<48.35&&c.lon>16.2&&c.lon<16.55,'Outside plausible Vienna location: '+c.id);
+for(const feature of ['function mapSights48()','for(const p of mapSights48())','function refreshSightClusters48()',"map.on('zoomend',refreshSightClusters48)",'vn35-cluster','vn35-pin-note','nearSightPopup32(p)']){
+ assert.ok(index.includes(feature),'48-attraction map missing: '+feature);
+}
+const mapCatMatch=index.match(/const CATALOG48=(\[[^;]+\]);/);
+assert.ok(mapCatMatch,'Embedded catalogue missing');
+const embedded=JSON.parse(mapCatMatch[1]);
+assert.equal(embedded.length,48,'Embedded catalogue needs 48 records');
+for(const c of embedded){const source=coords48.find(x=>x.id===c.id);assert.equal(c.lat,source.lat,'Embedded map latitude out of sync: '+c.id);assert.equal(c.lon,source.lon,'Embedded map longitude out of sync: '+c.id);}
+console.log('Phase 35 sightseeing map gate OK: 48 coordinates, 32 marked provisional and marker clustering.');
