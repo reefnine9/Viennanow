@@ -1313,7 +1313,7 @@ function googleNearby21(term){const a=anchor(),lat=a.lat.toFixed(5),lon=a.lon.to
 function nearMode31(){const m=state.nearSection;return m==='dining'?'food':m==='wc'?'wc':m==='plan'?'plan':m==='food'?'food':'sights'}
 const NEAR_FOOD_COORDS31={E01:[48.1974,16.3584],E02:[48.2112,16.3615],E03:[48.2086,16.3665],E04:[48.2084,16.3712],E05:[48.2013,16.3635],E09:[48.2103,16.3650],E10:[48.2095,16.3770],E12:[48.2095,16.3805]};
 let VN48_FOOD_GEO={},VN48_GEO_STATE='idle';
-function vn48NormalizeName(x){return String(x||'').normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');}
+function vn48NormalizeName(x){return String(x||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');}
 function vn48FoodRecords(){return VN42_DB?.restaurants||[];}
 function vn48FoodMapLink(r){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(r.quick_pick?.google_maps_query||[r.name?.de||r.name?.ko,r.address||'Wien, Austria'].filter(Boolean).join(', '));}
 function vn48LoadFoodGeo(){
@@ -1321,7 +1321,7 @@ function vn48LoadFoodGeo(){
  VN48_GEO_STATE='loading';
  // Load named restaurant POIs in one request; never fabricate restaurant pin coordinates.
  const names=vn48FoodRecords().map(r=>r.name?.de).filter(Boolean);
- const escaped=names.map(x=>x.replace(/[.*+?^\x24{}()|[\\]\\]/g,'\\function nearFood31(){return EXP19.filter(v=>['restaurant','cafe'].includes(v.kind)&&v.status!=='renovation-closed').filter(v=>NEAR_FOOD_COORDS31[v.id]||v.relatedPlaceId&&byId(v.relatedPlaceId)).map(v=>{const p=v.relatedPlaceId?byId(v.relatedPlaceId):null,coord=NEAR_FOOD_COORDS31[v.id];return {...v,lat:p?.lat??coord?.[0],lon:p?.lon??coord?.[1]};}).filter(v=>Number.isFinite(Number(v.lat))&&Number.isFinite(Number(v.lon)))}'));
+ const escaped=names.map(x=>x.replace(/[.*+?^$()|[\]\\]/g,'\\$&'));
  const regex=escaped.join('|').replace(/"/g,'');
  const query='[out:json][timeout:32];nwr["name"~"'+regex+'",i]["amenity"~"restaurant|cafe|fast_food|bar"](48.10,16.15,48.34,16.63);out center;';
  const url='https://overpass-api.de/api/interpreter';
