@@ -333,13 +333,19 @@
 .vn43-inline-credit{font-size:9px;line-height:1.45;color:#6a8382;margin-top:6px}.vn43-inline-credit a{font-size:9px;color:#427774}
 .vn44-guide{margin:14px 0;padding:16px;background:#f8f9f7;border:1px solid #e1e8e1;border-radius:15px}.vn44-guide h3{font-size:18px;margin:0 0 14px}.vn44-guide p{font-size:13px;line-height:1.9;margin:0 0 14px}
 .vn44-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vn44-full .full-shadow{background:linear-gradient(180deg,#071b263e,#071b2620 22%,#071b269a 63%,#071b26e8);pointer-events:none}
-.vn44-full .photo-close{z-index:9}.vn44-title{position:absolute;left:22px;right:60px;bottom:15%;color:#fff;z-index:5;font:700 clamp(25px,7vw,35px)/1.25 Georgia,'Noto Serif KR',serif;text-shadow:0 2px 12px #000c}
+.vn44-full .photo-close{z-index:9}.vn44-title{position:absolute;left:22px;right:60px;bottom:15%;color:#fff;z-index:5;font:850 clamp(25px,7vw,35px)/1.25 -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;letter-spacing:-1px;text-shadow:0 2px 12px #000c}
 .vn44-story{position:absolute;inset:12% 20px 25%;overflow:hidden;z-index:4;mask-image:linear-gradient(transparent,black 16%,black 75%,transparent);-webkit-mask-image:linear-gradient(transparent,black 16%,black 75%,transparent);pointer-events:none}
 .vn44-track{font-size:20px;line-height:1.75;color:white;text-shadow:0 2px 7px #000e;animation:vn44-rise var(--vn44-duration,100s) linear both;will-change:transform}.vn44-track p{margin:0 0 1.15em}
-@keyframes vn44-rise{from{transform:translateY(23vh)}to{transform:translateY(-100%)}}
+@keyframes vn44-rise{from{transform:translateY(11.5vh)}to{transform:translateY(-100%)}}
 .vn44-full.vn44-paused .vn44-track{animation-play-state:paused}
 .vn44-nav{position:absolute;right:13px;bottom:18px;display:flex;gap:8px;z-index:9}.vn44-nav button,.vn44-pause{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:white;background:#071b26ab;border:1px solid #ffffff70;font-size:23px;cursor:pointer}.vn44-pause{position:absolute;left:20px;bottom:18px;z-index:9;font-size:14px}
 @media(prefers-reduced-motion:reduce){.vn44-story{overflow-y:auto;pointer-events:auto;mask-image:none;-webkit-mask-image:none}.vn44-track{animation:none!important;padding-top:10px}}
+
+.vn45-place-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 3px}
+.vn45-place-head .h1{flex:1;min-width:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif}
+.vn45-directions{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:7px 11px;border:1px solid #b8ccc6;border-radius:9px;background:#fff;color:#216b65;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}
+.vn45-directions:focus-visible{outline:3px solid #45a8ab}
+.vn44-guide{margin-top:2px}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -570,44 +576,28 @@ function photoGallery(){
 function editorialInfo(c){
  const x=c&&contentById(c.id);if(!x)return '';
  const isEn=state.contentLang==='en';
- const l=(ko,en)=>isEn?en:ko;
- const fee=x.price_type==='free_public'?l('공공 공간 산책: 무료','Public-space walk: free'):
-   x.price_type==='free_grounds'?l('야외 공간: 일반적으로 무료 · 내부시설 별도','Outdoor grounds: generally free; attractions extra'):
-   x.price_type==='paid_indoor'?l('내부 유료 · 날짜별 공식 요금 확인','Paid indoor admission; check current rates'):
-   x.price_type==='mixed'?l('외관과 유료 시설을 구분','Exterior and ticketed activities differ'):
-   l('요금 확인 필요','Admission details need checking');
- const hls=isEn?x.highlights_en:x.highlights_ko;
- const src=x.official_url;
- const srcTag=src?`<a class="editorial-official" target="_blank" rel="noopener noreferrer" href="${h(src)}">${l('방문정보 출처 확인 ↗','Check visit-information source ↗')}</a>`:`<span class="editorial-source-pending">${l('명소별 공식 링크 검토 중','Official place link not yet attached')}</span>`;
- return `<section class="editorial-feature" aria-label="${l('명소 가이드','Place guide')}">
-  <div class="editorial-language"><span>${l('TRAVEL NOTE · 여행 가이드','TRAVEL NOTE · VISITOR GUIDE')}</span><div class="language-switch"><button data-act="content-lang" data-value="ko" class="${isEn?'':'active'}" aria-pressed="${!isEn}">한국어</button><button data-act="content-lang" data-value="en" class="${isEn?'active':''}" aria-pressed="${isEn}">EN</button></div></div>
-  <p class="editorial-lede">${h(l(x.overview_ko,x.overview_en))}</p>
-  <div class="editorial-kicker">${l('놓치지 마세요','HIGHLIGHTS')}</div>
-  <div class="editorial-highlights">${hls.map((x,i)=>`<div><span>0${i+1}</span>${h(x)}</div>`).join('')}</div>
-  <div class="editorial-facts"><div><small>${l('일정용 권장 체류','SUGGESTED VISIT')}</small><strong>${x.estimated_minutes_min}–${x.estimated_minutes_max} ${l('분','min')}</strong><em>${l('앱 기획 추정치','Our planning estimate')}</em></div><div><small>${l('입장·요금','ACCESS & PRICE')}</small><strong>${h(fee)}</strong>${x.price_example_ko?`<em>${h(l(x.price_example_ko,x.price_example_en))}</em>`:''}</div></div>
-  <div class="editorial-detail"><div class="editorial-detail-item"><strong>${l('운영시간','OPENING HOURS')}</strong><p>${h(l(x.hours_note_ko,x.hours_note_en))}</p></div><div class="editorial-detail-item"><strong>${l('예약·입장','BOOKING')}</strong><p>${h(l(x.booking_ko,x.booking_en))}</p></div><div class="editorial-detail-item tip"><strong>✦ ${l('현지 여행 팁','LOCAL TIP')}</strong><p>${h(l(x.tip_ko,x.tip_en))}</p></div></div>
-  <div class="editorial-bottom">${srcTag}<span>${l('확인일 2026-11-04 · 날짜별 변경 가능','Reviewed 2026-11-04 · subject to change')}</span></div>
-  <p class="editorial-disclaimer">${l('요금 예시는 확인일 기준이며 실제 방문일 요금이 아닙니다. 실시간 운영·예약 가능 여부는 제공하지 않습니다.','Prices shown are dated examples, not live prices. No real-time opening or ticket availability is provided.')}</p>
+ const highlights=isEn?x.highlights_en:x.highlights_ko;
+ return `<section class="editorial-feature" aria-label="관광지 소개">
+ <div class="editorial-language"><span>${isEn?'TRAVEL NOTE · VISITOR GUIDE':'TRAVEL NOTE · 여행 가이드'}</span><div class="language-switch"><button data-act="content-lang" data-value="ko" class="${isEn?'':'active'}" aria-pressed="${!isEn}">한국어</button><button data-act="content-lang" data-value="en" class="${isEn?'active':''}" aria-pressed="${isEn}">EN</button></div></div>
+ <p class="editorial-lede">${h(isEn?x.overview_en:x.overview_ko)}</p>
+ <div class="editorial-kicker">${isEn?'HIGHLIGHTS':'놓치지 마세요'}</div>
+ <div class="editorial-highlights">${highlights.map((v,i)=>`<div><span>0${i+1}</span>${h(v)}</div>`).join('')}</div>
  </section>`;
 }
 
 function vn44Guide(id,short=false){const d=LONG_GUIDES48[id];if(!d)return '';const p=d.p.map(x=>'<p>'+h(x)+'</p>').join('');return short?p:'<section class="vn44-guide"><h3>이 장소의 이야기</h3>'+p+'<p><b>놓치지 말 것</b> · '+h(d.h)+'</p><p><b>권장 체류</b> · '+h(d.t)+'</p></section>';}
 function catalogDetailLayer(c){
- const p=photoFor(c.id),isSaved=Array.isArray(state.savedPlaces)&&state.savedPlaces.includes(c.id);
- const source=contentById(c.id)?.official_url;
+ const maps='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(c.de+' Vienna');
  return `<div class="drawerbg" data-act="close-detail"><section class="drawer" role="dialog" aria-modal="true" aria-label="${h(c.ko)} 정보">
  <div class="row between"><span class="kicker">DISCOVER · ${h(c.region_ko)}</span><button class="miniopt" data-act="close-detail">✕ 닫기</button></div>
- <div class="place-photo-top catalog-cover">${photoImg(c.id,'place-cover')}<button class="expand-photo" data-act="photo-full" data-id="${c.id}">⤢ 사진 크게</button></div>
- <div class="h1">${h(c.ko)}</div><p class="sub">${h(c.de)}</p>
- ${p?`<p class="tiny">사진: ${h(p.creator)} · ${h(p.license)} · <a target="_blank" rel="noopener noreferrer" href="${h(p.source)}">원본과 이용조건 ↗</a></p>`:''}
+ <div class="place-photo-top catalog-cover">${photoImg(c.id,'place-cover')}${photoFor(c.id)?`<button class="expand-photo" data-act="photo-full" data-id="${c.id}">⤢ 사진 크게</button>`:''}</div>
+ <div class="vn45-place-head"><div class="h1">${h(c.ko)}</div><a class="vn45-directions" href="${maps}" target="_blank" rel="noopener noreferrer">↗ 길찾기</a></div>
+ <p class="sub">${h(c.de)}</p>
  ${editorialInfo(c)}
  ${state.contentLang==='en'?'':vn44Guide(c.id)}
- <p class="info">📍 ${c.address?h(c.address):'상세 출입구 주소 검증 전'}<br>좌표는 아직 공식 출입구 기준으로 검증되지 않았습니다.</p>
- <a class="btn outline block" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.de+' Vienna')}" target="_blank" rel="noopener noreferrer">📍 지도에서 찾아보기 ↗</a>
- <button class="btn primary block" data-act="save-catalog" data-id="${c.id}">${isSaved?'♥ 저장한 장소 · 다시 눌러 취소':'♡ 가고 싶은 곳에 저장'}</button>
- <div class="warning">${source?'공식 방문정보는 위 링크에서 확인할 수 있습니다.':'개별 공식 링크가 확인되지 않아 추가 검토가 필요합니다.'} 운영·입장 조건 검증 전까지 이 장소는 자동 일정 추천에 넣지 않습니다.</div>
  </section></div>`;
 }
+
 function home(){
   if(state.homeView==='explore')return photoGallery();
   if(state.homeGuide)return guide();
@@ -1251,7 +1241,20 @@ function routeLayer(){
   const saved=state.routeOverrides[legKey(from,to)]||{};
   return `<div class="drawerbg" data-act="close-route"><section class="drawer" role="dialog" aria-modal="true" aria-label="구간 이동시간 입력"><div class="row between"><span class="kicker">ROUTE REVIEW</span><button class="miniopt" data-act="close-route">✕ 닫기</button></div><div class="h1">구간 이동시간 확인</div><p class="sub">${h(from.ko)} → ${h(to.ko)}</p><p class="warning">도보는 API 키가 설정된 Cloudflare에서만 자동 계산됩니다. 대중교통 시간은 자동 조회되지 않으니 외부 지도에서 확인하거나 직접 입력해 주세요.</p><div class="card"><a class="btn outline block" href="${routeLink(from,to,'transit')}" target="_blank" rel="noopener noreferrer">🗺️ 대중교통 경로 열기 ↗</a><a class="btn outline block" href="${routeLink(from,to,'walking')}" target="_blank" rel="noopener noreferrer">🚶 도보 경로 열기 ↗</a></div><div class="card soft"><b>🚶 도보 경로 자동 계산</b><p class="sub">공식 보행 경로 API를 호출합니다. 실제 출입구는 검증 전의 근사 좌표이므로 관람객용 확정 이동시간은 아닙니다. 대중교통 경로는 계산하지 않습니다.</p><button class="btn navy block" data-act="auto-route" ${routeBusy?'disabled':''}>${routeBusy?'도보 경로 계산 중...':'도보 이동시간 API로 계산하기'}</button>${state.routeApiError?`<div class="warning" role="alert">${h(state.routeApiError)}</div>`:''}${saved.source==='ors-walking'?`<p class="tiny">마지막 API 계산: ${saved.minutes}분 · ${saved.distanceMeters??'?'}m · ${h(saved.savedAt||'')} · 출입구 위치 미검증</p>`:''}</div><div class="card"><label class="field"><span class="label">확인한 이동시간 (3~180분)</span><input id="routeMinutes" class="select" inputmode="numeric" type="number" min="3" max="180" step="1" value="${saved.minutes||''}" placeholder="예: 23"></label><label class="field" style="margin-top:12px"><span class="label">이동 방식</span><select class="select" id="routeMode"><option value="transit" ${saved.mode!=='walking'?'selected':''}>대중교통</option><option value="walking" ${saved.mode==='walking'?'selected':''}>도보</option></select></label></div><button class="btn primary block" data-act="save-route">직접 확인한 시간 적용하기</button>${saved.minutes?`<button class="btn outline block" data-act="clear-route">이 구간 입력값 삭제</button>`:''}<p class="footer">입력값은 이 기기에 저장됩니다. 경로 서비스의 자동 응답이 아니며 날짜·시간에 따라 달라질 수 있습니다.</p></section></div>`;
 }
-function detailLayer(){if(!state.detail)return '';const p=byId(state.detail);if(!p){const c=catalogById(state.detail);return c?catalogDetailLayer(c):'';}let mode=state.options[p.id]||p.options[0].mode;return `<div class="drawerbg" data-act="close-detail"><section class="drawer" role="dialog" aria-modal="true" aria-label="관광지 상세정보" ><div class="row between"><span class="kicker">OFFICIAL PLACE INFO</span><button class="miniopt" data-act="close-detail">✕ 닫기</button></div><div class="place-photo-top">${photoImg(p.id,'place-cover')}${photoFor(p.id)?`<button class="expand-photo" data-act="photo-full" data-id="${p.id}">⤢ 사진 크게</button>`:''}</div><div class="h1">${h(p.ko)}</div><p class="sub">${h(p.de)}</p>${photoFor(p.id)?`<p class="tiny">사진: ${h(photoFor(p.id).creator)} · ${h(photoFor(p.id).license)} · <a href="${h(photoFor(p.id).source)}" target="_blank" rel="noopener noreferrer">출처 보기</a></p>`:''}${editorialInfo(catalogById(p.id))}<div class="card soft"><div class="row between"><b>운영정보</b><span class="pill gray">일부 검토: 2026.11.04 · 변동 가능</span></div><p class="sub" style="margin-bottom:0">${h(p.hours)}</p><p class="info">${h(p.note)}</p><div class="warning">입장료 미검증 · 당일 운영정보는 공식 사이트에서 확인하세요.</div></div><div class="card"><b>관람 방식 선택</b><p class="sub">아래 시간은 일정 추천용 추정값이며 공식 관람시간이 아닙니다.</p>${p.options.map(o=>`<label class="choicebox ${mode===o.mode?'active':''}" style="margin-top:7px"><input type="radio" name="visitOpt" value="${o.mode}" ${mode===o.mode?'checked':''} data-act="visit-mode" data-id="${p.id}"><span class="grow"><b>${h(o.label)}</b></span><span class="pill">약 ${o.mins}분</span></label>`).join('')}</div><p class="info">📍 ${h(p.address)}<br>좌표: 기획용 근사 위치 (정밀 검증 전)</p><div class="two"><a class="btn outline" style="text-decoration:none" href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">📍 길 찾기</a><a class="btn navy" style="text-decoration:none" href="${h(p.source)}" target="_blank" rel="noopener noreferrer">공식 출처 ↗</a></div>${btn('★ 필수 명소로 선택','must-detail','primary block')}<button class="btn outline block" data-act="detail-to-plan">필수 명소로 선택하고 일정 만들기 →</button><button class="btn outline block" data-act="anchor-place" data-id="${p.id}">🚻 이 명소 주변 공공시설 찾기</button><p class="footer">운영시간은 2026-11-04 기준 일부 검토한 정보이며, 여행 날짜에 다시 확인해야 합니다. 본 상세정보는 해당 장소의 모든 유료 체험과 날짜별 변동사항까지 완전히 검증했다는 뜻이 아닙니다.</p></section></div>`}
+function detailLayer(){
+ if(!state.detail)return '';
+ const p=byId(state.detail);
+ if(!p){const c=catalogById(state.detail);return c?catalogDetailLayer(c):'';}
+ const cat=catalogById(p.id);
+ return `<div class="drawerbg" data-act="close-detail"><section class="drawer" role="dialog" aria-modal="true" aria-label="${h(p.ko)} 관광지 상세정보">
+ <div class="row between"><span class="kicker">DISCOVER VIENNA</span><button class="miniopt" data-act="close-detail">✕ 닫기</button></div>
+ <div class="place-photo-top">${photoImg(p.id,'place-cover')}${photoFor(p.id)?`<button class="expand-photo" data-act="photo-full" data-id="${p.id}">⤢ 사진 크게</button>`:''}</div>
+ <div class="vn45-place-head"><div class="h1">${h(p.ko)}</div><a class="vn45-directions" href="${mapsLink(p)}" target="_blank" rel="noopener noreferrer">↗ 길찾기</a></div>
+ <p class="sub">${h(p.de)}</p>
+ ${editorialInfo(cat)}
+ ${state.contentLang==='en'?'':vn44Guide(p.id)}
+ </section></div>`;
+}
 function mapsLink(p){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((p.de||p.ko||'Wien')+(p.address?', '+p.address:', Wien'))}
 function routeLink(from,to,travelmode='transit'){
  const target=to.de+', '+to.address;
