@@ -3782,10 +3782,13 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Börseplatz 1, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2143208,
+        "lng": 16.3667367,
+        "source": "https://directindex.org/r/alleswurscht.at",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5198,10 +5201,13 @@
       "categories": [],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Prinz-Eugen-Straße 56, 1040 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.19135,
+        "lng": 16.37927,
+        "source": "https://wien.worldplaces.me/de/review/169272757-art-corner.html",
+        "accuracy": "named_restaurant_poi_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
