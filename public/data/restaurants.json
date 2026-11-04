@@ -616,9 +616,33 @@
         "story_review": "public-source-supported-outline"
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "exterior",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schnitzelwirt%20Schmidt.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Schnitzelwirt%20Schmidt.jpg",
+          "author": "Allie_Caulfield",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "비엔나 Neubaugasse에 있는 Schnitzelwirt 외관"
+        },
+        "gallery": [
+          {
+            "type": "exterior",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schnitzelwirt%20Schmidt.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Schnitzelwirt%20Schmidt.jpg",
+            "author": "Allie_Caulfield",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "비엔나 Neubaugasse에 있는 Schnitzelwirt 외관"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
@@ -914,9 +938,57 @@
         "research_note": "메뉴와 영업시간을 확정 검증한 것은 아님"
       },
       "media": {
-        "cover": null,
-        "gallery": [],
-        "review_status": "pending"
+        "cover": {
+          "type": "food",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Glacis%20Beisl%20Wiener%20Schnitzel.jpg?width=800",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Glacis%20Beisl%20Wiener%20Schnitzel.jpg",
+          "author": "Butz.2013",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "commercial_use_verified": true,
+          "verified_on": "2026-11-04",
+          "changes": "CSS object-fit cover crop on screen",
+          "caption_ko": "Glacis Beisl에서 촬영된 비너 슈니첼"
+        },
+        "gallery": [
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Glacis%20Beisl%20Wiener%20Schnitzel.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Glacis%20Beisl%20Wiener%20Schnitzel.jpg",
+            "author": "Butz.2013",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Glacis Beisl에서 촬영된 비너 슈니첼"
+          },
+          {
+            "type": "exterior",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Entrance%20to%20Glacis%20Beisl%2C%20a%20charming%20restaurant%20in%20Vienna%2C%20Austria%20(22461374458).jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Entrance%20to%20Glacis%20Beisl%2C%20a%20charming%20restaurant%20in%20Vienna%2C%20Austria%20(22461374458).jpg",
+            "author": "traveljunction (www.traveljunction.com)",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Glacis Beisl 입구 사진"
+          },
+          {
+            "type": "food",
+            "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Glacis%20Beisl%20Meal.jpg?width=800",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Glacis%20Beisl%20Meal.jpg",
+            "author": "Butz.2013",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0/",
+            "commercial_use_verified": true,
+            "verified_on": "2026-11-04",
+            "changes": "CSS object-fit cover crop on screen",
+            "caption_ko": "Glacis Beisl에서 촬영된 음식"
+          }
+        ],
+        "review_status": "file_license_reviewed"
       },
       "quick_pick": {
         "summary_ko": null,
