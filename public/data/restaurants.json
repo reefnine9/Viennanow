@@ -433,8 +433,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20803,
+        "lng": 16.36998,
+        "source": "https://mapcarta.com/N567059350",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
         "슈니첼",
@@ -561,8 +564,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20249,
+        "lng": 16.34923,
+        "source": "https://mapcarta.com/N442981695",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -1695,8 +1701,11 @@
       "district": null,
       "address": null,
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.20334,
+        "lng": 16.34745,
+        "source": "https://mapcarta.com/N442972887",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -3469,8 +3478,11 @@
       "district": null,
       "address": "Gonzagagasse 14, 1010 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.2155,
+        "lng": 16.3704,
+        "source": "https://www.pulled.coffee/shop/lola-spanisches-tapas-restaurant-wien",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
@@ -5513,8 +5525,11 @@
       "district": null,
       "address": "Sechshauser Straße 120, 1150 Wien",
       "location": {
-        "lat": null,
-        "lng": null
+        "lat": 48.1862746,
+        "lng": 16.3220342,
+        "source": "https://directindex.org/r/rosi.wien/de",
+        "accuracy": "mapped_poi_or_building_not_entrance",
+        "checked_on": "2026-11-04"
       },
       "recommended_dishes": [],
       "price_range": null,
