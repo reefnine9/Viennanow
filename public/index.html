@@ -356,6 +356,10 @@
 .vn48-popup p{font-size:11px;line-height:1.6;max-height:110px;overflow:auto}.vn48-popup small{font-size:10px;color:#687d7b}.vn48-popup button{border:0;border-radius:6px;background:#235d55;color:white;padding:6px;margin-top:6px;font-size:11px}
 
 .vn49-guide{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px;background:#f7f5ee;border:1px solid #e6dec9;border-radius:9px;font-size:11px}.vn49-guide b{font-weight:850}.vn49-guide a{color:#386c65;font-weight:750}
+
+/* ViennaNow Phase 50: restaurant tab has its own compact V + 맛집 title, without redundant global header. */
+.phone.vn50-food-screen>.header{display:none!important}
+.vn50-food-screen .vn42-top{padding-top:2px}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark">V</span>ViennaNow</div><div class="headright">한국어 · <button type="button" class="header-settings" data-act="settings" aria-label="설정 및 개발 정보">⚙ 설정</button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -593,7 +597,7 @@ function toast(msg){let el=$('toast');el.textContent=msg;el.style.display='block
 const btn=(text,act,kind='outline',extra='')=>`<button type="button" class="btn ${kind} ${extra}" data-act="${act}">${h(text)}</button>`;
 const ICON_PATH25={"home":"<path d=\"m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z\"/>","sights":"<path d=\"M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7\"/>","food":"<path d=\"M4 3v7a3 3 0 0 0 6 0V3M7 3v18M17 21V3c-5 2-5 10 0 11h2\"/>","itinerary":"<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M7 3v4M17 3v4M3 10h18M8 15h3m-3 3h7\"/>","map":"<circle cx=\"12\" cy=\"12\" r=\"8\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 1v3m0 16v3M1 12h3m16 0h3\"/>","wc":"<g fill=\"currentColor\" stroke=\"none\"><circle cx=\"7.2\" cy=\"4.8\" r=\"2\"/><circle cx=\"16.8\" cy=\"4.8\" r=\"2\"/><path d=\"M4.3 8.3h5.8c.7 0 1.2.6 1.2 1.2v4H9.7V21H7.9v-6.4H6.5V21H4.8v-7.5H3.2v-4c0-.7.5-1.2 1.1-1.2zM15.1 8.3h3.4c.6 0 1.1.4 1.3 1l2 6h-2.1l-.6-1.8.8 4.1h-2V21h-2v-3.4h-2l.8-4.1-.6 1.8H12l2-6c.2-.6.6-1 1.1-1z\"/></g>","water":"<path d=\"M12 2c-2 4-7 9-7 13a7 7 0 0 0 14 0c0-4-5-9-7-13z\"/>","stops":"<rect x=\"5\" y=\"3\" width=\"14\" height=\"16\" rx=\"3\"/><path d=\"M5 12h14M8 19l-2 3m10-3 2 3\"/>","museum":"<path d=\"m2 9 10-6 10 6M3 10h18M5 10v9m5-9v9m5-9v9m5-9v9M2 21h20\"/>","park":"<path d=\"M12 22V12M8 17H6a4 4 0 0 1-1-8 6 6 0 0 1 12 0 4 4 0 0 1-1 8z\"/>","theater":"<path d=\"M3 4h18v14H3zM3 8h18M7 4v14m10-14v14M9 21h6\"/>","pin":"<path d=\"M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\"/>"};
 function icon25(name,size=22){return `<svg class="vn-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${ICON_PATH25[name]||ICON_PATH25.pin}</svg>`;}
-function tabs(){const all=[["home","홈"],["sights","볼거리"],["food","먹거리"],["itinerary","계획"],["map","내주변"]];return all.map(([key,label])=>`<button class="tab ${state.tab===key?'active':''}" data-act="tab" data-value="${key}" aria-label="${label}"><span class="vn-tab-symbol">${icon25(key,23)}</span><span>${label}</span></button>`).join("");}
+function tabs(){const all=[["home","홈"],["sights","볼거리"],["food","맛집"],["itinerary","계획"],["map","내주변"]];return all.map(([key,label])=>`<button class="tab ${state.tab===key?'active':''}" data-act="tab" data-value="${key}" aria-label="${label}"><span class="vn-tab-symbol">${icon25(key,23)}</span><span>${label}</span></button>`).join("");}
 function placeRow(p,select=false){let status=state.preferences[p.id]||'wish';return `<div class="place"><div class="placeicon visual">${photoImg(p.id)}</div><button class="clickrow grow" data-act="detail" data-id="${p.id}"><div class="placetitle">${h(p.ko)}</div><div class="placemeta">${h(p.de)} · ${h(p.region)}</div></button>${select?`<button class="miniopt ${status==='must'?'must':status==='no'?'no':''}" data-act="choice" data-id="${p.id}" aria-label="방문 우선순위 변경">${status==='must'?'★ 필수':status==='no'?'제외':'＋ 후보'}</button>`:`<button class="miniopt" data-act="detail" data-id="${p.id}">상세 ›</button>`}</div>`}
 function emoji(p){const e={A01:'⛪',A02:'🏛️',A03:'🏰',A04:'🖼️',A05:'🎭',A06:'🎨',A07:'🖼️',A08:'📚',A09:'⛪',A10:'🏛️',A11:'🎨',A12:'🎡',A13:'🏘️',A14:'🥨',A15:'🚶',A16:'🌳'};return e[p.id]||'📍'}
 function navTo(t){
@@ -1208,7 +1212,7 @@ function foodPage21(){
  if(state.vn42FoodCategory==='new')state.vn42FoodCategory='all';
  const cat=state.vn42FoodCategory||'all';
  const nav=opts.map(([id,label])=>'<button class="vn42-chip '+(cat===id?'on':'')+'" aria-pressed="'+(cat===id)+'" data-act="vn42-food-filter" data-value="'+h(id)+'">'+h(label)+'</button>').join('');
- const top='<div class="vn42-top"><div class="vn42-logo"><span class="vn37-v">V</span><strong>먹거리</strong></div><div class="vn42-filters">'+nav+'</div></div>';
+ const top='<div class="vn42-top"><div class="vn42-logo"><span class="vn37-v">V</span><strong>맛집</strong></div><div class="vn42-filters">'+nav+'</div></div>';
  if(!VN42_DB)return '<div class="vn42-wrap">'+top+'<div class="card">'+(VN42_ERROR?'맛집 목록을 불러오지 못했습니다. 새로고침 후 다시 시도해주세요.':'맛집 목록을 불러오는 중…')+'</div></div>';
  const isWarn=r=>(r.tags||[]).includes('visit_warning');
  const all=VN42_DB.restaurants;
@@ -1426,6 +1430,7 @@ function render(){
  main.closest('.phone')?.classList.toggle('vn32-near-screen',state.tab==='map');
  main.closest('.phone')?.classList.toggle('vn33-sights-screen',state.tab==='sights');
  main.closest('.phone')?.classList.toggle('vn37-plan-screen',state.tab==='itinerary');
+ main.closest('.phone')?.classList.toggle('vn50-food-screen',state.tab==='food');
  if(state.fullPhoto){vn46StopAuto();$('layer').innerHTML=photoLayer();vn46Init();return;}
  if(state.expDetail19){$('layer').innerHTML=experienceDetail19();return;}
  if(state.settingsOpen){$('layer').innerHTML=settingsLayer();return;}
