@@ -65,6 +65,10 @@ jobs:
         env:
           VIENNANOW_API_ORIGIN: ${{ inputs.api_origin }}
         run: npm run native:sync
+      - name: Set Google Play version code
+        run: |
+          sed -i -E 's/(versionCode[[:space:]]+)[0-9]+/\12/' android/app/build.gradle
+          grep -Eq 'versionCode[[:space:]]+2' android/app/build.gradle || { echo '::error::Could not set Android versionCode to 2'; exit 1; }
       - name: Prepare secure signing
         env:
           ENCRYPTED_KEYSTORE_B64: ${{ secrets.ANDROID_ENCRYPTED_KEYSTORE_BASE64 }}
