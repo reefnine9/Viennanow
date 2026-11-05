@@ -145,3 +145,15 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Modified `scripts/course-detail-qa.mjs` to emit touchmove events; added `scripts/finger-swipe-qa.mjs` and its GitHub Actions step, verifying intermediate `translate3d` position, preview presence, next-page settling and short-drag snap-back for all three screens.
 - **Verified:** [GitHub Actions run 41972668421](https://github.com/reefnine9/Viennanow/actions/runs/41972668421) at commit `28a03f33c94a4356edc9de9ce32079dea1d6282d`: **21/21** finger-follow tests passed; existing **13/13** route detail, **40/40** responsive/bilingual combinations, restaurant/map/failed-image tests and production HTTP checks all passed.
 - Remaining manual review: swipe feel and timing on a physical iPhone Safari and Android Chrome, transitions with very long detail content, and accessibility/reduced-motion observations.
+
+
+## 20. Swipe gesture stability and long-page resilience (2026-11-05)
+- Implemented stable swipe settling in `public/index.html`, preventing a second drag while a prior page is finishing its settle animation; cleans pending timers, preview elements and overridden parent styling after completed/cancelled gestures.
+- Two-finger or detached-target gestures now abort safely, text-input editing is excluded from swipe start, and unavailable adjacent previews no longer leave scrolling locked. Maintains native vertical reading/scrolling and reduced-motion behaviour.
+- **Verified** in [run 41973528803](https://github.com/reefnine9/Viennanow/actions/runs/41973528803): new 12/12 stability/accessibility browser checks and prior 21/21 finger-tracking checks pass.
+
+## 21. Detail navigation accessibility (2026-11-05)
+- Added keyboard `ArrowLeft`/`ArrowRight` navigation for active Sights, Dining and Recommended Route detail screens, excluding editable controls and modifier-key shortcuts.
+- Added one visually hidden `aria-live=polite` announcement region to inform assistive technologies of the new detail title after keyboard or swipe navigation; adjacent swipe previews remain `aria-hidden` and inert.
+- Added `scripts/swipe-stability-qa.mjs` to GitHub Actions to test vertical gesture, multi-touch recovery, keyboard next/previous, announcement, long-page drag and scroll recovery. **Verified [run 41973528803](https://github.com/reefnine9/Viennanow/actions/runs/41973528803): 12/12 new tests passed, 40/40 mobile/language combinations, 13/13 course-detail tests, 21/21 finger-follow tests and live site HTTP preflight passed**.
+- These are automated Chromium emulation tests, not a certification of real iOS Safari gestures or complete screen-reader UX. Manual VoiceOver/TalkBack and physical phone checks remain open.
