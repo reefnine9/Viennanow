@@ -136,3 +136,12 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Removed the "여행 전 확인" block (including its old external directions link) from the recommendation detail screen. The map overview and ordered stops remain.
 - Added `scripts/course-detail-qa.mjs` to GitHub Actions browser QA. **Verified** [run 41970849614](https://github.com/reefnine9/Viennanow/actions/runs/41970849614): course detail tests **13/13 passed**, overall 40 mobile/language layouts and other pre-existing browser checks also passed. Production HTTP checks passed, but the remote site was not specifically browser-tested for this new interaction.
 - Follow-up: check actual iPhone/Android swiping and provide UI feedback. Do not change map pin overlap handling unless later requested.
+
+
+## 19. Finger-following page swipe UX across detail screens (2026-11-05)
+- Replaced release-only snap between pages with continuously tracked horizontal touch dragging for Sights, Dining and Recommended Route detail views in deployed `public/index.html`.
+- Incoming adjacent page is rendered as a noninteractive preview beside the current page and both panels translate together at the touch displacement; releasing past a distance or quick-gesture threshold animates to the next/previous page, while short drags spring back. Vertical scrolling remains enabled (`touch-action:pan-y`); the older Home story/full-photo interactions remain separate.
+- Sight and restaurant `drawer` details now support full-page horizontal swiping rather than only a photo swipe; route detail swipe works through its scrollable content. Preview is removed after navigation/cancel and existing save/map actions remain intact.
+- Modified `scripts/course-detail-qa.mjs` to emit touchmove events; added `scripts/finger-swipe-qa.mjs` and its GitHub Actions step, verifying intermediate `translate3d` position, preview presence, next-page settling and short-drag snap-back for all three screens.
+- **Verified:** [GitHub Actions run 41972668421](https://github.com/reefnine9/Viennanow/actions/runs/41972668421) at commit `28a03f33c94a4356edc9de9ce32079dea1d6282d`: **21/21** finger-follow tests passed; existing **13/13** route detail, **40/40** responsive/bilingual combinations, restaurant/map/failed-image tests and production HTTP checks all passed.
+- Remaining manual review: swipe feel and timing on a physical iPhone Safari and Android Chrome, transitions with very long detail content, and accessibility/reduced-motion observations.
