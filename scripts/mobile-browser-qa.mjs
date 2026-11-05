@@ -13,12 +13,18 @@ for (const width of viewports) {
   const page = await context.newPage();
   const errors=[];
   page.on('pageerror',e=>errors.push(String(e.message)));
+  // Deterministic UI layout pass: external maps/photos are verified separately by deploy-check.
+  await page.route('**/*',route=>{
+    const url=route.request().url();
+    if(url.startsWith(base+'/'))return route.continue();
+    return route.abort();
+  });
   try {
     await page.goto(base+'/index.html',{waitUntil:'domcontentloaded',timeout:35000});
     await page.locator('#bottom button.tab').first().waitFor({timeout:20000});
     for (const [language,expectLang] of [['ko','ko'],['en','en']]) {
       if (language==='en') await page.locator('.vn-language-toggle').click();
-      await page.waitForTimeout(180);
+      await page.waitForTimeout(90);
       const actual = await page.locator('html').getAttribute('lang');
       if(actual!==expectLang) issues.push(width+'px: document lang mismatch, expected '+expectLang+', got '+actual);
       const labels = await page.locator('#bottom button.tab').allTextContents();
@@ -26,7 +32,7 @@ for (const width of viewports) {
       if(expected.some((label,i)=>!labels[i]?.includes(label))) issues.push(width+'px '+language+': incorrect nav labels '+labels.join(' / '));
       for (const section of sections) {
         await page.locator('#bottom button.tab[data-value="'+section+'"]').click({timeout:12000});
-        await page.waitForTimeout(220);
+        await page.waitForTimeout(100);
         const layout = await page.evaluate(()=>{
           const phone=document.querySelector('.phone'), nav=document.querySelector('#bottom'), viewport=document.documentElement.clientWidth;
           const rect=nav?.getBoundingClientRect();
