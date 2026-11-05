@@ -40,6 +40,8 @@ jobs:
         run: node scripts/phase14-media-audit.mjs
       - name: Phase 16 broken-photo fallback browser checks
         run: node scripts/phase16-photo-fallback-qa.mjs
+      - name: Recommended route swipe and Nearby map QA
+        run: node scripts/course-detail-qa.mjs
       - name: Phase 12 local HTTP asset integrity
         run: node scripts/deploy-qa.mjs
       - name: Phase 12 optional live Cloudflare HTTP checks
@@ -62,4 +64,5 @@ jobs:
             artifacts/phase14/
             artifacts/phase15/
             artifacts/phase16/
+            artifacts/course-qa/
           if-no-files-found: warn
