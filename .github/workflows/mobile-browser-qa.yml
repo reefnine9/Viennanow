@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      deployed_url:
+        description: 'Optional verified Cloudflare Pages production URL (HTTPS)'
+        required: false
+        type: string
 permissions:
   contents: read
 jobs:
@@ -29,6 +34,13 @@ jobs:
         run: node scripts/mobile-browser-qa.mjs
       - name: Phase 11 interaction and favorite persistence QA
         run: node scripts/interaction-qa.mjs
+      - name: Phase 12 local HTTP asset integrity
+        run: node scripts/deploy-qa.mjs
+      - name: Phase 12 optional live Cloudflare HTTP checks
+        if: inputs.deployed_url != ''
+        env:
+          VIENNANOW_DEPLOY_URL: ${{ inputs.deployed_url }}
+        run: node scripts/deploy-qa.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -36,4 +48,5 @@ jobs:
           path: |
             artifacts/mobile-qa/
             artifacts/interaction-qa/
+            artifacts/deploy-qa/
           if-no-files-found: warn
