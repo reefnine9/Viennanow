@@ -941,6 +941,10 @@ state.guideTopic=null;state.settingsOpen=false;state.placeSearch=state.placeSear
 state.sightSection=state.sightSection||'all';if(!state.vnAllSightsCategory57){state.sightSection='all';state.sightDeckIndex=0;state.vnAllSightsCategory57=true;}state.foodSection=state.foodSection||'cafe';state.nearSection=state.nearSection||'map';state.nearRestFilter=['all','cafe','park'].includes(state.nearRestFilter)?state.nearRestFilter:'all';state.nearDiningSaved=!!state.nearDiningSaved;state.planSection=['premium','mine'].includes(state.planSection)?state.planSection:'premium';if(!state.vnCatalogMigration36){state.planSection='premium';state.vnCatalogMigration36=true;}state.sightDeckIndex=Number(state.sightDeckIndex)||0;state.foodDeckIndex=Number(state.foodDeckIndex)||0;state.sightQuery=state.sightQuery||'';state.foodQuery=state.foodQuery||'';state.homeGuide=false;state.manualPlan=state.manualPlan&&Array.isArray(state.manualPlan.days)?state.manualPlan:null;state.editDraft=null;state.editPreviewOpen=false;
 state.dayWindows=state.dayWindows&&typeof state.dayWindows==='object'?state.dayWindows:{};state.fixedEvents=Array.isArray(state.fixedEvents)?state.fixedEvents:[];state.planError='';state.eventDone=state.eventDone&&typeof state.eventDone==='object'?state.eventDone:{};
 state.skipped=state.skipped||{};state.liveOverrides=state.liveOverrides||{};state.liveHistory=Array.isArray(state.liveHistory)?state.liveHistory:[];state.livePending=state.livePending||{};state.livePreview=null;state.liveClock=state.liveClock||'15:30';state.fullPhoto=null;state.contentLang=state.contentLang==='en'?'en':'ko';state.routeOverrides=state.routeOverrides||{};state.diagnostics=state.diagnostics||{};state.routeEdit=null;state.routeApiError='';let routeBusy=false;let map=null,layerGroup=null,loadedFacilities={};let fetchId=0,loadingFacility=null;
+const WC_CACHE_KEY='viennanow-wc-cache-v3';
+function wcCached(){try{const c=JSON.parse(localStorage.getItem(WC_CACHE_KEY)||'null');return c&&Array.isArray(c.points)&&c.points.length?{...c,status:'ok',stale:true}:null}catch{return null}}
+function wcStore(data){try{localStorage.setItem(WC_CACHE_KEY,JSON.stringify({status:'ok',points:data.points,updatedAt:new Date().toISOString()}))}catch{}}
+
 const $=id=>document.getElementById(id);
 const h=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const byId=id=>PLACES.find(p=>p.id===id);
@@ -2127,7 +2131,7 @@ function nearPage21(){
  const plan=section==='plan'?nearSelectedPlan31():null,options=nearPlanChoices31();
  const tools=section==='map'?`<form class="near31-search" id="near-search-form" role="search"><input id="near-search-input" type="search" class="near31-input" placeholder="명소·카페 이름 검색" aria-label="지도 장소 검색" value="${h(state.nearSearch||'')}"><button type="submit" aria-label="장소 찾기">⌕</button></form>`:section==='plan'?`<div class="near31-planbar vn41-nearplan"><select id="near-plan-choice" aria-label="지도에서 볼 여행 코스">${options.map(x=>`<option value="${h(x.id)}" ${plan?.id===x.id?'selected':''}>${h(x.category)} · ${h(x.name)} (${h(x.duration)})</option>`).join('')}</select></div>`:'';
  let items=[],resultTitle='';
- if(section==='wc'){const info=loadedFacilities.wc;items=info?.status==='ok'?nearest(info.points,a,{max:10,radius:3000}):[];resultTitle=info?.status==='failed'?(state.contentLang==='en'?'Unable to load public toilet data':'화장실 데이터를 불러오지 못했습니다'):(state.contentLang==='en'?`Public toilets · ${items.length} nearby`:`공공화장실 · ${items.length}곳 (가까운 위치)`);}
+ if(section==='wc'){const info=loadedFacilities.wc||wcCached();items=info?.status==='ok'?nearest(info.points,a,{max:10,radius:3000}):[];resultTitle=info?.status==='failed'?(state.contentLang==='en'?'Unable to load public toilet data':'화장실 데이터를 불러오지 못했습니다'):(state.contentLang==='en'?`Public toilets · ${items.length} nearby`:`공공화장실 · ${items.length}곳 (가까운 위치)`);}
  else if(section==='sights'){const places=vn61SightRecords();items=places.map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d).slice(0,10);resultTitle='볼거리 '+places.length+'곳 · 지도를 확대하면 개별 핀 표시';}
  else if(section==='food'){const selected=vn61FoodRecords(),ids=new Set(selected.map(p=>p.id));items=nearFood31().filter(p=>ids.has(p.id)).map(p=>({...p,d:distKm21(a.lat,a.lon,p.lat,p.lon)})).sort((x,y)=>x.d-y.d);resultTitle='맛집 '+selected.length+'곳 · 지도 핀 '+items.length+'곳'+(VN48_GEO_STATE==='loading'?' (위치 검색 중)':VN48_GEO_STATE==='unavailable'?' (위치 데이터 연결 실패)':'');}
  else if(section==='saved'){const f=vn59Favorites();const ids=new Set(f.sights.map(p=>p.id));items=[...mapSights48().filter(p=>ids.has(p.id)).map(p=>({...p,savedKind:'sights'})),...nearFood31().filter(p=>(state.savedRestaurants||[]).includes(p.id)).map(p=>({...p,savedKind:'food'}))];resultTitle='♥ 찜한 곳 · 지도 표시 '+items.length+'곳';}
@@ -2302,7 +2306,7 @@ function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)
   if(section==='sights')showPlaces();
   else if(section==='food')nearFoodLayer31();
   else if(section==='saved')vn59SavedMapLayer();
-  else if(section==='wc'){if(loadedFacilities.wc?.status==='ok')showFacilities('wc');else if(!loadedFacilities.wc&&loadingFacility!=='wc')startFetch('wc');}
+  else if(section==='wc'){if(loadedFacilities.wc?.status==='ok')showFacilities('wc');if(!loadedFacilities.wc&&loadingFacility!=='wc')startFetch('wc');}
   else if(section==='plan')nearPlanLayer31();
   else if(section==='stories')vn52MapPins();
   requestAnimationFrame(()=>map?.invalidateSize({pan:false}));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);
@@ -2364,18 +2368,18 @@ function showFacilities(kind){
 }
 async function fetchAsJson(url,controller){const r=await fetch(url,{mode:'cors',signal:controller.signal,headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}
 async function startFetch(kind){if(!FACILITIES[kind]||loadingFacility===kind)return;let reqId=++fetchId;loadingFacility=kind;
- const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),16000);
  const proxyUrl='/api/ogd?layer='+encodeURIComponent(kind);
  const canUseProxy=location.protocol!=='file:'&&!['localhost','127.0.0.1'].includes(location.hostname);
  let failures=[];
  try{
   let data;
-  if(canUseProxy){try{data=await fetchAsJson(proxyUrl,controller);if(data.status!=='ok')throw new Error(data.message||'proxy not available');}catch(e){failures.push('서버 함수: '+e.message);}}
+  if(canUseProxy){for(let attempt=1;attempt<=3&&!data;attempt++){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),16000);try{const result=await fetchAsJson(proxyUrl,controller);if(result.status!=='ok')throw new Error(result.message||'proxy not available');data=result;}catch(e){failures.push('시도 '+attempt+': '+e.message);if(attempt<3)await new Promise(resolve=>setTimeout(resolve,attempt*900));}finally{clearTimeout(timer);}}}
   if(!data){throw new Error(canUseProxy?'서버 함수 연결에 실패했습니다. Cloudflare에서 Functions 상태를 확인하세요.':'파일 실행/로컬 환경에서는 서버 함수를 사용할 수 없습니다. Cloudflare 배포 후 점검하세요.');}
   if(data.status!=='ok'||!Array.isArray(data.points))throw Error('올바른 공공데이터 형태가 아닙니다');
   loadedFacilities[kind]=data;
- }catch(e){loadedFacilities[kind]={status:'failed',message:([...failures,String(e.message||e)]).join(' / ')};}
- finally{clearTimeout(timer);if(reqId===fetchId){loadingFacility=null;if(state.facility===kind&&state.tab==='map')render();}}
+  if(kind==='wc')wcStore(data);
+ }catch(e){const cached=kind==='wc'?wcCached():null;loadedFacilities[kind]=cached||{status:'failed',message:([...failures,String(e.message||e)]).join(' / ')};}
+ finally{if(reqId===fetchId){loadingFacility=null;if(state.tab==='map'&&(state.facility===kind||nearMode31()===kind))render();}}
 }
 async function runDiagnostic(layer){
  if(!['wc','water','stops'].includes(layer))return;
