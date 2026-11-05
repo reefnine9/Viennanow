@@ -157,3 +157,15 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Added one visually hidden `aria-live=polite` announcement region to inform assistive technologies of the new detail title after keyboard or swipe navigation; adjacent swipe previews remain `aria-hidden` and inert.
 - Added `scripts/swipe-stability-qa.mjs` to GitHub Actions to test vertical gesture, multi-touch recovery, keyboard next/previous, announcement, long-page drag and scroll recovery. **Verified [run 41973528803](https://github.com/reefnine9/Viennanow/actions/runs/41973528803): 12/12 new tests passed, 40/40 mobile/language combinations, 13/13 course-detail tests, 21/21 finger-follow tests and live site HTTP preflight passed**.
 - These are automated Chromium emulation tests, not a certification of real iOS Safari gestures or complete screen-reader UX. Manual VoiceOver/TalkBack and physical phone checks remain open.
+
+
+## 22. Browser-engine compatibility of detail swipes (2026-11-05)
+- Introduced `scripts/phase22-cross-browser-qa.mjs` to run the same touchstart/touchmove/touchend sequence across Chromium (Android-like emulation) and WebKit (iPhone Safari-like emulation), checking Sights, Dining and Recommended Route detail views.
+- Verifies that the current page follows finger displacement, adjacent non-interactive preview exists during drag, navigation updates the page, and previews clean up after the gesture. Captures six screenshots in the workflow artifact.
+- **Confirmed:** [GitHub Actions run 41977907888](https://github.com/reefnine9/Viennanow/actions/runs/41977907888), **24/24 passed**, zero issues. WebKit is the Safari browser engine but this is still **headless Playwright emulation**, not a physical iPhone Safari session.
+
+## 23. Small-screen and enlarged-text detail accessibility QA (2026-11-05)
+- Introduced `scripts/phase23-responsive-a11y-qa.mjs` to validate Sights/Dining/Recommended Route detail pages across widths 320, 375 and 390 px and respective increased content font-size scales 1.0, 1.25, 1.5.
+- Verifies displayed panel boundaries, visibility of close/back controls, dialog semantics for modal details and absence of document-wide horizontal overflow, preserving screenshots and JSON results.
+- **Confirmed:** [GitHub Actions run 41977907888](https://github.com/reefnine9/Viennanow/actions/runs/41977907888), **36/36 passed**, zero issues. Existing 40/40 mobile/language, 21/21 live drag, 12/12 stability and production HTTP checks also passed.
+- No visual redesign or change to map pins performed. Automated checks cannot certify every text truncation, full WCAG accessibility compliance, native iOS VoiceOver/TalkBack or physical smartphone behaviour; those remain follow-up manual QA items.
