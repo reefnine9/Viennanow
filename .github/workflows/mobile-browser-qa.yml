@@ -38,6 +38,12 @@ jobs:
         run: node scripts/phase13-browser-qa.mjs
       - name: Phase 14 media attribution audit
         run: node scripts/phase14-media-audit.mjs
+      - name: Phase 16 broken-photo fallback browser checks
+        run: node scripts/phase16-photo-fallback-qa.mjs
+      - name: Phase 15 live image URL probes (advisory)
+        continue-on-error: true
+        timeout-minutes: 7
+        run: node scripts/phase15-photo-url-audit.mjs
       - name: Phase 12 local HTTP asset integrity
         run: node scripts/deploy-qa.mjs
       - name: Phase 12 optional live Cloudflare HTTP checks
@@ -58,4 +64,6 @@ jobs:
             artifacts/deploy-qa/
             artifacts/phase13/
             artifacts/phase14/
+            artifacts/phase15/
+            artifacts/phase16/
           if-no-files-found: warn
