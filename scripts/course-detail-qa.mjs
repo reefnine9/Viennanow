@@ -25,7 +25,7 @@ try{
  await page.locator('#main .vn36-detail button[data-act="vn-course-slide"][data-value="-1"]').click();
  check('Previous route arrow works',(await page.locator('#main .vn36-detail .kicker').first().innerText()).includes('B01'));
  const swipe=async(left)=>{
-  const target=page.locator('#main .vn-course-swipe .pro-plan');
+  const target=page.locator('#main .vn-course-swipe:not(.vn-swipe-preview) .pro-plan').first();
   const startX=left?300:75,endX=left?90:295;
   await target.dispatchEvent('touchstart',{touches:[{identifier:1,clientX:startX,clientY:260}]});
   await target.dispatchEvent('touchmove',{touches:[{identifier:1,clientX:(startX+endX)/2,clientY:260}]});
