@@ -12,9 +12,10 @@
     "check:stores": "node scripts/check-store-readiness.mjs",
     "native:add:ios": "cap add ios",
     "native:add:android": "cap add android",
-    "native:sync": "cap sync",
+    "native:sync": "npm run native:build:web && cap sync",
     "native:open:ios": "cap open ios",
-    "native:open:android": "cap open android"
+    "native:open:android": "cap open android",
+    "native:build:web": "node scripts/build-native.mjs"
   },
   "engines": {
     "node": ">=20"
