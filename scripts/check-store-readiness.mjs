@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root=process.cwd();
+const pub=path.join(root,'public');
+const html=fs.readFileSync(path.join(pub,'index.html'),'utf8');
+const manifest=JSON.parse(fs.readFileSync(path.join(pub,'manifest.webmanifest'),'utf8'));
+const required=['name','short_name','start_url','scope','display','icons'];
+for(const key of required)assert.ok(manifest[key],`Missing PWA manifest field: ${key}`);
+assert.equal(manifest.display,'standalone');
+assert.ok(html.includes('rel="manifest" href="/manifest.webmanifest"'),'Manifest link missing');
+assert.ok(html.includes('apple-mobile-web-app-title'),'iOS home-screen title missing');
+assert.ok(html.includes('viewport-fit=cover'),'Safe-area viewport metadata missing');
+assert.ok(manifest.icons.every(icon=>fs.existsSync(path.join(pub,icon.src.replace(/^\//,'')))),'Manifest references a missing icon');
+assert.ok(html.includes('rel="icon"'),'Browser favicon missing');
+const warnings=[];
+if(!manifest.icons.some(icon=>icon.type==='image/png'&&icon.sizes==='192x192'))warnings.push('192x192 PNG PWA icon missing');
+if(!manifest.icons.some(icon=>icon.type==='image/png'&&icon.sizes==='512x512'))warnings.push('512x512 PNG PWA icon missing');
+if(!html.includes('rel="apple-touch-icon"'))warnings.push('Apple touch PNG icon missing');
+if(html.includes('name="robots" content="noindex,nofollow"'))warnings.push('Public search indexing disabled');
+if(!fs.existsSync(path.join(pub,'service-worker.js')))warnings.push('No service worker: offline experience unavailable');
+for(const page of ['privacy.html','legal.html'])if(/pre-release|출시 전 검토 초안/i.test(fs.readFileSync(path.join(pub,page),'utf8')))warnings.push(page+' still marked as draft');
+console.log('Phase 34 web-install metadata checks passed.');
+for(const warning of warnings)console.warn('RELEASE REVIEW: '+warning);
+console.log('Store release requires native builds, real-device tests and approval; this script cannot certify app-store readiness.');
