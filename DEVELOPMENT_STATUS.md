@@ -64,3 +64,10 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 2. Verify mobile widths 320/375/390/430px, favourite tap targets, language-toggle layout, and selected states on a real device.
 3. Check live Cloudflare deployment and run `qa-smoke.html` and `deploy-check.html`.
 4. After verifying, mark the relevant steps complete and update the GitHub log.
+
+## 9. GitHub Actions failure diagnosis and repair (2026-11-05)
+- Initial workflow failures: 104 unit tests, 95 passed / 9 failed. Older Phase 21/22/24 tests asserted obsolete root `index.html` markup and retired map controls instead of the current `public/index.html` UI.
+- Updated `tests/phase21-navigation.test.mjs`, `tests/phase22-nearby.test.mjs` and `tests/phase24-map-layout.test.mjs` to assert the currently shipped five bottom tabs, six nearby map categories, current favourites/food filters and map resizing.
+- Next preflight failure: `scripts/check-cloudflare.mjs` expected Phase 30 in the public title, root HTML identical to public HTML, legacy four-tab labels, an obsolete `m.openPopup()` expression and old zoom clustering. Replaced stale checks with present public deployment invariants; kept root divergence warning and requirement to deploy `public/`.
+- **Confirmed GitHub Actions success:** workflow run [41945707348](https://github.com/reefnine9/Viennanow/actions/runs/41945707348), source commit `a3385b72213d70aecf2f006ecde7451736c1f27b`. Both `npm test` and `npm run check` steps passed. Previous failed runs remain historical and need no deletion.
+- This confirms automated source and preflight gates, **not** actual Cloudflare deployment, real-device appearance, business information or photo licensing.
