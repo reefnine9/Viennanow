@@ -2299,7 +2299,7 @@ async function autoDayWalk(){
 }
 function act(a,el){let id=el?.dataset?.id,value=el?.dataset?.value;switch(a){
 case 'vn51-food-map':{state.vn51FocusFood=id;state.nearSection='food';state.tab='map';save();render();return;}
-case 'vn48-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.tab='food';state.vn42FoodCategory='all';state.vn64FoodDetail=id;state.detail=null;state.expDetail19=null;state.foodQuery='';save();render();return;}
+case 'vn48-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;state.detail=null;state.expDetail19=null;save();render();return;}
 case 'vn-filter-scroll':{const strip=document.querySelector('.vn40-filter-wrap .vn38-filterstrip');if(strip){strip.scrollBy({left:(value==='prev'?-1:1)*Math.max(170,strip.clientWidth*.75),behavior:'smooth'});}return;}
 case 'vn-course-filter':state.vnCourseFilter39=value;state.vnCourseDetail=null;save();render();return;
 case 'vn-course-detail':state.vnCourseDetail=id;save();render();$('main').scrollTop=0;return;
