@@ -8,7 +8,7 @@ for(const p of manifest){
  if(unique.has(p.placeId))problems.push('Duplicate sight ID '+p.placeId);unique.add(p.placeId);
  for(const k of ['placeId','title','source','creator','license','licenseUrl','url'])if(!p[k])problems.push(p.placeId+' missing '+k);
  if(!validUrl(p.url)||!validUrl(p.source)||!validUrl(p.licenseUrl))problems.push(p.placeId+' invalid image/source/license URL');
- if(!/^CC (BY|BY-SA|0)|^Public domain|^PD-/i.test(p.license||''))warnings.push(p.placeId+' license requires manual review: '+p.license);
+ if(!/^(CC(?: BY(?:-SA)?|0)|Public domain|PD-)/i.test(p.license||''))warnings.push(p.placeId+' license requires manual review: '+p.license);
 }
 if(manifest.length!==48)problems.push('Expected 48 sightseeing photo records, got '+manifest.length);
 const reviewed=rows.filter(r=>r.media?.cover?.commercial_use_verified);
