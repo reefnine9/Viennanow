@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 최종 71–82번 12곳 공식 메뉴·미쉐린·비엔나 관광청·지역 상공회의소 자료로 한영 소개/추천메뉴/선정 이유 수정. Babida 주소 보완, Café Central 휴업 및 DECENTRAL 대안, Hinterholz 주소 운영 충돌 명시.",
     "2026-11-05: 식당 61–70번 한영 소개·대표메뉴·선정 이유 공식 메뉴·미쉐린·한국대사관 자료로 재작성. Kim Shop 테이크아웃과 Kim Kocht 식당 구분.",
     "2026-11-05: 51–60번 10개 식당 한영 소개·대표메뉴·선정이유 재작성. Wrenkh Rauhensteingasse 지점은 채식 점심 매장임을 명시하고 Zur Alten Kaisermühle를 수변 레스토랑으로 정확히 분류하여 설명.",
     "2026-11-05: 식당 41–50번 공식 메뉴·미쉐린 가이드·현지 피자 가이드 대조하여 한영 소개/대표 메뉴/선정 이유 수정; 지점 미확인 정보 및 Google 별점 추측 배제.",
@@ -5494,7 +5495,7 @@
       ],
       "cuisine": [],
       "district": null,
-      "address": null,
+      "address": "Franz-Josefs-Kai 29, 1010 Wien",
       "location": {
         "lat": 48.21219,
         "lng": 16.37484,
@@ -5502,13 +5503,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돌솥비빔밥",
+        "불고기비빔밥",
+        "닭강정",
+        "삼겹살"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "한국식 식사 경험을 찾는 여행자를 위한 선택지다. 구체적인 메뉴와 현재 영업 상태는 방문 전에 확인해 볼 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A Korean dining option; confirm the current menu and opening status before visiting.",
+        "ko": "프란츠요제프스카이 29의 한식당으로, 공식 메뉴에 돌솥비빔밥과 불고기비빔밥, 매콤달콤한 닭강정, 김치전이 있다. 두 명 이상이면 테이블에서 굽는 삼겹살이나 갈비살, 감자탕·부대찌개 전골도 선택할 수 있다. 관광 중 간단한 한식부터 여러 명이 나눠 먹는 식사까지 가능한 것이 장점이다.",
+        "en": "A Korean restaurant on Franz-Josefs-Kai with dolsot and bulgogi bibimbap, sweet-spicy fried chicken and kimchi pancakes. Groups can order tabletop pork belly or beef barbecue and shared stews such as gamjatang or budae-jjigae.",
         "de": null
       },
       "personal_review": {
@@ -5520,7 +5526,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://babida-vienna.at/menue/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5532,8 +5540,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "한국식 식사 경험을 찾는 여행자를 위한 선택지다. 구체적인 메뉴와 현재 영업 상태는 방문 전에 확인해 볼 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "프란츠요제프스카이 29의 한식당으로, 공식 메뉴에 돌솥비빔밥과 불고기비빔밥, 매콤달콤한 닭강정, 김치전이 있다. 두 명 이상이면 테이블에서 굽는 삼겹살이나 갈비살, 감자탕·부대찌개 전골도 선택할 수 있다. 관광 중 간단한 한식부터 여러 명이 나눠 먹는 식사까지 가능한 것이 장점이다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5566,13 +5574,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "양념치킨",
+        "김치삼겹살",
+        "오징어볶음"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "비엔나에서 한국 음식을 찾는 사람을 위해 포함한 후보이다. 지역 식당으로서의 운영 형태와 대표 메뉴는 추가 확인이 필요하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "Listed for travelers searching for Korean food in Vienna; verify its current operating format and specialties.",
+        "ko": "8구 알베르트가세의 넓은 한식·일식 레스토랑. 비엔나 상공회의소 지역 안내는 달콤매콤한 양념치킨과 김치를 곁들인 삼겹살, 채소와 함께 볶은 오징어를 추천한다. 다양한 아시아 메뉴와 넓은 공간이 장점이라 여러 사람이 함께 방문하기 좋다. 현재 메뉴와 영업시간은 예약 전 확인하는 것이 좋다.",
+        "en": "A spacious Korean and Japanese restaurant in Josefstadt. Vienna's chamber-of-commerce neighbourhood guide highlights yangnyeom fried chicken, pork belly with kimchi and stir-fried squid with vegetables. Good for groups seeking a broad Asian menu.",
         "de": null
       },
       "personal_review": {
@@ -5584,7 +5596,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://wienerleben.wko.at/unternehmen/678904b8b1b86bb3a55f8ebd/koinonia-plus"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5596,8 +5610,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비엔나에서 한국 음식을 찾는 사람을 위해 포함한 후보이다. 지역 식당으로서의 운영 형태와 대표 메뉴는 추가 확인이 필요하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "8구 알베르트가세의 넓은 한식·일식 레스토랑. 비엔나 상공회의소 지역 안내는 달콤매콤한 양념치킨과 김치를 곁들인 삼겹살, 채소와 함께 볶은 오징어를 추천한다. 다양한 아시아 메뉴와 넓은 공간이 장점이라 여러 사람이 함께 방문하기 좋다. 현재 메뉴와 영업시간은 예약 전 확인하는 것이 좋다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5627,13 +5641,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "스시 세트",
+        "마키 롤",
+        "일본식 덮밥"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "초밥과 일본식 메뉴를 간편하게 선택할 수 있는 아시아 외식 브랜드다. 전통 오스트리아식 메뉴 외에 빠르고 익숙한 식사를 원하는 사람에게 적합하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "An accessible Asian chain serving sushi and Japanese-style dishes for a quick and familiar meal.",
+        "ko": "프란츠요제프역의 율리우스탄들러플라츠에 자리한 일본식 퓨전 외식 체인 지점. 초밥과 마키 롤, 간편한 일본식 식사를 빠르게 고를 수 있으며 포장·배달도 지원한다. 기차를 이용하거나 9구를 이동할 때 편리한 식사 장소로, 특별한 미식 경험보다 접근성과 메뉴 선택의 편리함이 강점이다.",
+        "en": "An Akakiko Japanese-fusion chain branch at Julius-Tandler-Platz by Franz-Josefs-Bahnhof. Sushi and maki are convenient for a quick meal, with takeaway and delivery options. Best for practicality rather than destination dining.",
         "de": null
       },
       "personal_review": {
@@ -5645,7 +5663,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://akakiko.at/lokale/julius-tandler-platz"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5657,8 +5677,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "초밥과 일본식 메뉴를 간편하게 선택할 수 있는 아시아 외식 브랜드다. 전통 오스트리아식 메뉴 외에 빠르고 익숙한 식사를 원하는 사람에게 적합하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "프란츠요제프역의 율리우스탄들러플라츠에 자리한 일본식 퓨전 외식 체인 지점. 초밥과 마키 롤, 간편한 일본식 식사를 빠르게 고를 수 있으며 포장·배달도 지원한다. 기차를 이용하거나 9구를 이동할 때 편리한 식사 장소로, 특별한 미식 경험보다 접근성과 메뉴 선택의 편리함이 강점이다.",
+        "story_review": "official-menus-guide-review-2026-11-05",
         "branch_note_ko": "아카키코는 여러 지점이 있는 체인입니다. 지도 링크는 Julius-Tandler-Platz 4 지점을 안내합니다."
       },
       "media": {
@@ -5694,13 +5714,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "고추장 송어 세비체",
+        "한국 현대식 9코스"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "현대적인 한국 요리를 고급 미식 형식으로 선보이는 레스토랑이다. 한식이 비엔나의 현대 미식 문화에서 어떻게 재해석되는지 궁금한 방문객에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Contemporary Korean-inspired fine dining exploring how Korean flavors translate into Vienna's modern restaurant scene.",
+        "ko": "프란츠요제프스카이의 소규모 셰프 테이블에서 약 3시간 동안 9코스 한국 현대 요리를 즐기는 레스토랑. 미쉐린 가이드는 오스트리아산 송어에 고추장과 자몽 사바용, 바질 오일을 더한 세비체를 독창적인 요리로 소개한다. 오픈 키친에서 셰프의 설명을 들으며 한식을 유럽 식재료로 재해석한 특별한 경험을 할 수 있다.",
+        "en": "An intimate Korean contemporary chef's table offering a nine-course meal lasting around three hours. The MICHELIN Guide highlights Austrian trout ceviche with gochujang, grapefruit sabayon and basil oil. A distinctive special-occasion experience with an open kitchen.",
         "de": null
       },
       "personal_review": {
@@ -5712,7 +5735,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://guide.michelin.com/gb/en/vienna/wien/restaurant/addiert"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5724,8 +5749,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "현대적인 한국 요리를 고급 미식 형식으로 선보이는 레스토랑이다. 한식이 비엔나의 현대 미식 문화에서 어떻게 재해석되는지 궁금한 방문객에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "프란츠요제프스카이의 소규모 셰프 테이블에서 약 3시간 동안 9코스 한국 현대 요리를 즐기는 레스토랑. 미쉐린 가이드는 오스트리아산 송어에 고추장과 자몽 사바용, 바질 오일을 더한 세비체를 독창적인 요리로 소개한다. 오픈 키친에서 셰프의 설명을 들으며 한식을 유럽 식재료로 재해석한 특별한 경험을 할 수 있다.",
+        "story_review": "official-menus-guide-review-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -5760,13 +5785,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "그리스식 그릴 요리",
+        "비너 슈니첼",
+        "지중해식 메뉴"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "벨베데레 주변 관광을 마친 후 식사 장소를 찾는 여행자를 위한 후보이다. 대표 요리의 특성은 아직 개별 검증이 필요하다.\n\n새롭게 소개되는 식당일수록 메뉴와 운영 형태가 빠르게 바뀔 수 있다. 현재는 직접 찾아볼 만한 후보로 분류하며, 대표 음식과 실제 인지도는 추가 자료를 확인한 뒤 업데이트할 예정이다.",
-        "en": "A dining option near Belvedere Palace; individual signature dishes have not yet been verified.",
+        "ko": "벨베데레 궁전 바로 옆의 그리스·비엔나 음식 전문점으로, 그리스식 요리와 오스트리아식 전통 메뉴를 함께 제공한다. 궁전과 상부 벨베데레를 관람한 뒤 가까운 곳에서 식사하기 좋으며, 지중해식 요리를 원하는 일행과 슈니첼을 찾는 일행 모두에게 편리하다. 대표 메뉴는 방문 전 최신 메뉴판을 확인하는 편이 좋다.",
+        "en": "A Greek and Viennese restaurant beside Belvedere Palace, offering Mediterranean specialities alongside Austrian classics. Convenient after visiting Upper Belvedere, especially for groups choosing between Greek dishes and schnitzel.",
         "de": null
       },
       "personal_review": {
@@ -5778,7 +5807,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://artcorner.restaurant/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5790,8 +5821,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "벨베데레 주변 관광을 마친 후 식사 장소를 찾는 여행자를 위한 후보이다. 대표 요리의 특성은 아직 개별 검증이 필요하다.\n\n새롭게 소개되는 식당일수록 메뉴와 운영 형태가 빠르게 바뀔 수 있다. 현재는 직접 찾아볼 만한 후보로 분류하며, 대표 음식과 실제 인지도는 추가 자료를 확인한 뒤 업데이트할 예정이다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "벨베데레 궁전 바로 옆의 그리스·비엔나 음식 전문점으로, 그리스식 요리와 오스트리아식 전통 메뉴를 함께 제공한다. 궁전과 상부 벨베데레를 관람한 뒤 가까운 곳에서 식사하기 좋으며, 지중해식 요리를 원하는 일행과 슈니첼을 찾는 일행 모두에게 편리하다. 대표 메뉴는 방문 전 최신 메뉴판을 확인하는 편이 좋다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5822,13 +5853,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "카페 첸트랄 토르테",
+        "비엔나 커피",
+        "홈메이드 케이크"
+      ],
       "price_range": null,
       "website": "https://cafecentral.wien/",
       "reservation_url": null,
       "description": {
-        "ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.\n\n이곳을 소개하는 이유: 비엔나의 대표적인 역사적 카페로, 문학가들이 드나들던 공간과 아름다운 실내, 커피·케이크로 유명하다. 다만 2026년 3월부터 보수공사로 휴업해 재개장 공지를 확인해야 한다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "en": "A historic Viennese café closed for renovation since March 16, 2026. Its stated reopening period was winter 2026, but check the official site for an exact date.",
+        "ko": "1876년 문을 연 비엔나의 상징적인 문학 카페로, 페터 알텐베르크 등 예술가와 지식인이 드나들던 팔레 페르스텔의 화려한 실내가 유명하다. 대표적인 커피와 카페 첸트랄 토르테, 수제 케이크를 즐기는 장소지만 2026년 3월 16일부터 전면 보수공사로 휴업 중이다. 공식 안내는 2026년 겨울 재개장을 예정하고 있으며, 그동안 프라이웅 3의 임시 카페 DECENTRAL을 이용할 수 있다. 방문 직전 재개장 여부를 확인하자.",
+        "en": "An iconic literary café dating to 1876, famed for its ornate Palais Ferstel interior and Viennese coffee and cakes. Closed for renovation since 16 March 2026, with reopening planned for winter 2026. Meanwhile visit its pop-up DECENTRAL at Freyung 3 and check the official reopening notice.",
         "de": "Wegen Generalsanierung seit 16. März 2026 geschlossen. Wiedereröffnung für Winter 2026 vorgesehen; kein genaues Datum bestätigt. Zwischenzeitlich ist das DECENTRAL, Freyung 3/1, geöffnet."
       },
       "personal_review": {
@@ -5847,7 +5882,7 @@
       },
       "operations": {
         "status": "temporarily_closed",
-        "note": "공식 발표: 2026년 겨울 재개장 예정 (정확한 날짜 미정)",
+        "note": "Closed for renovation since 2026-03-16; reopening planned winter 2026. Check official status; DECENTRAL at Freyung 3 available.",
         "reopening": {
           "expected_period": "2026년 겨울",
           "confirmed_date": null,
@@ -5870,8 +5905,8 @@
       ],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비엔나의 대표적인 역사적 카페. 2026년 3월 16일부터 보수공사로 휴업 중이며 공식 홈페이지에 따르면 2026년 겨울 재개장 예정입니다. 정확한 재개장일은 아직 발표되지 않았습니다. 그동안 임시 카페 DECENTRAL(Freyung 3/1, 1010 Wien)을 이용할 수 있습니다.\n\n이곳을 소개하는 이유: 비엔나의 대표적인 역사적 카페로, 문학가들이 드나들던 공간과 아름다운 실내, 커피·케이크로 유명하다. 다만 2026년 3월부터 보수공사로 휴업해 재개장 공지를 확인해야 한다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "1876년 문을 연 비엔나의 상징적인 문학 카페로, 페터 알텐베르크 등 예술가와 지식인이 드나들던 팔레 페르스텔의 화려한 실내가 유명하다. 대표적인 커피와 카페 첸트랄 토르테, 수제 케이크를 즐기는 장소지만 2026년 3월 16일부터 전면 보수공사로 휴업 중이다. 공식 안내는 2026년 겨울 재개장을 예정하고 있으며, 그동안 프라이웅 3의 임시 카페 DECENTRAL을 이용할 수 있다. 방문 직전 재개장 여부를 확인하자.",
+        "story_review": "official-menus-guide-review-2026-11-05",
         "research_sources": [
           "https://www.wien.info/en/dine-drink/coffeehouses/in-the-old-city-348958"
         ],
@@ -5927,13 +5962,15 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "현재 영업·메뉴 재확인 필요"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "잘 알려진 관광 식당만이 아니라 비엔나의 동네 식문화를 경험할 수 있는 후보로 포함했다. 격식 있는 코스 요리보다 편안한 현지 식당의 분위기를 찾는 여행자에게 어울린다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "en": "A neighborhood restaurant for informal Viennese food and a more local atmosphere beyond the tourist hotspots.",
+        "ko": "17구 헤르날저 귀르텔 47에 등록되었던 Hinterholz는 현재 같은 주소에 다른 음식점이 공식적으로 안내되고 있어 기존 식당이 그대로 운영되는지 확인이 필요하다. 검증되지 않은 슈니첼이나 전통식 메뉴를 추천하지 않으며, 여행자가 이 주소를 방문하기 전에 최신 지도와 영업자 정보를 확인하도록 안내한다. 현재는 추천 방문 대상보다는 운영 여부 확인이 필요한 기록으로 취급하는 것이 안전하다.",
+        "en": "Hinterholz was previously listed at Hernalser Gürtel 47, but a different restaurant now advertises that address. Current operation and menu could not be confirmed, so it should not be treated as a verified dining recommendation. Check the current business before visiting.",
         "de": null
       },
       "personal_review": {
@@ -5945,11 +5982,13 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.umamilab.at/"
+        ]
       },
       "operations": {
         "status": "reported_closed",
-        "note": null
+        "note": "Hernalser Gürtel 47 is now advertised by UMAMI LAB; Hinterholz operating status unverified as of 2026-11-05."
       },
       "publication": {
         "approved": false
@@ -5959,8 +5998,8 @@
       ],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "잘 알려진 관광 식당만이 아니라 비엔나의 동네 식문화를 경험할 수 있는 후보로 포함했다. 격식 있는 코스 요리보다 편안한 현지 식당의 분위기를 찾는 여행자에게 어울린다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "17구 헤르날저 귀르텔 47에 등록되었던 Hinterholz는 현재 같은 주소에 다른 음식점이 공식적으로 안내되고 있어 기존 식당이 그대로 운영되는지 확인이 필요하다. 검증되지 않은 슈니첼이나 전통식 메뉴를 추천하지 않으며, 여행자가 이 주소를 방문하기 전에 최신 지도와 영업자 정보를 확인하도록 안내한다. 현재는 추천 방문 대상보다는 운영 여부 확인이 필요한 기록으로 취급하는 것이 안전하다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5994,14 +6033,15 @@
         "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
-        "오스트리아 전통음식"
+        "오스트리아식 돼지고기 구이",
+        "전통 비엔나 요리"
       ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "수도원과 관련된 역사적 공간에서 오스트리아 전통음식을 즐기는 것이 매력이다. 지하 저장고 같은 분위기에서 비엔나의 오래된 식문화에 다가갈 수 있다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "en": "Traditional Austrian dining in a historic cellar-like setting with connections to monastic heritage.",
+        "ko": "쇼텐가세의 오래된 수도원 지하 저장고 분위기에서 식사할 수 있는 역사적인 레스토랑. 멜크 수도원과 관련된 공간으로, 아치형 천장 아래에서 전통 오스트리아 요리를 즐기는 경험이 특징이다. 구시가지에서 단순한 식사보다 역사적인 분위기를 함께 느끼고 싶은 여행객에게 추천한다. 현재 대표 메뉴와 운영시간은 방문 전에 확인하자.",
+        "en": "A historic cellar restaurant on Schottengasse associated with Melk Abbey. Vaulted ceilings and a traditional Austrian atmosphere are its main draw. Choose it for a memorable historic setting, while checking the current menu and opening hours before visiting.",
         "de": null
       },
       "personal_review": {
@@ -6013,7 +6053,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/traditional-viennese-restaurants-351234"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -6025,8 +6067,8 @@
       "tags": [],
       "editorial": {
         "must_visit": true,
-        "selection_reason_ko": "수도원과 관련된 역사적 공간에서 오스트리아 전통음식을 즐기는 것이 매력이다. 지하 저장고 같은 분위기에서 비엔나의 오래된 식문화에 다가갈 수 있다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "쇼텐가세의 오래된 수도원 지하 저장고 분위기에서 식사할 수 있는 역사적인 레스토랑. 멜크 수도원과 관련된 공간으로, 아치형 천장 아래에서 전통 오스트리아 요리를 즐기는 경험이 특징이다. 구시가지에서 단순한 식사보다 역사적인 분위기를 함께 느끼고 싶은 여행객에게 추천한다. 현재 대표 메뉴와 운영시간은 방문 전에 확인하자.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": {
@@ -6082,14 +6124,16 @@
         "checked_on": "2026-11-04"
       },
       "recommended_dishes": [
-        "오스트리아 전통음식"
+        "송아지 비너 슈니첼",
+        "타펠슈피츠",
+        "바삭한 슈텔체"
       ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "유서 깊은 구시가지 건물과 오스트리아 전통 음식으로 알려져 있다. 식사뿐 아니라 비엔나의 오래된 식당 분위기를 경험하고 싶은 방문객에게 추천한다. 대표 메뉴로 오스트리아 전통음식을(를) 먼저 살펴볼 만하다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "en": "A historic Old Town restaurant known for traditional Austrian fare and the atmosphere of old Vienna.",
+        "ko": "비엔나에서 가장 오래된 식당 중 하나로 알려진 구시가지의 역사적인 가스트하우스. 공식 메뉴에는 송아지 슈니첼과 타펠슈피츠, 두 명이 나눠 먹는 바삭한 돼지고기 족발 슈텔체가 있다. 오래된 목재 방과 역사적인 분위기를 즐기며 전통 비엔나 음식을 먹고 싶을 때 추천한다.",
+        "en": "One of Vienna's best-known historic inns, serving classic veal schnitzel, Tafelspitz and crisp pork knuckle for two. Its centuries-old rooms add atmosphere to a traditional Old Town meal.",
         "de": null
       },
       "personal_review": {
@@ -6101,7 +6145,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.griechenbeisl.at/menu/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -6113,8 +6159,8 @@
       "tags": [],
       "editorial": {
         "must_visit": true,
-        "selection_reason_ko": "유서 깊은 구시가지 건물과 오스트리아 전통 음식으로 알려져 있다. 식사뿐 아니라 비엔나의 오래된 식당 분위기를 경험하고 싶은 방문객에게 추천한다. 대표 메뉴로 오스트리아 전통음식을(를) 먼저 살펴볼 만하다.\n\n음식의 맛뿐 아니라 장소의 역사나 주변 여행 동선도 식당을 고르는 이유가 된다. 방문 전에는 해당 식당의 최근 영업 안내와 메뉴를 확인하는 것이 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "비엔나에서 가장 오래된 식당 중 하나로 알려진 구시가지의 역사적인 가스트하우스. 공식 메뉴에는 송아지 슈니첼과 타펠슈피츠, 두 명이 나눠 먹는 바삭한 돼지고기 족발 슈텔체가 있다. 오래된 목재 방과 역사적인 분위기를 즐기며 전통 비엔나 음식을 먹고 싶을 때 추천한다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": {
@@ -6173,13 +6219,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "부야베스",
+        "스테이크 타르타르",
+        "코코뱅",
+        "크렘 브륄레"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "마리아힐퍼 거리의 호텔 MOTTO 7층에 있는 세련된 프랑스풍 레스토랑이다. 부야베스, 스테이크 타르타르, 코코뱅, 크렘 브륄레 같은 익숙한 프랑스 요리를 분위기 좋은 공간에서 즐길 수 있다. 위층 루프톱 테라스의 전망도 매력으로, 합리적인 가격에 특별한 외식 분위기를 경험하고 싶은 여행자에게 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A stylish French-influenced restaurant on the seventh floor of Hotel MOTTO, serving dishes such as bouillabaisse and steak tartare, with a rooftop terrace above.",
+        "ko": "마리아힐퍼 거리 호텔 MOTTO의 7층에 자리한 프랑스풍 레스토랑. 부야베스와 스테이크 타르타르, 코코뱅, 크렘 브륄레 등 고전적인 프랑스 요리를 세련된 공간에서 즐길 수 있다. 식사 뒤 위층의 루프톱 테라스까지 둘러보면 쇼핑 거리의 번잡함과 다른 특별한 시간을 보낼 수 있다.",
+        "en": "A stylish French-inspired restaurant on the seventh floor of Hotel MOTTO. Enjoy classics such as bouillabaisse, steak tartare, coq au vin and crème brûlée, then explore the rooftop terrace above Vienna's shopping district.",
         "de": null
       },
       "personal_review": {
@@ -6193,7 +6244,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/us/en/vienna/wien/restaurant/chez-bernard"
+          "https://guide.michelin.com/us/en/vienna/wien/restaurant/chez-bernard",
+          "https://guide.michelin.com/at/en/vienna/wien/restaurant/chez-bernard"
         ]
       },
       "operations": {
@@ -6213,7 +6265,8 @@
           "city": "Vienna",
           "verified_on": "2026-11-04"
         },
-        "selection_reason_ko": "마리아힐퍼 거리의 호텔 MOTTO 7층에 있는 세련된 프랑스풍 레스토랑이다. 부야베스, 스테이크 타르타르, 코코뱅, 크렘 브륄레 같은 익숙한 프랑스 요리를 분위기 좋은 공간에서 즐길 수 있다. 위층 루프톱 테라스의 전망도 매력으로, 합리적인 가격에 특별한 외식 분위기를 경험하고 싶은 여행자에게 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다."
+        "selection_reason_ko": "마리아힐퍼 거리 호텔 MOTTO의 7층에 자리한 프랑스풍 레스토랑. 부야베스와 스테이크 타르타르, 코코뱅, 크렘 브륄레 등 고전적인 프랑스 요리를 세련된 공간에서 즐길 수 있다. 식사 뒤 위층의 루프톱 테라스까지 둘러보면 쇼핑 거리의 번잡함과 다른 특별한 시간을 보낼 수 있다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -6248,13 +6301,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "버섯 XO 소스 감자 요리",
+        "셰프 초이스 공유 코스",
+        "주말 브런치"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "지역 식재료로 창의적인 요리를 만드는 캐주얼한 비스트로다. 주말 브런치와 저녁에 함께 나누는 셰어링 메뉴가 특징이며, 주로 채소를 중심으로 발효·피클링 기법을 활용한다. 미쉐린은 숯불에 구운 브로콜리와 김치 홀랜다이즈 같은 독특한 조합을 소개한다. 새로운 비엔나 미식을 부담 없이 경험할 수 있다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A casual creative bistro highlighting seasonal vegetables, fermentation and sharing plates; also known for weekend brunch.",
+        "ko": "15구의 활기찬 현대식 비스트로로, 지역 제철 재료를 활용한 창의적인 요리를 여러 명이 나눠 먹는 것이 특징이다. 미쉐린 가이드는 버섯 XO 소스와 절인 꾀꼬리버섯, 고추냉이 거품을 곁들인 감자 요리를 소개한다. 채소 요리와 발효·피클링을 즐기는 사람에게 추천하며 주말에는 별도의 브런치 메뉴도 운영한다.",
+        "en": "A lively modern bistro in the fifteenth district built around seasonal local produce and sharing plates. The MICHELIN Guide highlights confit potatoes with mushroom XO, pickled chanterelles and horseradish foam. Predominantly vegetable-led, with weekend brunch.",
         "de": null
       },
       "personal_review": {
@@ -6268,7 +6325,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/us/en/vienna/wien/restaurant/rosi-1216730"
+          "https://guide.michelin.com/us/en/vienna/wien/restaurant/rosi-1216730",
+          "https://guide.michelin.com/de/de/vienna/wien/restaurant/rosi-1216730"
         ]
       },
       "operations": {
@@ -6288,7 +6346,8 @@
           "city": "Vienna",
           "verified_on": "2026-11-04"
         },
-        "selection_reason_ko": "지역 식재료로 창의적인 요리를 만드는 캐주얼한 비스트로다. 주말 브런치와 저녁에 함께 나누는 셰어링 메뉴가 특징이며, 주로 채소를 중심으로 발효·피클링 기법을 활용한다. 미쉐린은 숯불에 구운 브로콜리와 김치 홀랜다이즈 같은 독특한 조합을 소개한다. 새로운 비엔나 미식을 부담 없이 경험할 수 있다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다."
+        "selection_reason_ko": "15구의 활기찬 현대식 비스트로로, 지역 제철 재료를 활용한 창의적인 요리를 여러 명이 나눠 먹는 것이 특징이다. 미쉐린 가이드는 버섯 XO 소스와 절인 꾀꼬리버섯, 고추냉이 거품을 곁들인 감자 요리를 소개한다. 채소 요리와 발효·피클링을 즐기는 사람에게 추천하며 주말에는 별도의 브런치 메뉴도 운영한다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -6323,13 +6382,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "제철 채식 공유 코스",
+        "호박 리소토",
+        "버섯 미소 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "미쉐린 스타 레스토랑 TIAN의 비스트로 형태로, 지역 제철 식재료와 채식·비건 요리를 편안하게 즐기는 곳이다. 유기농 재료와 채소의 맛에 집중하며, 여러 사람이 나눠 먹는 셰어링 메뉴를 제공한다. 슈피텔베르크 골목 분위기와 안뜰 공간도 좋아, 채식의 수준 높은 가능성을 비교적 합리적인 가격에 경험하는 식당으로 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "The relaxed bistro counterpart to TIAN, with seasonal vegetarian and vegan sharing dishes in the atmospheric Spittelberg district.",
+        "ko": "슈피텔베르크 골목의 채식·비건 비스트로로, 여러 접시를 테이블 가운데 놓고 함께 나누는 제철 코스가 핵심이다. 공식 메뉴에는 호박 리소토와 트럼펫버섯, 미소를 곁들인 버섯 요리, 자두·아마자케 치즈케이크 등이 있다. 지역 유기농 식재료와 편안한 분위기가 매력이며, 미쉐린 스타 TIAN 본점과는 별도의 비스트로다.",
+        "en": "A vegetarian and vegan bistro in Spittelberg serving seasonal sharing menus. Its current menu features pumpkin risotto with trumpet mushrooms, miso mushrooms and plum-amazake cheesecake. A more relaxed sister venue to the Michelin-starred TIAN restaurant.",
         "de": null
       },
       "personal_review": {
@@ -6343,7 +6406,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/at/de/vienna/wien/restaurant/tian-bistro-am-spittelberg"
+          "https://guide.michelin.com/at/de/vienna/wien/restaurant/tian-bistro-am-spittelberg",
+          "https://www.tian-bistro.com/en/"
         ]
       },
       "operations": {
@@ -6363,7 +6427,8 @@
           "city": "Vienna",
           "verified_on": "2026-11-04"
         },
-        "selection_reason_ko": "미쉐린 스타 레스토랑 TIAN의 비스트로 형태로, 지역 제철 식재료와 채식·비건 요리를 편안하게 즐기는 곳이다. 유기농 재료와 채소의 맛에 집중하며, 여러 사람이 나눠 먹는 셰어링 메뉴를 제공한다. 슈피텔베르크 골목 분위기와 안뜰 공간도 좋아, 채식의 수준 높은 가능성을 비교적 합리적인 가격에 경험하는 식당으로 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다."
+        "selection_reason_ko": "슈피텔베르크 골목의 채식·비건 비스트로로, 여러 접시를 테이블 가운데 놓고 함께 나누는 제철 코스가 핵심이다. 공식 메뉴에는 호박 리소토와 트럼펫버섯, 미소를 곁들인 버섯 요리, 자두·아마자케 치즈케이크 등이 있다. 지역 유기농 식재료와 편안한 분위기가 매력이며, 미쉐린 스타 TIAN 본점과는 별도의 비스트로다.",
+        "story_review": "official-menus-guide-review-2026-11-05"
       },
       "media": {
         "cover": null,
