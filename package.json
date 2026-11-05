@@ -15,14 +15,16 @@
     "native:sync": "npm run native:build:web && cap sync",
     "native:open:ios": "cap open ios",
     "native:open:android": "cap open android",
-    "native:build:web": "node scripts/build-native.mjs"
+    "native:build:web": "node scripts/build-native.mjs",
+    "icons:generate": "node scripts/generate-app-icons.mjs"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
     "wrangler": "^4.0.0",
-    "@capacitor/cli": "^7.0.0"
+    "@capacitor/cli": "^7.0.0",
+    "sharp": "^0.34.0"
   },
   "dependencies": {
     "@capacitor/core": "^7.0.0",
