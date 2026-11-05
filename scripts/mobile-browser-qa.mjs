@@ -23,7 +23,7 @@ for (const width of viewports) {
     await page.goto(base+'/index.html',{waitUntil:'domcontentloaded',timeout:35000});
     await page.locator('#bottom button.tab').first().waitFor({timeout:20000});
     for (const [language,expectLang] of [['ko','ko'],['en','en']]) {
-      if (language==='en') await page.locator('.vn-language-toggle').click();
+      if (language==='en') { await page.locator('#bottom button.tab[data-value="home"]').click(); await page.locator('.vn-language-toggle').click(); }
       await page.waitForTimeout(90);
       const actual = await page.locator('html').getAttribute('lang');
       if(actual!==expectLang) issues.push(width+'px: document lang mismatch, expected '+expectLang+', got '+actual);
@@ -50,6 +50,7 @@ for (const width of viewports) {
       }
     }
     // Restoring Korean must update the document and navigation.
+    await page.locator('#bottom button.tab[data-value="home"]').click();
     await page.locator('.vn-language-toggle').click();
     if(await page.locator('html').getAttribute('lang')!=='ko')issues.push(width+'px: KO language restoration failed');
   }catch(error){issues.push(width+'px: browser flow failed: '+String(error.stack||error).slice(0,700));}
