@@ -71,3 +71,11 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Next preflight failure: `scripts/check-cloudflare.mjs` expected Phase 30 in the public title, root HTML identical to public HTML, legacy four-tab labels, an obsolete `m.openPopup()` expression and old zoom clustering. Replaced stale checks with present public deployment invariants; kept root divergence warning and requirement to deploy `public/`.
 - **Confirmed GitHub Actions success:** workflow run [41945707348](https://github.com/reefnine9/Viennanow/actions/runs/41945707348), source commit `a3385b72213d70aecf2f006ecde7451736c1f27b`. Both `npm test` and `npm run check` steps passed. Previous failed runs remain historical and need no deletion.
 - This confirms automated source and preflight gates, **not** actual Cloudflare deployment, real-device appearance, business information or photo licensing.
+
+
+## 10. Phase 9 mobile / bilingual source fix (2026-11-05)
+- Verified successful prior GitHub Actions run 41945758160.
+- Fixed English translation for native `<select><option>` text by removing `option` from the translation walk's skipped-elements selector in **`public/index.html`**. Inputs/textarea and script/style remain excluded, and the language switch still sets the document's `lang` attribute. Source commit: `819ae3503c159b53986d25cd2a6261652f000984`.
+- Added **`tests/phase9-mobile-language.test.mjs`**, covering option translation, accessible labels and attributes, mobile styles, and saved favourites. Commit: `57e828e4a5ed4310dc5f8d664b90d54e903e04ea`.
+- GitHub Actions run [41946303819](https://github.com/reefnine9/Viennanow/actions/runs/41946303819) **passed** `npm test` (108 passing) and `npm run check`.
+- Manual UI gates still open: mobile 320/375/390/430px, verify translated option names in native dropdowns after switching languages, photo fallback, keyboard/touch, map popup, and actual deployed Cloudflare Pages URL. Static tests cannot prove complete English coverage or visual correctness.
