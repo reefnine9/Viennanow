@@ -51,6 +51,10 @@ jobs:
           npm run check:native:release
       - name: Generate Android project
         run: npm run native:add:android
+      - name: Set Google Play minimum Android SDK to 24
+        run: |
+          sed -i -E 's/(minSdkVersion[[:space:]]*=[[:space:]]*)23/\124/' android/variables.gradle
+          grep -Eq 'minSdkVersion[[:space:]]*=[[:space:]]*24' android/variables.gradle || { echo '::error::Could not set minSdkVersion to 24'; exit 1; }
       - name: Sync bundled app
         env:
           VIENNANOW_API_ORIGIN: ${{ inputs.api_origin }}
