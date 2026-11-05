@@ -1,0 +1,59 @@
+name: Native Android build check
+on:
+  workflow_dispatch:
+    inputs:
+      api_origin:
+        description: 'Verified HTTPS production origin for Cloudflare Pages Functions'
+        required: true
+        type: string
+  push:
+    paths:
+      - 'capacitor.config.ts'
+      - 'scripts/build-native.mjs'
+      - 'scripts/generate-app-icons.mjs'
+      - 'functions/api/**'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/native-android.yml'
+jobs:
+  android:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate source
+        run: |
+          npm test
+          npm run check
+          npm run check:stores
+      - name: Generate app icons
+        run: npm run icons:generate
+      - name: Create Android native project
+        run: npm run native:add:android
+      - name: Stage and sync native web assets
+        env:
+          VIENNANOW_API_ORIGIN: ${{ inputs.api_origin }}
+        run: npm run native:sync
+      - name: Build unsigned Android debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+      - name: Upload test APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: viennanow-android-debug-unsigned
+          path: android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 7
