@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 식당 61–70번 한영 소개·대표메뉴·선정 이유 공식 메뉴·미쉐린·한국대사관 자료로 재작성. Kim Shop 테이크아웃과 Kim Kocht 식당 구분.",
     "2026-11-05: 51–60번 10개 식당 한영 소개·대표메뉴·선정이유 재작성. Wrenkh Rauhensteingasse 지점은 채식 점심 매장임을 명시하고 Zur Alten Kaisermühle를 수변 레스토랑으로 정확히 분류하여 설명.",
     "2026-11-05: 식당 41–50번 공식 메뉴·미쉐린 가이드·현지 피자 가이드 대조하여 한영 소개/대표 메뉴/선정 이유 수정; 지점 미확인 정보 및 Google 별점 추측 배제.",
     "2026-11-05: 31–40번 식당 10곳 소개글·대표 메뉴·선정 이유 한영 개별 개선. Gasthaus Quell 공식 메뉴, Meierei 미쉐린 안내, 2026 비엔나 미쉐린 선정 현황 참고. Google 별점은 미검증으로 미기재.",
@@ -4764,13 +4765,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "스시 롤",
+        "야키토리",
+        "규동"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "프라터슈트라세의 인기 일본 음식점으로, 스시 롤·야키토리·규동에 현대적인 감각을 더한다. 오픈 키친의 활기찬 분위기와 점심의 간단한 볼 메뉴, 저녁의 다양한 접시가 특징이다. 비엔나에서 품질 좋은 일본 음식을 비교적 부담 없는 가격에 경험하려는 여행자에게 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A lively Japanese restaurant on Praterstraße, with sushi rolls, yakitori, gyudon and an open-kitchen atmosphere.",
+        "ko": "프라터슈트라세의 활기찬 일본 음식점으로, 오픈 키친에서 스시 롤과 야키토리, 규동을 만드는 모습을 볼 수 있다. 점심에는 덮밥 위주로 간편하게, 저녁에는 여러 작은 접시를 나눠 먹는 방식이 매력이다. 미쉐린 가이드도 예약 수요가 높다고 소개하므로 미리 자리를 확보하는 것이 좋다.",
+        "en": "A lively Japanese restaurant on Praterstraße with an open kitchen preparing sushi rolls, yakitori and gyudon. Lunch bowls are casual, while dinner invites sharing several plates. The MICHELIN Guide notes high demand, so book early.",
         "de": null
       },
       "personal_review": {
@@ -4784,7 +4789,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/at/en/vienna/wien/restaurant/mochi"
+          "https://guide.michelin.com/at/en/vienna/wien/restaurant/mochi",
+          "https://guide.michelin.com/en/vienna/wien/restaurant/mochi"
         ]
       },
       "operations": {
@@ -4797,8 +4803,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "프라터슈트라세의 인기 일본 음식점으로, 스시 롤·야키토리·규동에 현대적인 감각을 더한다. 오픈 키친의 활기찬 분위기와 점심의 간단한 볼 메뉴, 저녁의 다양한 접시가 특징이다. 비엔나에서 품질 좋은 일본 음식을 비교적 부담 없는 가격에 경험하려는 여행자에게 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "프라터슈트라세의 활기찬 일본 음식점으로, 오픈 키친에서 스시 롤과 야키토리, 규동을 만드는 모습을 볼 수 있다. 점심에는 덮밥 위주로 간편하게, 저녁에는 여러 작은 접시를 나눠 먹는 방식이 매력이다. 미쉐린 가이드도 예약 수요가 높다고 소개하므로 미리 자리를 확보하는 것이 좋다.",
+        "story_review": "official-menu-local-guides-2026-11-05",
         "research_sources": [
           "https://www.wien.info/en/dine-drink/markets/praterstrasse-355808"
         ],
@@ -4840,13 +4846,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "후무스",
+        "샥슈카",
+        "팝콘 팔라펠",
+        "함슈카"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "나슈마르크트 시장의 활기찬 분위기 속에서 중동·지중해풍 공유 메뉴를 즐기는 식당이다. 시장 산책과 음식 경험을 한 번에 연결하기 좋다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A popular stop at Naschmarkt for Middle Eastern and Mediterranean sharing plates amid the bustling market.",
+        "ko": "나슈마르크트 한복판에서 이스라엘·중동풍 음식을 즐기는 인기 식당. 부드러운 수제 후무스와 샥슈카, 바삭한 팝콘 팔라펠, 고기와 후무스를 함께 내는 함슈카를 추천한다. 여러 접시를 나누어 먹으며 시장의 활기를 느끼기 좋고, 아침부터 저녁까지 폭넓게 이용할 수 있다.",
+        "en": "A lively Israeli and Middle Eastern restaurant in the Naschmarkt. Share house-made hummus, shakshuka, popcorn falafel or hamshuka while soaking up the market atmosphere. Suitable for breakfast, lunch or dinner.",
         "de": null
       },
       "personal_review": {
@@ -4858,7 +4869,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.nenifood.com/restaurants/naschmarkt"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4870,8 +4883,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "나슈마르크트 시장의 활기찬 분위기 속에서 중동·지중해풍 공유 메뉴를 즐기는 식당이다. 시장 산책과 음식 경험을 한 번에 연결하기 좋다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "나슈마르크트 한복판에서 이스라엘·중동풍 음식을 즐기는 인기 식당. 부드러운 수제 후무스와 샥슈카, 바삭한 팝콘 팔라펠, 고기와 후무스를 함께 내는 함슈카를 추천한다. 여러 접시를 나누어 먹으며 시장의 활기를 느끼기 좋고, 아침부터 저녁까지 폭넓게 이용할 수 있다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": {
@@ -4928,13 +4941,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "스시·사시미",
+        "와규 요리",
+        "제철 일본식 코스"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "고급스러운 공간에서 일본 요리를 차분하게 즐기고 싶은 여행자에게 어울린다. 초밥 외의 구성과 분위기를 고려할 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "Refined Japanese cuisine in an elegant setting, suitable for a more leisurely dining experience.",
+        "ko": "국립오페라극장 가까이에 있는 세련된 일본 레스토랑으로, 스시와 사시미뿐 아니라 와규와 계절 식재료를 활용한 정교한 요리를 제공한다. 일본 요리를 유럽의 현대적인 감각과 접목한 분위기가 특징이다. 캐주얼한 라멘집보다는 특별한 저녁이나 격식 있는 일본식 식사를 원할 때 추천한다.",
+        "en": "An elegant Japanese restaurant near the State Opera offering sushi, sashimi, wagyu and seasonal Japanese dishes with a modern European sensibility. A good choice for a refined dinner rather than a casual noodle stop.",
         "de": null
       },
       "personal_review": {
@@ -4946,7 +4963,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.shiki.at/en/japanese-restaurant-vienna-menu/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4958,8 +4977,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "고급스러운 공간에서 일본 요리를 차분하게 즐기고 싶은 여행자에게 어울린다. 초밥 외의 구성과 분위기를 고려할 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "국립오페라극장 가까이에 있는 세련된 일본 레스토랑으로, 스시와 사시미뿐 아니라 와규와 계절 식재료를 활용한 정교한 요리를 제공한다. 일본 요리를 유럽의 현대적인 감각과 접목한 분위기가 특징이다. 캐주얼한 라멘집보다는 특별한 저녁이나 격식 있는 일본식 식사를 원할 때 추천한다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4992,13 +5011,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돈코츠 시오 라멘",
+        "새우완탕 쇼유 라멘",
+        "비건 버섯 미소 라멘"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "따뜻한 라멘과 일본식 국물 면 요리를 즐기는 곳이다. 오스트리아 요리가 이어지는 여행 중 다른 종류의 한 끼를 찾을 때 추천한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A ramen bar serving comforting Japanese noodle soups, a welcome change from traditional Austrian meals.",
+        "ko": "2구 포어가르텐마르크트의 라멘 전문점으로 면을 매일 직접 만든다. 차슈와 달걀이 들어간 돈코츠 시오, 새우완탕 쇼유, 버섯·두부를 넣은 비건 미소 라멘 등 육수별 선택지가 다양하다. 교자와 가라아게 같은 작은 접시를 곁들이기 좋으며, 일본식 국물 요리를 찾는 여행객에게 추천한다.",
+        "en": "A ramen specialist at Vorgartenmarkt making noodles fresh daily. Choose tonkotsu shio with chashu, shoyu ramen with shrimp wontons or vegan mushroom miso ramen. Gyoza and karaage make good sides.",
         "de": null
       },
       "personal_review": {
@@ -5010,7 +5033,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.gaultmillau.at/news/mochi-ramen-bar-japan-flair-am-vorgartenmarkt"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5022,8 +5047,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "따뜻한 라멘과 일본식 국물 면 요리를 즐기는 곳이다. 오스트리아 요리가 이어지는 여행 중 다른 종류의 한 끼를 찾을 때 추천한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "2구 포어가르텐마르크트의 라멘 전문점으로 면을 매일 직접 만든다. 차슈와 달걀이 들어간 돈코츠 시오, 새우완탕 쇼유, 버섯·두부를 넣은 비건 미소 라멘 등 육수별 선택지가 다양하다. 교자와 가라아게 같은 작은 접시를 곁들이기 좋으며, 일본식 국물 요리를 찾는 여행객에게 추천한다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5053,13 +5078,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "수제 딤섬",
+        "비앙비앙 수타면",
+        "북경오리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "나슈마르크트 인근의 중국 요리 전문점으로, 수제 딤섬과 손으로 뽑은 면, 북경오리가 대표적인 강점이다. 미식 가이드 Falstaff도 이러한 메뉴와 합리적인 가격을 소개한다. 비엔나 여행 중 오스트리아 요리와 다른 풍미를 찾는 사람에게 추천한다.",
-        "en": "Chinese restaurant near Naschmarkt known for handmade dim sum, hand-pulled noodles and Peking duck.",
+        "ko": "나슈마르크트 인근의 중국 요리 전문점으로, 손으로 직접 뽑은 넓은 비앙비앙 면과 수제 딤섬이 특히 유명하다. 껍질을 바삭하게 구운 북경오리는 여러 명이 나눠 먹기 좋은 대표 요리다. Falstaff 2026 가이드도 수제 면과 만두, 북경오리를 높게 평가했다.",
+        "en": "A Chinese restaurant near Naschmarkt known for handmade dumplings, wide hand-pulled biang-biang noodles and crisp Peking duck. Falstaff's 2026 guide particularly praises all three specialities.",
         "de": null
       },
       "personal_review": {
@@ -5072,7 +5101,8 @@
         "status": "partially_verified",
         "last_checked": null,
         "sources": [
-          "https://www.falstaff.com/at/restaurants/red-bowl-wien"
+          "https://www.falstaff.com/at/restaurants/red-bowl-wien",
+          "https://www.falstaff.com/en/restaurants/red-bowl-vienna"
         ]
       },
       "operations": {
@@ -5085,8 +5115,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "나슈마르크트 인근의 중국 요리 전문점으로, 수제 딤섬과 손으로 뽑은 면, 북경오리가 대표적인 강점이다. 미식 가이드 Falstaff도 이러한 메뉴와 합리적인 가격을 소개한다. 비엔나 여행 중 오스트리아 요리와 다른 풍미를 찾는 사람에게 추천한다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "나슈마르크트 인근의 중국 요리 전문점으로, 손으로 직접 뽑은 넓은 비앙비앙 면과 수제 딤섬이 특히 유명하다. 껍질을 바삭하게 구운 북경오리는 여러 명이 나눠 먹기 좋은 대표 요리다. Falstaff 2026 가이드도 수제 면과 만두, 북경오리를 높게 평가했다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5121,13 +5151,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "비빔밥",
+        "찌개·국물 요리",
+        "점심 한식 정식"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "비엔나 여행 중 한국식 밥과 양념이 그리울 때 살펴볼 만한 후보이다. 구체적인 대표 메뉴는 공식 메뉴 확인이 필요하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A Korean food option when you crave familiar rice dishes and seasonings; check the latest menu.",
+        "ko": "벨베데레 근처 렌베크의 아담한 한식당으로, 비빔밥과 다양한 국·찌개 메뉴를 찾는 여행객에게 추천한다. 2016년 문을 연 가족 운영 식당으로, 2026년 주오스트리아 한국대사관도 직접 방문해 정갈한 집밥 같은 한식과 친근한 분위기를 소개했다. 오스트리아 음식이 이어진 여행 중 따뜻한 한식 한 끼가 필요할 때 좋다.",
+        "en": "A small family-run Korean restaurant near Belvedere, known for bibimbap and a broad selection of soups and stews. The Korean Embassy in Austria highlighted its comforting home-style cooking during a 2026 visit.",
         "de": null
       },
       "personal_review": {
@@ -5139,7 +5173,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://overseas.mofa.go.kr/at-ko/brd/m_20389/view.do?seq=1345544"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5151,8 +5187,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비엔나 여행 중 한국식 밥과 양념이 그리울 때 살펴볼 만한 후보이다. 구체적인 대표 메뉴는 공식 메뉴 확인이 필요하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "벨베데레 근처 렌베크의 아담한 한식당으로, 비빔밥과 다양한 국·찌개 메뉴를 찾는 여행객에게 추천한다. 2016년 문을 연 가족 운영 식당으로, 2026년 주오스트리아 한국대사관도 직접 방문해 정갈한 집밥 같은 한식과 친근한 분위기를 소개했다. 오스트리아 음식이 이어진 여행 중 따뜻한 한식 한 끼가 필요할 때 좋다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5185,13 +5221,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "테이블 한국식 바비큐",
+        "불고기",
+        "돌솥비빔밥",
+        "잡채"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "익숙한 한식 한 끼를 찾는 여행자에게 도움이 되는 선택지다. 관광 중 오스트리아 요리와 다른 식사가 당길 때 고려할 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A useful choice for a familiar Korean meal during a Vienna sightseeing trip.",
+        "ko": "슈테판 대성당 인근 싱어슈트라세에서 한국식 테이블 바비큐를 즐길 수 있는 식당. 불고기와 삼겹살을 직접 구워 먹는 메뉴는 2인분부터 주문할 수 있으며 돌솥비빔밥, 잡채, 떡볶이와 다양한 찌개도 있다. 일행과 함께 고기를 나눠 먹거나 제대로 된 한식 한 상을 먹고 싶을 때 추천한다.",
+        "en": "A Korean restaurant near St Stephen's Cathedral, specialising in tabletop barbecue with bulgogi and pork belly (from two portions). Dolsot bibimbap, japchae, tteokbokki and hearty stews make it a versatile choice for groups.",
         "de": null
       },
       "personal_review": {
@@ -5203,7 +5244,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.sura.wien/online-ordering"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5215,8 +5258,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "익숙한 한식 한 끼를 찾는 여행자에게 도움이 되는 선택지다. 관광 중 오스트리아 요리와 다른 식사가 당길 때 고려할 만하다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "슈테판 대성당 인근 싱어슈트라세에서 한국식 테이블 바비큐를 즐길 수 있는 식당. 불고기와 삼겹살을 직접 구워 먹는 메뉴는 2인분부터 주문할 수 있으며 돌솥비빔밥, 잡채, 떡볶이와 다양한 찌개도 있다. 일행과 함께 고기를 나눠 먹거나 제대로 된 한식 한 상을 먹고 싶을 때 추천한다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5249,13 +5292,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돌솥비빔밥",
+        "불고기",
+        "김치찌개",
+        "닭강정"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "한국식 요리를 선택할 수 있는 식당으로 여행 중 익숙한 밥과 반찬이 당길 때 후보가 된다. 대표 메뉴는 최신 정보를 확인해야 한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A Korean restaurant for rice and side dishes; confirm signature items on the current menu.",
+        "ko": "우라니아 근처 비엔나 1구의 한식당으로, 돌솥비빔밥과 불고기, 김치찌개 같은 익숙한 한식을 다양하게 제공한다. 매콤달콤한 닭강정과 만두 등 함께 나눠 먹을 메뉴도 있다. 공식 메뉴에는 바비큐와 찌개, 비빔밥, 채식 선택지가 구분되어 있어 취향이 다른 일행에게도 편리하다.",
+        "en": "A Korean restaurant near Urania with a broad menu of sizzling stone-pot bibimbap, bulgogi, kimchi stew and sweet-spicy fried chicken. Its official menu also includes barbecue and vegetarian options, useful for groups with different tastes.",
         "de": null
       },
       "personal_review": {
@@ -5267,7 +5315,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.yori.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5279,8 +5329,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "한국식 요리를 선택할 수 있는 식당으로 여행 중 익숙한 밥과 반찬이 당길 때 후보가 된다. 대표 메뉴는 최신 정보를 확인해야 한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "우라니아 근처 비엔나 1구의 한식당으로, 돌솥비빔밥과 불고기, 김치찌개 같은 익숙한 한식을 다양하게 제공한다. 매콤달콤한 닭강정과 만두 등 함께 나눠 먹을 메뉴도 있다. 공식 메뉴에는 바비큐와 찌개, 비빔밥, 채식 선택지가 구분되어 있어 취향이 다른 일행에게도 편리하다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5310,13 +5360,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "제철 생선·해산물 코스",
+        "한국식 반찬",
+        "비빔밥"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "한국식 식재료와 조리법을 창의적으로 해석한 요리로 알려져 있다. 익숙한 한식과는 조금 다른 스타일을 경험하고 싶은 여행자에게 어울린다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "Creative cuisine drawing on Korean ingredients and techniques, offering a different interpretation of Korean flavors.",
+        "ko": "한국 출신 셰프 소희 김이 비엔나에서 선보이는 개성 있는 미식 공간. 한국식 양념과 발효 음식의 감각을 생선·해산물 중심의 현대 요리에 접목한다. 일반적인 한식당과 달리 재료에 따라 달라지는 코스와 특별한 점심 구성이 특징이므로, 방문 전 현재 식사 제공 방식과 예약 가능 여부를 확인하는 것이 좋다.",
+        "en": "Chef Sohyi Kim brings Korean flavours, fermentation and seasoning to inventive fish- and seafood-focused cooking. This is not a standard bibimbap restaurant: expect a changing, more personal dining format and check current service and reservations before visiting.",
         "de": null
       },
       "personal_review": {
@@ -5328,7 +5382,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://kimkocht.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5340,8 +5396,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "한국식 식재료와 조리법을 창의적으로 해석한 요리로 알려져 있다. 익숙한 한식과는 조금 다른 스타일을 경험하고 싶은 여행자에게 어울린다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "한국 출신 셰프 소희 김이 비엔나에서 선보이는 개성 있는 미식 공간. 한국식 양념과 발효 음식의 감각을 생선·해산물 중심의 현대 요리에 접목한다. 일반적인 한식당과 달리 재료에 따라 달라지는 코스와 특별한 점심 구성이 특징이므로, 방문 전 현재 식사 제공 방식과 예약 가능 여부를 확인하는 것이 좋다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -5376,13 +5432,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "김치·불고기 마키",
+        "볶음만두",
+        "채식 점심 메뉴"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "한국 음식과 식재료를 만날 수 있는 곳이지만 식당의 운영 형태를 먼저 확인하는 것이 좋다. 식사 가능 여부와 메뉴는 현지 정보로 확인하도록 안내한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "en": "A place associated with Korean food and ingredients; check whether it currently offers sit-down dining.",
+        "ko": "베링거슈트라세 44의 Kim Shop은 소희 김 셰프가 운영하는 식재료 매장 겸 테이크아웃 공간으로, 옆 건물의 Kim Kocht 레스토랑과 다르다. 공개된 메뉴에는 김치·불고기 마키, 볶음만두, 채식·비건 점심 요리와 소스가 포함된다. 좌석이 있는 정식 식사보다는 간단한 점심을 포장하거나 한국풍 식재료를 구입할 때 적합하다.",
+        "en": "Kim Shop at Währinger Straße 44 is chef Sohyi Kim's food shop and takeaway, separate from Kim Kocht next door. Its published menus feature kimchi-bulgogi maki, fried dumplings, vegetarian lunch dishes and sauces. Best for takeaway or shopping rather than a full-service dinner.",
         "de": null
       },
       "personal_review": {
@@ -5394,7 +5454,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://kimkocht.at/wp-content/uploads/2022/10/KimShop_menu_en.pdf"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -5406,8 +5468,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "한국 음식과 식재료를 만날 수 있는 곳이지만 식당의 운영 형태를 먼저 확인하는 것이 좋다. 식사 가능 여부와 메뉴는 현지 정보로 확인하도록 안내한다.\n\n비엔나에는 오스트리아 음식만 있는 것이 아니라 다양한 아시아 음식 문화도 자리 잡고 있다. 여행 중 익숙한 맛이 그립거나 전통 음식과 다른 메뉴를 원할 때 살펴볼 만하다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "베링거슈트라세 44의 Kim Shop은 소희 김 셰프가 운영하는 식재료 매장 겸 테이크아웃 공간으로, 옆 건물의 Kim Kocht 레스토랑과 다르다. 공개된 메뉴에는 김치·불고기 마키, 볶음만두, 채식·비건 점심 요리와 소스가 포함된다. 좌석이 있는 정식 식사보다는 간단한 점심을 포장하거나 한국풍 식재료를 구입할 때 적합하다.",
+        "story_review": "official-menu-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
