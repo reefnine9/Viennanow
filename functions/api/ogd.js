@@ -5,7 +5,7 @@ const LIMIT = 6000;
 const CACHE_SECONDS = 6 * 60 * 60;
 const MAX_RESPONSE_BYTES = 12 * 1024 * 1024;
 const json = (data, status = 200, headers = {}) => new Response(JSON.stringify(data), {
-  status, headers: {'Content-Type': 'application/json; charset=utf-8', 'X-Content-Type-Options': 'nosniff', ...headers}
+  status, headers: {'Content-Type': 'application/json; charset=utf-8', 'X-Content-Type-Options': 'nosniff', 'Access-Control-Allow-Origin': '*', ...headers}
 });
 const ALLOWED = new Set(['wc', 'water', 'stops']);
 export async function onRequestGet({ request, waitUntil }) {
