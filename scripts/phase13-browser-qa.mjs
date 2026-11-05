@@ -44,7 +44,10 @@ try{
  await page.locator('#map .leaflet-marker-icon').first().waitFor({timeout:12000});
  const pins=await page.locator('#map .leaflet-marker-icon').count();
  verify('Real Leaflet markers rendered',pins>0,'count='+pins);
- await page.locator('#map .leaflet-marker-icon').first().click({timeout:8000});
+ // The centre of Vienna has densely overlapping pins at zoom 13; zoom on the target before a true pointer click.
+ await page.evaluate(()=>{const p=CATALOG48[0];map.setView([p.lat,p.lon],18);});
+ await page.waitForTimeout(350);
+ await page.locator('#map .leaflet-marker-icon[title="슈테판 대성당"]').click({timeout:8000});
  await page.locator('.leaflet-popup-content .vn34-sight-card').waitFor({timeout:8000});
  verify('Real marker click displays photo popup',await page.locator('.leaflet-popup-content .vn34-sight-card').count()>0);
  await page.screenshot({path:'artifacts/phase13/sight-map-popup.png',animations:'disabled'});
