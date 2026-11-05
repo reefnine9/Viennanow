@@ -23,6 +23,17 @@ if(app.ok&&!app.body.includes('ViennaNow')){results.push({name:'App identity',ok
 if(live&&app.ok){const marker=app.body.includes('Phase 11: keep save controls tappable');results.push({name:'Latest favourite overlay fix deployed',ok:marker,required:false,detail:marker?'Phase 11 CSS marker present':'Not found: production may be running an earlier build'});}
 const test=await check('Deployed QA page','/qa-smoke.html',{type:'html'});
 const health=await check('Deployment diagnostics page','/deploy-check.html',{type:'html'});
+for(const [path,label,marker] of [
+ ['/privacy.html','Privacy and location information','viennanow_p9'],
+ ['/legal.html','Legal and operator draft','Impressum 미완성'],
+ ['/photo-credits.html','Photo attribution page','Photo Credits']
+]){
+ const response=await check(label,path,{type:'html',required:!live});
+ if(response.ok){
+  const match=String(response.body).includes(marker);
+  results.push({name:label+' expected content',path,ok:match,required:!live,detail:match?'Current page marker present':'Page is missing or deployment is stale'});
+ }
+}
 const manifest=await check('Photo manifest','/photo_manifest.json',{type:'json'});
 if(manifest.ok){
  const count=Array.isArray(manifest.body)?manifest.body.length:null;
