@@ -20,6 +20,7 @@ async function check(name,path,{type='text',required=true}={}){
 }
 const app=await check('ViennaNow entrypoint','/index.html',{type:'html'});
 if(app.ok&&!app.body.includes('ViennaNow')){results.push({name:'App identity',ok:false,required:true,detail:'Unexpected app content'});}
+if(live&&app.ok){const marker=app.body.includes('Phase 11: keep save controls tappable');results.push({name:'Latest favourite overlay fix deployed',ok:marker,required:false,detail:marker?'Phase 11 CSS marker present':'Not found: production may be running an earlier build'});}
 const test=await check('Deployed QA page','/qa-smoke.html',{type:'html'});
 const health=await check('Deployment diagnostics page','/deploy-check.html',{type:'html'});
 const manifest=await check('Photo manifest','/photo_manifest.json',{type:'json'});
@@ -38,7 +39,7 @@ if(live){
  await check('Cloudflare toilet sample diagnostics','/api/diagnostics?layer=wc',{type:'json',required:false});
 }
 await mkdir('artifacts/deploy-qa',{recursive:true});
-await writeFile('artifacts/deploy-qa/report.json',JSON.stringify({base,mode:live?'remote':'local',checkedAt:new Date().toISOString(),results},null,2));
+await writeFile('artifacts/deploy-qa/'+(live?'production':'local')+'-report.json',JSON.stringify({base,mode:live?'remote':'local',checkedAt:new Date().toISOString(),results},null,2));
 for(const r of results)console.log((r.ok?'PASS ':'FAIL ')+r.name+' '+(r.status??'')+' '+r.detail);
 const failures=results.filter(x=>x.required&&!x.ok);
 console.log('Phase 12 '+(live?'remote':'local')+' verification: '+(results.length-failures.length)+'/'+results.length+' checks without required failure; '+failures.length+' required failures');
