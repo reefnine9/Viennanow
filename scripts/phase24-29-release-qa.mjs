@@ -25,7 +25,7 @@ for(const [engineName,engine] of [['chromium',chromium],['webkit',webkit]]){
    await page.locator('#main button[data-act="vn-course-detail"]').first().click();
    const detail=page.locator('#main .vn36-detail');
    check(engineName+' '+width+' route map button',await detail.locator('button[data-act="vn-course-near-map"]').count()===1);
-   const stats=await page.evaluate(()=>{const c=VN_COURSES36;return {routes:c.length,missing:c.map(p=>({id:p.id,total:p.stops.length,mapped:vnCoursePoints41(p).length})).filter(p=>p.mapped<p.total)}});
+   const stats=await page.evaluate(()=>{const c=VN_COURSES36;return {routes:c.length,missing:c.map(p=>({id:p.id,title:p.enTitle||p.title,total:p.stops.length,mapped:vnCoursePoints41(p).length,unmapped:p.stops.filter(stop=>!vnCoursePoint41(stop))})).filter(p=>p.mapped<p.total)}});
    gaps.push({engineName,width,stats});
    await detail.locator('button[data-act="vn-course-near-map"]').click();
    const routeSelect=page.locator('#near-plan-choice');
