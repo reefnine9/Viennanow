@@ -131,7 +131,7 @@ for(const feature of [
  '.leaflet-tile-pane{z-index:200',
  '.leaflet-marker-pane{z-index:600',
  '.leaflet-popup-pane{z-index:700',
- "m.openPopup()",
+ "marker.openPopup()",
  "m.bindPopup(nearSightPopup32(p)"
 ])assert.ok(index.includes(feature),'Popup visibility regression: '+feature);
 console.log('Map popup visibility gate OK: pane z-index and click-open handler present.');
@@ -142,7 +142,7 @@ assert.equal(new Set(coords48.map(x=>x.id)).size,48,'Map IDs must be unique');
 assert.equal(coords48.filter(x=>Number.isFinite(x.lat)&&Number.isFinite(x.lon)).length,48,'Every sightseeing point requires coordinates');
 assert.equal(coords48.filter(x=>x.coordinate_status==='approximate_unverified').length,32,'Provisional coordinates require explicit status labels');
 for(const c of coords48)assert.ok(c.lat>48.1&&c.lat<48.35&&c.lon>16.2&&c.lon<16.55,'Outside plausible Vienna location: '+c.id);
-for(const feature of ['function mapSights48()','function vn61SightRecords()','function refreshSightClusters48()',"map.on('zoomend',refreshSightClusters48)",'vn35-cluster','vn35-pin-note','nearSightPopup32(p)']){
+for(const feature of ['function mapSights48()','function vn61SightRecords()','function refreshSightClusters48()',"vn61SightRecords().forEach(p=>",'vn35-cluster','vn35-pin-note','nearSightPopup32(p)']){
  assert.ok(index.includes(feature),'48-attraction map missing: '+feature);
 }
 const embeddedStart=index.indexOf('const CATALOG48=');
