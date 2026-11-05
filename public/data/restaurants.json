@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 51–60번 10개 식당 한영 소개·대표메뉴·선정이유 재작성. Wrenkh Rauhensteingasse 지점은 채식 점심 매장임을 명시하고 Zur Alten Kaisermühle를 수변 레스토랑으로 정확히 분류하여 설명.",
     "2026-11-05: 식당 41–50번 공식 메뉴·미쉐린 가이드·현지 피자 가이드 대조하여 한영 소개/대표 메뉴/선정 이유 수정; 지점 미확인 정보 및 Google 별점 추측 배제.",
     "2026-11-05: 31–40번 식당 10곳 소개글·대표 메뉴·선정 이유 한영 개별 개선. Gasthaus Quell 공식 메뉴, Meierei 미쉐린 안내, 2026 비엔나 미쉐린 선정 현황 참고. Google 별점은 미검증으로 미기재.",
     "2026-11-05: 맛집 1–10 및 21–30번 총 20곳 한국어·영어 설명/추천 이유/대표 메뉴 개별 개선. 공개 메뉴·미식 가이드 참고; 구글 평점 미검증으로 수치 입력하지 않음.",
@@ -3980,13 +3981,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "이베리코 플루마",
+        "스페인식 토르티야",
+        "크레마 카탈라나"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "구시가지의 작고 활기찬 스페인 타파스 비스트로다. 이베리코 햄·만체고 치즈·감자 토르티야·크레마 카탈라나 같은 여러 지역의 작은 접시를 함께 나누는 즐거움이 있다. 스페인 와인도 매력이며, 미쉐린 가이드는 인기가 높아 사전 예약을 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A lively Spanish tapas bistro in the Old Town serving small plates such as Iberian ham, Manchego and tortilla alongside Spanish wine.",
+        "ko": "1구 곤차가가세의 작고 활기찬 스페인 타파스 비스트로. 이베리코 돼지고기 플루마와 감자 토르티야, 크레마 카탈라나를 여러 명이 나눠 먹기 좋다. 스페인 와인과 높은 천장의 바 분위기도 매력이다. 미쉐린 가이드가 인기를 언급하며 사전 예약을 권하는 곳이다.",
+        "en": "A lively Spanish tapas bistro in the first district, known for Iberico pluma, potato tortilla and crema catalana. Spanish wines and a buzzy bar atmosphere make it ideal for sharing plates; the MICHELIN Guide advises booking.",
         "de": null
       },
       "personal_review": {
@@ -4013,8 +4018,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "구시가지의 작고 활기찬 스페인 타파스 비스트로다. 이베리코 햄·만체고 치즈·감자 토르티야·크레마 카탈라나 같은 여러 지역의 작은 접시를 함께 나누는 즐거움이 있다. 스페인 와인도 매력이며, 미쉐린 가이드는 인기가 높아 사전 예약을 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "1구 곤차가가세의 작고 활기찬 스페인 타파스 비스트로. 이베리코 돼지고기 플루마와 감자 토르티야, 크레마 카탈라나를 여러 명이 나눠 먹기 좋다. 스페인 와인과 높은 천장의 바 분위기도 매력이다. 미쉐린 가이드가 인기를 언급하며 사전 예약을 권하는 곳이다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05",
         "michelin": {
           "distinction": "Bib Gourmand",
           "year": 2026,
@@ -4054,13 +4059,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "채식 점심 뷔페",
+        "카라멜라이즈드 양배추 파스타",
+        "일일 채식 메뉴"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "채소와 제철 재료 중심의 식사 문화에 관심 있는 여행자를 위한 곳이다. 오스트리아 요리를 다양한 식재료의 관점에서 즐길 수 있다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "Vegetable-forward cooking with an emphasis on seasonal produce and a fresh take on Austrian cuisine.",
+        "ko": "라우엔슈타인가세 12의 '작은 Wrenkh'는 정식 저녁 레스토랑이 아니라 평일 점심에 운영하는 채식 간편식 매장이다. 카라멜라이즈드 양배추 파스타와 타임 렌틸콩·훈제두부 등 차가운 채식 메뉴에 매일 바뀌는 따뜻한 요리와 수프를 곁들인다. 가벼운 채식 점심에 추천하며, 저녁 코스 식사는 별도 Bauernmarkt 10 지점을 확인해야 한다.",
+        "en": "The 'little Wrenkh' at Rauhensteingasse 12 is a weekday lunchtime vegetarian takeaway and buffet, not the main evening restaurant. Try caramelised cabbage pasta, thyme lentils with smoked tofu and changing hot dishes and soup. The full-service restaurant is separately located at Bauernmarkt 10.",
         "de": null
       },
       "personal_review": {
@@ -4072,7 +4081,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://wrenkh-wien.at/site/de/restaurant2"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4084,8 +4095,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "채소와 제철 재료 중심의 식사 문화에 관심 있는 여행자를 위한 곳이다. 오스트리아 요리를 다양한 식재료의 관점에서 즐길 수 있다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "라우엔슈타인가세 12의 '작은 Wrenkh'는 정식 저녁 레스토랑이 아니라 평일 점심에 운영하는 채식 간편식 매장이다. 카라멜라이즈드 양배추 파스타와 타임 렌틸콩·훈제두부 등 차가운 채식 메뉴에 매일 바뀌는 따뜻한 요리와 수프를 곁들인다. 가벼운 채식 점심에 추천하며, 저녁 코스 식사는 별도 Bauernmarkt 10 지점을 확인해야 한다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4115,13 +4126,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "유기농 보스나",
+        "비건 버섯 소시지",
+        "수제 감자칩"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "비엔나의 현대적인 소시지 가판대 문화에 관심 있는 사람에게 어울린다. 짧은 관광 동선에서도 지역의 거리 음식을 즐길 수 있다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A contemporary take on Vienna's traditional sausage-stand culture, convenient for a quick snack.",
+        "ko": "8구 파일가세의 유기농 인증 소시지 가판대. 잘츠부르크식 보스나와 지역 생산자의 소시지, 비건 느타리버섯 소시지 보스나가 특징이다. 수제 감자칩과 살사 베르데도 추천할 만하다. 비엔나 전통 길거리 음식을 현대적인 재료와 방식으로 즐기고 싶을 때 어울린다.",
+        "en": "An organic-certified sausage stand in Josefstadt serving Salzburg-style Bosna, regional sausages and a vegan oyster-mushroom Bosna. House-made potato chips with salsa verde add a creative twist to Vienna street food.",
         "de": null
       },
       "personal_review": {
@@ -4133,7 +4148,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.falstaff.com/de/listings/streetfood-guide-die-besten-wuerstelstaende-in-wien"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4145,8 +4162,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비엔나의 현대적인 소시지 가판대 문화에 관심 있는 사람에게 어울린다. 짧은 관광 동선에서도 지역의 거리 음식을 즐길 수 있다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "8구 파일가세의 유기농 인증 소시지 가판대. 잘츠부르크식 보스나와 지역 생산자의 소시지, 비건 느타리버섯 소시지 보스나가 특징이다. 수제 감자칩과 살사 베르데도 추천할 만하다. 비엔나 전통 길거리 음식을 현대적인 재료와 방식으로 즐기고 싶을 때 어울린다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4181,13 +4198,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "트러플 감자튀김",
+        "비프 타르타르",
+        "오징어 튀김"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "전통 소시지 가판대에 창의적인 곁들임과 요리를 더한 것으로 알려져 있다. 비엔나 길거리 음식의 새로운 흐름을 보여주는 후보이다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A creative take on the classic sausage stand, with inventive accompaniments and street-food dishes.",
+        "ko": "뵈르제플라츠의 고급형 소시지 가판대로, 소시지뿐 아니라 셰프가 만든 트러플 감자튀김과 브리오슈를 곁들인 비프 타르타르, 바삭한 오징어 튀김이 특히 유명하다. 직접 발효한 김치 등 곁들임도 개성 있다. 평범한 핫도그보다 새로운 비엔나 길거리 미식을 맛보고 싶을 때 추천한다.",
+        "en": "A gourmet sausage stand at Börseplatz, famous as much for truffle fries, beef tartare on brioche and crisp calamari as for its sausages. House-fermented accompaniments bring an inventive twist to classic street food.",
         "de": null
       },
       "personal_review": {
@@ -4199,7 +4220,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/de/essen-trinken/wiener-kueche/wuerstelstand-366402"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4211,8 +4234,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "전통 소시지 가판대에 창의적인 곁들임과 요리를 더한 것으로 알려져 있다. 비엔나 길거리 음식의 새로운 흐름을 보여주는 후보이다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "뵈르제플라츠의 고급형 소시지 가판대로, 소시지뿐 아니라 셰프가 만든 트러플 감자튀김과 브리오슈를 곁들인 비프 타르타르, 바삭한 오징어 튀김이 특히 유명하다. 직접 발효한 김치 등 곁들임도 개성 있다. 평범한 핫도그보다 새로운 비엔나 길거리 미식을 맛보고 싶을 때 추천한다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05",
         "research_sources": [
           "https://www.wien.info/de/essen-trinken/wiener-kueche/wuerstelstand-366402"
         ],
@@ -4249,13 +4272,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "빅 마마 케제크라이너",
+        "핫도그",
+        "소시지"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "오래된 비엔나 소시지 가판대 문화를 경험하는 대표적인 선택이다. 한밤의 간식이나 간단한 한 끼로 현지식 소시지를 주문해 보고 싶을 때 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A longstanding Vienna sausage stand, suitable for a late-night snack or a quick taste of local sausages.",
+        "ko": "1928년에 시작한 비엔나의 유서 깊은 소시지 가판대. 치즈가 듬뿍 들어간 대형 케제크라이너 '빅 마마'가 상징적인 메뉴이며 다양한 핫도그도 인기다. 늦은 시간 간단히 먹기 좋은 현지 명소로, 오랜 비엔나 소시지 문화 자체를 경험하고 싶을 때 추천한다.",
+        "en": "A historic Vienna sausage stand dating to 1928. Its signature Big Mama is an oversized cheese-filled Käsekrainer, joined by a wide range of hot dogs. A classic stop for a substantial late-night snack.",
         "de": null
       },
       "personal_review": {
@@ -4267,7 +4294,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/viennese-cuisine/hot-dog-stands-348128"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4279,8 +4308,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "오래된 비엔나 소시지 가판대 문화를 경험하는 대표적인 선택이다. 한밤의 간식이나 간단한 한 끼로 현지식 소시지를 주문해 보고 싶을 때 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "1928년에 시작한 비엔나의 유서 깊은 소시지 가판대. 치즈가 듬뿍 들어간 대형 케제크라이너 '빅 마마'가 상징적인 메뉴이며 다양한 핫도그도 인기다. 늦은 시간 간단히 먹기 좋은 현지 명소로, 오랜 비엔나 소시지 문화 자체를 경험하고 싶을 때 추천한다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": {
@@ -4334,13 +4363,18 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "트러플 감자튀김",
+        "스매시 버거",
+        "케제크라이너",
+        "쿠반 도그"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A quick street-food option; confirm the sausage varieties, snacks and operating hours before visiting.",
+        "ko": "슈타트할레와 베스트반호프 근처의 현대적인 길거리 음식 가판대. 트러플 감자튀김과 스매시 버거, 케제크라이너 외에 프레첼 빵을 활용한 '쿠반 도그' 같은 개성 있는 메뉴가 있다. 공연을 보고 난 뒤 든든한 간식을 먹거나 새로운 스타일의 비엔나 소시지 문화를 경험하기 좋다.",
+        "en": "A modern street-food stand near Stadthalle and Westbahnhof, serving truffle fries, smash burgers, Käsekrainer and the inventive Cuban Dog in a pretzel roll. Handy for a substantial bite after an event.",
         "de": null
       },
       "personal_review": {
@@ -4352,7 +4386,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.falstaff.com/at/listings/streetfood-guide-die-besten-wuerstelstaende-in-wien"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4364,8 +4400,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "슈타트할레와 베스트반호프 근처의 현대적인 길거리 음식 가판대. 트러플 감자튀김과 스매시 버거, 케제크라이너 외에 프레첼 빵을 활용한 '쿠반 도그' 같은 개성 있는 메뉴가 있다. 공연을 보고 난 뒤 든든한 간식을 먹거나 새로운 스타일의 비엔나 소시지 문화를 경험하기 좋다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4397,13 +4433,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "부렌부어스트",
+        "케제크라이너",
+        "레버케제 빵"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A quick street-food stop for Vienna's sausage-stand culture; verify current offerings and opening hours.",
+        "ko": "비엔나 중앙묘지 2번 문 옆에 자리한 독특한 소시지 가판대. 부렌부어스트와 케제크라이너, 레버케제를 넣은 빵처럼 전통적인 메뉴를 지역 식재료로 제공한다. 묘지의 역사적인 분위기와 비엔나 특유의 유머가 만나는 장소로, 중앙묘지를 방문할 때 함께 들르기 좋다.",
+        "en": "A distinctive sausage stand beside Gate 2 of Vienna's Central Cemetery, serving traditional Burenwurst, Käsekrainer and Leberkäse rolls. Its setting makes it a memorable stop during a cemetery visit.",
         "de": null
       },
       "personal_review": {
@@ -4415,7 +4455,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://ehschowuascht.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4427,8 +4469,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "비엔나 중앙묘지 2번 문 옆에 자리한 독특한 소시지 가판대. 부렌부어스트와 케제크라이너, 레버케제를 넣은 빵처럼 전통적인 메뉴를 지역 식재료로 제공한다. 묘지의 역사적인 분위기와 비엔나 특유의 유머가 만나는 장소로, 중앙묘지를 방문할 때 함께 들르기 좋다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4460,13 +4502,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "망갈리차 돼지고기 브라트부어스트",
+        "지역 맥주"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A casual Vienna sausage stand; check the latest menu and hours before heading over.",
+        "ko": "기술박물관 뒤편의 작지만 개성 있는 소시지 가판대. 망갈리차 돼지고기와 그라나 치즈를 사용한 자체 개발 브라트부어스트가 특징이며 지역 양조장의 맥주와 함께 즐기기 좋다. 중심가에서 일부러 찾아가야 하는 위치지만, 특별한 소시지 맛을 원하는 여행객에게 추천한다.",
+        "en": "A specialist sausage stand behind the Technical Museum, noted for its own Bratwurst made with Mangalitza pork and Grana cheese. Pair it with local beer; worth seeking out for a less conventional Viennese sausage.",
         "de": null
       },
       "personal_review": {
@@ -4478,7 +4523,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.falstaff.com/at/listings/streetfood-guide-die-besten-wuerstelstaende-in-wien"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4490,8 +4537,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "짧은 관광 일정 중 간편하게 비엔나의 길거리 음식 문화를 경험할 수 있는 선택지로 포함했다. 현장에서 판매하는 소시지·간식 종류와 운영시간은 방문 전에 확인하는 것이 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "기술박물관 뒤편의 작지만 개성 있는 소시지 가판대. 망갈리차 돼지고기와 그라나 치즈를 사용한 자체 개발 브라트부어스트가 특징이며 지역 양조장의 맥주와 함께 즐기기 좋다. 중심가에서 일부러 찾아가야 하는 위치지만, 특별한 소시지 맛을 원하는 여행객에게 추천한다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -4526,13 +4573,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "치즈 레버케제",
+        "트러플·포르치니 레버케제",
+        "칠리 레버케제"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "레버케제를 따뜻한 빵에 넣어 먹는 오스트리아식 간식으로 알려져 있다. 슈니첼 외에 비엔나의 간편한 현지 식사를 맛볼 만하다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "Known for warm bread rolls filled with Austrian Leberkäse, a satisfying alternative to schnitzel.",
+        "ko": "오페라극장 인근에서 오스트리아식 레버케제를 따뜻한 빵에 넣어 먹는 전문점. 치즈를 섞은 종류부터 트러플·포르치니, 칠리, 구운 양파 등 다양한 맛을 고를 수 있다. 짧은 시간에 든든하게 먹기 좋고, 소시지와는 다른 비엔나의 대표 간편식을 경험할 수 있다.",
+        "en": "A Leberkäse specialist near the State Opera, serving thick slices of baked Austrian meat loaf in fresh rolls. Choose from cheese, truffle-porcini, chilli or roasted-onion varieties for a quick and filling local snack.",
         "de": null
       },
       "personal_review": {
@@ -4544,7 +4595,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.leberkaspepi.at/sorten.php"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4556,8 +4609,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "레버케제를 따뜻한 빵에 넣어 먹는 오스트리아식 간식으로 알려져 있다. 슈니첼 외에 비엔나의 간편한 현지 식사를 맛볼 만하다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "오페라극장 인근에서 오스트리아식 레버케제를 따뜻한 빵에 넣어 먹는 전문점. 치즈를 섞은 종류부터 트러플·포르치니, 칠리, 구운 양파 등 다양한 맛을 고를 수 있다. 짧은 시간에 든든하게 먹기 좋고, 소시지와는 다른 비엔나의 대표 간편식을 경험할 수 있다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": {
@@ -4614,13 +4667,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "시그니처 폭립",
+        "송아지 비너 슈니첼",
+        "구운 생선"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "알테 도나우 물가 풍경을 즐기며 여유로운 식사를 할 수 있다. 관광 중심가에서 벗어나 강변 산책과 저녁을 함께 계획하기 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "en": "A relaxed waterfront restaurant on the Old Danube, combining a meal with views and a riverside walk.",
+        "ko": "알테 도나우 물가에 자리한 수변 레스토랑으로, 정원과 테라스에서 물가 풍경을 바라보며 식사할 수 있다. 공식 메뉴의 시그니처 폭립과 송아지 슈니첼, 구운 생선이 대표적인 선택이다. 도심 관광보다 여유로운 야외 식사를 원하는 여행객에게 어울리며, 겨울에는 휴업 기간이 있어 방문 전 확인해야 한다.",
+        "en": "A waterfront restaurant on the Alte Donau with a leafy garden and terraces overlooking the water. Signature ribs, veal Wiener schnitzel and grilled fish feature on the menu. Ideal for a leisurely outing; check seasonal winter closures.",
         "de": null
       },
       "personal_review": {
@@ -4632,7 +4689,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.kaisermuehle.at/speisekarte.pdf"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -4644,8 +4703,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "알테 도나우 물가 풍경을 즐기며 여유로운 식사를 할 수 있다. 관광 중심가에서 벗어나 강변 산책과 저녁을 함께 계획하기 좋다.\n\n거리 음식의 매력은 긴 식사 시간을 따로 내지 않아도 비엔나의 일상을 가까이에서 맛볼 수 있다는 점이다. 산책하거나 대중교통을 이용하는 사이 짧은 식사로 계획하기 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "알테 도나우 물가에 자리한 수변 레스토랑으로, 정원과 테라스에서 물가 풍경을 바라보며 식사할 수 있다. 공식 메뉴의 시그니처 폭립과 송아지 슈니첼, 구운 생선이 대표적인 선택이다. 도심 관광보다 여유로운 야외 식사를 원하는 여행객에게 어울리며, 겨울에는 휴업 기간이 있어 방문 전 확인해야 한다.",
+        "story_review": "official-menus-local-food-guides-2026-11-05"
       },
       "media": {
         "cover": {
