@@ -2820,6 +2820,13 @@ function vnTranslateText(text){
  result=result.replace(/(\d+)분/g,(_,n)=>n+' min');
  for(const [ko,en] of [['반나절','Half day'],['하루','Full day'],['연중','Year-round'],['적음','Light'],['보통','Moderate'],['많음','High'],['맛집','Dining'],['식료품','Groceries'],['출발:','Start:'],['도착:','Finish:'],['사진:','Photo:'],['코스','route']])result=result.replace(new RegExp('(^|[ ·:])'+ko+'(?=$|[ ·,])','g'),(_,sp)=>sp+en);
 
+ // Phase 25 editorial QA: mixed-language course labels and select option durations.
+ for(const [ko,en] of Object.entries({
+  '반나절':'Half day','하루':'Full day','황실 거처':'Imperial Apartments',
+  '또는':'or','국립도서관':'National Library','호어 마르크트':'Hoher Markt',
+  '주변':'area','공연일':'performance days','월~토':'Mon–Sat',
+  '시시 박물관':'Sisi Museum','예술사박물관':'Kunsthistorisches Museum'
+ }))result=result.split(ko).join(en);
  return prefix+result+suffix;
 }
 function vnTranslateDocument(){
