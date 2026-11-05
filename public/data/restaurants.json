@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 식당 41–50번 공식 메뉴·미쉐린 가이드·현지 피자 가이드 대조하여 한영 소개/대표 메뉴/선정 이유 수정; 지점 미확인 정보 및 Google 별점 추측 배제.",
     "2026-11-05: 31–40번 식당 10곳 소개글·대표 메뉴·선정 이유 한영 개별 개선. Gasthaus Quell 공식 메뉴, Meierei 미쉐린 안내, 2026 비엔나 미쉐린 선정 현황 참고. Google 별점은 미검증으로 미기재.",
     "2026-11-05: 맛집 1–10 및 21–30번 총 20곳 한국어·영어 설명/추천 이유/대표 메뉴 개별 개선. 공개 메뉴·미식 가이드 참고; 구글 평점 미검증으로 수치 입력하지 않음.",
     "2026-11-05: 맛집 목록 11–20번 10곳의 반복 소개문 제거 및 메뉴·리뷰 기반 한국어/영어 소개글과 선정 이유 갱신. 구글 평점은 검증되지 않은 수치를 입력하지 않음.",
@@ -3259,13 +3260,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "현대식 테이스팅 코스",
+        "오픈 키친 창작 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "현대적인 고급 코스 요리와 정교한 접객을 경험할 수 있는 비엔나의 미식 장소다. 여유 있는 저녁을 계획할 때 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Refined modern tasting menus and attentive service, suited to an unhurried upscale evening.",
+        "ko": "미쉐린 1스타를 받은 현대 오스트리아 파인다이닝. 주방의 움직임을 가까이에서 볼 수 있는 오픈 키친과 정교한 테이스팅 코스가 매력이다. 제철 식재료를 창의적으로 구성한 여러 접시를 천천히 즐기는 곳으로, 특별한 저녁에 비엔나의 현대 미식을 경험하고 싶을 때 추천한다.",
+        "en": "A one-MICHELIN-star restaurant with an open kitchen and inventive tasting menus built around seasonal produce. Choose APRON for a leisurely special-occasion dinner focused on contemporary Austrian gastronomy.",
         "de": null
       },
       "personal_review": {
@@ -3277,7 +3281,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3289,8 +3295,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "현대적인 고급 코스 요리와 정교한 접객을 경험할 수 있는 비엔나의 미식 장소다. 여유 있는 저녁을 계획할 때 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "미쉐린 1스타를 받은 현대 오스트리아 파인다이닝. 주방의 움직임을 가까이에서 볼 수 있는 오픈 키친과 정교한 테이스팅 코스가 매력이다. 제철 식재료를 창의적으로 구성한 여러 접시를 천천히 즐기는 곳으로, 특별한 저녁에 비엔나의 현대 미식을 경험하고 싶을 때 추천한다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3329,13 +3335,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "깜짝 테이스팅 코스",
+        "오징어·훈제장어 카르보나라"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "창의적인 코스 구성과 예상치 못한 맛의 조합으로 알려진 현대 레스토랑이다. 전통 레스토랑과 다른 비엔나의 미식 장면을 보여준다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "An intimate contemporary restaurant with imaginative tasting menus and surprising flavor combinations.",
+        "ko": "9구의 오래된 선술집을 개조한 편안한 분위기의 미쉐린 1스타 레스토랑. 메뉴를 미리 모두 공개하지 않는 깜짝 코스가 특징이며, 미쉐린 가이드는 파스타 면 없이 오징어와 훈제장어, 파르메산으로 만든 카르보나라를 독창적인 요리의 예로 소개한다. 와인 또는 무알코올 페어링도 가능하다.",
+        "en": "A relaxed one-MICHELIN-star restaurant in a former ninth-district pub. Its surprise tasting menu plays with unexpected textures; the MICHELIN Guide highlights a pasta-free carbonara made with calamari, smoked eel and Parmesan. Wine and non-alcoholic pairings are offered.",
         "de": null
       },
       "personal_review": {
@@ -3347,7 +3356,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://guide.michelin.com/en/vienna/wien/restaurant/pramerl-the-wolf"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3359,8 +3370,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "창의적인 코스 구성과 예상치 못한 맛의 조합으로 알려진 현대 레스토랑이다. 전통 레스토랑과 다른 비엔나의 미식 장면을 보여준다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "9구의 오래된 선술집을 개조한 편안한 분위기의 미쉐린 1스타 레스토랑. 메뉴를 미리 모두 공개하지 않는 깜짝 코스가 특징이며, 미쉐린 가이드는 파스타 면 없이 오징어와 훈제장어, 파르메산으로 만든 카르보나라를 독창적인 요리의 예로 소개한다. 와인 또는 무알코올 페어링도 가능하다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3397,13 +3408,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "현대 프랑스식 7코스",
+        "근대 토르텔로니",
+        "와인 페어링"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "현대적인 분위기의 파인다이닝으로, 세련된 메뉴와 공간을 함께 즐기는 식사 경험이 강점이다. 기념일 저녁을 고려할 만하다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "A sophisticated modern fine-dining experience with elegant surroundings, suitable for a special occasion.",
+        "ko": "링슈트라세의 호텔 더 아마우리스에 자리한 미쉐린 1스타 레스토랑. 셰프 알렉산드루 시몬은 프랑스 요리의 기본기에 현대적인 조합을 더한다. 계절에 따라 바뀌는 7코스에는 근대 토르텔로니와 성게 비스크 같은 창작 요리가 등장하며, 정교한 와인 페어링과 우아한 실내가 특별한 저녁을 완성한다.",
+        "en": "A one-MICHELIN-star dining room at The Amauris hotel. Chef Alexandru Simon combines classical French technique with modern ideas in a changing seven-course menu, with creations such as Swiss-chard tortelloni and sea-urchin bisque. Elegant interiors and wine pairings suit a celebration.",
         "de": null
       },
       "personal_review": {
@@ -3415,7 +3430,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://guide.michelin.com/gb/en/vienna/wien/restaurant/glasswing?millesime=65gpb9"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3427,8 +3444,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "현대적인 분위기의 파인다이닝으로, 세련된 메뉴와 공간을 함께 즐기는 식사 경험이 강점이다. 기념일 저녁을 고려할 만하다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "링슈트라세의 호텔 더 아마우리스에 자리한 미쉐린 1스타 레스토랑. 셰프 알렉산드루 시몬은 프랑스 요리의 기본기에 현대적인 조합을 더한다. 계절에 따라 바뀌는 7코스에는 근대 토르텔로니와 성게 비스크 같은 창작 요리가 등장하며, 정교한 와인 페어링과 우아한 실내가 특별한 저녁을 완성한다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3468,13 +3485,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "셰프 초이스 제철 코스",
+        "유기농·바이오다이내믹 와인"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "와인과 제철 식재료를 중심으로 한 현대적인 비스트로다. 정교한 음식과 와인 페어링에 관심은 있지만 딱딱한 고급 레스토랑보다는 편안한 분위기를 선호하는 여행자에게 잘 맞는다. 미쉐린 빕 구르망 선정으로 합리적인 가격의 미식 경험을 제공하는 식당으로 소개된다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A relaxed modern wine bistro built around seasonal ingredients and thoughtful wine pairings; recognized by the Michelin Guide for good value.",
+        "ko": "9구의 역사적인 건물에 자리한 와인 비스트로로, 지역 농가의 제철 재료와 유기농·바이오다이내믹 와인을 함께 즐길 수 있다. 대표적인 선택은 주방이 그날 재료에 맞춰 구성하는 '셰프 초이스' 코스다. 미쉐린 빕 구르망에 선정된 곳으로, 격식보다 음식과 와인의 조합을 중시하는 여행객에게 추천한다.",
+        "en": "A Bib Gourmand wine bistro in a historic ninth-district building, combining seasonal produce from local farms with organic and biodynamic wines. Its Chef's Choice menu is the signature option, ideal for a relaxed, food-and-wine-focused evening.",
         "de": null
       },
       "personal_review": {
@@ -3487,7 +3507,8 @@
         "status": "verified",
         "last_checked": "2026-11-04",
         "sources": [
-          "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand"
+          "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
+          "https://www.mast.wine/en/menu.html"
         ]
       },
       "operations": {
@@ -3500,8 +3521,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "와인과 제철 식재료를 중심으로 한 현대적인 비스트로다. 정교한 음식과 와인 페어링에 관심은 있지만 딱딱한 고급 레스토랑보다는 편안한 분위기를 선호하는 여행자에게 잘 맞는다. 미쉐린 빕 구르망 선정으로 합리적인 가격의 미식 경험을 제공하는 식당으로 소개된다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "9구의 역사적인 건물에 자리한 와인 비스트로로, 지역 농가의 제철 재료와 유기농·바이오다이내믹 와인을 함께 즐길 수 있다. 대표적인 선택은 주방이 그날 재료에 맞춰 구성하는 '셰프 초이스' 코스다. 미쉐린 빕 구르망에 선정된 곳으로, 격식보다 음식과 와인의 조합을 중시하는 여행객에게 추천한다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05",
         "michelin": {
           "distinction": "Bib Gourmand",
           "year": 2026,
@@ -3541,13 +3562,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "나폴리식 마르게리타",
+        "부팔라 피자",
+        "피자 톰볼라"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "나폴리 스타일 피자와 활기찬 분위기를 즐기기 좋은 식당이다. 오스트리아 전통 음식을 먹은 뒤 다른 캐주얼한 메뉴를 찾을 때 매력적이다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "A lively restaurant for Neapolitan-style pizza, perfect when you want something different from Austrian classics.",
+        "ko": "6구 굼펜도르퍼 거리의 인기 피자집으로, 거대한 디스코볼처럼 생긴 독특한 장작 화덕이 상징이다. 부드럽고 가장자리가 부푼 나폴리식 피자를 만들며 부팔라 모차렐라 피자와 네 구역의 토핑이 다른 '피자 톰볼라'가 재미있는 선택이다. 활기찬 분위기에서 가볍게 식사하기 좋다.",
+        "en": "A lively Neapolitan pizzeria in the sixth district, instantly recognisable by its giant disco-ball-shaped wood-fired oven. Try buffalo-mozzarella pizza or Pizza Tombola, with four different topping combinations.",
         "de": null
       },
       "personal_review": {
@@ -3559,7 +3584,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.disco-volante.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3571,8 +3598,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "나폴리 스타일 피자와 활기찬 분위기를 즐기기 좋은 식당이다. 오스트리아 전통 음식을 먹은 뒤 다른 캐주얼한 메뉴를 찾을 때 매력적이다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "6구 굼펜도르퍼 거리의 인기 피자집으로, 거대한 디스코볼처럼 생긴 독특한 장작 화덕이 상징이다. 부드럽고 가장자리가 부푼 나폴리식 피자를 만들며 부팔라 모차렐라 피자와 네 구역의 토핑이 다른 '피자 톰볼라'가 재미있는 선택이다. 활기찬 분위기에서 가볍게 식사하기 좋다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -3602,13 +3629,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "나폴리식 화덕 피자",
+        "이탈리아 와인"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "피자 반죽과 화덕 조리에 중점을 둔 이탈리아식 피자 전문점이다. 간단하지만 음식 자체의 완성도를 중시하는 식사를 찾는 사람에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "An Italian pizzeria focused on carefully prepared dough and wood-fired cooking.",
+        "ko": "8구 요제프슈타트의 나폴리식 피자 전문점. 부드러운 가운데와 부풀어 오른 가장자리를 살린 피자 도우, 엄선한 이탈리아 재료와 와인의 조합에 집중한다. '50 Top Pizza Europe' 순위에 이름을 올린 곳으로, 비엔나에서 피자 자체의 완성도를 중요하게 생각한다면 추천한다.",
+        "en": "A Josefstadt enopizzeria specialising in airy, soft-centred Neapolitan pizza paired with Italian wines. Its appearances in the 50 Top Pizza Europe rankings make it an appealing destination for serious pizza lovers.",
         "de": null
       },
       "personal_review": {
@@ -3620,7 +3650,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://topwien.at/essen-trinken/pizza-wien/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3632,8 +3664,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "피자 반죽과 화덕 조리에 중점을 둔 이탈리아식 피자 전문점이다. 간단하지만 음식 자체의 완성도를 중시하는 식사를 찾는 사람에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "8구 요제프슈타트의 나폴리식 피자 전문점. 부드러운 가운데와 부풀어 오른 가장자리를 살린 피자 도우, 엄선한 이탈리아 재료와 와인의 조합에 집중한다. '50 Top Pizza Europe' 순위에 이름을 올린 곳으로, 비엔나에서 피자 자체의 완성도를 중요하게 생각한다면 추천한다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -3668,13 +3700,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "나폴리식 피자",
+        "마르게리타",
+        "토핑 피자"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "오스트리아 전통 음식에 이어 이탈리아식 피자를 즐기고 싶을 때 살펴볼 만한 곳이다. 캐주얼한 식사를 원하는 일행에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "A casual Italian pizza option for groups looking for a break from Austrian traditional food.",
+        "ko": "쇤브룬 궁전이 있는 13구 히칭 지역에서 피자를 먹고 싶다면 주목할 만한 곳이다. 나폴리식 도우와 다양한 토핑을 내세우며 2026년 Falstaff 독자 투표에서 높은 평가를 받았다. 궁전 방문 전후 전통 오스트리아 요리 대신 캐주얼한 이탈리아 음식을 즐기기에 좋다.",
+        "en": "A well-regarded Neapolitan-style pizzeria in Hietzing, near the Schönbrunn area. It topped the 2026 Falstaff readers' pizza vote, making it a good casual alternative to Austrian food after sightseeing.",
         "de": null
       },
       "personal_review": {
@@ -3686,7 +3722,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://topwien.at/essen-trinken/pizza-wien/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3698,8 +3736,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "오스트리아 전통 음식에 이어 이탈리아식 피자를 즐기고 싶을 때 살펴볼 만한 곳이다. 캐주얼한 식사를 원하는 일행에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "쇤브룬 궁전이 있는 13구 히칭 지역에서 피자를 먹고 싶다면 주목할 만한 곳이다. 나폴리식 도우와 다양한 토핑을 내세우며 2026년 Falstaff 독자 투표에서 높은 평가를 받았다. 궁전 방문 전후 전통 오스트리아 요리 대신 캐주얼한 이탈리아 음식을 즐기기에 좋다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -3729,13 +3767,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "나폴리식 마르게리타",
+        "부팔라 모차렐라 피자"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "피자를 중심으로 한 이탈리아식 식사에 관심 있는 여행자를 위한 후보다. 구체적인 화덕 메뉴와 지점 정보는 최신 내용을 확인해야 한다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "A pizza-centered Italian restaurant; check its latest wood-fired menu and location details.",
+        "ko": "비엔나에 여러 지점을 운영하는 나폴리식 피자 브랜드. 마르게리타와 부팔라 모차렐라를 올린 피자처럼 간결한 재료의 조합을 즐기기 좋다. 도심 관광 중 접근하기 쉬운 지점을 고를 수 있다는 것이 장점이지만, 앱에서 방문할 지점의 주소와 영업시간을 따로 확인하는 것이 좋다.",
+        "en": "A multi-location Viennese pizzeria specialising in Neapolitan-style pies such as Margherita and buffalo mozzarella. Convenient for a casual meal, but check the exact branch and its opening hours before visiting.",
         "de": null
       },
       "personal_review": {
@@ -3747,7 +3788,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://topwien.at/essen-trinken/pizza-wien/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3759,8 +3802,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "피자를 중심으로 한 이탈리아식 식사에 관심 있는 여행자를 위한 후보다. 구체적인 화덕 메뉴와 지점 정보는 최신 내용을 확인해야 한다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "비엔나에 여러 지점을 운영하는 나폴리식 피자 브랜드. 마르게리타와 부팔라 모차렐라를 올린 피자처럼 간결한 재료의 조합을 즐기기 좋다. 도심 관광 중 접근하기 쉬운 지점을 고를 수 있다는 것이 장점이지만, 앱에서 방문할 지점의 주소와 영업시간을 따로 확인하는 것이 좋다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -3792,13 +3835,17 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "리가토니 알라 노르마",
+        "화덕 피자 콰트로 스타지오니",
+        "티라미수"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "이탈리아식 파스타와 레스토랑 분위기를 즐기고 싶을 때 고려할 만하다. 오스트리아식 메뉴와 다른 저녁 식사를 계획하는 여행자에게 소개한다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "An Italian restaurant for pasta and a relaxed evening away from Vienna's traditional food scene.",
+        "ko": "1985년부터 구시가지 쇤라테른가세에서 운영해 온 이탈리아 레스토랑. 공식 메뉴에는 가지와 페코리노를 넣은 리가토니 알라 노르마, 화덕 피자 콰트로 스타지오니, 구운 새우와 티라미수 등이 있다. 파스타·피자·해산물 중 취향대로 고르기 좋아 가족이나 여러 명이 함께 식사할 때 어울린다.",
+        "en": "An Italian restaurant in the Old Town since 1985. Its menu spans Rigatoni alla Norma with aubergine and pecorino, wood-fired Quattro Stagioni pizza, grilled prawns and tiramisu. A versatile choice for families and mixed tastes.",
         "de": null
       },
       "personal_review": {
@@ -3810,7 +3857,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://rossini-ristorante.at/speisekarte/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3822,8 +3871,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "이탈리아식 파스타와 레스토랑 분위기를 즐기고 싶을 때 고려할 만하다. 오스트리아식 메뉴와 다른 저녁 식사를 계획하는 여행자에게 소개한다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "1985년부터 구시가지 쇤라테른가세에서 운영해 온 이탈리아 레스토랑. 공식 메뉴에는 가지와 페코리노를 넣은 리가토니 알라 노르마, 화덕 피자 콰트로 스타지오니, 구운 새우와 티라미수 등이 있다. 파스타·피자·해산물 중 취향대로 고르기 좋아 가족이나 여러 명이 함께 식사할 때 어울린다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -3858,13 +3907,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "비텔로 토나토",
+        "오징어 튀김",
+        "사프란 리소토"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "세련된 이탈리아식 레스토랑의 분위기와 지중해풍 식사에 관심 있는 여행자를 위한 선택지다. 특별한 식사 분위기를 찾는 사람에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "en": "A stylish Italian restaurant with Mediterranean flavors and a sophisticated atmosphere.",
+        "ko": "투흘라우벤 거리의 세련된 이탈리아 레스토랑으로, 미니멀한 실내와 도심 테라스가 특징이다. 참치 소스를 곁들인 송아지고기 비텔로 토나토와 바삭한 오징어 튀김이 대표 메뉴이며 사프란 리소토도 추천할 만하다. 쇼핑 도중 분위기 있는 점심이나 특별한 저녁을 계획할 때 잘 어울린다.",
+        "en": "A stylish Italian restaurant on Tuchlauben with a minimalist interior and lively terrace. House favourites include vitello tonnato, fried calamari and saffron risotto. Ideal for an elegant lunch or dinner in central Vienna.",
         "de": null
       },
       "personal_review": {
@@ -3876,7 +3929,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://guide.michelin.com/en/vienna/wien/restaurant/fabios"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3888,8 +3943,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "세련된 이탈리아식 레스토랑의 분위기와 지중해풍 식사에 관심 있는 여행자를 위한 선택지다. 특별한 식사 분위기를 찾는 사람에게 어울린다.\n\n오스트리아식 메뉴가 이어진 일정에서 분위기를 바꾸고 싶을 때 좋은 선택지다. 함께 가는 사람의 취향에 맞춰 피자·파스타·작은 접시 등 메뉴를 비교해 보면 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "투흘라우벤 거리의 세련된 이탈리아 레스토랑으로, 미니멀한 실내와 도심 테라스가 특징이다. 참치 소스를 곁들인 송아지고기 비텔로 토나토와 바삭한 오징어 튀김이 대표 메뉴이며 사프란 리소토도 추천할 만하다. 쇼핑 도중 분위기 있는 점심이나 특별한 저녁을 계획할 때 잘 어울린다.",
+        "story_review": "official-menus-michelin-local-guides-2026-11-05"
       },
       "media": {
         "cover": null,
