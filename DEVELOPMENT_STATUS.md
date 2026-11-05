@@ -9,6 +9,8 @@ Purpose: project handoff between short ChatGPT conversations. Check GitHub HEAD 
 - Cloudflare Pages-oriented static/mobile web app, with Pages Functions under `functions/api/`; deployment success is not implied by GitHub commits.
 - `package.json`: version 0.24.1; scripts `npm test`, `npm run check`, and `npm run dev`.
 - Main application includes `index.html`, `app.js`; `public/` is identified as the deployed output in README.
+- IMPORTANT SOURCE DIVERGENCE: GitHub reports root `index.html` at ~495 KB and `public/index.html` at ~756 KB (2026-11-05). These are not identical. Inspect `public/index.html` first for UI changes and confirm whether root sources generate the public file; never copy root `index.html` blindly over the deployed version.
+- `public/qa-smoke.html` exists in the published output; its presence is not proof of a successful live execution.
 - GitHub HEAD observed at the start of this document: `9c196ab4949cb9dce13ec416c09d71d13a238f98` ("Phase 4: add reproducible QA smoke-check page for release checks"). This hash becomes historical after the next commit.
 - `QA_RELEASE_AUDIT_2026-11-05.md` reports 48 sightseeing records and 82 restaurant records, but this is an audit snapshot, not a live venue validation.
 
