@@ -1,0 +1,49 @@
+name: Generate ViennaNow Android upload key (encrypted backup)
+on:
+  workflow_dispatch:
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Verify required protected secrets
+        env:
+          STORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          BACKUP_PASS: ${{ secrets.ANDROID_KEY_BACKUP_PASSWORD }}
+        run: |
+          test -n "$STORE_PASS" || { echo "::error::Missing ANDROID_KEYSTORE_PASSWORD"; exit 1; }
+          test -n "$KEY_PASS" || { echo "::error::Missing ANDROID_KEY_PASSWORD"; exit 1; }
+          test -n "$BACKUP_PASS" || { echo "::error::Missing ANDROID_KEY_BACKUP_PASSWORD"; exit 1; }
+          test "${#BACKUP_PASS}" -ge 16 || { echo "::error::Backup password must be at least 16 characters"; exit 1; }
+      - name: Generate upload key and encrypted backup
+        env:
+          STORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          BACKUP_PASS: ${{ secrets.ANDROID_KEY_BACKUP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          umask 077
+          keytool -genkeypair -noprompt \
+            -keystore "$RUNNER_TEMP/viennanow-upload.jks" \
+            -storetype JKS \
+            -alias viennanow-upload \
+            -keyalg RSA -keysize 3072 -validity 10000 \
+            -dname "CN=ViennaNow Android Upload, OU=ViennaNow, O=ViennaNow, L=Vienna, C=AT" \
+            -storepass "$STORE_PASS" -keypass "$KEY_PASS"
+          openssl enc -aes-256-cbc -pbkdf2 -iter 250000 -salt \
+            -in "$RUNNER_TEMP/viennanow-upload.jks" \
+            -out "$RUNNER_TEMP/viennanow-upload.jks.enc" \
+            -pass env:BACKUP_PASS
+          test -s "$RUNNER_TEMP/viennanow-upload.jks.enc"
+          rm -f "$RUNNER_TEMP/viennanow-upload.jks"
+          echo "Encrypted key backup generated. Download the artifact and keep the backup password separately."
+      - name: Upload encrypted backup only
+        uses: actions/upload-artifact@v4
+        with:
+          name: viennanow-encrypted-upload-key-backup
+          path: ${{ runner.temp }}/viennanow-upload.jks.enc
+          if-no-files-found: error
+          retention-days: 7
