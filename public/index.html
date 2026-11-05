@@ -2616,8 +2616,10 @@ function vnSwipeNeighbor(kind,direction){
  }
  return null;
 }
+let vnSwipeSettling=false;
 function vnSwipeClear(g){
  if(!g)return;
+ if(g.timer){clearTimeout(g.timer);g.timer=null;}
  if(g.preview?.isConnected)g.preview.remove();
  if(g.target?.isConnected){g.target.style.transform='';g.target.style.transition='';g.target.style.willChange='';}
  if(g.parent?.isConnected){g.parent.style.overflow=g.oldOverflow;g.parent.style.position=g.oldPosition;}
@@ -2653,6 +2655,7 @@ function vnSwipeShift(g,offset){
 }
 function vnSwipeFinish(g,commit){
  if(!g?.preview){vnSwipeClear(g);return;}
+ vnSwipeSettling=true;
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  const ms=reduce?0:230;
  const easing='transform '+ms+'ms cubic-bezier(.22,.74,.26,1)';
@@ -2660,12 +2663,14 @@ function vnSwipeFinish(g,commit){
  vnSwipeShift(g,commit?-g.direction*g.width:0);
  const done=()=>{
   vnSwipeClear(g);
+  vnSwipeSettling=false;
   if(commit)act(g.action,{dataset:{value:String(g.direction)}});
  };
- if(ms)window.setTimeout(done,ms+20);else done();
+ if(ms)g.timer=window.setTimeout(done,ms+20);else done();
 }
 document.addEventListener('touchstart',e=>{
- if(vnLiveSwipe||e.touches.length!==1)return;
+ if(vnLiveSwipe||vnSwipeSettling||e.touches.length!==1)return;
+ if(e.target.closest('input,textarea,select,[contenteditable="true"]'))return;
  const target=e.target.closest('.vn-page-swipe,.vn-course-swipe');
  if(!target)return;
  const kind=target.dataset.swipeKind;
@@ -2677,7 +2682,8 @@ document.addEventListener('touchstart',e=>{
   preview:null,active:false,vertical:false,oldOverflow:parent.style.overflow,oldPosition:parent.style.position};
 }, {passive:true});
 document.addEventListener('touchmove',e=>{
- const g=vnLiveSwipe;if(!g||e.touches.length!==1||!g.target.isConnected)return;
+ const g=vnLiveSwipe;if(!g)return;
+ if(e.touches.length!==1||!g.target.isConnected){vnLiveSwipe=null;vnSwipeClear(g);return;}
  const t=e.touches[0],dx=t.clientX-g.x,dy=t.clientY-g.y;
  if(g.vertical)return;
  if(!g.active){
@@ -2689,7 +2695,7 @@ document.addEventListener('touchmove',e=>{
  }
  g.dx=dx;g.dy=dy;
  const dir=dx<0?1:-1;
- if(!vnSwipePrepare(g,dir))return;
+ if(!vnSwipePrepare(g,dir)){vnSwipeClear(g);g.active=false;return;}
  vnSwipeShift(g,Math.max(-g.width,Math.min(g.width,dx)));
 }, {passive:true});
 document.addEventListener('touchend',e=>{
@@ -2697,8 +2703,8 @@ document.addEventListener('touchend',e=>{
  if(!g.active||!g.preview){vnSwipeClear(g);return;}
  const t=e.changedTouches[0],dx=t.clientX-g.x,dy=t.clientY-g.y;
  const duration=Math.max(1,performance.now()-g.at);
- const commit=Math.abs(dx)>Math.max(65,g.width*.22)&&Math.abs(dx)>Math.abs(dy)*1.1
-  ||Math.abs(dx)>38&&Math.abs(dx)/duration>.65&&Math.abs(dx)>Math.abs(dy)*1.4;
+ const commit=(Math.abs(dx)>Math.max(65,g.width*.22)&&Math.abs(dx)>Math.abs(dy)*1.1)
+  ||(Math.abs(dx)>38&&Math.abs(dx)/duration>.65&&Math.abs(dx)>Math.abs(dy)*1.4);
  vnSwipeFinish(g,commit);
 }, {passive:true});
 document.addEventListener('touchcancel',()=>{const g=vnLiveSwipe;vnLiveSwipe=null;if(g)vnSwipeFinish(g,false);}, {passive:true});
