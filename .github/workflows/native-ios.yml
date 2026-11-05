@@ -1,0 +1,31 @@
+name: Native iOS simulator build check
+on:
+  workflow_dispatch:
+    inputs:
+      api_origin:
+        description: 'Verified HTTPS production origin for Cloudflare Pages Functions'
+        required: true
+        type: string
+jobs:
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies and generate artwork
+        run: |
+          npm install --no-audit --no-fund
+          npm run icons:generate
+          npm run native:add:ios
+      - name: Sync native app
+        env:
+          VIENNANOW_API_ORIGIN: ${{ inputs.api_origin }}
+        run: npm run native:sync
+      - name: Build for iOS Simulator without signing
+        run: |
+          xcodebuild -workspace ios/App/App.xcworkspace -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
