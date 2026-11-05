@@ -103,3 +103,16 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Production HTML contains the latest Phase 11 heart-overlay CSS marker, so the fix is **confirmed deployed** (this checks the marker's presence, not visual/touch success on a physical phone).
 - Local and production HTTP reports are written separately to `artifacts/deploy-qa/local-report.json` and `production-report.json`; test artifacts are attached to the GitHub Actions run.
 - Still not a full production release certification: browser QA blocks external images/maps, external photo links and licences are unverified, route-status JSON does not prove route success, HTTP 200 for toilet sample diagnostics does not establish completeness, mobile Safari/Android devices and real live map pin interactions remain untested.
+
+
+## 14. Phase 13 — actual map popup / restaurant favourite browser QA (2026-11-05)
+- Created `scripts/phase13-browser-qa.mjs` using Chromium and the actual Leaflet 1.9.4 library supplied from npm, while remote map tiles and photos are blocked so that interactions are reproducible. The script clicks real Leaflet markers and popup buttons (not merely inspecting handler source), and tests restaurant saved state through localStorage, reload and Plan, as well as detail open/close.
+- Discovered that closely overlapping central Vienna map pins can intercept a tap at initial zoom. The test now zooms on a known sight before clicking. This means tap interactions work for a separated pin, **not** that all crowded pins are convenient to select. Consider clustering/spiderfying overlapping markers in a future release.
+- **Confirmed** in [run 41967791053](https://github.com/reefnine9/Viennanow/actions/runs/41967791053) at commit `972ea9945dfb985dd968db10ebd87f77f46a25b2`: **12/12 checks passed**.
+- True iPhone Safari/Android Chrome map gestures and externally fetched basemap/photo behaviour remain outside this controlled Chromium test.
+
+## 15. Phase 14 — image attribution metadata and readiness audit (2026-11-05)
+- Added `scripts/phase14-media-audit.mjs`. Audit: **48/48** sightseeing records include photo credit/creator/license/source metadata and all 82 restaurants are accounted for. **21/82** restaurant cover records are marked commercially reviewed; **61/82 are not**.
+- In [run 41967791053](https://github.com/reefnine9/Viennanow/actions/runs/41967791053), metadata audit had zero blocking errors but three initial warnings caused by incorrectly flagging valid `CC0 1.0` licence labels (A09, A11, A12). Corrected the license-recognition rule in subsequent commit `696b65102ed53f293da10161638465f408fb5a05`.
+- Source and deployed HTTP checks in that run passed, including production endpoint checks; media **licence text/URL metadata does not constitute legal clearance**, and external image delivery was not live-probed by this audit.
+- Manual release gate still open: check original licences/attribution obligations and share-alike conditions, test individual Wikimedia image URLs and failures in a live browser, verify actual venue/photo matching, check hotel/restaurant legal content and current hours, run Safari iPhone + Chrome Android touchscreen tests and inspect screenshot artifacts. Do not claim release-certified status from automated checks alone.
