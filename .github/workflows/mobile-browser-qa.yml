@@ -50,6 +50,8 @@ jobs:
         run: node scripts/phase22-cross-browser-qa.mjs
       - name: Phase 23 small-screen and enlarged-text QA
         run: node scripts/phase23-responsive-a11y-qa.mjs
+      - name: Phase 25 English content audit report
+        run: node scripts/phase25-language-audit.mjs
       - name: Phases 24-29 bilingual release and mobile UI checks
         run: node scripts/phase24-29-release-qa.mjs
       - name: Phase 12 local HTTP asset integrity
@@ -80,4 +82,5 @@ jobs:
             artifacts/phase22/
             artifacts/phase23/
             artifacts/release-qa/
+            artifacts/language-audit/
           if-no-files-found: warn
