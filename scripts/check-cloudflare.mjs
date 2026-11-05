@@ -153,3 +153,38 @@ const embedded=JSON.parse(index.slice(embeddedStart+'const CATALOG48='.length,em
 assert.equal(embedded.length,48,'Embedded catalogue needs 48 records');
 for(const c of embedded){const source=coords48.find(x=>x.id===c.id);assert.equal(c.lat,source.lat,'Embedded map latitude out of sync: '+c.id);assert.equal(c.lon,source.lon,'Embedded map longitude out of sync: '+c.id);}
 console.log('Phase 35 sightseeing map gate OK: 48 coordinates, 32 marked provisional and marker clustering.');
+
+
+// Release Phase 31: restaurant content, bilingual UI and store-readiness preflight.
+// This is a static regression gate; passing it does NOT replace browser/device testing.
+const restaurantsPath=path.join(pub,'data','restaurants.json');
+assert.ok(fs.existsSync(restaurantsPath),'Release: missing restaurant catalog');
+const restaurantDb=JSON.parse(fs.readFileSync(restaurantsPath,'utf8'));
+assert.ok(Array.isArray(restaurantDb.restaurants),'Release: invalid restaurant catalog');
+assert.equal(restaurantDb.restaurants.length,82,'Release: expected 82 restaurant entries');
+const restaurantIds=new Set();
+for(const [i,r] of restaurantDb.restaurants.entries()){
+ const label='#'+(i+1)+' '+(r.name?.de||'unnamed');
+ assert.ok(r.id&&!restaurantIds.has(r.id),'Release: duplicate/missing restaurant ID '+label);
+ restaurantIds.add(r.id);
+ assert.ok(r.name?.de?.trim(),'Release: missing restaurant name '+label);
+ for(const lang of ['ko','en'])assert.ok(r.description?.[lang]?.trim(),'Release: missing '+lang+' restaurant description '+label);
+ assert.ok(Array.isArray(r.recommended_dishes)&&r.recommended_dishes.length,'Release: missing dishes '+label);
+ assert.ok(r.location&&typeof r.location==='object','Release: missing location object '+label);
+ if(r.location.lat!=null||r.location.lng!=null){
+  assert.ok(Number.isFinite(r.location.lat)&&Number.isFinite(r.location.lng),'Release: incomplete coordinates '+label);
+  assert.ok(r.location.lat>48.05&&r.location.lat<48.4&&r.location.lng>16.1&&r.location.lng<16.7,'Release: restaurant coordinates outside Vienna '+label);
+ }
+}
+for(const token of ['vn64-food-slide','savedRestaurants','vn48FoodMapLink','vnTranslateDocument','state.contentLang','reported_closed','temporarily_closed']){
+ assert.ok(index.includes(token),'Release: restaurant/UI regression '+token);
+}
+const privacy=fs.readFileSync(path.join(pub,'privacy.html'),'utf8');
+const privacyDraft=/Pre-release draft|출시 전 검토 초안|not a final GDPR/i.test(privacy);
+const withoutCoords=restaurantDb.restaurants.filter(r=>!Number.isFinite(r.location?.lat)||!Number.isFinite(r.location?.lng));
+const withoutPhotos=restaurantDb.restaurants.filter(r=>!r.media?.cover?.commercial_use_verified);
+console.log('Phase 31 static QA OK: 82 unique restaurants, KO/EN descriptions, dishes, UI controls and coordinate bounds.');
+if(withoutCoords.length)console.warn('RELEASE BLOCKER TO REVIEW: '+withoutCoords.length+' restaurant entries lack verified map coordinates: '+withoutCoords.map(r=>r.name.de).join(', '));
+if(withoutPhotos.length)console.warn('RELEASE CONTENT REVIEW: '+withoutPhotos.length+' restaurant entries have no commercially verified cover photo.');
+if(privacyDraft)console.warn('RELEASE BLOCKER: privacy notice is explicitly marked as a pre-release draft; complete controller and processing disclosures.');
+console.log('STORE RELEASE PENDING: verify install manifest/icons, iOS and Android packages, store listings, device testing, ad consent and operator details separately.');
