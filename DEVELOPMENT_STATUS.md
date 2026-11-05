@@ -169,3 +169,32 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Verifies displayed panel boundaries, visibility of close/back controls, dialog semantics for modal details and absence of document-wide horizontal overflow, preserving screenshots and JSON results.
 - **Confirmed:** [GitHub Actions run 41977907888](https://github.com/reefnine9/Viennanow/actions/runs/41977907888), **36/36 passed**, zero issues. Existing 40/40 mobile/language, 21/21 live drag, 12/12 stability and production HTTP checks also passed.
 - No visual redesign or change to map pins performed. Automated checks cannot certify every text truncation, full WCAG accessibility compliance, native iOS VoiceOver/TalkBack or physical smartphone behaviour; those remain follow-up manual QA items.
+
+
+## 24. Phase 24 — image quality and attribution access (2026-11-05)
+- Preserved honest missing-photo fallback for restaurant entries without verified commercial-use imagery; enhanced verified restaurant cover delivery with asynchronous decoding and no-referrer image requests.
+- Added `public/photo-credits.html` with bilingual, source-linked attribution rows for existing 48 sightseeing images and 21 restaurant covers marked reviewed; links appear in Home service footer.
+- **Not complete as licensing certification:** 61 of 82 restaurant covers are still not verified, some external URL checks previously returned 429; original work/author, adaptations, places and licences require independent manual review.
+
+## 25. Phase 25 — bilingual UI and content audit (2026-11-05)
+- Updated `nearPlanLayer31` to translate suggested route stop titles and marker popups through `VN_EN_STOPS` when English is selected.
+- Added `scripts/phase25-language-audit.mjs`: creates per-screen English-mode screenshots and advisory lists of remaining Korean-bearing text on Home, Sights, Dining, Plan, detail screens and Nearby route map. Place names may be legitimate un-translated proper nouns; audit requires editorial review.
+- **Not claiming complete professional translation:** the app includes numerous long-form Korean cultural descriptions; editorial verification of every English screen is outstanding.
+
+## 26. Phase 26 — visual control system consolidation (2026-11-05)
+- Aligned selected course arrows, menu links and dining controls to a 44 px minimum tap height and consistent 12 px radius, with visible keyboard focus.
+- Existing source and Chromium/WebKit 320–430 px regression checks retained. Overall designer visual review and physical-device pixel QA remain open.
+
+## 27. Phase 27 — route map precision (2026-11-05)
+- Explicitly show a bilingual warning in recommended course details when some stops lack a confirmed coordinate. The existing real-route map selection is retained; no fabricated geolocation or route metrics.
+- `scripts/phase24-29-release-qa.mjs` reports original stop names missing coordinates per route to guide future editorial/geo enrichment. Observed on first run: **17 of 28 curated routes** have at least one unmapped/unsupported stop. Some are generic lunch/rest breaks; assess each case individually.
+
+## 28. Phase 28 — mobile and bilingual release simulation (2026-11-05)
+- Added automated bilingual release QA to GitHub Actions for Chromium and WebKit, 320/390/430 px, Home service information links, route detail, selected map route and public legal/attribution pages; screenshots and JSON artifacts are uploaded.
+- Initial run [41979127955](https://github.com/reefnine9/Viennanow/actions/runs/41979127955) passed **78/78** checks; prior mobile and swipe suites also passed.
+- This is **emulation, not physical iPhone Safari or Android Chrome signoff**.
+
+## 29. Phase 29 — public disclosure draft and release gates (2026-11-05)
+- Created `public/privacy.html` and `public/legal.html` with Korean/English informational drafts; Home provides access and includes the photo credit page. Privacy explains `localStorage.viennanow_p9`, opt-in device GPS, Cloudflare hosting and possible third-party photo/map requests. Legal page **clearly marks missing operator identification**.
+- Added `RELEASE_READINESS_KR.md` with identified blockers, actual Austrian WKO/USP/Creative Commons reference links, and independent review tasks. The drafts intentionally do NOT claim GDPR/Impressum legal compliance, nor identify an unverified operator.
+- **Release NOT legally certified:** accountable publisher/contact/address/company details, exact third-party processing and consent arrangements, photo reuse clearance, actual-device acceptance tests and operating-hours freshness must be resolved before public launch.
