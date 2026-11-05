@@ -128,3 +128,11 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Added `scripts/phase16-photo-fallback-qa.mjs`: Chromium intentionally blocks external image hosts and verifies placeholder, Korean and English messages, single retry, saved-heart tap and detail opening.
 - **Verified in [run 41969049053](https://github.com/reefnine9/Viennanow/actions/runs/41969049053):** 6/6 photo-failure UI checks passed, 40/40 bilingual/mobile combinations, 12/12 prior restaurant and Leaflet checks, production HTTP connectivity checks passed.
 - Unresolved: 18 image URLs unconfirmed due largely to automated request throttling; 61 of 82 restaurant cover photos have no independent commercial-use review, so honest placeholders remain; external photo content/authenticity, legal license clearance and physical iPhone/Android checks remain manual gates.
+
+
+## 18. Recommended route detail navigation (2026-11-05)
+- User requested left/right swiping between recommended course detail pages, replacing the Google start/finish link with the selected course in Nearby > Plan map, and removing the "여행 전 확인" pre-trip confirmation text.
+- Implemented in deployed `public/index.html`: course-detail touch swipes and visible previous/next controls; navigation respects current course filter; accessible swipe hint/route counter; route-specific `vn-course-near-map` handler sets `state.nearPlanChoice`, `state.nearSection='plan'`, `state.tab='map'` and renders the selected map.
+- Removed the "여행 전 확인" block (including its old external directions link) from the recommendation detail screen. The map overview and ordered stops remain.
+- Added `scripts/course-detail-qa.mjs` to GitHub Actions browser QA. **Verified** [run 41970849614](https://github.com/reefnine9/Viennanow/actions/runs/41970849614): course detail tests **13/13 passed**, overall 40 mobile/language layouts and other pre-existing browser checks also passed. Production HTTP checks passed, but the remote site was not specifically browser-tested for this new interaction.
+- Follow-up: check actual iPhone/Android swiping and provide UI feedback. Do not change map pin overlap handling unless later requested.
