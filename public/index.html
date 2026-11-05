@@ -683,6 +683,66 @@ button.vn63-detail-heart.saved,button.heart.saved,button.exp19-save.saved,
 .vn42-wrap,.vn59-saved-page{gap:12px}
 .vn65-food-list{gap:12px}
 .vn64-food-page .vn64-food-content{gap:12px}
+
+/* Mobile QA / responsive layout pass — 320px to 430px, Korean + English.
+   Preserve fixed V icon baselines, chip design tokens, imagery and the map's controls. */
+@media(max-width:430px){
+ .phone,.main,.near-shell,.vn42-wrap,.vn33-sights,.plan-wrapper{min-width:0}
+ .phone .main{overscroll-behavior-y:contain}
+ .vn33-sight-head,.vn42-top,.vn37-planbar,.near31-title{width:100%;min-width:0}
+ .vn33-sight-tabs,.vn42-filters,.vn37-planbar .sectionnav,
+ .vn61-mainnav.near31-tabs,.vn61-subnav,.vn38-filterstrip{
+  min-width:0!important;max-width:100%!important;
+  overflow-x:auto!important;overflow-y:hidden!important;
+  flex-wrap:nowrap!important;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+ }
+ .vn33-sight-tabs::-webkit-scrollbar,.vn42-filters::-webkit-scrollbar,
+ .vn37-planbar .sectionnav::-webkit-scrollbar,
+ .vn61-mainnav.near31-tabs::-webkit-scrollbar,
+ .vn61-subnav::-webkit-scrollbar,.vn38-filterstrip::-webkit-scrollbar{display:none}
+ .vn33-sight-tabs .chip,.vn42-filters .vn42-chip,
+ .vn37-planbar .sectionnav button,.vn61-mainnav.near31-tabs .chip{
+  flex-shrink:0!important;
+ }
+ .vn59-saved-info,.vn65-food-list-content,.vn52-cardtext{min-width:0}
+ .vn59-saved-info b,.vn65-food-list-content strong,.vn52-cardtext b{
+  overflow-wrap:anywhere;
+ }
+ .vn45-place-head{min-width:0;align-items:flex-start}
+ .vn45-place-head .h1{min-width:0;overflow-wrap:anywhere;font-size:clamp(20px,5.8vw,25px)}
+ .vn45-directions{white-space:nowrap}
+ .drawerbg{width:100%;max-width:100%;overflow:hidden}
+ .drawer{box-sizing:border-box;width:100%;max-width:100%;min-width:0;
+   max-height:calc(100dvh - env(safe-area-inset-top,0px) - 16px);
+   padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));
+   overscroll-behavior:contain;
+ }
+ .vn64-food-links{min-width:0}
+ .vn64-food-links>*{overflow-wrap:anywhere}
+ .vn59-saved-card{min-width:0}
+ .vn38-filterstrip{touch-action:pan-x pan-y}
+}
+@media(max-width:360px){
+ .vn33-sight-head,.vn42-top,.vn37-planbar{gap:6px!important}
+ .vn33-sight-brand,.vn42-logo,.vn37-title{gap:5px!important;flex-shrink:0}
+ .vn33-sight-brand strong,.vn42-logo strong,.vn37-title strong{font-size:15px!important;letter-spacing:-.03em}
+ .phone.vn32-near-screen .near31-title{padding-left:12px!important;padding-right:12px!important}
+ .near31-locations{min-width:0;gap:4px!important}
+ .near31-locations button{padding-left:7px!important;padding-right:7px!important}
+ .vn59-saved-card{gap:9px;padding-right:47px}
+ .vn59-saved-thumb{width:66px;height:64px}
+ .vn64-food-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .vn64-food-links>*{font-size:10px;line-height:1.35;padding-left:6px;padding-right:6px}
+}
+@media(max-height:640px){
+ .drawer{max-height:calc(100dvh - env(safe-area-inset-top,0px) - 8px)}
+ .vn64-food-drawer .vn64-detail-cover{height:clamp(125px,25dvh,220px)}
+}
+/* Prevent text clipping as browsers honor larger accessibility font settings. */
+.vn33-sight-tabs,.vn42-filters,.vn37-planbar .sectionnav,.vn61-subnav,
+.vn61-mainnav.near31-tabs{scroll-padding-inline:6px}
+.vn-language-toggle{flex-shrink:0}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright vn-language-toggle-wrap"><button type="button" class="vn-language-toggle" data-act="toggle-language" aria-label="Change language" title="Change language"><span class="vn-language-short" aria-hidden="true"></span></button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
