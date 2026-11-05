@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 맛집 목록 11–20번 10곳의 반복 소개문 제거 및 메뉴·리뷰 기반 한국어/영어 소개글과 선정 이유 갱신. 구글 평점은 검증되지 않은 수치를 입력하지 않음.",
     "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록.",
     "2026-11-04: 전체 94개 식당 상세 한국어 설명과 선정 이유 작성. 개별 확인 근거가 불충분한 식당은 보수적인 후보 설명과 검증 필요를 명시.",
     "2026-11-04: 각 식당별 차별점에 여행자 관점의 방문 맥락을 추가하고 확인 가능한 관광청/미쉐린 소개 링크 일부 첨부.",
@@ -826,13 +827,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돼지고기 크러스트 덤플링(Grammelknödel)",
+        "버섯 굴라시",
+        "비너 슈니첼"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "9구 세르비텐 지구의 아늑한 가스트하우스로, 비엔나의 친근한 동네 식당 문화를 느낄 수 있는 곳이다. 미쉐린 가이드는 크러스트 돼지고기 덤플링, 버섯 굴라슈와 슈니첼, 일요일 로스트를 소개한다. 고급 코스보다는 따뜻한 오스트리아 전통 식사를 합리적인 가격에 즐기고 싶을 때 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "A cozy neighborhood gasthaus in the Servitenviertel. The Michelin Guide highlights pork dumplings, mushroom goulash, schnitzel and Sunday roasts.",
+        "ko": "세르비텐 교회 옆의 아늑한 동네 가스트하우스. 돼지고기 크러스트 덤플링과 양배추샐러드, 버섯 굴라시와 빵 덤플링, 슈니첼이 대표적인 선택이다. 미쉐린 가이드가 소개한 정겨운 분위기와 평일 점심 메뉴가 강점이며, 방문 후기에서도 타펠슈피츠와 친절한 서비스가 호평을 받는다. 여름에는 그늘진 야외 좌석이 인기다.",
+        "en": "A cosy neighbourhood inn by the Servitenkirche. Try pork-crackling dumplings, mushroom goulash with bread dumplings or Wiener schnitzel. The MICHELIN Guide highlights its welcoming atmosphere and weekday lunch specials; diners also praise the Tafelspitz and attentive service.",
         "de": null
       },
       "personal_review": {
@@ -846,7 +851,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/gb/en/vienna/wien/restaurant/tante-liesl"
+          "https://guide.michelin.com/gb/en/vienna/wien/restaurant/tante-liesl",
+          "https://guide.michelin.com/at/de/vienna/wien/restaurant/tante-liesl"
         ]
       },
       "operations": {
@@ -859,8 +865,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "9구 세르비텐 지구의 아늑한 가스트하우스로, 비엔나의 친근한 동네 식당 문화를 느낄 수 있는 곳이다. 미쉐린 가이드는 크러스트 돼지고기 덤플링, 버섯 굴라슈와 슈니첼, 일요일 로스트를 소개한다. 고급 코스보다는 따뜻한 오스트리아 전통 식사를 합리적인 가격에 즐기고 싶을 때 추천한다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "story_review": "editorial-draft-needs-verification",
+        "selection_reason_ko": "세르비텐 교회 옆의 아늑한 동네 가스트하우스. 돼지고기 크러스트 덤플링과 양배추샐러드, 버섯 굴라시와 빵 덤플링, 슈니첼이 대표적인 선택이다. 미쉐린 가이드가 소개한 정겨운 분위기와 평일 점심 메뉴가 강점이며, 방문 후기에서도 타펠슈피츠와 친절한 서비스가 호평을 받는다. 여름에는 그늘진 야외 좌석이 인기다.",
+        "story_review": "review-and-menu-informed-2026-11-05",
         "michelin": {
           "distinction": "Bib Gourmand",
           "year": 2026,
@@ -900,13 +906,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "비너 슈니첼",
+        "소고기 굴라시",
+        "크라우트플레커른"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "뮤지엄스콰르티어의 안뜰 정원과 고전적인 비엔나식 음식이 이곳의 매력이다. 여름에는 나무 그늘 아래에서 굴라슈나 타펠슈피츠 같은 요리를 즐길 수 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "An appealing courtyard garden by the MuseumsQuartier, where visitors can enjoy classic Viennese dishes under leafy trees.",
+        "ko": "뮤지엄스콰르티어 옆에 숨은 비엔나식 선술집으로, 호두나무 그늘이 드리운 정원이 가장 큰 매력이다. 송아지 슈니첼과 진한 소고기 굴라시, 양배추 파스타인 크라우트플레커른을 추천한다. 최근 방문 후기에는 음식의 맛과 넉넉한 양, 친절한 서비스에 대한 호평이 많지만 가격이 다소 높고 인기 시간대에는 예약이 필요하다는 의견도 있다.",
+        "en": "A Viennese beisl tucked beside MuseumsQuartier, best known for its leafy courtyard garden. Order veal schnitzel, rich beef goulash or Krautfleckerl cabbage pasta. Reviewers praise the food and generous portions, though prices can be high and reservations are advisable.",
         "de": null
       },
       "personal_review": {
@@ -918,7 +928,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.tripadvisor.com/Restaurant_Review-g190454-d877459-Reviews-Glacis_Beisl-Vienna.html"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -930,8 +942,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "뮤지엄스콰르티어의 안뜰 정원과 고전적인 비엔나식 음식이 이곳의 매력이다. 여름에는 나무 그늘 아래에서 굴라슈나 타펠슈피츠 같은 요리를 즐길 수 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "뮤지엄스콰르티어 옆에 숨은 비엔나식 선술집으로, 호두나무 그늘이 드리운 정원이 가장 큰 매력이다. 송아지 슈니첼과 진한 소고기 굴라시, 양배추 파스타인 크라우트플레커른을 추천한다. 최근 방문 후기에는 음식의 맛과 넉넉한 양, 친절한 서비스에 대한 호평이 많지만 가격이 다소 높고 인기 시간대에는 예약이 필요하다는 의견도 있다.",
+        "story_review": "review-and-menu-informed-2026-11-05",
         "research_sources": [
           "https://www.wien.info/en/dine-drink/restaurants/in-places/cuisine-at-city-walls-343800"
         ],
@@ -1014,13 +1026,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "비너 슈니첼",
+        "오스트리아식 전통 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "현지의 소박한 비엔나 가스트하우스 문화를 경험하려는 여행자에게 소개한다. 인기 메뉴와 정확한 운영 정보는 방문 전에 확인할 필요가 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A modest traditional gasthaus for travelers seeking local Viennese tavern culture. Check current menus and hours before visiting.",
+        "ko": "전통적인 비엔나 가스트하우스에서 느긋하게 저녁을 먹고 싶다면 고려할 만한 곳이다. 비너 슈니첼을 비롯한 오스트리아식 가정 요리를 중심으로 고르기 좋으며, 방문객 평가에서는 분위기 있는 식사 공간과 다양한 메뉴가 장점으로 언급된다. 특정 인기 메뉴와 최신 운영시간은 방문 전 메뉴판에서 확인하는 편이 좋다.",
+        "en": "A traditional Viennese tavern suited to an unhurried dinner. Explore Austrian comfort food, including Wiener schnitzel, in an atmospheric dining room. Check the current menu for seasonal specialities and opening hours.",
         "de": null
       },
       "personal_review": {
@@ -1032,7 +1047,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://viennalist.com/austrian-food/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1044,8 +1061,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "현지의 소박한 비엔나 가스트하우스 문화를 경험하려는 여행자에게 소개한다. 인기 메뉴와 정확한 운영 정보는 방문 전에 확인할 필요가 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "전통적인 비엔나 가스트하우스에서 느긋하게 저녁을 먹고 싶다면 고려할 만한 곳이다. 비너 슈니첼을 비롯한 오스트리아식 가정 요리를 중심으로 고르기 좋으며, 방문객 평가에서는 분위기 있는 식사 공간과 다양한 메뉴가 장점으로 언급된다. 특정 인기 메뉴와 최신 운영시간은 방문 전 메뉴판에서 확인하는 편이 좋다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -1080,13 +1097,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "비너 슈니첼",
+        "굴라시",
+        "양파 로스트비프"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "격식에 얽매이지 않는 식사를 원하는 사람을 위한 비엔나의 캐주얼한 음식점 후보다. 구체적인 인기 메뉴는 방문 전 확인이 필요하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A casual Vienna dining option for an unfussy meal; check the current signature dishes before choosing.",
+        "ko": "5구의 아늑한 동네 레스토랑으로, 관광지 한복판을 벗어나 차분하게 비엔나 음식을 즐기기 좋다. 비너 슈니첼과 굴라시, 양파를 곁들인 로스트비프가 리뷰에 자주 등장한다. 예약 방문객들은 친절한 직원과 따뜻한 분위기, 음식의 맛을 특히 높게 평가하며 좌석이 많지 않아 예약을 권한다.",
+        "en": "A cosy neighbourhood restaurant in Vienna's fifth district. Wiener schnitzel, goulash and onion roast beef are frequently praised. Verified diners especially appreciate the warm service and welcoming atmosphere; booking ahead is sensible.",
         "de": null
       },
       "personal_review": {
@@ -1098,7 +1119,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.thefork.com/restaurant/sixta-restaurant-bar-r598825/reviews"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1110,8 +1133,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "격식에 얽매이지 않는 식사를 원하는 사람을 위한 비엔나의 캐주얼한 음식점 후보다. 구체적인 인기 메뉴는 방문 전 확인이 필요하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "5구의 아늑한 동네 레스토랑으로, 관광지 한복판을 벗어나 차분하게 비엔나 음식을 즐기기 좋다. 비너 슈니첼과 굴라시, 양파를 곁들인 로스트비프가 리뷰에 자주 등장한다. 예약 방문객들은 친절한 직원과 따뜻한 분위기, 음식의 맛을 특히 높게 평가하며 좌석이 많지 않아 예약을 권한다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -1144,13 +1167,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돼지고기 족발(Stelze)",
+        "폭립",
+        "자체 양조 맥주"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "벨베데레 궁전 인근에서 공원과 식사를 묶기 좋은 장소로 소개한다. 관광 동선 중 여유롭게 쉬어 가는 식사 공간을 찾는 사람에게 어울린다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A relaxed dining stop near Belvedere Palace, combining a meal with time in the nearby park.",
+        "ko": "벨베데레 궁전 근처 슈바르첸베르크 정원의 오래된 나무 사이에 자리한 양조장 식당. 돼지고기 족발과 폭립 같은 푸짐한 요리에 자체 양조 맥주를 곁들이기 좋다. 정원과 맥주에 대한 호평이 많은 반면, 일부 방문 후기에서는 음식의 완성도와 서비스 속도에 아쉬움을 나타낸다. 식사 자체보다 야외 분위기까지 즐기고 싶을 때 추천한다.",
+        "en": "A brewery restaurant set among old trees near Belvedere Palace. Pair house-brewed beer with hearty pork knuckle or ribs. Guests particularly like the garden and beer, although some reviews criticise food consistency and slow service.",
         "de": null
       },
       "personal_review": {
@@ -1162,7 +1189,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.stoecklimpark.at/stoeckl-im-park/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1174,8 +1203,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "벨베데레 궁전 인근에서 공원과 식사를 묶기 좋은 장소로 소개한다. 관광 동선 중 여유롭게 쉬어 가는 식사 공간을 찾는 사람에게 어울린다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "벨베데레 궁전 근처 슈바르첸베르크 정원의 오래된 나무 사이에 자리한 양조장 식당. 돼지고기 족발과 폭립 같은 푸짐한 요리에 자체 양조 맥주를 곁들이기 좋다. 정원과 맥주에 대한 호평이 많은 반면, 일부 방문 후기에서는 음식의 완성도와 서비스 속도에 아쉬움을 나타낸다. 식사 자체보다 야외 분위기까지 즐기고 싶을 때 추천한다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -1208,13 +1237,18 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "자체 양조 맥주",
+        "핫윙",
+        "프레첼",
+        "굴라시 수프"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "직접 양조한 맥주와 캐주얼한 펍 요리를 즐기는 분위기가 특징이다. 궁전·카페 중심 일정과 다른 활기찬 비엔나의 맥주 문화를 경험할 수 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A lively brewery serving house-made beer and pub food, offering a different side of Vienna from its grand cafés.",
+        "ko": "비엔나 도심에서 수제 맥주와 활기찬 펍 분위기를 즐기기 좋은 브루펍. 맥주와 함께 프레첼, 매운 핫윙, 굴라시 수프 같은 간단한 음식을 주문할 수 있다. 리뷰에서는 다양한 맥주와 친근한 서비스가 자주 호평받는다. 조용한 전통 식당보다는 친구들과 캐주얼한 저녁을 보내고 싶을 때 어울린다.",
+        "en": "A lively central Vienna brewpub serving house-brewed beers alongside pretzels, spicy wings and goulash soup. Reviews often praise the beer selection and friendly staff. Choose it for a casual, sociable evening rather than a quiet traditional dinner.",
         "de": null
       },
       "personal_review": {
@@ -1226,7 +1260,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.1516brewingcompany.com/web/wp-content/uploads/2025/11/1516-Karte-2025-11.pdf"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1238,8 +1274,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "직접 양조한 맥주와 캐주얼한 펍 요리를 즐기는 분위기가 특징이다. 궁전·카페 중심 일정과 다른 활기찬 비엔나의 맥주 문화를 경험할 수 있다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "비엔나 도심에서 수제 맥주와 활기찬 펍 분위기를 즐기기 좋은 브루펍. 맥주와 함께 프레첼, 매운 핫윙, 굴라시 수프 같은 간단한 음식을 주문할 수 있다. 리뷰에서는 다양한 맥주와 친근한 서비스가 자주 호평받는다. 조용한 전통 식당보다는 친구들과 캐주얼한 저녁을 보내고 싶을 때 어울린다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": {
@@ -1296,13 +1332,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "케제크라이너",
+        "브라트부어스트",
+        "커리부어스트"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "알베르티나와 국립오페라극장 옆 소시지 가판대로, 케제크라이너 등 비엔나 길거리 음식을 간단하게 맛볼 수 있다. 공연이나 도심 산책 도중 들르기 좋다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "An iconic sausage stand beside the Albertina and State Opera, known for Käsekrainer and other Viennese street-food favorites.",
+        "ko": "알베르티나 미술관과 국립오페라극장 바로 옆의 유명 소시지 가판대. 치즈가 들어간 케제크라이너와 브라트부어스트, 커리부어스트를 빠르게 맛볼 수 있다. 방문 후기에서는 소시지 맛과 늦은 시간까지 이용하기 좋은 점이 호평이며, 줄이 길어 보여도 비교적 빨리 줄어든다는 평가가 있다. 격식 있는 식사보다 비엔나식 길거리 간식에 적합하다.",
+        "en": "A famous sausage stand beside the Albertina and State Opera. Try cheese-filled Käsekrainer, Bratwurst or currywurst. Visitors praise the sausages and convenient late-night service; queues can look long but often move quickly.",
         "de": null
       },
       "personal_review": {
@@ -1314,7 +1354,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.tripadvisor.at/Restaurant_Review-g190454-d2656869-Reviews-Bitzinger_Wurstelstand_Albertina-Vienna.html"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1326,8 +1368,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "알베르티나와 국립오페라극장 옆 소시지 가판대로, 케제크라이너 등 비엔나 길거리 음식을 간단하게 맛볼 수 있다. 공연이나 도심 산책 도중 들르기 좋다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "알베르티나 미술관과 국립오페라극장 바로 옆의 유명 소시지 가판대. 치즈가 들어간 케제크라이너와 브라트부어스트, 커리부어스트를 빠르게 맛볼 수 있다. 방문 후기에서는 소시지 맛과 늦은 시간까지 이용하기 좋은 점이 호평이며, 줄이 길어 보여도 비교적 빨리 줄어든다는 평가가 있다. 격식 있는 식사보다 비엔나식 길거리 간식에 적합하다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": {
@@ -1384,13 +1426,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "달걀 스프레드 오픈 샌드위치",
+        "다양한 카나페"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "1904년에 시작한 오픈 샌드위치 전문점으로, 작은 검은빵에 달걀과 다양한 스프레드를 올리는 것이 특징이다. 여러 종류를 조금씩 골라 먹는 비엔나식 간식 경험이 독특하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "Founded in 1904, this sandwich shop sells small open-faced sandwiches with egg and an assortment of savory spreads.",
+        "ko": "1904년부터 이어온 비엔나의 작은 오픈 샌드위치 전문점. 한입 크기의 검은빵 위에 달걀과 여러 종류의 스프레드를 얹은 샌드위치를 취향대로 골라 먹는 재미가 있다. 여러 맛을 조금씩 시도할 수 있어 구시가지 산책 중 가벼운 점심이나 간식으로 추천한다. 정식 식사보다는 짧게 들러 맛보는 경험에 가깝다.",
+        "en": "A Viennese institution dating to 1904, known for bite-sized open sandwiches on dark bread with egg and assorted spreads. Mix several flavours for a quick snack or light lunch while exploring the Old Town.",
         "de": null
       },
       "personal_review": {
@@ -1402,7 +1447,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.trzesniewski.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1414,8 +1461,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "1904년에 시작한 오픈 샌드위치 전문점으로, 작은 검은빵에 달걀과 다양한 스프레드를 올리는 것이 특징이다. 여러 종류를 조금씩 골라 먹는 비엔나식 간식 경험이 독특하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "1904년부터 이어온 비엔나의 작은 오픈 샌드위치 전문점. 한입 크기의 검은빵 위에 달걀과 여러 종류의 스프레드를 얹은 샌드위치를 취향대로 골라 먹는 재미가 있다. 여러 맛을 조금씩 시도할 수 있어 구시가지 산책 중 가벼운 점심이나 간식으로 추천한다. 정식 식사보다는 짧게 들러 맛보는 경험에 가깝다.",
+        "story_review": "review-and-menu-informed-2026-11-05",
         "research_sources": [
           "https://www.wien.info/en/dine-drink/viennese-cuisine/trzesniewski-362100"
         ],
@@ -1478,13 +1525,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "오픈 샌드위치(Brötchen)",
+        "햄과 델리 메뉴"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "역사적인 구시가지 델리 겸 식당으로, 작은 오픈 샌드위치와 오래된 비엔나 미식 문화가 매력이다. 긴 식사 대신 가볍고 개성 있는 먹거리를 찾는 사람에게 추천한다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A historic Old Town deli and restaurant celebrated for its delicate open-faced sandwiches and longstanding Viennese food culture.",
+        "ko": "오랜 역사를 가진 구시가지의 델리 겸 레스토랑. 정교하게 만든 작은 오픈 샌드위치와 햄을 중심으로 비엔나의 고전적인 미식 문화를 맛볼 수 있다. 짧은 간식부터 조금 더 격식 있는 식사까지 선택할 수 있는 점이 매력이다. 특히 샌드위치를 여러 종류 골라 가볍게 먹고 싶을 때 추천한다.",
+        "en": "A historic Old Town delicatessen and restaurant celebrated for elegant open sandwiches and ham specialities. Stop for a few bite-sized Brötchen or settle in for a more leisurely meal in a classic Viennese setting.",
         "de": null
       },
       "personal_review": {
@@ -1496,7 +1546,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://schwarzeskameel.at/"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1508,8 +1560,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "역사적인 구시가지 델리 겸 식당으로, 작은 오픈 샌드위치와 오래된 비엔나 미식 문화가 매력이다. 긴 식사 대신 가볍고 개성 있는 먹거리를 찾는 사람에게 추천한다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "오랜 역사를 가진 구시가지의 델리 겸 레스토랑. 정교하게 만든 작은 오픈 샌드위치와 햄을 중심으로 비엔나의 고전적인 미식 문화를 맛볼 수 있다. 짧은 간식부터 조금 더 격식 있는 식사까지 선택할 수 있는 점이 매력이다. 특히 샌드위치를 여러 종류 골라 가볍게 먹고 싶을 때 추천한다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": {
@@ -1566,13 +1618,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "슈바인스브라텐",
+        "슈니첼 트리오",
+        "빵 덤플링"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "오스트리아식 식사를 포장해 간단히 즐기기 좋은 선택지다. 박물관과 관광지를 돌아다니는 중 시간을 아끼면서 현지 음식을 먹고 싶을 때 적합하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "en": "A practical place to pick up Austrian-style food to go while sightseeing, without committing to a long restaurant stop.",
+        "ko": "오스트리아 전통 음식을 간편하게 먹을 수 있도록 제공하는 캐주얼 식당. 바삭한 껍질의 돼지고기 구이인 슈바인스브라텐, 슈니첼 트리오, 소스를 곁들인 빵 덤플링 등이 인기 주문 메뉴다. 주간 메뉴가 바뀌므로 새로운 요리를 발견하는 재미도 있다. 긴 코스 식사보다 관광 중 빠르고 든든하게 먹고 싶을 때 추천한다.",
+        "en": "A casual spot for Austrian comfort food without a long sit-down meal. Popular orders include roast pork, a schnitzel trio and bread dumplings with gravy. Weekly specials change, making it handy for a quick, filling stop during sightseeing.",
         "de": null
       },
       "personal_review": {
@@ -1584,7 +1640,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.foodora.at/restaurant/xkru/schachtelwirt"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -1596,8 +1654,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "오스트리아식 식사를 포장해 간단히 즐기기 좋은 선택지다. 박물관과 관광지를 돌아다니는 중 시간을 아끼면서 현지 음식을 먹고 싶을 때 적합하다.\n\n비엔나에서 무엇을 먹을지 고민된다면 이 식당이 제안하는 전통 메뉴의 맛과 분위기에 주목해 보자. 구시가지 관광 동선과 식사를 함께 계획할 때 비교하기 좋은 선택지다.",
-        "story_review": "public-source-supported-outline"
+        "selection_reason_ko": "오스트리아 전통 음식을 간편하게 먹을 수 있도록 제공하는 캐주얼 식당. 바삭한 껍질의 돼지고기 구이인 슈바인스브라텐, 슈니첼 트리오, 소스를 곁들인 빵 덤플링 등이 인기 주문 메뉴다. 주간 메뉴가 바뀌므로 새로운 요리를 발견하는 재미도 있다. 긴 코스 식사보다 관광 중 빠르고 든든하게 먹고 싶을 때 추천한다.",
+        "story_review": "review-and-menu-informed-2026-11-05"
       },
       "media": {
         "cover": null,
