@@ -524,6 +524,100 @@ button.vn63-detail-heart.saved,button.heart.saved,button.exp19-save.saved,
 }
 .phone.vn32-near-screen .near32-brand{height:33px!important;align-items:center!important}
 .phone.vn32-near-screen .near32-logo{width:33px!important;height:33px!important;flex:0 0 33px!important;align-self:center!important}
+
+/* ViennaNow shared UI design system — November 2026
+   Consistent category/filter chips across Discover, Dining, Plan, Nearby and other chip rows.
+   Major CTA, favorite, arrow, bottom-navigation and language buttons retain distinct semantics. */
+:root{
+ --vn-chip-height:38px;
+ --vn-chip-radius:12px;
+ --vn-chip-font:11px;
+ --vn-chip-pad-x:12px;
+ --vn-chip-border:#dbe5df;
+ --vn-chip-active:#183547;
+ --vn-chip-text:#39565c;
+}
+.chip,
+.sectionnav button,
+.vn42-chip,
+.vn61-subnav button,
+.near31-locations button,
+.vn38-filterstrip>.chip,
+.vn36-filter>.chip,
+.vn65-view-switch button,
+.gallery-filters .chip,
+.gallery-saved-filter{
+ appearance:none;
+ box-sizing:border-box!important;
+ height:var(--vn-chip-height)!important;
+ min-height:var(--vn-chip-height)!important;
+ max-height:var(--vn-chip-height)!important;
+ border-radius:var(--vn-chip-radius)!important;
+ padding:0 var(--vn-chip-pad-x)!important;
+ border:1px solid var(--vn-chip-border)!important;
+ background:#fff;
+ color:var(--vn-chip-text);
+ font-family:inherit!important;
+ font-size:var(--vn-chip-font)!important;
+ font-weight:750!important;
+ letter-spacing:0!important;
+ line-height:1.2!important;
+ display:inline-flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ text-align:center;
+ white-space:nowrap!important;
+ flex:0 0 auto;
+ vertical-align:middle;
+ box-shadow:none;
+ cursor:pointer;
+}
+.chip.active,
+.sectionnav button.current,
+.vn42-chip.on,
+.vn61-subnav button.active,
+.vn65-view-switch button.active,
+.gallery-saved-filter.selected{
+ background:var(--vn-chip-active)!important;
+ color:#fff!important;
+ border-color:var(--vn-chip-active)!important;
+ box-shadow:none!important;
+}
+.near31-locations button.active{
+ background:#e9f2ec!important;
+ border-color:#95c4b2!important;
+ color:#185e53!important;
+}
+.chip:focus-visible,.sectionnav button:focus-visible,
+.vn42-chip:focus-visible,.vn61-subnav button:focus-visible,
+.near31-locations button:focus-visible{
+ outline:2px solid #26766b!important;outline-offset:2px;
+}
+.vn33-sight-tabs,.vn42-filters,.vn37-planbar .sectionnav,
+.vn61-mainnav.near31-tabs,.vn61-subnav,.vn38-filterstrip{
+ gap:6px!important;
+ align-items:center!important;
+}
+.vn33-sight-tabs{justify-content:flex-start;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.vn33-sight-tabs::-webkit-scrollbar{display:none}
+.vn37-planbar .sectionnav{gap:6px!important}
+.vn61-mainnav.near31-tabs .chip,.near31-tabs .chip{
+ width:auto!important;min-width:max-content!important;
+ padding:0 var(--vn-chip-pad-x)!important;
+}
+.near31-locations{gap:6px!important}
+.near31-locations button{padding:0 10px!important}
+.vn65-view-switch{min-height:44px;max-width:100%}
+.vn65-view-switch button{min-width:max-content}
+@media(max-width:375px){
+ .vn33-sight-tabs .chip,.vn42-chip,.vn37-planbar .sectionnav button,
+ .near31-tabs .chip,.near31-locations button,.vn61-subnav button{
+  font-size:var(--vn-chip-font)!important;
+  min-height:var(--vn-chip-height)!important;
+  height:var(--vn-chip-height)!important;
+  padding:0 10px!important;
+ }
+}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright vn-language-toggle-wrap"><button type="button" class="vn-language-toggle" data-act="toggle-language" aria-label="Change language" title="Change language"><span class="vn-language-short" aria-hidden="true"></span></button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
