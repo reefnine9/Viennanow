@@ -1,0 +1,57 @@
+import { chromium } from 'playwright';
+import { mkdir, writeFile } from 'node:fs/promises';
+
+const base=process.env.VIENNANOW_TEST_URL||'http://127.0.0.1:8765';
+const browser=await chromium.launch({headless:true});
+const context=await browser.newContext({viewport:{width:390,height:780},locale:'ko-KR',reducedMotion:'reduce'});
+const page=await context.newPage();
+const checks=[];
+const issues=[];
+const record=(name,ok,detail='')=>{checks.push({name,ok,detail});if(!ok)issues.push(name+': '+detail);};
+page.on('pageerror',e=>issues.push('Page JS error: '+e.message));
+await mkdir('artifacts/interaction-qa',{recursive:true});
+await page.route('**/*',route=>{
+ const url=route.request().url();
+ return url.startsWith(base+'/')?route.continue():route.abort();
+});
+try{
+ await page.goto(base+'/index.html',{waitUntil:'domcontentloaded',timeout:30000});
+ await page.locator('#bottom button.tab[data-value="sights"]').click();
+ const sight=page.locator('.photo-pick button[data-act="save-catalog"]').first();
+ await sight.waitFor();
+ const id=await sight.getAttribute('data-id');
+ record('Favourite starts unselected',await sight.getAttribute('aria-pressed')==='false',id);
+ await sight.click();
+ record('Favourite selected after click',await page.locator('.photo-pick button[data-act="save-catalog"][data-id="'+id+'"]').getAttribute('aria-pressed')==='true',id);
+ const stored=await page.evaluate(id=>JSON.parse(localStorage.getItem('viennanow_p9')||'{}').savedPlaces?.includes(id),id);
+ record('Favourite saved in localStorage',stored===true,id);
+ await page.reload({waitUntil:'domcontentloaded'});
+ await page.locator('#bottom button.tab[data-value="sights"]').click();
+ record('Favourite survives reload',await page.locator('.photo-pick button[data-act="save-catalog"][data-id="'+id+'"]').getAttribute('aria-pressed')==='true',id);
+ await page.locator('#bottom button.tab[data-value="itinerary"]').click();
+ await page.locator('[data-act="section-plan"][data-value="mine"]').first().click();
+ record('Favourite appears in Plan',await page.locator('.vn59-saved-card button[data-act="save-catalog"][data-id="'+id+'"]').count()===1,id);
+ await page.screenshot({path:'artifacts/interaction-qa/favorite-in-plan.png',animations:'disabled'});
+ await page.locator('.vn59-saved-card button[data-act="save-catalog"][data-id="'+id+'"]').click();
+ record('Removing favourite updates Plan',await page.locator('.vn59-saved-card button[data-act="save-catalog"][data-id="'+id+'"]').count()===0,id);
+ const absent=await page.evaluate(id=>!(JSON.parse(localStorage.getItem('viennanow_p9')||'{}').savedPlaces||[]).includes(id),id);
+ record('Favourite removal persists',absent===true,id);
+ await page.locator('#bottom button.tab[data-value="sights"]').click();
+ const open=page.locator('.photo-pick button.cardclick').first();
+ await open.click();
+ record('Sight detail opens',await page.locator('#layer [role="dialog"]').count()>0,'Sight card opens details');
+ record('Detail has save control',await page.locator('#layer button.vn63-detail-heart').count()>0);
+ const close=page.locator('#layer button[data-act="close-detail"]').first();
+ await close.click();
+ record('Sight detail closes',await page.locator('#layer [role="dialog"]').count()===0);
+ await page.locator('#bottom button.tab[data-value="map"]').click();
+ record('Nearby renders map element',await page.locator('#main #map').count()===1);
+ record('Nearby has sight layer category',await page.locator('#main button[data-act="section-near"][data-value="sights"]').count()===1);
+ record('Pin detail wiring in deployed source',await page.evaluate(()=>typeof nearSightPopup32==='function'&&typeof refreshSightClusters48==='function'&&nearSightPopup32({id:'A01',ko:'슈테판 대성당',de:'Stephansdom'}).includes('data-act="detail"')),'This is a wiring check, not a live Leaflet marker tap');
+ await page.screenshot({path:'artifacts/interaction-qa/nearby-map-structure.png',animations:'disabled'});
+}catch(e){issues.push('Test flow: '+String(e.stack||e).slice(0,1600));}
+await writeFile('artifacts/interaction-qa/report.json',JSON.stringify({checks,issues,method:'Local Chromium; external network blocked; map pin test is source wiring only'},null,2));
+await browser.close();
+console.log('Phase 11 checks: '+checks.filter(x=>x.ok).length+'/'+checks.length+' passed; '+issues.length+' issues');
+issues.forEach(x=>console.error('FAIL '+x));
+if(issues.length)process.exitCode=1;
