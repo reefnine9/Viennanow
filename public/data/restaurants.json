@@ -3,6 +3,7 @@
   "catalog": "ViennaNow Restaurants",
   "as_of": "2026-11-04",
   "notes": [
+    "2026-11-05: 31–40번 식당 10곳 소개글·대표 메뉴·선정 이유 한영 개별 개선. Gasthaus Quell 공식 메뉴, Meierei 미쉐린 안내, 2026 비엔나 미쉐린 선정 현황 참고. Google 별점은 미검증으로 미기재.",
     "2026-11-05: 맛집 1–10 및 21–30번 총 20곳 한국어·영어 설명/추천 이유/대표 메뉴 개별 개선. 공개 메뉴·미식 가이드 참고; 구글 평점 미검증으로 수치 입력하지 않음.",
     "2026-11-05: 맛집 목록 11–20번 10곳의 반복 소개문 제거 및 메뉴·리뷰 기반 한국어/영어 소개글과 선정 이유 갱신. 구글 평점은 검증되지 않은 수치를 입력하지 않음.",
     "2026-11-04: Wikimedia Commons 공개 라이선스 검증 사진 9개 추가. 각 파일의 원본 및 라이선스 출처는 media.cover/source_page에 기록.",
@@ -2481,13 +2482,17 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "돼지고기 슈니첼",
+        "굴라시",
+        "슈바인스브라텐"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "오래된 비엔나 동네 식당의 분위기를 경험하고 싶을 때 고려할 만한 후보다. 메뉴와 영업 상태는 현장이나 공식 안내를 확인해야 한다.\n\n이런 지역 식당은 유명 관광지의 식당과는 다른 분위기를 경험하는 데 의미가 있다. 다만 방문 전 최신 메뉴와 실제 운영시간을 다시 확인하는 것이 좋다.",
-        "en": "An old-style Viennese tavern; verify the latest menu and opening status before planning a visit.",
+        "ko": "전통적인 비엔나 동네 식당에서 푸짐한 가정식을 먹고 싶다면 좋은 선택이다. 공식 메뉴에는 돼지고기 슈니첼과 굴라시, 빵 덤플링을 곁들인 돼지고기 구이, 타펠슈피츠까지 폭넓게 올라 있다. 화려한 코스 요리보다 익숙한 현지 음식과 넉넉한 선택지를 원하는 사람에게 어울린다.",
+        "en": "An old-school Viennese neighbourhood inn with a broad menu of pork schnitzel, goulash, roast pork with bread dumplings and Tafelspitz. A good choice for hearty, familiar local cooking rather than formal dining.",
         "de": null
       },
       "personal_review": {
@@ -2499,7 +2504,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.gasthausquell.at/speisen.php"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2511,8 +2518,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "오래된 비엔나 동네 식당의 분위기를 경험하고 싶을 때 고려할 만한 후보다. 메뉴와 영업 상태는 현장이나 공식 안내를 확인해야 한다.\n\n이런 지역 식당은 유명 관광지의 식당과는 다른 분위기를 경험하는 데 의미가 있다. 다만 방문 전 최신 메뉴와 실제 운영시간을 다시 확인하는 것이 좋다.",
-        "story_review": "editorial-draft-needs-verification"
+        "selection_reason_ko": "전통적인 비엔나 동네 식당에서 푸짐한 가정식을 먹고 싶다면 좋은 선택이다. 공식 메뉴에는 돼지고기 슈니첼과 굴라시, 빵 덤플링을 곁들인 돼지고기 구이, 타펠슈피츠까지 폭넓게 올라 있다. 화려한 코스 요리보다 익숙한 현지 음식과 넉넉한 선택지를 원하는 사람에게 어울린다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05"
       },
       "media": {
         "cover": null,
@@ -2548,13 +2555,17 @@
         "accuracy": "mapped_poi_or_building_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "숙성 치즈 셀렉션",
+        "송아지 슈니첼",
+        "카이저슈마른"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "슈타트파크의 슈타이러에크 아래층에 자리한 식당으로, 약 150종의 치즈와 비너 슈니첼·카이저슈마른 같은 고전 요리가 매력이다. 빈강과 공원이 보이는 테라스도 인상적이다. 세계적으로 유명한 고급 레스토랑 옆에서 좀 더 부담 없이 오스트리아 음식을 즐길 수 있다는 점에서 빕 구르망에 어울리는 장소다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "en": "On the lower level of Steirereck in Stadtpark, with an extensive cheese selection, classics such as schnitzel and Kaiserschmarrn, and a terrace by the park.",
+        "ko": "슈타트파크의 강변에 자리한 슈타이러에크의 자매 식당. 약 150종의 숙성 치즈가 가장 독특한 볼거리이며 어린 송아지 슈니첼과 카이저슈마른 같은 비엔나 고전 요리도 맛볼 수 있다. 아침 식사부터 점심·저녁까지 이용 가능하고, 여름에는 빈강을 내려다보는 테라스가 특히 매력적이다.",
+        "en": "Steirereck's sister restaurant by the Wien River, celebrated for around 150 matured cheeses. Also serves milk-fed veal schnitzel and Kaiserschmarrn. Breakfast and the leafy riverside terrace make it a more relaxed alternative to formal fine dining.",
         "de": null
       },
       "personal_review": {
@@ -2568,7 +2579,8 @@
         "last_checked": "2026-11-04",
         "sources": [
           "https://guide.michelin.com/at/en/vienna/restaurants/bib-gourmand",
-          "https://guide.michelin.com/vn/en/vienna/wien/restaurant/meierei-im-stadtpark"
+          "https://guide.michelin.com/vn/en/vienna/wien/restaurant/meierei-im-stadtpark",
+          "https://guide.michelin.com/en/vienna/wien/restaurant/meierei-im-stadtpark"
         ]
       },
       "operations": {
@@ -2581,8 +2593,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "슈타트파크의 슈타이러에크 아래층에 자리한 식당으로, 약 150종의 치즈와 비너 슈니첼·카이저슈마른 같은 고전 요리가 매력이다. 빈강과 공원이 보이는 테라스도 인상적이다. 세계적으로 유명한 고급 레스토랑 옆에서 좀 더 부담 없이 오스트리아 음식을 즐길 수 있다는 점에서 빕 구르망에 어울리는 장소다.\n\n미쉐린 가이드 2026년 빕 구르망으로 선정된 곳이며, 미쉐린 스타 식당과는 구별된다.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "슈타트파크의 강변에 자리한 슈타이러에크의 자매 식당. 약 150종의 숙성 치즈가 가장 독특한 볼거리이며 어린 송아지 슈니첼과 카이저슈마른 같은 비엔나 고전 요리도 맛볼 수 있다. 아침 식사부터 점심·저녁까지 이용 가능하고, 여름에는 빈강을 내려다보는 테라스가 특히 매력적이다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "michelin": {
           "distinction": "Bib Gourmand",
           "year": 2026,
@@ -2646,13 +2658,15 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "제철 오스트리아 식재료 테이스팅 코스"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "비엔나의 현대 오스트리아 미식을 대표하는 파인다이닝 중 하나로, 지역 식재료를 창의적으로 다룬다. 슈타트파크의 녹지와 함께 특별한 식사를 계획하는 사람에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "One of Vienna's leading modern Austrian fine-dining restaurants, combining regional ingredients with inventive techniques in Stadtpark.",
+        "ko": "미쉐린 3스타를 받은 오스트리아 대표 파인다이닝 레스토랑. 잊혀 가는 지역 식재료와 전통 조리법을 현대적으로 재해석한 여러 접시의 코스가 특징이다. 슈타트파크의 녹지와 정교한 서비스까지 포함해 식사 자체를 여행의 중요한 일정으로 계획하는 미식가에게 추천한다. 계절에 따라 코스 구성이 달라진다.",
+        "en": "One of Austria's flagship fine-dining destinations, awarded three MICHELIN stars. Its changing tasting menus reinterpret regional produce and forgotten Austrian culinary traditions with remarkable precision, in a striking Stadtpark setting.",
         "de": null
       },
       "personal_review": {
@@ -2664,7 +2678,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2676,8 +2692,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비엔나의 현대 오스트리아 미식을 대표하는 파인다이닝 중 하나로, 지역 식재료를 창의적으로 다룬다. 슈타트파크의 녹지와 함께 특별한 식사를 계획하는 사람에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "미쉐린 3스타를 받은 오스트리아 대표 파인다이닝 레스토랑. 잊혀 가는 지역 식재료와 전통 조리법을 현대적으로 재해석한 여러 접시의 코스가 특징이다. 슈타트파크의 녹지와 정교한 서비스까지 포함해 식사 자체를 여행의 중요한 일정으로 계획하는 미식가에게 추천한다. 계절에 따라 코스 구성이 달라진다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -2738,13 +2754,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "현대적 창작 테이스팅 코스",
+        "제철 고급 식재료"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "창의적인 고급 코스 요리로 유명한 비엔나의 파인다이닝 레스토랑이다. 여행에서 음식 자체를 중요한 이벤트로 계획하는 미식가에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Creative upscale tasting menus make this a destination for travelers planning a special culinary evening.",
+        "ko": "비엔나 그린칭의 와인 저장고를 개조한 공간에서 후안 아마도르의 창의적인 코스 요리를 즐기는 미쉐린 3스타 레스토랑. 엄선한 고급 식재료를 균형 있게 조합하는 정교한 요리가 강점이다. 캐주얼한 비엔나 전통식보다는 특별한 날을 위한 미식 경험을 찾는 여행객에게 추천한다.",
+        "en": "Juan Amador's three-MICHELIN-star restaurant occupies a refined former wine cellar in Grinzing. Its creative tasting menus balance exceptional ingredients with precise modern technique, making it a destination for a special occasion.",
         "de": null
       },
       "personal_review": {
@@ -2756,7 +2775,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.michelin.com/en/publications/products-and-services/michelin-guide-austria-2026"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2768,8 +2789,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "창의적인 고급 코스 요리로 유명한 비엔나의 파인다이닝 레스토랑이다. 여행에서 음식 자체를 중요한 이벤트로 계획하는 미식가에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "비엔나 그린칭의 와인 저장고를 개조한 공간에서 후안 아마도르의 창의적인 코스 요리를 즐기는 미쉐린 3스타 레스토랑. 엄선한 고급 식재료를 균형 있게 조합하는 정교한 요리가 강점이다. 캐주얼한 비엔나 전통식보다는 특별한 날을 위한 미식 경험을 찾는 여행객에게 추천한다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -2806,13 +2827,15 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "생선·해산물 중심의 현대식 테이스팅 코스"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "정교한 현대 요리와 코스 다이닝으로 알려진 레스토랑이다. 오스트리아식 전통 메뉴와 다른 독창적인 미식 경험을 찾는 여행자에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "A contemporary fine-dining restaurant recognized for precise cooking and distinctive tasting menus.",
+        "ko": "오스트리아와 그리스에 뿌리를 둔 콘스탄틴 필리푸의 개성이 드러나는 미쉐린 2스타 레스토랑. 생선과 해산물을 중심으로 강렬하면서도 절제된 맛을 만드는 현대적 코스가 특징이다. 전통 슈니첼보다 셰프의 독창적인 요리 세계를 경험하고 싶은 미식가에게 어울린다.",
+        "en": "Konstantin Filippou's two-MICHELIN-star restaurant draws on Austrian and Greek influences, with a particularly strong focus on fish and seafood. Its carefully composed tasting menu is ideal for diners seeking distinctive modern cuisine.",
         "de": null
       },
       "personal_review": {
@@ -2824,7 +2847,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2836,8 +2861,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "정교한 현대 요리와 코스 다이닝으로 알려진 레스토랑이다. 오스트리아식 전통 메뉴와 다른 독창적인 미식 경험을 찾는 여행자에게 추천한다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "오스트리아와 그리스에 뿌리를 둔 콘스탄틴 필리푸의 개성이 드러나는 미쉐린 2스타 레스토랑. 생선과 해산물을 중심으로 강렬하면서도 절제된 맛을 만드는 현대적 코스가 특징이다. 전통 슈니첼보다 셰프의 독창적인 요리 세계를 경험하고 싶은 미식가에게 어울린다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -2874,13 +2899,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "창의적 테이스팅 코스",
+        "계절별 실험적 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "예상치 못한 식재료 조합과 창의적인 구성의 코스 요리로 알려져 있다. 새로운 맛과 미식 실험을 즐기는 여행자에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Known for creative tasting menus, unexpected ingredient pairings and an adventurous approach to fine dining.",
+        "ko": "비엔나 20구에 자리한 미쉐린 2스타 파인다이닝으로, 예상하지 못한 식재료 조합과 유쾌한 연출이 특징이다. 마르츠 가문의 독창적인 코스는 한 접시마다 새로운 아이디어를 보여주며, 정해진 대표 음식보다 그날의 전체 코스를 즐기는 곳이다. 익숙한 맛보다 놀라움을 찾는 미식가에게 추천한다.",
+        "en": "A two-MICHELIN-star destination in Vienna's twentieth district, Mraz & Sohn is known for playful creativity, surprising ingredient combinations and an inventive multi-course experience. Come for the full tasting menu, not one fixed signature dish.",
         "de": null
       },
       "personal_review": {
@@ -2892,7 +2920,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2904,8 +2934,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "예상치 못한 식재료 조합과 창의적인 구성의 코스 요리로 알려져 있다. 새로운 맛과 미식 실험을 즐기는 여행자에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "비엔나 20구에 자리한 미쉐린 2스타 파인다이닝으로, 예상하지 못한 식재료 조합과 유쾌한 연출이 특징이다. 마르츠 가문의 독창적인 코스는 한 접시마다 새로운 아이디어를 보여주며, 정해진 대표 음식보다 그날의 전체 코스를 즐기는 곳이다. 익숙한 맛보다 놀라움을 찾는 미식가에게 추천한다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -2942,13 +2972,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "현대식 고급 테이스팅 코스",
+        "와인 페어링"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "역사적인 팔레 코부르크의 분위기 속에서 정교한 고급 코스 요리를 경험할 수 있다. 기념일이나 특별한 저녁을 위해 고려할 만하다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Elegant fine dining inside the historic Palais Coburg, ideal for celebrations and special evenings.",
+        "ko": "역사적인 팔레 코부르크 내부의 미쉐린 2스타 레스토랑. 실비오 니콜의 섬세한 현대 요리와 세계적인 와인 저장고의 페어링이 큰 매력이다. 궁전 같은 공간과 정교한 서비스까지 즐길 수 있어 기념일이나 특별한 저녁에 어울린다. 코스와 와인 가격은 예약 전에 확인하는 것이 좋다.",
+        "en": "A two-MICHELIN-star restaurant inside the historic Palais Coburg, pairing Silvio Nickol's refined modern tasting menus with the palace's renowned wine collection. A luxurious choice for celebrations and special dinners.",
         "de": null
       },
       "personal_review": {
@@ -2960,7 +2993,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -2972,8 +3007,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "역사적인 팔레 코부르크의 분위기 속에서 정교한 고급 코스 요리를 경험할 수 있다. 기념일이나 특별한 저녁을 위해 고려할 만하다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "역사적인 팔레 코부르크 내부의 미쉐린 2스타 레스토랑. 실비오 니콜의 섬세한 현대 요리와 세계적인 와인 저장고의 페어링이 큰 매력이다. 궁전 같은 공간과 정교한 서비스까지 즐길 수 있어 기념일이나 특별한 저녁에 어울린다. 코스와 와인 가격은 예약 전에 확인하는 것이 좋다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3010,13 +3045,15 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "직화·숯불 조리 테이스팅 코스"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "불을 적극적으로 활용하는 조리와 창의적인 요리가 특징인 현대적 미식 공간이다. 불향과 조리 방식 자체를 즐기는 여행자에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "An innovative restaurant defined by fire-based cooking and inventive dishes with smoky flavors.",
+        "ko": "불과 숯을 활용한 조리법을 요리의 중심에 둔 미쉐린 2스타 레스토랑. 직화의 향과 온도 차이를 살린 창의적인 코스를 어두운 분위기의 공간에서 경험한다. 평범한 구이 식당이 아니라 불을 이용한 현대 미식의 가능성을 보여주는 곳으로, 색다른 파인다이닝을 찾는 사람에게 추천한다.",
+        "en": "A two-MICHELIN-star restaurant built around live-fire and charcoal cooking. Its inventive tasting menu explores smoke, heat and texture in an intimate setting. Ideal for diners curious about fire-led contemporary gastronomy.",
         "de": null
       },
       "personal_review": {
@@ -3028,7 +3065,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3040,8 +3079,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "불을 적극적으로 활용하는 조리와 창의적인 요리가 특징인 현대적 미식 공간이다. 불향과 조리 방식 자체를 즐기는 여행자에게 어울린다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "불과 숯을 활용한 조리법을 요리의 중심에 둔 미쉐린 2스타 레스토랑. 직화의 향과 온도 차이를 살린 창의적인 코스를 어두운 분위기의 공간에서 경험한다. 평범한 구이 식당이 아니라 불을 이용한 현대 미식의 가능성을 보여주는 곳으로, 색다른 파인다이닝을 찾는 사람에게 추천한다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3078,13 +3117,16 @@
         "accuracy": "named_restaurant_poi_not_entrance",
         "checked_on": "2026-11-04"
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "제철 채소 테이스팅 코스",
+        "식물성 창작 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "채소와 식물성 식재료를 중심에 둔 창의적인 고급 요리로 유명하다. 채식이 단순한 대체 메뉴가 아니라 세련된 미식 경험이 되는 곳이다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "High-end creative vegetarian cuisine, placing vegetables and plant-based ingredients at the center of the experience.",
+        "ko": "채소를 식사의 중심에 두는 비엔나의 대표적인 미쉐린 1스타 채식 파인다이닝. 제철 식물성 재료의 맛과 질감을 섬세하게 끌어낸 창작 코스가 특징이다. 미쉐린 그린스타도 받은 곳으로, 채식이 단순한 대체 메뉴가 아니라 완성도 높은 미식 경험이 될 수 있음을 보여준다.",
+        "en": "A one-MICHELIN-star vegetarian fine-dining restaurant, also recognised with a Green Star. TIAN's seasonal tasting menu puts vegetables and plant-based ingredients centre stage through imaginative techniques and refined flavours.",
         "de": null
       },
       "personal_review": {
@@ -3096,7 +3138,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3108,8 +3152,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "채소와 식물성 식재료를 중심에 둔 창의적인 고급 요리로 유명하다. 채식이 단순한 대체 메뉴가 아니라 세련된 미식 경험이 되는 곳이다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "채소를 식사의 중심에 두는 비엔나의 대표적인 미쉐린 1스타 채식 파인다이닝. 제철 식물성 재료의 맛과 질감을 섬세하게 끌어낸 창작 코스가 특징이다. 미쉐린 그린스타도 받은 곳으로, 채식이 단순한 대체 메뉴가 아니라 완성도 높은 미식 경험이 될 수 있음을 보여준다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
@@ -3143,13 +3187,16 @@
         "lat": null,
         "lng": null
       },
-      "recommended_dishes": [],
+      "recommended_dishes": [
+        "100% 비건 테이스팅 코스",
+        "제철 식물성 요리"
+      ],
       "price_range": null,
       "website": null,
       "reservation_url": null,
       "description": {
-        "ko": "비건 코스 다이닝을 창의적으로 풀어내는 식당이다. 고기 없이도 풍성한 맛과 다양한 조리법을 경험할 수 있다는 점에서 선정했다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "en": "Inventive vegan tasting menus that showcase varied techniques and rich flavors without animal products.",
+        "ko": "동물성 재료 없이 구성한 창의적인 비건 코스로 주목받는 파인다이닝 레스토랑. 제철 채소와 곡물, 허브를 여러 조리법으로 표현하며 고기나 유제품 없이도 풍성한 맛을 만든다. 2026년 미쉐린 1스타와 그린스타를 받은 곳으로, 비건 미식 자체를 특별한 경험으로 즐기고 싶은 여행객에게 추천한다.",
+        "en": "A creative all-vegan fine-dining restaurant, awarded one MICHELIN star and a Green Star in 2026. Its seasonal tasting menu transforms vegetables, grains and herbs into an ambitious plant-based dining experience.",
         "de": null
       },
       "personal_review": {
@@ -3161,7 +3208,9 @@
       "verification": {
         "status": "unverified",
         "last_checked": null,
-        "sources": []
+        "sources": [
+          "https://www.wien.info/en/dine-drink/restaurants/luxury-restaurants-351340"
+        ]
       },
       "operations": {
         "status": "unknown",
@@ -3173,8 +3222,8 @@
       "tags": [],
       "editorial": {
         "must_visit": false,
-        "selection_reason_ko": "비건 코스 다이닝을 창의적으로 풀어내는 식당이다. 고기 없이도 풍성한 맛과 다양한 조리법을 경험할 수 있다는 점에서 선정했다.\n\n이 식당은 빠르게 한 끼를 해결하는 곳이 아니라, 여러 접시로 이어지는 요리의 아이디어와 서비스까지 경험하는 목적지에 가깝다. 방문을 계획한다면 메뉴 구성과 예약 조건을 먼저 살펴보자.",
-        "story_review": "public-source-supported-outline",
+        "selection_reason_ko": "동물성 재료 없이 구성한 창의적인 비건 코스로 주목받는 파인다이닝 레스토랑. 제철 채소와 곡물, 허브를 여러 조리법으로 표현하며 고기나 유제품 없이도 풍성한 맛을 만든다. 2026년 미쉐린 1스타와 그린스타를 받은 곳으로, 비건 미식 자체를 특별한 경험으로 즐기고 싶은 여행객에게 추천한다.",
+        "story_review": "official-menu-michelin-verified-2026-11-05",
         "research_sources": [
           "https://guide.michelin.com/en/at/vienna/wien/restaurants/all-starred"
         ],
