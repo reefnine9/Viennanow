@@ -828,6 +828,15 @@ button.heart:focus-visible,button.exp19-save:focus-visible,
 
 /* Accessible swipe announcement hidden visually but available to assistive technology. */
 .vn-visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Release consistency: scoped, accessible 44px touch targets and even corners. */
+.vn36-course-nav button,.vn36-show-near-map,.vn63-detail-arrows button,.vn64-food-links button,.vn64-food-links a,.vn-release-links a{border-radius:12px;min-height:44px;font-family:inherit}
+.vn36-course-nav button,.vn63-detail-arrows button{display:inline-flex;align-items:center;justify-content:center}
+.vn-release-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;padding:16px 6px 25px;font-size:11px;border-top:1px solid var(--line)}
+.vn-release-links a{display:inline-flex;align-items:center;color:var(--navy);text-decoration:underline;text-underline-offset:3px;padding:9px 3px}
+.vn-route-location-caution{font-size:12px;line-height:1.6;color:var(--muted);margin:10px 0}
+.vn-release-links a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(max-width:360px){.vn-release-links{gap:2px 8px;font-size:10px}}
 </style></head><body><div id="vn-swipe-announcer" role="status" aria-live="polite" aria-atomic="true" class="vn-visually-hidden"></div><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright vn-language-toggle-wrap"><button type="button" class="vn-language-toggle" data-act="toggle-language" aria-label="Change language" title="Change language"><span class="vn-language-short" aria-hidden="true"></span></button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -1274,7 +1283,7 @@ function home(){
   return `<div class="stack home21">${storyHero()}  ${state.itinerary?`<div class="card soft"><div class="row between"><b>저장한 나의 여행</b><span class="pill">${state.days}일 · ${paceText()}</span></div><p class="sub">계획한 명소 ${state.itinerary.covered}/${state.itinerary.mustCount}곳</p>${btn('내 계획 보러가기','plan-mine','primary block')}</div>`:''}
   ${vn52Preview()}
   <section class="vn62-guide-preview"><div class="row between"><b class="sectionheading">여행 준비 정보</b><button class="backbtn" data-act="go-guide">더보기 →</button></div><div class="vn52-items">${Object.entries(GUIDE_TOPICS).slice(0,4).map(([key,t])=>`<button type="button" class="vn52-card vn62-guide-card" data-act="vn62-home-guide-topic" data-value="${key}"><span class="vn62-guide-icon">${t.icon}</span><span class="vn52-cardtext"><b>${h(t.title)}</b><small>${h(t.sub)}</small></span><span class="vn52-arrow">›</span></button>`).join('')}</div></section>
-  ${vn62ShopPreview()}</div>`;
+  ${vn62ShopPreview()}<footer class="vn-release-links" aria-label="서비스 정보"><a href="/privacy.html" target="_blank" rel="noopener noreferrer">${state.contentLang==='en'?'Privacy & location':'개인정보·위치정보 안내'}</a><a href="/legal.html" target="_blank" rel="noopener noreferrer">${state.contentLang==='en'?'Legal & operator information':'운영자·법적 고지'}</a><a href="/photo-credits.html" target="_blank" rel="noopener noreferrer">${state.contentLang==='en'?'Photo credits':'사진 저작권 표시'}</a></footer></div>`;
 
 }
 function editPage(){
@@ -1850,7 +1859,7 @@ function vn64FoodPhoto(r,cls='',size=840){
  const placeholder=en?'Photo unavailable':'사진 준비 중';
  if(!photo)return '<span class="vn64-image-placeholder '+cls+'"><span>🍽</span><small>'+placeholder+'</small></span>';
  const alt=en?(photo.caption_en||name):(photo.caption_ko||name);
- return '<span class="vn64-photo-wrap '+cls+'"><img loading="lazy" src="'+h(photo.url)+'" alt="'+h(alt)+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="vn64-image-placeholder" hidden><span>🍽</span><small>'+placeholder+'</small></span></span>';
+ return '<span class="vn64-photo-wrap '+cls+'"><img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="'+h(photo.url)+'" alt="'+h(alt)+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="vn64-image-placeholder" hidden><span>🍽</span><small>'+placeholder+'</small></span></span>';
 }
 function vn64FoodType(r){
  if(r.editorial?.michelin?.distinction==='Bib Gourmand')return state.contentLang==='en'?'Michelin Bib Gourmand':'미쉐린 빕 구르망';
@@ -1987,6 +1996,7 @@ function courseDetail36(c){
    <p class="sub">${en?'Stops are listed in suggested visiting order.':'여행자가 장소를 쉽게 이해할 수 있도록 주요 지점을 순서대로 정리했습니다.'}</p>
    <ol class="vn36-stops">${c.stops.map(stop=>`<li>${h(stop)}</li>`).join('')}</ol>
    ${vnCourseMiniMap41(c)}
+   ${vnCoursePoints41(c).length<c.stops.length?'<p class="vn-route-location-caution" role="note">'+(en?'Some stops are omitted from the map because their precise location is not verified.':'정확한 위치가 확인되지 않은 경유지는 지도에 표시하지 않았습니다.')+'</p>':''}
    <button type="button" class="btn primary block vn36-show-near-map" data-act="vn-course-near-map" data-id="${h(c.id)}">${en?'View this route in Nearby map':'내주변 지도에서 이 코스 보기'} ↗</button>
   </section>
  </div>`;
@@ -2249,8 +2259,9 @@ function vn60FoodPopup(v){
 function nearPlanLayer31(){
  const plan=nearSelectedPlan31();if(!plan||!layerGroup)return;
  const pts=vnCoursePoints41(plan),lines=pts.map(p=>[p.lat,p.lon]);
+ const en=state.contentLang==='en';
  if(lines.length)map.fitBounds(L.latLngBounds(lines).pad(.26),{maxZoom:15});
- vn60Clusters(pts.map((p,i)=>({lat:p.lat,lon:p.lon,type:'plan',order:p.order,key:String(p.order),title:p.order+'. '+p.name,icon:nearPin31('plan',p.order),popup:'<b>'+h(p.order+'. '+p.name)+'</b><br><small>위치 참고용 · 길찾기 경로가 아닙니다.</small>',action:'noop'})),{label:'코스 경유지',route:lines});
+ vn60Clusters(pts.map((p,i)=>({lat:p.lat,lon:p.lon,type:'plan',order:p.order,key:String(p.order),title:p.order+'. '+(en?(VN_EN_STOPS[p.name]||p.name):p.name),icon:nearPin31('plan',p.order),popup:'<b>'+h(p.order+'. '+(en?(VN_EN_STOPS[p.name]||p.name):p.name))+'</b><br><small>'+(en?'Approximate stop location; not turn-by-turn directions.':'위치 참고용 · 길찾기 경로가 아닙니다.')+'</small>',action:'noop'})),{label:'코스 경유지',route:lines});
 }
 function vn59SavedMapLayer(){
  if(!map||!layerGroup)return;
