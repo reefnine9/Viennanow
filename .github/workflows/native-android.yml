@@ -41,6 +41,7 @@ jobs:
           npm test
           npm run check
           npm run check:stores
+          npm run check:native:release
       - name: Create Android native project
         run: npm run native:add:android
       - name: Stage and sync native web assets
