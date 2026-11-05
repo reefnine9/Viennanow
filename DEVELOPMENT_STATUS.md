@@ -88,3 +88,18 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - **Verified success**: GitHub Actions run [41947156886](https://github.com/reefnine9/Viennanow/actions/runs/41947156886) / commit `9e92f25bc4ddbf124ad6e79864a1fea7e16238c0`: 40/40 combinations, **0 issues**; 2D viewport screenshots and report uploaded as workflow artifact. Source QA at same commit also passed.
 - Scope limitation: Chromium emulation on GitHub is not physical iPhone Safari or Android Chrome; screenshots were captured but not yet manually visually reviewed. Map/photos external requests intentionally blocked in this test; real deployed site, link availability, map pin interactions, favourite persistence and physical touch gestures are still NOT validated.
 - Next: review artifacts and real-device screenshots, add favourite persistence / map popup interaction checks, verify Cloudflare deployed URL separately, and update release readiness.
+
+
+## 12. Phase 11 — favourite interactions and detail flow (2026-11-05)
+- Added `scripts/interaction-qa.mjs` to browser-check sight favourites: initial state, save, localStorage persistence, reload, Plan saved list, remove, persistence of removal, sight detail open/close, Nearby map element and pin-to-detail **source wiring**.
+- Browser testing caught a real blocker when a sight photo failed: `.photo-error23` overlay in `.photo-pick` intercepted taps on the favourite heart. Fixed in deployed `public/index.html` with `.photo-pick .heart{z-index:4;isolation:isolate}` and non-interactive error overlay. Commit `7c44ab0d5311af289f5843dccef7a4d65f0d197f`.
+- **Verified:** Phase 11 Chromium checks **13/13 passed**, no issues, in GitHub Actions run [41948602867](https://github.com/reefnine9/Viennanow/actions/runs/41948602867).
+- Scope: Map element and popup handler wiring were tested, but **real Leaflet marker taps with map tiles were not**. Restaurant favourite interaction also remains a further end-to-end target.
+
+## 13. Phase 12 — local and production HTTP verification (2026-11-05)
+- Created `scripts/deploy-qa.mjs`; extended `.github/workflows/mobile-browser-qa.yml` to run local asset checks and production observation separately, upload results and screenshots, and avoid treating transient production failures as source QA failures.
+- Exact production URL previously supplied in the project: `https://viennanow.pages.dev/`.
+- **Verified:** GitHub Actions run [41948602867](https://github.com/reefnine9/Viennanow/actions/runs/41948602867): 40/40 mobile/tab/language combinations; Phase 11 13/13; Phase 12 local 7/7; Phase 12 production HTTP **11/11** required/noncritical checks without failure. Production passed app HTML, QA/deploy pages, 48-photo manifest, 82-restaurant catalogue, route-status API response/shape, public-toilet sample diagnostics response.
+- Production HTML contains the latest Phase 11 heart-overlay CSS marker, so the fix is **confirmed deployed** (this checks the marker's presence, not visual/touch success on a physical phone).
+- Local and production HTTP reports are written separately to `artifacts/deploy-qa/local-report.json` and `production-report.json`; test artifacts are attached to the GitHub Actions run.
+- Still not a full production release certification: browser QA blocks external images/maps, external photo links and licences are unverified, route-status JSON does not prove route success, HTTP 200 for toilet sample diagnostics does not establish completeness, mobile Safari/Android devices and real live map pin interactions remain untested.
