@@ -618,6 +618,71 @@ button.vn63-detail-heart.saved,button.heart.saved,button.exp19-save.saved,
   padding:0 10px!important;
  }
 }
+
+/* ViennaNow visual audit: semantic sizes, surfaces and typographic rhythm.
+   Shared tokens, intentionally excluding photo aspect ratios, maps and fullscreen viewers. */
+:root{
+ --vn-radius-card:14px;
+ --vn-radius-media:12px;
+ --vn-radius-control:12px;
+ --vn-space-card:13px;
+ --vn-surface:#fff;
+ --vn-border:#dfe8e3;
+ --vn-text:#163547;
+ --vn-muted:#5f7478;
+ --vn-button-height:44px;
+}
+.card,.vn42-card,.vn65-food-list-card,.vn59-saved-card,
+.vn52-card,.vn36-card,.vn36-catalog .card,
+.vn59-saved-summary,.vn64-food-card{
+ border-radius:var(--vn-radius-card)!important;
+}
+.card,.vn42-card,.vn65-food-list-card,.vn59-saved-card,.vn52-card{
+ border-color:var(--vn-border)!important;
+}
+.vn36-image,.vn36-detail-img,.vn59-saved-thumb,
+.vn43-imagebox,.vn64-food-drawer .vn64-detail-cover{
+ border-radius:var(--vn-radius-media);
+}
+.btn:not(.small),button.btn:not(.small){
+ min-height:var(--vn-button-height);
+ border-radius:var(--vn-radius-control);
+ font-weight:750;
+ font-size:12px;
+ line-height:1.35;
+}
+.btn.outline{border-color:var(--vn-border)}
+.vn45-directions,.vn64-food-links>*,.near-more .near-row button,
+.near-more summary{
+ box-sizing:border-box;
+ border-radius:var(--vn-radius-control);
+ font-family:inherit;
+ font-weight:750;
+}
+.vn45-directions,.vn64-food-links>*,.near-more .near-row button{
+ min-height:38px;
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:7px 11px;
+ font-size:11px;
+}
+.near-more summary{
+ display:flex;align-items:center;justify-content:center;
+ min-height:38px;padding:8px 12px;
+ border:1px solid var(--vn-border);
+ background:#fff;
+ text-align:center;
+}
+.vn59-saved-page h3,.vn42-summary b,.vn64-detail-text>b{
+ color:var(--vn-text);letter-spacing:-.02em;
+}
+.vn59-saved-page h3{font-size:15px;font-weight:800}
+.vn59-saved-info b,.vn65-food-list-card strong{
+ line-height:1.4;letter-spacing:-.02em;
+}
+.sub,.vn64-detail-text p{color:var(--vn-muted)}
+.vn42-wrap,.vn59-saved-page{gap:12px}
+.vn65-food-list{gap:12px}
+.vn64-food-page .vn64-food-content{gap:12px}
 </style></head><body><div class="desktop"><aside class="intro"><div class="eyebrow">CITY GUIDE · AUSTRIA HIGHDPI</div><h1>Vienna<br>Now.</h1><p>가고 싶은 곳은 최대한 담고,<br>여행의 속도는 내가 정합니다.</p><span class="tag">16곳 공식정보 검토</span><span class="tag">지도 표시</span><span class="tag">OGD 연동 시험</span><span class="tag">여행 일정 초안</span><small>이 앱은 개발 중인 실험용 프로토타입입니다. 지도의 명소 마커 좌표는 근사치이며, 경로·요금·당일 개방 여부는 아직 검증되지 않았습니다.</small></aside><div class="phone"><div class="status"><span>16:20</span><span>••• ▰</span></div><aside id="ad-slot" class="vn32-ad-slot" role="complementary" aria-label="배너 광고 영역"><span>광고 영역 · 준비 중</span></aside><header class="header"><div class="brand"><span class="mark" role="img" aria-label="ViennaNow"></span><span class="brand-word">ViennaNow</span></div><div class="headright vn-language-toggle-wrap"><button type="button" class="vn-language-toggle" data-act="toggle-language" aria-label="Change language" title="Change language"><span class="vn-language-short" aria-hidden="true"></span></button></div></header><main id="main" class="main"></main><nav id="bottom" class="bottom" aria-label="주요 메뉴"></nav><div id="layer"></div><div id="toast" role="status"></div></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
