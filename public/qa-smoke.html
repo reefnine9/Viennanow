@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ViennaNow · Release smoke checks</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:#183547;background:#f8f6f2}
+*{box-sizing:border-box}main{max-width:760px;margin:0 auto;padding:24px 16px 70px}
+header{background:#183547;color:#fff;border-radius:16px;padding:20px}h1{font-size:22px;margin:0 0 7px}
+header p{font-size:13px;line-height:1.6;margin:0;color:#e0eaee}
+button{height:42px;border-radius:12px;border:0;background:#183547;color:white;font-weight:750;padding:0 18px;cursor:pointer}
+article{padding:12px 14px;background:white;border:1px solid #dfe8e3;border-radius:14px;margin:9px 0}
+.pass{border-left:4px solid #23846f}.fail{border-left:4px solid #ba4250}.warn{border-left:4px solid #d18d38}
+h2{font-size:17px}.label{font-size:11px;font-weight:800;letter-spacing:.06em}.description{font-size:12px;line-height:1.6;margin:4px 0 0;color:#5c7175}
+</style></head><body><main>
+<header><h1>ViennaNow · Release QA</h1><p>Static smoke checks only. These tests inspect the deployed application source and bundled restaurant catalogue; they do not confirm real-world operating hours, the legal status of photos, network availability of external links or touchscreen behaviour.</p></header>
+<p><button type="button" id="run">Run checks / 점검 실행</button></p><p id="summary" role="status">Not run</p><section id="checks" aria-live="polite"></section>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const escapeHtml=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function declaration(source,name){
+ const marker='const '+name+'=',start=source.indexOf(marker);
+ if(start<0)throw Error('Missing declaration '+name);
+ const from=start+marker.length,to=source.indexOf(';\n',from);
+ if(to<0)throw Error('Missing terminator '+name);
+ return JSON.parse(source.slice(from,to));
+}
+async function run(){
+ $('run').disabled=true;$('summary').textContent='Checking…';$('checks').innerHTML='';
+ const results=[];
+ const add=(status,title,detail)=>results.push({status,title,detail});
+ try{
+  const [htmlResponse,dataResponse]=await Promise.all([fetch('./index.html',{cache:'no-store'}),fetch('./data/restaurants.json',{cache:'no-store'})]);
+  if(!htmlResponse.ok||!dataResponse.ok)throw Error('App/data fetch failed: '+htmlResponse.status+' / '+dataResponse.status);
+  const [source,data]=await Promise.all([htmlResponse.text(),dataResponse.json()]);
+  const sights=declaration(source,'CATALOG48'),photos=declaration(source,'PHOTO_ASSETS'),guides=declaration(source,'LONG_GUIDES48_EN'),restaurants=data.restaurants||[];
+  add(sights.length===48&&new Set(sights.map(x=>x.id)).size===48?'pass':'fail','48 sights / unique IDs',sights.length+' sights, '+new Set(sights.map(x=>x.id)).size+' distinct IDs');
+  add(restaurants.length===82&&new Set(restaurants.map(x=>x.id)).size===82?'pass':'fail','82 restaurants / unique IDs',restaurants.length+' restaurants, '+new Set(restaurants.map(x=>x.id)).size+' distinct IDs');
+  const missingSightGeo=sights.filter(x=>!Number.isFinite(x.lat)||!Number.isFinite(x.lon));
+  add(missingSightGeo.length?'fail':'pass','Sight map coordinates',missingSightGeo.length+' without usable coordinates');
+  const missingRestaurantGeo=restaurants.filter(x=>!Number.isFinite(x.location?.lat)||!Number.isFinite(x.location?.lng));
+  add(missingRestaurantGeo.length?'warn':'pass','Restaurant map coordinates',missingRestaurantGeo.length+' restaurants without stored map coordinates; live discovery may find unambiguous matches');
+  add(photos.length===48&&new Set(photos.map(x=>x.placeId)).size===48&&photos.every(x=>x.source&&x.creator&&x.license&&x.url)?'pass':'fail','Sight photo attribution metadata',photos.length+' entries; this does not verify current URL responses or legal permissions');
+  const covers=restaurants.filter(x=>x.media?.cover?.commercial_use_verified&&x.media.cover.url&&x.media.cover.source_page&&x.media.cover.license);
+  add(covers.length===restaurants.length?'pass':'warn','Restaurant photo coverage',covers.length+' reviewed covers; '+(restaurants.length-covers.length)+' without reviewed cover images');
+  const missingGuide=sights.filter(x=>!Array.isArray(guides[x.id])||guides[x.id].length<2);
+  add(missingGuide.length?'fail':'pass','English full-length sight stories',missingGuide.length+' records missing 2+ paragraphs');
+  const noEnglish=restaurants.filter(x=>!x.description?.en);
+  add(noEnglish.length?'fail':'pass','Restaurant English summaries',noEnglish.length+' records missing English descriptions');
+  const actions=['save-catalog','vn58-food-heart','vn48-food-open','detail','section-near','toggle-language'];
+  const noActions=actions.filter(x=>!source.includes("case '"+x+"'")&&!source.includes("case'"+x+"'"));
+  add(noActions.length?'fail':'pass','Favorite, detail, map and language actions',noActions.length?'Missing action handlers: '+noActions.join(', '):'All six required action handlers are present');
+  add(source.includes('vn59SavedMapLayer')&&source.includes("['food','saved'].includes(nearMode31())")?'pass':'fail','Saved map refresh wiring','Checks that saved map updates after restaurant coordinates are retrieved');
+  add(source.includes('vn63-detail-heart')&&source.includes('vn59-saved-card')?'pass':'fail','Favorite visual components','Saved and detail heart styles found in page source');
+  add('warn','Manual mobile/browser testing remains required','Test iOS Safari, Android Chrome, KO/EN, real marker taps, offline/slow network, photos, external links and screen reader interactions.');
+ }catch(err){add('fail','QA could not run',String(err.message||err));}
+ $('summary').textContent=results.filter(x=>x.status==='pass').length+' passed · '+results.filter(x=>x.status==='warn').length+' warnings · '+results.filter(x=>x.status==='fail').length+' failed';
+ $('checks').innerHTML=results.map(x=>'<article class="'+x.status+'"><div class="label">'+escapeHtml(x.status.toUpperCase())+'</div><strong>'+escapeHtml(x.title)+'</strong><p class="description">'+escapeHtml(x.detail)+'</p></article>').join('');
+ $('run').disabled=false;
+}
+$('run').addEventListener('click',run);run();
+</script></main></body></html>
