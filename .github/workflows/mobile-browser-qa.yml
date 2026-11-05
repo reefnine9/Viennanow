@@ -41,6 +41,9 @@ jobs:
         env:
           VIENNANOW_DEPLOY_URL: ${{ inputs.deployed_url }}
         run: node scripts/deploy-qa.mjs
+      - name: Phase 12 production site observation
+        continue-on-error: true
+        run: node scripts/deploy-qa.mjs --url=https://viennanow.pages.dev
       - uses: actions/upload-artifact@v4
         if: always()
         with:
