@@ -25,12 +25,14 @@ jobs:
       - uses: android-actions/setup-android@v3
       - name: Verify signing configuration
         env:
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ENCRYPTED_KEYSTORE_B64: ${{ secrets.ANDROID_ENCRYPTED_KEYSTORE_BASE64 }}
+          BACKUP_PASSWORD: ${{ secrets.ANDROID_KEY_BACKUP_PASSWORD }}
           STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
-          test -n "$KEYSTORE_B64" || { echo "::error::Missing ANDROID_KEYSTORE_BASE64 secret"; exit 1; }
+          test -n "$ENCRYPTED_KEYSTORE_B64" || { echo "::error::Missing ANDROID_ENCRYPTED_KEYSTORE_BASE64 secret"; exit 1; }
+          test -n "$BACKUP_PASSWORD" || { echo "::error::Missing ANDROID_KEY_BACKUP_PASSWORD secret"; exit 1; }
           test -n "$STORE_PASSWORD" || { echo "::error::Missing ANDROID_KEYSTORE_PASSWORD secret"; exit 1; }
           test -n "$KEY_ALIAS" || { echo "::error::Missing ANDROID_KEY_ALIAS secret"; exit 1; }
           test -n "$KEY_PASSWORD" || { echo "::error::Missing ANDROID_KEY_PASSWORD secret"; exit 1; }
@@ -52,13 +54,16 @@ jobs:
         run: npm run native:sync
       - name: Prepare secure signing
         env:
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ENCRYPTED_KEYSTORE_B64: ${{ secrets.ANDROID_ENCRYPTED_KEYSTORE_BASE64 }}
+          BACKUP_PASSWORD: ${{ secrets.ANDROID_KEY_BACKUP_PASSWORD }}
           STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           umask 077
-          printf '%s' "$KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/viennanow-upload.jks"
+          printf '%s' "$ENCRYPTED_KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/viennanow-upload.jks.enc"
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 250000 -in "$RUNNER_TEMP/viennanow-upload.jks.enc" -out "$RUNNER_TEMP/viennanow-upload.jks" -pass env:BACKUP_PASSWORD
+          rm -f "$RUNNER_TEMP/viennanow-upload.jks.enc"
           test -s "$RUNNER_TEMP/viennanow-upload.jks"
           cat >> android/gradle.properties <<EOF
           VIENNANOW_RELEASE_STORE_FILE=$RUNNER_TEMP/viennanow-upload.jks
