@@ -1721,7 +1721,7 @@ function vn42Load(){
  fetch('/data/restaurants.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
   if(!Array.isArray(d.restaurants))throw Error('Invalid data');
   VN42_DB=d;
- }).catch(e=>{VN42_ERROR=String(e.message||e)}).finally(()=>{VN42_LOADING=false;if(state.tab==='food'||(state.tab==='map'&&nearMode31()==='food'))render()});
+ }).catch(e=>{VN42_ERROR=String(e.message||e)}).finally(()=>{VN42_LOADING=false;if(state.tab==='food'||(state.tab==='itinerary'&&state.planSection==='mine')||(state.tab==='map'&&['food','saved'].includes(nearMode31())))render()});
 }
 function vn42RevealSelectedFilter(){
  const strip=document.querySelector('.vn42-filters');
@@ -2320,7 +2320,7 @@ case 'vn65-food-view':if(value!=='tiles'&&value!=='list')return;state.vn65FoodVi
 case 'vn42-food-filter':state.vn42FoodCategory=value;state.foodQuery='';state.vn42Open=null;state.foodDeckIndex=0;save();render();requestAnimationFrame(vn42RevealSelectedFilter);return;
 case 'vn42-food-reset':state.foodQuery='';state.vn42FoodCategory='all';state.vn42Open=null;save();render();return;
 case 'vn42-retry':VN42_DB=null;VN42_ERROR='';VN42_LOADING=false;vn42Load();render();return;
-case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn48-food-open':case 'vn64-food-open':case 'vn42-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;save();render();return;}
+case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn64-food-open':case 'vn42-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;save();render();return;}
 case 'vn64-food-close':state.vn64FoodDetail=null;save();render();return;
 case 'vn64-food-slide':{
  const records=vn64FoodRecords(),index=records.findIndex(p=>p.id===state.vn64FoodDetail);
