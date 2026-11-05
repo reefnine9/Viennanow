@@ -44,6 +44,8 @@ jobs:
         run: node scripts/course-detail-qa.mjs
       - name: Finger-follow animated detail swipe QA
         run: node scripts/finger-swipe-qa.mjs
+      - name: Phase 20-21 swipe stability and accessibility QA
+        run: node scripts/swipe-stability-qa.mjs
       - name: Phase 12 local HTTP asset integrity
         run: node scripts/deploy-qa.mjs
       - name: Phase 12 optional live Cloudflare HTTP checks
@@ -68,4 +70,5 @@ jobs:
             artifacts/phase16/
             artifacts/course-qa/
             artifacts/gesture-qa/
+            artifacts/swipe-stability/
           if-no-files-found: warn
