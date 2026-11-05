@@ -1955,7 +1955,7 @@ function vn48LoadFoodGeo(){
   }
   VN48_FOOD_GEO=result;VN48_GEO_STATE='ready';
  }).catch(()=>{VN48_GEO_STATE='unavailable';}).finally(()=>{
-  if(state.tab==='map'&&nearMode31()==='food')render();
+  if(state.tab==='map'&&['food','saved'].includes(nearMode31()))render();
  });
 }
 function nearFood31(){
@@ -2118,8 +2118,13 @@ function vn60Clusters(records,{label='장소',route=null,focusId=null}={}){
  });
 }
 function vn60FoodPopup(v){
- const reason=v.description?.ko||v.quick_pick?.summary_ko||'대표 메뉴는 식당 정보에서 확인하세요.';
- return `<div class="vn48-popup"><b>${h(v.ko)}</b><p>${h(reason)}</p><small>${v.mapSource==='verified'?'공개 지도에서 확인한 위치':'OpenStreetMap 이름 일치 위치'} · 실제 출입구는 확인 필요${v.operations?.status==='temporarily_closed'?' · 임시휴업':''}</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">맛집 자세히 보기</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google 지도 ↗</a></div></div>`;
+ const en=state.contentLang==='en';
+ const name=en?(v.name?.en||v.name?.de||v.ko):v.ko;
+ const reason=en?(v.description?.en||v.quick_pick?.summary_en||'See restaurant details for recommended dishes.'):(v.description?.ko||v.quick_pick?.summary_ko||'대표 메뉴는 식당 정보에서 확인하세요.');
+ const locationNote=en?(v.mapSource==='verified'?'Location from public map data':'Location matched by name on OpenStreetMap'):(v.mapSource==='verified'?'공개 지도에서 확인한 위치':'OpenStreetMap 이름 일치 위치');
+ const caution=en?' · Entrance location not independently checked':' · 실제 출입구는 확인 필요';
+ const closed=v.operations?.status==='temporarily_closed'?(en?' · Temporarily closed':' · 임시휴업'):'';
+ return `<div class="vn48-popup"><b>${h(name)}</b><p>${h(reason)}</p><small>${h(locationNote+caution+closed)}</small><div><button data-act="vn48-food-open" data-id="${h(v.id)}">${en?'Restaurant details':'맛집 자세히 보기'}</button> <a target="_blank" rel="noopener noreferrer" href="${h(vn48FoodMapLink(v))}">Google Maps ↗</a></div></div>`;
 }
 function nearPlanLayer31(){
  const plan=nearSelectedPlan31();if(!plan||!layerGroup)return;
@@ -2129,10 +2134,13 @@ function nearPlanLayer31(){
 }
 function vn59SavedMapLayer(){
  if(!map||!layerGroup)return;
- const f=vn59Favorites(),sights=f.sights.filter(p=>Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))).map(p=>({key:p.id,title:p.ko,type:'sights',lat:p.lat,lon:p.lon,popup:nearSightPopup32(p),action:'detail'}));
- const food=nearFood31().filter(p=>(state.savedRestaurants||[]).includes(p.id)).map(p=>({key:p.id,title:p.ko,type:'food',lat:p.lat,lon:p.lon,popup:'<div class="vn48-popup"><b>'+h(p.ko)+'</b><p>♥ 찜한 맛집</p><button data-act="vn48-food-open" data-id="'+h(p.id)+'">상세 보기</button></div>',action:'vn48-food-open'}));
- map.setView([anchor().lat,anchor().lon],13);
- vn60Clusters([...sights,...food],{label:'찜한 장소'});
+ const f=vn59Favorites(),english=state.contentLang==='en';
+ const sights=f.sights.filter(p=>Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))).map(p=>({key:p.id,title:english?(p.en||p.de||p.ko):p.ko,type:'sights',lat:p.lat,lon:p.lon,popup:nearSightPopup32(p),action:'detail'}));
+ const food=nearFood31().filter(p=>(state.savedRestaurants||[]).includes(p.id)).map(p=>({key:p.id,title:english?(p.name?.en||p.name?.de||p.ko):p.ko,type:'food',lat:p.lat,lon:p.lon,popup:'<div class="vn48-popup"><b>'+h(english?(p.name?.en||p.name?.de||p.ko):p.ko)+'</b><p>'+ (english?'♥ Saved restaurant':'♥ 찜한 맛집') +'</p><button data-act="vn48-food-open" data-id="'+h(p.id)+'">'+(english?'View details':'상세 보기')+'</button></div>',action:'vn48-food-open'}));
+ const points=[...sights,...food];
+ if(points.length){const bounds=L.latLngBounds(points.map(p=>[Number(p.lat),Number(p.lon)]));map.fitBounds(bounds.pad(.16),{maxZoom:15});}
+ else map.setView([anchor().lat,anchor().lon],13);
+ vn60Clusters(points,{label:english?'Saved places':'찜한 장소'});
 }
 function nearFoodLayer31(){
  const allowed=new Set(vn61FoodRecords().map(r=>r.id));
@@ -2312,7 +2320,7 @@ case 'vn65-food-view':if(value!=='tiles'&&value!=='list')return;state.vn65FoodVi
 case 'vn42-food-filter':state.vn42FoodCategory=value;state.foodQuery='';state.vn42Open=null;state.foodDeckIndex=0;save();render();requestAnimationFrame(vn42RevealSelectedFilter);return;
 case 'vn42-food-reset':state.foodQuery='';state.vn42FoodCategory='all';state.vn42Open=null;save();render();return;
 case 'vn42-retry':VN42_DB=null;VN42_ERROR='';VN42_LOADING=false;vn42Load();render();return;
-case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn64-food-open':case 'vn42-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;save();render();return;}
+case 'vn58-food-heart':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;const saved=new Set(state.savedRestaurants||[]);if(saved.has(id))saved.delete(id);else saved.add(id);state.savedRestaurants=[...saved];save();render();return;}case 'vn48-food-open':case 'vn64-food-open':case 'vn42-food-open':{if(!VN42_DB?.restaurants?.some(r=>r.id===id))return;state.vn64FoodDetail=id;save();render();return;}
 case 'vn64-food-close':state.vn64FoodDetail=null;save();render();return;
 case 'vn64-food-slide':{
  const records=vn64FoodRecords(),index=records.findIndex(p=>p.id===state.vn64FoodDetail);
