@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
-import { readFileSync, mkdir, writeFile } from 'node:fs';
+import { readFileSync } from 'node:fs';
+import { mkdir, writeFile } from 'node:fs/promises';
 const base=process.env.VIENNANOW_TEST_URL||'http://127.0.0.1:8765';
 const browser=await chromium.launch({headless:true});
 const ctx=await browser.newContext({viewport:{width:390,height:780},reducedMotion:'reduce',locale:'ko-KR'});
