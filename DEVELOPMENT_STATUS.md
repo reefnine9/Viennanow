@@ -79,3 +79,12 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - Added **`tests/phase9-mobile-language.test.mjs`**, covering option translation, accessible labels and attributes, mobile styles, and saved favourites. Commit: `57e828e4a5ed4310dc5f8d664b90d54e903e04ea`.
 - GitHub Actions run [41946303819](https://github.com/reefnine9/Viennanow/actions/runs/41946303819) **passed** `npm test` (108 passing) and `npm run check`.
 - Manual UI gates still open: mobile 320/375/390/430px, verify translated option names in native dropdowns after switching languages, photo fallback, keyboard/touch, map popup, and actual deployed Cloudflare Pages URL. Static tests cannot prove complete English coverage or visual correctness.
+
+
+## 11. Phase 10 — automated mobile browser QA (2026-11-05)
+- Added `scripts/mobile-browser-qa.mjs` and `.github/workflows/mobile-browser-qa.yml` to launch Chromium in the official Playwright container, run against the locally served `public/` output, and upload screenshots + JSON report as an artifact.
+- Checks four mobile viewport widths (320, 375, 390, 430px), both Korean and English, and five main tabs: **40 combinations**; validates tab labels, document language, page content, no document-wide horizontal overflow, bottom navigation within viewport, no uncaught page errors, and switch back to Korean.
+- Fixed QA setup: GitHub Ubuntu 26.04 was incompatible with initial Playwright browser install, so workflow now uses `mcr.microsoft.com/playwright:v1.56.1-noble`. Fixed QA driver to return Home before clicking its language toggle. Isolated UI checks from external map/image endpoints to avoid flaky remote failures; external network tests remain separate.
+- **Verified success**: GitHub Actions run [41947156886](https://github.com/reefnine9/Viennanow/actions/runs/41947156886) / commit `9e92f25bc4ddbf124ad6e79864a1fea7e16238c0`: 40/40 combinations, **0 issues**; 2D viewport screenshots and report uploaded as workflow artifact. Source QA at same commit also passed.
+- Scope limitation: Chromium emulation on GitHub is not physical iPhone Safari or Android Chrome; screenshots were captured but not yet manually visually reviewed. Map/photos external requests intentionally blocked in this test; real deployed site, link availability, map pin interactions, favourite persistence and physical touch gestures are still NOT validated.
+- Next: review artifacts and real-device screenshots, add favourite persistence / map popup interaction checks, verify Cloudflare deployed URL separately, and update release readiness.
