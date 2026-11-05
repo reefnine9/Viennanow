@@ -47,3 +47,19 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 
 ## 6. Log
 - 2026-11-05: Established persistent cross-chat handoff process; documented verified code baseline, known audit risks and proposed design consistency phase. No claim of full visual QA or production deployment.
+
+
+## 7. Phase 5–8 execution record (2026-11-05)
+- Phase 5 source audit: inspected the actual deployed `public/index.html`, not the divergent root `index.html`. Existing chip tokens, card radius, V-icon consistency rules and favourite colours already existed; retained those rather than layering new conflicting defaults.
+- Phase 6 visual consistency patch: `public/index.html` adds common favorite-heart minimum visual size, red saved-state colour, focus-visible outline, expanded image-overlay hit region and narrow-screen resilience. GitHub commit `727c0237d7d503e43201ec1f88971025bdf96dd5`.
+- Phase 7 test coverage: added `tests/design-system.test.mjs` with 5 source-level regression tests for chip sizing, favourite palette, focus/touch, language toggle/accessible labels and continuity documents. GitHub commit `7c2a1e987ce1cbf391abb4d7413bc07979e85781`.
+- Phase 8 static verification: re-fetched the updated deployed HTML and test file from GitHub; all 7 direct static source checks passed (new CSS present, shared tokens present, red-heart overrides present, touch/focus declarations present, language/ARIA symbols present, test file present, HTML structure markers intact).
+- **Not run:** `npm test` / `npm run check` on a complete local checkout; no available checkout of the repository in this session. Static checks are not equivalent to Node tests.
+- **Not run:** actual iPhone/Android rendering, bilingual full-flow interaction, photographic licences and runtime API / Cloudflare Pages checks. No live deployment success claim. Next step is to run CI/local tests with repository files, then real-device smoke checks using `public/qa-smoke.html`.
+- Production note: source changes on `main` are committed, but automatic deployment is dependent on the linked Cloudflare Pages configuration and has not been verified.
+
+## 8. Next prioritized tasks
+1. Run `npm test` and `npm run check` against a full clone. Fix any failures and log the outputs.
+2. Verify mobile widths 320/375/390/430px, favourite tap targets, language-toggle layout, and selected states on a real device.
+3. Check live Cloudflare deployment and run `qa-smoke.html` and `deploy-check.html`.
+4. After verifying, mark the relevant steps complete and update the GitHub log.
