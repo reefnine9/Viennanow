@@ -9,12 +9,23 @@
     "check": "node scripts/check-cloudflare.mjs",
     "dev": "wrangler pages dev public",
     "deploy:manual": "wrangler pages deploy public --project-name viennanow",
-    "check:stores": "node scripts/check-store-readiness.mjs"
+    "check:stores": "node scripts/check-store-readiness.mjs",
+    "native:add:ios": "cap add ios",
+    "native:add:android": "cap add android",
+    "native:sync": "cap sync",
+    "native:open:ios": "cap open ios",
+    "native:open:android": "cap open android"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.0.0",
+    "@capacitor/cli": "^7.0.0"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/ios": "^7.0.0"
   }
 }
