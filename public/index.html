@@ -2596,7 +2596,8 @@ function vnTranslateDocument(){
  if(!english)return;
  for(const root of [document.getElementById('main'),document.getElementById('layer'),document.getElementById('bottom'),document.getElementById('ad-slot'),document.querySelector('.leaflet-popup-pane'),document.getElementById('toast')]){
   if(!root)continue;const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];let n;
-  while((n=walk.nextNode()))if(n.parentElement&&!n.parentElement.closest('script,style,textarea,option'))nodes.push(n);
+  // Include <option> labels: English mode must translate native select menus too.
+  while((n=walk.nextNode()))if(n.parentElement&&!n.parentElement.closest('script,style,textarea'))nodes.push(n);
   for(const n of nodes){const value=vnTranslateText(n.nodeValue);if(value!==n.nodeValue)n.nodeValue=value;}
   for(const el of root.querySelectorAll('[aria-label],[placeholder],[title],[alt]'))for(const key of ['aria-label','placeholder','title','alt']){const val=el.getAttribute(key);if(val){const next=vnTranslateText(val);if(next!==val)el.setAttribute(key,next);}}
  }
