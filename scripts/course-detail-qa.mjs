@@ -25,8 +25,13 @@ try{
  await page.locator('#main .vn36-detail button[data-act="vn-course-slide"][data-value="-1"]').click();
  check('Previous route arrow works',(await page.locator('#main .vn36-detail .kicker').first().innerText()).includes('B01'));
  const swipe=async(left)=>{
-  await page.locator('#main .vn-course-swipe .pro-plan').dispatchEvent('touchstart',{touches:[{identifier:1,clientX:left?300:75,clientY:260}]});
-  await page.locator('#main .vn-course-swipe .pro-plan').dispatchEvent('touchend',{changedTouches:[{identifier:1,clientX:left?90:295,clientY:260}]});
+  const target=page.locator('#main .vn-course-swipe .pro-plan');
+  const startX=left?300:75,endX=left?90:295;
+  await target.dispatchEvent('touchstart',{touches:[{identifier:1,clientX:startX,clientY:260}]});
+  await target.dispatchEvent('touchmove',{touches:[{identifier:1,clientX:(startX+endX)/2,clientY:260}]});
+  await target.dispatchEvent('touchmove',{touches:[{identifier:1,clientX:endX,clientY:260}]});
+  await target.dispatchEvent('touchend',{changedTouches:[{identifier:1,clientX:endX,clientY:260}]});
+  await page.waitForTimeout(80);
  };
  await swipe(true);
  check('Swipe left navigates to next route',(await page.locator('#main .vn36-detail .kicker').first().innerText()).includes('B02'));
