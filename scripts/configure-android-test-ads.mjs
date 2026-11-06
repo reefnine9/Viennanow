@@ -97,8 +97,7 @@ gradle+=`\n// ViennaNow: Google-provided TEST ads only; never use production IDs
 fs.writeFileSync(gradleFile,gradle);
 let manifest=fs.readFileSync(manifestFile,'utf8');
 if(!manifest.includes('com.google.android.gms.ads.APPLICATION_ID')){
-  manifest=manifest.replace(/<application\\b/, '<application android:usesCleartextTraffic="false"');
-  manifest=manifest.replace(/(<application\\b[^>]*>)/, '$1\n        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />');
+  manifest=manifest.replace(/(<application\b[^>]*>)/, '$1\n        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />');
 }
 if(!manifest.includes('com.google.android.gms.ads.APPLICATION_ID'))throw Error('Could not configure AdMob application ID');
 fs.writeFileSync(manifestFile,manifest);
