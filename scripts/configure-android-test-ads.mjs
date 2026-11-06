@@ -30,6 +30,8 @@ import com.google.android.ump.UserMessagingPlatform;
 
 public class MainActivity extends BridgeActivity {
   private static final String TEST_BANNER_ID = "ca-app-pub-3940256099942544/6300978111";
+  // Production banner ID is reserved for a later, explicitly reviewed release.
+  // ca-app-pub-7209491348764750/5746358028
   private AdView banner;
   private FrameLayout adContainer;
   private WebView webView;
@@ -135,7 +137,7 @@ gradle+=`\n// ViennaNow: Google-provided TEST ads only; never use production IDs
 fs.writeFileSync(gradleFile,gradle);
 let manifest=fs.readFileSync(manifestFile,'utf8');
 if(!manifest.includes('com.google.android.gms.ads.APPLICATION_ID')){
-  manifest=manifest.replace(/(<application\b[^>]*>)/, '$1\n        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />');
+  manifest=manifest.replace(/(<application\b[^>]*>)/, '$1\n        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7209491348764750~2179713762" />');
 }
 if(!manifest.includes('com.google.android.gms.ads.APPLICATION_ID'))throw Error('Could not configure AdMob application ID');
 fs.writeFileSync(manifestFile,manifest);
