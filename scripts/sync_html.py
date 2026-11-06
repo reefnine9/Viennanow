@@ -1,11 +1,7 @@
-from pathlib import Path
-root=Path(__file__).resolve().parents[1]
-app=(root/'app.js').read_text()
-for path in [root/'index.html',root/'public/index.html']:
-  raw=path.read_text()
-  first=raw.index("<script>\n'use strict';")
-  end=raw.index('</script>',first)
-  out=raw[:first]+'<script>\n'+app+'\n</script>'+raw[end+len('</script>'):]
-  path.write_text(out)
-(root/'public/coordinate_audit_pending.csv').write_bytes((root/'coordinate_audit_pending.csv').read_bytes())
-print('Refreshed both HTML files from app.js')
+"""RETIRED: Phase 24 legacy app.js-to-HTML synchronization.
+
+This script previously overwrote public/index.html from app.js, which can destroy
+newer ViennaNow features. Production source is public/index.html; the old root
+HTML has been frozen as index_old.html. Never auto-sync both.
+"""
+raise SystemExit("Retired legacy script: do NOT overwrite public/index.html from app.js. Edit the production public/index.html directly.")

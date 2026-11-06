@@ -69,10 +69,10 @@ GitHub reefnine9/Viennanow (main)
   ├─ QA_RELEASE_AUDIT_2026-11-05.md 데이터·사진·위치 QA
   ├─ RELEASE_READINESS_KR.md        정식 출시 준비
   ├─ docs/                          출시·패키징·본 개발 노트
-  └─ index.html                     루트 HTML (주의: 배포용과 다름)
+  └─ index_old.html                 이전 개발 단계 HTML 보관본 (배포용 아님)
 ~~~
 
-**매우 중요한 주의:** 루트의 index.html과 public/index.html은 서로 다른 파일이다. Cloudflare 실제 배포용은 **public/index.html**이므로 예전 루트 파일을 덮어쓰면 최근 수정이 사라질 수 있다. 수정 전에 GitHub main 최신 HEAD와 파일 내용을 읽고 수정한다.
+**매우 중요한 주의:** 저장소 루트의 오래된 화면은 **index_old.html**로 보관한다. 현재 앱의 유일한 배포 진입점은 **public/index.html**이며, **루트 index.html은 존재하지 않는다.** 예전 화면을 배포용에 덮어쓰면 최근 기능이 사라질 수 있다. 수정 전에 GitHub main 최신 HEAD와 파일 내용을 읽고 수정한다.
 
 **웹과 Android의 관계:** 같은 public/ 웹 리소스를 공통 원본으로 사용한다. Android 빌드 때 scripts/build-native.mjs가 이를 dist-native/로 복사하고 /api 경로를 Cloudflare HTTPS 서버에 연결한 뒤 Capacitor WebView에 포함시킨다. 따라서 웹 디자인 수정은 Cloudflare 재배포 대상이고, Android 사용자가 받으려면 새 AAB도 필요하다.
 
@@ -250,3 +250,12 @@ Capacitor 설정과 .github/workflows/native-ios.yml의 iOS 시뮬레이터 컴�
 
 ---
 *작성 기준: 2026-11-06 GitHub 실파일/Actions #17 결과 + 이전 ViennaNow 개발 대화 + 사용자가 제공한 Google Play/AdMob 화면. Cloudflare 실배포, 최신 Play 업로드, 승인 상태, Android 광고 실기기 동작까지 확인했다고 주장하지 않는다.*
+
+
+## 15. 2026-11-06 파일명 혼동 방지 정리
+- [확인] 루트의 오래된 `index.html`은 **`index_old.html`**로 이름을 변경해 보존했다(HTML 내용 변경 없음).
+- [확인] 실제 Cloudflare 웹앱 진입점은 **`public/index.html`** 그대로이고, Android도 이 파일을 사용한다.
+- [확인] 과거 루트 HTML 내용을 검사하는 역사적 회귀 테스트 2개는 `index_old.html`을 참조하도록 변경했다. 이 테스트들은 **현재 앱의 기능 인증이 아님**.
+- [확인] 잘못 사용하면 최신 앱을 덮어쓰는 `scripts/sync_html.py`는 실행 시 오류와 안내를 출력하도록 비활성화했다.
+- [확인] `scripts/check-cloudflare.mjs`가 루트 `index.html`의 재생성을 금지하도록 변경했다.
+- **실무 규칙:** 새 개발에서는 오직 `public/index.html`을 수정하고 `index_old.html`은 과거 참고용으로만 사용한다.

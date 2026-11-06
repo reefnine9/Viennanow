@@ -16,12 +16,9 @@ console.log('Cloudflare preflight OK: '+required.length+' static files, four API
 for(const label of ['코스 상세 안내','이 코스로 계획짜기','tour-apply','tour-start-date','tour-start-time']){
   assert.ok(index.includes(label),`guided tour missing from public/index.html: ${label}`);
 }
-// Cloudflare Pages must use public/, not the older root index.html.
-const rootIndexPath=path.join(root,'index.html');
-if(fs.existsSync(rootIndexPath)){
-  const legacy=fs.readFileSync(rootIndexPath,'utf8');
-  if(legacy!==index)console.warn('DEPLOY WARNING: root index.html is older than public/index.html. Configure Cloudflare Pages output directory = public.');
-}
+// Single deployed entrypoint; the historical root app is kept as a clearly named archive.
+assert.ok(!fs.existsSync(path.join(root,'index.html')),'Unexpected root index.html: only public/index.html may be deployed');
+assert.ok(fs.existsSync(path.join(root,'index_old.html')),'Historical root index_old.html archive is missing');
 console.log('Phase 26 release gate OK: tour preview/apply controls present; output directory must be public.');
 
 const curatedRoutes=['old','art','music','imperial','classiccenter','palaces'];
@@ -44,12 +41,7 @@ for(const [phase,controls] of [
 assert.ok(index.includes('<title>ViennaNow'), 'public app title must identify ViennaNow');
 console.log('Phases 28–30 regression gate OK: course map, itinerary editing and mobile layout.');
 
-// Prevent a stale root entrypoint from being served by alternative deployment configurations.
-if(fs.existsSync(path.join(root,'index.html'))){
- const rootIndex=fs.readFileSync(path.join(root,'index.html'),'utf8');
- if(rootIndex!==index)console.warn('Expected: root index.html is legacy; deploy only public/index.html');
-}
-console.log('Deployment entrypoints synchronized: root and public index.html.');
+console.log('Deployment entrypoint: public/index.html. Root legacy archived at index_old.html.');
 
 for (const feature of [
  'main.classList.toggle(\'near-map-main\'',

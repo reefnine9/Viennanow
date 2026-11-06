@@ -1,7 +1,8 @@
+// Historical Phase 22 regression only: assertions intentionally target archived root HTML, not the live Cloudflare app.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-const src=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');
+const src=fs.readFileSync(new URL('../index_old.html',import.meta.url),'utf8');
 const venues=JSON.parse(fs.readFileSync(new URL('../experiences_24.json',import.meta.url),'utf8'));
 const bars=venues.filter(v=>v.kind==='nightlife');
 test('24 experiences have six new bars and clubs and preserve all 18 old items',()=>{

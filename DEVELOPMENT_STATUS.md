@@ -9,7 +9,7 @@ Purpose: project handoff between short ChatGPT conversations. Check GitHub HEAD 
 - Cloudflare Pages-oriented static/mobile web app, with Pages Functions under `functions/api/`; deployment success is not implied by GitHub commits.
 - `package.json`: version 0.24.1; scripts `npm test`, `npm run check`, and `npm run dev`.
 - Main application includes `index.html`, `app.js`; `public/` is identified as the deployed output in README.
-- IMPORTANT SOURCE DIVERGENCE: GitHub reports root `index.html` at ~495 KB and `public/index.html` at ~756 KB (2026-11-05). These are not identical. Inspect `public/index.html` first for UI changes and confirm whether root sources generate the public file; never copy root `index.html` blindly over the deployed version.
+- IMPORTANT SOURCE DIVERGENCE: GitHub reports archived root `index_old.html` at ~495 KB and `public/index.html` at ~756 KB (2026-11-05). These are not identical. Inspect `public/index.html` first for UI changes and confirm whether root sources generate the public file; never copy root `index_old.html` blindly over the deployed version.
 - `public/qa-smoke.html` exists in the published output; its presence is not proof of a successful live execution.
 - GitHub HEAD observed at the start of this document: `9c196ab4949cb9dce13ec416c09d71d13a238f98` ("Phase 4: add reproducible QA smoke-check page for release checks"). This hash becomes historical after the next commit.
 - `QA_RELEASE_AUDIT_2026-11-05.md` reports 48 sightseeing records and 82 restaurant records, but this is an audit snapshot, not a live venue validation.
@@ -50,7 +50,7 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 
 
 ## 7. Phase 5–8 execution record (2026-11-05)
-- Phase 5 source audit: inspected the actual deployed `public/index.html`, not the divergent root `index.html`. Existing chip tokens, card radius, V-icon consistency rules and favourite colours already existed; retained those rather than layering new conflicting defaults.
+- Phase 5 source audit: inspected the actual deployed `public/index.html`, not the divergent root `index_old.html`. Existing chip tokens, card radius, V-icon consistency rules and favourite colours already existed; retained those rather than layering new conflicting defaults.
 - Phase 6 visual consistency patch: `public/index.html` adds common favorite-heart minimum visual size, red saved-state colour, focus-visible outline, expanded image-overlay hit region and narrow-screen resilience. GitHub commit `727c0237d7d503e43201ec1f88971025bdf96dd5`.
 - Phase 7 test coverage: added `tests/design-system.test.mjs` with 5 source-level regression tests for chip sizing, favourite palette, focus/touch, language toggle/accessible labels and continuity documents. GitHub commit `7c2a1e987ce1cbf391abb4d7413bc07979e85781`.
 - Phase 8 static verification: re-fetched the updated deployed HTML and test file from GitHub; all 7 direct static source checks passed (new CSS present, shared tokens present, red-heart overrides present, touch/focus declarations present, language/ARIA symbols present, test file present, HTML structure markers intact).
@@ -66,7 +66,7 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 4. After verifying, mark the relevant steps complete and update the GitHub log.
 
 ## 9. GitHub Actions failure diagnosis and repair (2026-11-05)
-- Initial workflow failures: 104 unit tests, 95 passed / 9 failed. Older Phase 21/22/24 tests asserted obsolete root `index.html` markup and retired map controls instead of the current `public/index.html` UI.
+- Initial workflow failures: 104 unit tests, 95 passed / 9 failed. Older Phase 21/22/24 tests asserted obsolete root `index_old.html` markup and retired map controls instead of the current `public/index.html` UI.
 - Updated `tests/phase21-navigation.test.mjs`, `tests/phase22-nearby.test.mjs` and `tests/phase24-map-layout.test.mjs` to assert the currently shipped five bottom tabs, six nearby map categories, current favourites/food filters and map resizing.
 - Next preflight failure: `scripts/check-cloudflare.mjs` expected Phase 30 in the public title, root HTML identical to public HTML, legacy four-tab labels, an obsolete `m.openPopup()` expression and old zoom clustering. Replaced stale checks with present public deployment invariants; kept root divergence warning and requirement to deploy `public/`.
 - **Confirmed GitHub Actions success:** workflow run [41945707348](https://github.com/reefnine9/Viennanow/actions/runs/41945707348), source commit `a3385b72213d70aecf2f006ecde7451736c1f27b`. Both `npm test` and `npm run check` steps passed. Previous failed runs remain historical and need no deletion.
@@ -204,3 +204,11 @@ See `DESIGN_SYSTEM_KR.md` for the working UI specification.
 - English-mode candidate audit initially found 38 Korean-bearing text nodes across eight primary screens, mostly route list excerpts and Nearby route options. Fixed mixed-word route translations and timing/season terms, then re-ran.
 - **Verified final source commit `73139d5bb835b68b24e0b35871317683f42ac002`** in [GitHub Actions run 41979977929](https://github.com/reefnine9/Viennanow/actions/runs/41979977929): **0 Korean-bearing text nodes** on the eight audited English screens (Home, Sights, sight detail, Dining, food detail, Plan, route detail, Nearby route), **78/78** release QA checks, **40/40** mobile/language checks, **17/17** local-to-production HTTP diagnostics all passed. This does not certify English fluency or all hidden/alternate editorial sections; native speaker review remains open.
 - Production diagnostics now verify availability and presence of the draft privacy, legal and photo credits pages. Operator disclosure and third-party consent are still NOT approved for public launch.
+
+
+## 2026-11-06: root entrypoint archive/rename
+- Legacy root `index.html` was renamed to `index_old.html` without changing its contents; production uses `public/index.html` exclusively.
+- The two tests intentionally asserting historical root content now reference `index_old.html`; they do **not** validate modern production app behavior.
+- `scripts/sync_html.py` disabled because it could overwrite current production HTML using outdated `app.js`.
+- `scripts/check-cloudflare.mjs` now fails if an accidental root `index.html` reappears.
+- For all future UI changes, edit `public/index.html` (and related data/functions), not `index_old.html`.
