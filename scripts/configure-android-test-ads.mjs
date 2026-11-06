@@ -57,8 +57,8 @@ public class MainActivity extends BridgeActivity {
       FrameLayout bar = new FrameLayout(this);
       bar.setBackgroundColor(Color.rgb(243,245,242));
       FrameLayout.LayoutParams barParams = new FrameLayout.LayoutParams(
-        ViewGroup.LayoutParams.MATCH_PARENT, dp(54), Gravity.BOTTOM);
-      barParams.bottomMargin = dp(68);
+        ViewGroup.LayoutParams.MATCH_PARENT, dp(54), Gravity.TOP);
+      barParams.topMargin = dp(25);
       root.addView(bar, barParams);
       banner = new AdView(this);
       banner.setAdUnitId(TEST_BANNER_ID);
