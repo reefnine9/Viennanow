@@ -77,7 +77,7 @@ jobs:
       - name: Set Google Play version code
         run: |
           sed -i -E 's/(versionCode[[:space:]]+)[0-9]+/\14/' android/app/build.gradle
-          grep -Eq 'versionCode[[:space:]]+4' android/app/build.gradle || { echo '::error::Could not set Android versionCode to 3'; exit 1; }
+          grep -Eq 'versionCode[[:space:]]+4' android/app/build.gradle || { echo '::error::Could not set Android versionCode to 4'; exit 1; }
       - name: Prepare secure signing
         env:
           ENCRYPTED_KEYSTORE_B64: ${{ secrets.ANDROID_ENCRYPTED_KEYSTORE_BASE64 }}
