@@ -1088,7 +1088,14 @@ function icon25(name,size=22){return `<svg class="vn-icon" width="${size}" heigh
 function tabs(){const all=state.contentLang==='en'?[["home","Home"],["sights","Discover"],["food","Dining"],["itinerary","Plan"],["map","Nearby"]]:[["home","홈"],["sights","볼거리"],["food","맛집"],["itinerary","계획"],["map","내주변"]];return all.map(([key,label])=>`<button class="tab ${state.tab===key?'active':''}" data-act="tab" data-value="${key}" aria-label="${label}"><span class="vn-tab-symbol">${icon25(key,23)}</span><span>${label}</span></button>`).join("");}
 function placeRow(p,select=false){let status=state.preferences[p.id]||'wish';return `<div class="place"><div class="placeicon visual">${photoImg(p.id)}</div><button class="clickrow grow" data-act="detail" data-id="${p.id}"><div class="placetitle">${h(p.ko)}</div><div class="placemeta">${h(p.de)} · ${h(p.region)}</div></button>${select?`<button class="miniopt ${status==='must'?'must':status==='no'?'no':''}" data-act="choice" data-id="${p.id}" aria-label="방문 우선순위 변경">${status==='must'?'★ 필수':status==='no'?'제외':'＋ 후보'}</button>`:`<button class="miniopt" data-act="detail" data-id="${p.id}">상세 ›</button>`}</div>`}
 function emoji(p){const e={A01:'⛪',A02:'🏛️',A03:'🏰',A04:'🖼️',A05:'🎭',A06:'🎨',A07:'🖼️',A08:'📚',A09:'⛪',A10:'🏛️',A11:'🎨',A12:'🎡',A13:'🏘️',A14:'🥨',A15:'🚶',A16:'🌳'};return e[p.id]||'📍'}
+let vnCourseReturnFromNear=null; // Temporary course-detail navigation state; not persisted.
 function navTo(t){
+ const returnToCourse=t==='itinerary'&&state.tab==='map'&&state.nearSection==='plan'&&vnCourseReturnFromNear;
+ if(returnToCourse){
+  state.planSection='premium';
+  state.vnCourseDetail=returnToCourse.id;
+ }
+ if(t!=='map')vnCourseReturnFromNear=null;
  state.vn52View=null;state.vn62ShopView=null;state.vn62ShopDetail=null;state.guideTopic=null;
  // Enter the restaurant tab with a full list, not a persisted restaurant-specific search.
  if(t==='food'&&state.tab!=='food'){state.foodQuery='';state.vn42FoodCategory='all';}
@@ -1098,6 +1105,12 @@ function navTo(t){
  if(t==='itinerary')state.planSection=['premium','mine'].includes(state.planSection)?state.planSection:'premium';
  if(t==='map')state.nearSection=nearMode31();
  save();render();
+ if(returnToCourse){
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+   const main=$('main');
+   if(main&&state.tab==='itinerary'&&state.vnCourseDetail===returnToCourse.id)main.scrollTop=returnToCourse.scrollTop;
+  }));
+ }
 }
 function sectionBack(act,label='돌아가기'){return `<button class="backbtn" data-act="${act}">← ${h(label)}</button>`}
 function paceText(){return state.pace==='packed'?'알차게':state.pace==='relaxed'?'여유롭게':'균형 있게'}
@@ -2448,6 +2461,8 @@ case 'vn-course-slide':{
 }
 case 'vn-course-near-map':{
  if(!VN_COURSES36.some(c=>c.id===id))return;
+ // Keep the origin course and its reading position when opening the Nearby route map.
+ vnCourseReturnFromNear={id,scrollTop:$('main')?.scrollTop||0};
  state.nearPlanChoice=id;state.nearSection='plan';state.tab='map';
  state.vnCourseDetail=null;state.detail=null;
  save();render();return;
