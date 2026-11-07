@@ -267,3 +267,13 @@ Capacitor 설정과 .github/workflows/native-ios.yml의 iOS 시뮬레이터 컴�
 - 다른 메뉴 방문 시 일시 복귀 상태를 정리하며, `tests/course-near-return.test.mjs`에 회귀 테스트 추가.
 - 수정 커밋: `895be19865d044415cf389ece9a995abcd84dd3f`; 테스트 추가: `67e71738c0395f8eadb832ce21bb965569c5fe71`.
 - Cloudflare 자동 배포와 Android 새 AAB 반영/실기기 동작은 별도 검증 필요. 현재 Play 스토어 설치 버전이 자동 변경되지는 않음.
+
+
+## 2026-11-07: ViennaNow 추천코스 방문지 상세보기 버튼
+- 변경 대상은 **ViennaNow 저장소 한 곳**이며 HamburgNow는 수정하지 않음.
+- 추천코스 상세의 방문 순서 목록에서, 실제 `CATALOG48`의 관광지 상세 자료와 일치하는 장소 옆에 한국어 `상세보기` / 영어 `Details` 버튼 표시.
+- 장소 명칭이 조금 다른 경우(예: 국립오페라극장 → A05, 벨베데레 상궁 → A04)는 명시적으로 검토한 연결표만 사용. 휴식·식당 등 관광지 데이터와 매칭되지 않는 항목에는 버튼을 표시하지 않아 잘못된 상세정보 연결을 방지함.
+- 버튼 클릭 시 기존 볼거리 상세 드로어를 열고, 닫으면 원래 추천코스 상세로 복귀하도록 화면 흐름을 유지.
+- 수정 파일 `public/index.html`, 신규 테스트 `tests/course-stop-details.test.mjs`.
+- 커밋 `5f82b1d34d4053fde5b325e2cf5148f0c5b9ddc9` 및 `9d342d3f610e617fa6122bf5b273c5b9ed24334a`.
+- GitHub CI, Cloudflare 배포, Android 새 AAB/실기기 확인 여부는 별도 추적.
