@@ -259,3 +259,11 @@ Capacitor 설정과 .github/workflows/native-ios.yml의 iOS 시뮬레이터 컴�
 - [확인] 잘못 사용하면 최신 앱을 덮어쓰는 `scripts/sync_html.py`는 실행 시 오류와 안내를 출력하도록 비활성화했다.
 - [확인] `scripts/check-cloudflare.mjs`가 루트 `index.html`의 재생성을 금지하도록 변경했다.
 - **실무 규칙:** 새 개발에서는 오직 `public/index.html`을 수정하고 `index_old.html`은 과거 참고용으로만 사용한다.
+
+
+## 2026-11-07: 계획 상세 → 내주변 지도 → 하단 계획 복귀
+- 요청: 추천코스 상세 페이지 하단의 ‘내주변 지도에서 이 코스 보기’로 이동한 다음 하단 ‘계획’ 탭을 누르면 목록 상단이 아니라 **그 코스 상세와 원래 스크롤 위치로 복귀**해야 함.
+- 코드: `public/index.html`의 `vn-course-near-map` 동작에 출발 코스 ID 및 `#main` scrollTop을 일시 저장하고, `navTo('itinerary')`가 내주변의 계획 지도로부터 호출되면 `planSection='premium'`, 해당 코스 `vnCourseDetail` 및 읽던 스크롤 위치 복원.
+- 다른 메뉴 방문 시 일시 복귀 상태를 정리하며, `tests/course-near-return.test.mjs`에 회귀 테스트 추가.
+- 수정 커밋: `895be19865d044415cf389ece9a995abcd84dd3f`; 테스트 추가: `67e71738c0395f8eadb832ce21bb965569c5fe71`.
+- Cloudflare 자동 배포와 Android 새 AAB 반영/실기기 동작은 별도 검증 필요. 현재 Play 스토어 설치 버전이 자동 변경되지는 않음.
