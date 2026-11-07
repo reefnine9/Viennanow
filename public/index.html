@@ -221,6 +221,11 @@
 .near32-brand{display:inline-flex;align-items:center;gap:8px}
 .near32-logo{display:inline-grid;place-items:center;background:#163547;color:#fff;font:700 19px Georgia,serif;width:31px;height:31px;border-radius:9px;flex:none}
 .near31-title{margin-bottom:8px}.near31-pin{width:32px;height:42px}
+/* Recommended course stops: direct links to existing sightseeing details. */
+.vn36-stops li{padding-top:5px;padding-bottom:5px}
+.vn-course-stop-name{min-width:0;overflow-wrap:anywhere}
+.vn-course-sight-detail{margin-left:10px;min-height:36px;padding:6px 11px;border:1px solid #d1dce0;border-radius:10px;background:#fff;color:#245268;font:inherit;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.vn-course-sight-detail:focus-visible{outline:3px solid #286985;outline-offset:2px}
 .vn32-ad-slot{height:54px;flex:0 0 54px;background:#f3f5f2;border-top:1px solid #dae2dc;display:flex;align-items:center;justify-content:center;color:#91a29e;font-size:10px;letter-spacing:.3px}
 .vn32-sight-pop{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;line-height:1.4;max-width:236px}
 .vn32-sight-pop>b{display:block;font-size:14px;color:#17384e}
@@ -1990,6 +1995,36 @@ function courseCatalog36(){
  if(state.vnCourseDetail){const c=VN_COURSES36.find(x=>x.id===state.vnCourseDetail);if(c)return courseDetail36(c);}
  return `<div class="stack plan-wrapper vn36-catalog"><div class="vn40-filter-wrap"><button class="vn40-scrollarrow vn40-prev" data-act="vn-filter-scroll" data-value="prev" type="button" aria-label="이전 코스 필터 보기">‹</button><div class="vn38-filterstrip" role="group" aria-label="여행 코스 필터">${['전체','반나절','하루',...VN_CATEGORIES36.filter(x=>x!=='전체')].map(x=>`<button class="chip ${selected===x?'active':''}" data-act="vn-course-filter" data-value="${h(x)}" aria-pressed="${selected===x}">${h(x)}</button>`).join('')}</div><button class="vn40-scrollarrow vn40-next" data-act="vn-filter-scroll" data-value="next" type="button" aria-label="다음 코스 필터 보기">›</button></div><div class="vn36-count">${filtered.length}개 코스</div>${filtered.map(c=>`<article class="pro-plan vn36-card"><div class="vn36-image">${photoImg(c.cover,'deck-photo')}</div><div class="pro-body"><div class="kicker">${h(c.category)} · ${h(c.duration)} · ${h(c.hours)}</div><h3>${h(c.title)}</h3><p>${h(c.summary)}</p><div class="vn36-meta">이동량 ${h(c.mobility)} · 추천 시기 ${h(c.season)}</div><p class="tiny">${h(c.stops.slice(0,4).join(' → '))}${c.stops.length>4?' …':''}</p><button class="btn primary block" data-act="vn-course-detail" data-id="${h(c.id)}">코스 자세히 보기 →</button></div></article>`).join('')}<p class="footer">방문지 정보는 여행 계획용 추천 초안입니다. 실제 운영시간·입장권·이동시간은 여행일에 다시 확인해 주세요.</p></div>`;
 }
+// Explicit course-stop to sightseeing-record links. Do not guess links from approximate route coordinates.
+const VN_COURSE_SIGHT_LINKS={
+ '그라벤':'A15','성 페터 성당':'C01','호프부르크':'A02','호프부르크·미하엘광장':'C04',
+ '국립오페라극장':'A05','오페라극장':'A05','벨베데레 상궁':'A04','카를교회':'A09',
+ '폭스가르텐':'C07','시시 박물관·황실 거처':'B01','황실 보물관 또는 국립도서관':'B02',
+ '유덴광장 추모비':'C02','유덴광장 박물관':'C02','국회의사당':'B17','시청사':'A10',
+ '호어 마르크트·앙커 시계':'C03','쇼텐슈티프트 주변':null,
+ '미술사박물관':'A06','알베르티나':'A07','카를스플라츠 오토 바그너 파빌리온':'C10',
+ '훈데르트바서 하우스 외관':'A13','모차르트하우스':'B08','하우스 데어 무지크':'B09',
+ '시립공원·슈트라우스 기념상':'A16','슈피텔베르크':'C09','프라터 대관람차':'A12',
+ '알베르티나 주변':'A07','나슈마르크트 벼룩시장':'A14','나슈마르크트 간식':'A14',
+ '칼렌베르크 전망대':'B16','도나우인젤 또는 알테 도나우':'C14','벨베데레 정원':'A04',
+ '알베르티나 테라스':'A07','슈테판 광장':'A01','그라벤·슈테판 광장':'A15',
+ '뮤지엄콰르티어':'A11','뮤지엄콰르티어 카페':'A11',
+ '쇤브룬 정원':'A03','궁전 정원':'A03','프라터 공원':'A12',
+ '쇤브룬 크리스마스 마켓':'A03','마리아 테레지아 광장 마켓':'C06','시청사 마켓':'A10',
+ '카를광장 마켓':'A09','슈피텔베르크 마켓':'C09',
+ '프라이융 주변 상점':null,'도나우 운하':'C12','나슈마르크트':'A14',
+ '쿤스트하우스 빈':'B07','제체시온':'B06','레오폴트 미술관':'B04',
+ '쇤브룬 동물원':'B12','도나우인젤':'C14','슈테판 광장 야경':'A01',
+ '슈테판 대성당':'A01','쇤브룬 궁전':'A03','호프부르크 왕궁':'A02'
+};
+function vnCourseSightId(stop){
+ const label=String(stop||'').trim();
+ const explicit=Object.prototype.hasOwnProperty.call(VN_COURSE_SIGHT_LINKS,label)?VN_COURSE_SIGHT_LINKS[label]:null;
+ if(explicit&&catalogById(explicit))return explicit;
+ const exact=CATALOG48.find(c=>c.ko===label||c.de===label||c.en===label);
+ return exact?.id||null;
+}
+
 function courseDetail36(c){
  const selected=state.vnCourseFilter39||'전체';
  const filtered=VN_COURSES36.filter(x=>selected==='전체'||x.duration===selected||x.category===selected);
@@ -2011,7 +2046,7 @@ function courseDetail36(c){
   </div>
   <section class="card"><div class="h2">${en?'Recommended stops':'추천 방문 순서'}</div>
    <p class="sub">${en?'Stops are listed in suggested visiting order.':'여행자가 장소를 쉽게 이해할 수 있도록 주요 지점을 순서대로 정리했습니다.'}</p>
-   <ol class="vn36-stops">${c.stops.map(stop=>`<li>${h(stop)}</li>`).join('')}</ol>
+   <ol class="vn36-stops">${c.stops.map(stop=>{const sightId=vnCourseSightId(stop);return `<li><span class="vn-course-stop-name">${h(stop)}</span>${sightId?`<button type="button" class="vn-course-sight-detail" data-act="vn-course-sight-detail" data-id="${h(sightId)}" aria-label="${h(stop)} ${en?'View details':'상세보기'}">${en?'Details':'상세보기'} ›</button>`:''}</li>`;}).join('')}</ol>
    ${vnCourseMiniMap41(c)}
    ${vnCoursePoints41(c).length<c.stops.length?'<p class="vn-route-location-caution" role="note">'+(en?'Some stops are omitted from the map because their precise location is not verified.':'정확한 위치가 확인되지 않은 경유지는 지도에 표시하지 않았습니다.')+'</p>':''}
    <button type="button" class="btn primary block vn36-show-near-map" data-act="vn-course-near-map" data-id="${h(c.id)}">${en?'View this route in Nearby map':'내주변 지도에서 이 코스 보기'} ↗</button>
@@ -2466,6 +2501,11 @@ case 'vn-course-near-map':{
  state.nearPlanChoice=id;state.nearSection='plan';state.tab='map';
  state.vnCourseDetail=null;state.detail=null;
  save();render();return;
+}
+case 'vn-course-sight-detail':{
+ if(!catalogById(id))return;
+ state.detail=id;state.expDetail19=null;
+ render();return;
 }
 case 'vn-course-detail':state.vnCourseDetail=id;save();render();$('main').scrollTop=0;return;
 case 'vn-course-back':state.vnCourseDetail=null;save();render();$('main').scrollTop=0;return;
