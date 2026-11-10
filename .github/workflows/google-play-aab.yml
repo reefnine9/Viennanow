@@ -9,6 +9,11 @@ on:
       - '.github/workflows/google-play-aab.yml'
   workflow_dispatch:
     inputs:
+      version_code:
+        description: 'Android versionCode (must exceed all previously uploaded Play builds)'
+        required: true
+        default: '5'
+        type: string
       api_origin:
         description: 'Production Cloudflare API origin'
         required: true
@@ -74,10 +79,17 @@ jobs:
         run: npm run native:sync
       - name: Configure Google test banner and consent
         run: node scripts/configure-android-test-ads.mjs
-      - name: Set Google Play version code
+      - name: Set unique Google Play version code
+        env:
+          PLAY_VERSION_CODE: ${{ inputs.version_code || '5' }}
         run: |
-          sed -i -E 's/(versionCode[[:space:]]+)[0-9]+/\14/' android/app/build.gradle
-          grep -Eq 'versionCode[[:space:]]+4' android/app/build.gradle || { echo '::error::Could not set Android versionCode to 4'; exit 1; }
+          if ! [[ "$PLAY_VERSION_CODE" =~ ^[1-9][0-9]*$ ]] || (( PLAY_VERSION_CODE > 2100000000 )); then
+            echo "::error::version_code must be a positive Android-compatible integer"; exit 1
+          fi
+          sed -i -E "s/(versionCode[[:space:]]+)[0-9]+/\\1${PLAY_VERSION_CODE}/" android/app/build.gradle
+          grep -Eq "versionCode[[:space:]]+${PLAY_VERSION_CODE}([^0-9]|$)" android/app/build.gradle || { echo "::error::Could not set Android versionCode"; exit 1; }
+          echo "AAB will use versionCode=${PLAY_VERSION_CODE}"
+          echo "NOTE: Play Console rejects any versionCode already uploaded."
       - name: Prepare secure signing
         env:
           ENCRYPTED_KEYSTORE_B64: ${{ secrets.ANDROID_ENCRYPTED_KEYSTORE_BASE64 }}
