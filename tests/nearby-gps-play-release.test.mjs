@@ -10,7 +10,7 @@ test('Nearby GPS keeps user-selected zoom and renders a blue position dot', () =
   const focus = source.slice(source.indexOf('function vnGpsFocus('), source.indexOf('function initMap(){'));
   const overlay = source.slice(source.indexOf('function vnGpsOverlay('), source.indexOf('function vnGpsFocus('));
   assert.match(gps, /vnGpsFocus\(loc\)/);
-  assert.doesNotMatch(gps, /\brender\(\)/);
+  assert.doesNotMatch(gps.replace(/\/\/[^\n]*/g, ''), /\brender\(\)/);
   assert.match(focus, /map\.panTo\(\[loc\.lat,loc\.lon\]/);
   assert.doesNotMatch(focus, /setView|fitBounds|flyTo/);
   assert.match(overlay, /L\.circleMarker/);
