@@ -2344,11 +2344,37 @@ function nearSearch31(){
 
 function mapIcon(emoji){const type=emoji==='🚻'?'wc':emoji==='🚰'?'water':emoji==='🚉'?'stops':'sights';return L.divIcon({className:'vn-leaflet-marker',html:`<div class="vn-map-pin vn-pin-${type}">${icon25(type,type==='wc'?21:17)}</div>`,iconSize:[36,36],iconAnchor:[18,31]})}
 
+// A GPS fix should move the map camera without replacing its zoom or recreating the map.
+let vnGpsDot=null;
+let vnGpsAccuracy=null;
+function vnGpsOverlay(){
+ if(!map||!window.L)return;
+ if(vnGpsDot){map.removeLayer(vnGpsDot);vnGpsDot=null;}
+ if(vnGpsAccuracy){map.removeLayer(vnGpsAccuracy);vnGpsAccuracy=null;}
+ const a=state.anchor;
+ if(!a||!String(a.label||'').startsWith('내 위치')||!Number.isFinite(a.lat)||!Number.isFinite(a.lon))return;
+ vnGpsDot=L.circleMarker([a.lat,a.lon],{radius:8,weight:3,color:'#fff',fillColor:'#1684ed',fillOpacity:1,opacity:1,interactive:false,pane:'markerPane'}).addTo(map);
+ const accuracy=Number(a.accuracy);
+ if(Number.isFinite(accuracy)&&accuracy>0&&accuracy<2000){
+  vnGpsAccuracy=L.circle([a.lat,a.lon],{radius:accuracy,stroke:true,color:'#1684ed',weight:1,opacity:.45,fillColor:'#1684ed',fillOpacity:.10,interactive:false}).addTo(map);
+  vnGpsDot.bringToFront();
+ }
+}
+function vnGpsFocus(loc){
+ const gps=!!String(loc.label||'').startsWith('내 위치');
+ document.querySelectorAll('.near31-locations [data-act="use-gps"]').forEach(b=>b.classList.toggle('active',gps));
+ document.querySelectorAll('.near31-locations [data-act="reset-anchor"]').forEach(b=>b.classList.toggle('active',!gps));
+ if(map&&state.tab==='map'){
+  vnGpsOverlay();
+  // panTo changes only the center; retain the exact user-selected zoom.
+  map.panTo([loc.lat,loc.lon],{animate:true,duration:.45});
+ }else render();
+}
 function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)return;const section=nearMode31();
  if(!window.L){target.innerHTML='<div class="mapfallback">지도 라이브러리를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.</div>';return;}
  try{
-  if(map){map.remove();map=null;}target.innerHTML='';
-  map=L.map(target,{zoomControl:false,scrollWheelZoom:true}).setView([anchor().lat,anchor().lon],13);
+  if(map){map.remove();map=null;}vnGpsDot=null;vnGpsAccuracy=null;target.innerHTML='';
+  map=L.map(target,{zoomControl:false,scrollWheelZoom:true,dragging:true,touchZoom:true,doubleClickZoom:true,boxZoom:true,keyboard:true,zoomSnap:0.5,zoomDelta:1,wheelPxPerZoomLevel:90}).setView([anchor().lat,anchor().lon],13);
   L.tileLayer('https://mapsneu.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg',{attribution:'Grundkarte: <a href="https://basemap.at/" target="_blank" rel="noopener noreferrer">basemap.at</a>',tileSize:256,maxZoom:19,keepBuffer:2,updateWhenIdle:true}).addTo(map);
   layerGroup=L.layerGroup().addTo(map);
   if(section==='sights')showPlaces();
@@ -2357,6 +2383,7 @@ function initMap(){if(state.tab!=='map')return;const target=$('map');if(!target)
   else if(section==='wc'){if(loadedFacilities.wc?.status==='ok'||wcCached())showFacilities('wc');if(!loadedFacilities.wc&&loadingFacility!=='wc')startFetch('wc');}
   else if(section==='plan')nearPlanLayer31();
   else if(section==='stories')vn52MapPins();
+  vnGpsOverlay();
   requestAnimationFrame(()=>map?.invalidateSize({pan:false}));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);
  }catch(e){target.innerHTML='<div class="mapfallback">지도 로딩 오류 · 새로고침을 시도하세요.</div>';}
 }
@@ -2444,10 +2471,13 @@ async function runDiagnostic(layer){
 }
 function useGps(){if(!navigator.geolocation){toast('현재 위치 기능을 지원하지 않습니다');return;}
  navigator.geolocation.getCurrentPosition(({coords})=>{
-  let loc={lat:coords.latitude,lon:coords.longitude,label:'내 위치 (GPS로 선택됨)'};
+  const loc={lat:coords.latitude,lon:coords.longitude,accuracy:coords.accuracy,label:'내 위치 (GPS로 선택됨)'};
   if(!Number.isFinite(loc.lat)||!Number.isFinite(loc.lon)){toast('유효하지 않은 위치입니다');return;}
-  state.anchor=loc;save();render();toast(inVienna(loc.lat,loc.lon)?'검색 기준점이 현재 위치로 변경되었습니다':'현재 비엔나 외부입니다. 주변 시설 검색은 시내 중심을 선택해 주세요.');
- },e=>{toast(e.code===1?'위치 권한이 거부되었습니다. 기준점을 수동으로 선택하세요.':'위치를 확인할 수 없습니다. 네트워크와 기기 설정을 확인하세요.');},{enableHighAccuracy:false,timeout:12000,maximumAge:30000});
+  state.anchor=loc;save();
+  // Update location in place: no render(), map recreation or forced zoom.
+  vnGpsFocus(loc);
+  toast(inVienna(loc.lat,loc.lon)?'파란 점으로 현재 위치를 표시했습니다':'현재 비엔나 외부입니다. 파란 점은 현재 위치를 표시합니다.');
+ },e=>{toast(e.code===1?'위치 권한이 거부되었습니다. 기기의 위치 권한을 허용하세요.':'위치를 확인할 수 없습니다. 네트워크와 기기 설정을 확인하세요.');},{enableHighAccuracy:true,timeout:15000,maximumAge:15000});
 }
 async function apiWalkingLeg(from,to){
   const url='/api/route?'+new URLSearchParams({from:from.id,to:to.id}).toString();
@@ -2646,7 +2676,7 @@ case'detail':state.detail=id;render();return;case'close-detail':state.detail=nul
  state.fixedEvents.push(ev);state.planError='';state.itinerary=null;save();render();toast('고정 예약을 추가했습니다');return;
 }
 case'remove-event':state.fixedEvents=state.fixedEvents.filter(e=>e.id!==id);state.planError='';state.itinerary=null;save();render();return;
-case'generate':generate();return;case'day':state.currentDay=Number(value);save();render();return;case'facility':state.facility=value;save();render();return;case'anchor-place':{let p=byId(id);if(p){state.anchor={lat:p.lat,lon:p.lon,label:p.ko+' 주변 (기획용 좌표)'};state.facility='wc';state.nearSection='wc';save();navTo('map');}return;}case'reset-anchor':state.anchor={...DEFAULT.anchor};save();render();return;case'use-gps':useGps();return;case'reload-facility':delete loadedFacilities[state.facility];startFetch(state.facility);toast('공식 공공데이터 새로고침을 시도합니다');return;case'start-live':state.live=true;state.tab='home';state.homeView='overview';save();render();return;case'stop-live':state.live=false;state.tab='home';state.homeView='overview';save();render();return;case'done':state.done[id]=!state.done[id];if(state.done[id])delete state.skipped[id];state.livePreview=null;save();render();return;case'finish-event':state.eventDone[id]=true;state.livePreview=null;save();render();return;
+case'generate':generate();return;case'day':state.currentDay=Number(value);save();render();return;case'facility':state.facility=value;save();render();return;case'anchor-place':{let p=byId(id);if(p){state.anchor={lat:p.lat,lon:p.lon,label:p.ko+' 주변 (기획용 좌표)'};state.facility='wc';state.nearSection='wc';save();navTo('map');}return;}case'reset-anchor':state.anchor={...DEFAULT.anchor};save();vnGpsFocus(state.anchor);return;case'use-gps':useGps();return;case'reload-facility':delete loadedFacilities[state.facility];startFetch(state.facility);toast('공식 공공데이터 새로고침을 시도합니다');return;case'start-live':state.live=true;state.tab='home';state.homeView='overview';save();render();return;case'stop-live':state.live=false;state.tab='home';state.homeView='overview';save();render();return;case'done':state.done[id]=!state.done[id];if(state.done[id])delete state.skipped[id];state.livePreview=null;save();render();return;case'finish-event':state.eventDone[id]=true;state.livePreview=null;save();render();return;
 case'auto-route':autoRouteSingle();return;case'auto-day-walk':autoDayWalk();return;case'edit-route':{state.routeApiError='';let parts=String(id||'').split('>');if(parts.length===2&&byId(parts[0])&&byId(parts[1])){state.routeEdit={from:parts[0],to:parts[1]};render();}return;}
 case'close-route':state.routeEdit=null;render();return;
 case'clear-route':{let r=state.routeEdit;if(r)delete state.routeOverrides[legKey(byId(r.from),byId(r.to))];state.routeEdit=null;save();generate({preserveDone:true});return;}
