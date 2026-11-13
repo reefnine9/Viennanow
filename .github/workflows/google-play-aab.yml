@@ -3,9 +3,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'public/index.html'
-      - 'scripts/configure-android-test-ads.mjs'
-      - 'functions/api/ogd.js'
+      - 'public/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'functions/api/**'
+      - 'capacitor.config.ts'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/google-play-aab.yml'
   workflow_dispatch:
     inputs:
