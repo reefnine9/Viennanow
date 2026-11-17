@@ -19,7 +19,10 @@ test('Nearby GPS keeps user-selected zoom and renders a blue position dot', () =
 
 test('Signed Google Play AAB workflow supports a new versionCode', () => {
   assert.match(workflow, /version_code:/);
-  assert.match(workflow, /default: '5'/);
+  const defaultCode = workflow.match(/version_code:\n(?:[^\n]+\n)*? *default: '([1-9][0-9]*)'/)?.[1];
+  const pushCode = workflow.match(/inputs\.version_code \|\| '([1-9][0-9]*)'/)?.[1];
+  assert.ok(defaultCode, 'Expected a positive default version code');
+  assert.equal(pushCode, defaultCode);
   assert.match(workflow, /PLAY_VERSION_CODE/);
   assert.match(workflow, /bundleRelease/);
 });
