@@ -30,6 +30,8 @@ jobs:
             sleep 1
           done
           exit 1
+      - name: Nearby map tiles, search and live GPS
+        run: node scripts/nearby-map-browser-qa.mjs
       - name: Run mobile and language browser checks
         run: node scripts/mobile-browser-qa.mjs
       - name: Phase 11 interaction and favorite persistence QA

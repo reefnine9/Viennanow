@@ -16,7 +16,7 @@ on:
       version_code:
         description: 'Android versionCode (must exceed all previously uploaded Play builds)'
         required: true
-        default: '6'
+        default: '7'
         type: string
       api_origin:
         description: 'Production Cloudflare API origin'
@@ -85,7 +85,7 @@ jobs:
         run: node scripts/configure-android-test-ads.mjs
       - name: Set unique Google Play version code
         env:
-          PLAY_VERSION_CODE: ${{ inputs.version_code || '6' }}
+          PLAY_VERSION_CODE: ${{ inputs.version_code || '7' }}
         run: |
           if ! [[ "$PLAY_VERSION_CODE" =~ ^[1-9][0-9]*$ ]] || (( PLAY_VERSION_CODE > 2100000000 )); then
             echo "::error::version_code must be a positive Android-compatible integer"; exit 1

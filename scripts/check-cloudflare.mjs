@@ -62,12 +62,12 @@ for(const key of ['near31-locations','near31-tabs','aria-label="지도 표시 �
 assert.ok(!index.includes("L.control.zoom({position:'bottomright'})"),'zoom widget must remain disabled on mobile map');
 console.log('Map toolbar and touch zoom regression gate OK.');
 
-// basemap.at HighDPI release gate: both nearby and curated-route maps use the Austrian official tiles.
-const basemapUrl='https://mapsneu.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.jpeg';
-assert.equal(index.split(basemapUrl).length-1,2,'both maps must use basemap.at HiDPI');
-assert.ok(index.includes('Grundkarte: <a href="https://basemap.at/'), 'map attribution must link to basemap.at');
-assert.ok(!index.includes('tile.openstreetmap.org'), 'legacy public tile provider must not remain');
-console.log('Austrian HiDPI map regression gate OK: two layers and attribution.');
+// Both map views use the local HiDPI provider and can fall back to worldwide tiles.
+assert.ok(index.includes('vnAddBasemap(map)')&&index.includes('vnAddBasemap(tourMap28)'), 'both maps must use the shared basemap');
+assert.ok(index.includes('https://mapsneu.wien.gv.at/basemap/bmaphidpi/'), 'missing basemap.at HiDPI tiles');
+assert.ok(index.includes('https://tile.openstreetmap.org/{z}/{x}/{y}.png'), 'missing worldwide tile fallback');
+assert.ok(index.includes('Grundkarte: <a href="https://basemap.at/')&&index.includes('https://www.openstreetmap.org/copyright'), 'map attribution must link to both providers');
+console.log('Map providers and attribution OK.');
 
 const newTabs=["['sights','볼거리']","['food','맛집']","['saved','♥ 찜한 곳']","['stories','비엔나 이야기']","['wc','화장실']","['plan','계획']"];
 let prev=-1;for(const t of newTabs){const pos=index.indexOf(t);assert.ok(pos>prev,'Five near-me categories must appear in requested order: '+t);prev=pos;}

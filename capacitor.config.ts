@@ -5,6 +5,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'app.viennanow.travel',
   appName: 'ViennaNow',
+  appendUserAgent: 'ViennaNow (+https://viennanow.pages.dev)',
   webDir: 'dist-native',
   bundledWebRuntime: false,
   ios: { contentInset: 'automatic' },

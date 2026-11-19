@@ -11,6 +11,6 @@ test('Nearby sights include all, attractions, museums and performance categories
 test('Nearby dining categories use restaurant records and preserve saved places',()=>{
  assert.match(src,/function vn61FoodRecords\(\)/);
  for(const id of ['must','featured','local_recommended','michelin','asian'])assert.ok(src.includes("['"+id+"',"),id);
- assert.match(src,/function vn59SavedMapLayer\(\)/);
+ assert.match(src,/function vn59SavedMapLayer\(focus=true\)/);
  assert.match(src,/state\.savedRestaurants/);
 });
