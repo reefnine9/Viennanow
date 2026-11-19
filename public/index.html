@@ -2281,7 +2281,7 @@ function render(){
  if(state.tab==='itinerary'&&state.planSection==='premium'&&state.tourDetail)setTimeout(initTourMap28,80);else if(tourMap28){tourMap28.remove();tourMap28=null;}
  const key=[state.tab,state.homeView,state.homeGuide?'guide':'',state.sightSection,state.foodSection,state.nearSection,state.planSection,state.planView,state.live?'live':'prep'].join('/');
  if(lastScreenKey!==key){main.scrollTop=0;lastScreenKey=key;}
- if(state.tab==='map'){requestAnimationFrame(()=>requestAnimationFrame(initMap));setTimeout(()=>map?.invalidateSize({pan:false}),250);setTimeout(()=>map?.invalidateSize({pan:false}),700);}
+ if(state.tab==='map'){requestAnimationFrame(()=>requestAnimationFrame(initMap));setTimeout(()=>map?.invalidateSize({pan:true}),250);setTimeout(()=>map?.invalidateSize({pan:true}),700);}
 }
 
 
@@ -2472,7 +2472,7 @@ function initMap(){
   vnGpsOverlay();
   vnStartGps();
   vnSyncLocationButtons();
-  requestAnimationFrame(()=>map?.invalidateSize({pan:false}));
+  requestAnimationFrame(()=>map?.invalidateSize({pan:true}));
  }catch(e){
   if(map){map.remove();map=null;vnNearbyViewKey=null;}
   target.innerHTML='<div class="mapfallback">지도 로딩 오류 · 새로고침을 시도하세요.</div>';

@@ -50,8 +50,8 @@ for (const feature of [
  'near-mapfilter',
  'near-mapstatus',
  'leaflet-map-pane',
- 'requestAnimationFrame(()=>map?.invalidateSize({pan:false}))',
- "map?.invalidateSize({pan:false}),700",
+ 'requestAnimationFrame(()=>map?.invalidateSize({pan:true}))',
+ "map?.invalidateSize({pan:true}),700",
  '.vn-pin-wc{background:#626b73'
 ]) assert.ok(index.includes(feature),`Map-first layout regression: ${feature}`);
 assert.ok(!index.includes('CITY GUIDE · MAP FIX'), 'stale map fix header reappeared');

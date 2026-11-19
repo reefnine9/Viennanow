@@ -10,7 +10,8 @@ const base = process.env.VIENNANOW_TEST_URL || 'http://127.0.0.1:8765';
   const ctx = await browser.newContext({viewport:{width:393,height:852},deviceScaleFactor:3,isMobile:true,hasTouch:true, permissions:['geolocation'],geolocation:{latitude:48.2085,longitude:16.3731,accuracy:15}});
   const page = await ctx.newPage();
   const errors=[];
-  let viennaTiles=0, worldTiles=0;
+  let viennaTiles=0;
+  const worldTiles=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/*',async route=>{
    const u = route.request().url();
@@ -20,13 +21,13 @@ const base = process.env.VIENNANOW_TEST_URL || 'http://127.0.0.1:8765';
     return route.fulfill({status:200,contentType:file.endsWith('.js')?'text/javascript':'text/css',body:fs.readFileSync(new URL(file,leaflet)),headers:{'access-control-allow-origin':'*'}});
    }
    if(u.startsWith('https://mapsneu.wien.gv.at/basemap/')){viennaTiles++;return route.abort();}
-   if(u.startsWith('https://tile.openstreetmap.org/')){worldTiles++;return route.fulfill({status:200,contentType:'image/png',body:tile});}
+   if(u.startsWith('https://tile.openstreetmap.org/')){worldTiles.push(u);return route.fulfill({status:200,contentType:'image/png',body:tile});}
    return route.abort();
   });
   await page.goto(base+'/index.html',{waitUntil:'domcontentloaded'});
   await page.locator('#bottom button.tab[data-value="map"]').click();
   await page.waitForFunction(()=>map && !!document.querySelector('#map .leaflet-tile-loaded'));
-  assert.ok(viennaTiles>0 && worldTiles>0);
+  assert.ok(viennaTiles>0 && worldTiles.length>0);
   await page.locator('button[data-act="use-gps"]').click();
   await page.waitForFunction(()=>vnGpsDot && Math.abs(vnGpsDot.getLatLng().lat-48.2085)<.00001);
   await ctx.setGeolocation({latitude:48.22,longitude:16.4,accuracy:18});
@@ -59,13 +60,15 @@ const base = process.env.VIENNANOW_TEST_URL || 'http://127.0.0.1:8765';
   const zoom = await page.evaluate(()=>map.getZoom());
   await ctx.setGeolocation({latitude:48.85,longitude:2.35,accuracy:20});
   await page.waitForFunction(()=>Math.abs(vnGpsDot.getLatLng().lat-48.85)<.00001);
-  const priorVienna=viennaTiles, priorWorld=worldTiles;
+  const priorWorld=worldTiles.length;
   await page.locator('button[data-act="use-gps"]').click();
   await page.waitForFunction(()=>Math.abs(map.getCenter().lng-2.35)<.0003 && !!document.querySelector('#map .leaflet-tile-loaded'));
-  await page.waitForTimeout(350);
   assert.equal(await page.evaluate(()=>map.getZoom()),zoom);
-  assert.equal(viennaTiles,priorVienna);
-  assert.ok(worldTiles>priorWorld);
+  const parisTileX=Math.floor((2.35+180)/360*2**zoom);
+  assert.ok(worldTiles.slice(priorWorld).some(url=>{
+   const [,z,x]=new URL(url).pathname.split('/');
+   return Number(z)===zoom&&Math.abs(Number(x)-parisTileX)<=1;
+  }),'Expected OpenStreetMap tiles near the new GPS position');
   await page.locator('button[data-act="reset-anchor"]').click();
   assert.equal(await page.evaluate(()=>vnGpsWatch),null);
   assert.equal(await page.evaluate(()=>vnGpsDot),null);
